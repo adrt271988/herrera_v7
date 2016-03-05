@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+<!--
+        Herencia vista en Tree de account_account_list (Plan de cuentas)
+-->
+        <record model="ir.ui.view" id="inherited_account_list_tree_view">
+            <field name="name">inherit.account.list.tree</field>
+            <field name="model">account.account</field>
+            <field name="inherit_id" ref="account.view_account_list" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='user_type']" position="replace">
+                       <field name="user_type" invisible="0"/>
+                </xpath>
+                <xpath expr="//field[@name='company_currency_id']" position="replace">
+                       <field name="company_currency_id" string="Divisa"/>
+                </xpath>
+            </field>
+        </record>
+        
+    </data>
+</openerp>

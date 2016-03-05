@@ -1,0 +1,37 @@
+{
+    "name": "Despacho y entrega de marcancia de Herrera C.A",
+    "version": "1.1",
+    "author" : "Herrera C.A",
+    "category": "Distribucion",
+    "description": """
+     Este modulo gestiona la distribucion de mercancia y el control de rutas y choferes para HERRERA, C.A
+    """,
+    'images': [],
+    'depends': ['fleet', 'hr', 'sale', 'account', 'stock','stock_location', 'herrera_sales', 'herrera_warehouse', 'herrera_invoice', 'herrera_payment'],
+    'data': [
+            ],
+    'init_xml': ['data/ruta_flete.xml'],
+    'update_xml': [
+                    'view/fleet_drivers_view.xml',
+                    'view/freight_route_view.xml',
+                    'wizard/create_distribution_view.xml',
+                    'view/stock_view.xml',
+		    'view/stock_reception_view.xml',
+		    'wizard/pre_reception_wizard_view.xml',
+                    'wizard/stock_distribution_line_details_view.xml',
+                    'view/stock_distribution_view.xml',
+                    'data/sequence.xml',
+                    'view/sale_shop.xml',
+                    'report/stock_distribution.xml',
+                    'view/account_invoice_view.xml',
+                    'wizard/account_invoice_refund_view.xml',
+                    'report/stock_distribution_sada_report.rml',
+                    'report/invoice_forwarding_report.rml',
+                    #~ 'data/scheduler.xml',
+                  ],
+    'demo_xml': [],
+    'test': [],
+    'installable': True,
+    'active': True,
+    'auto_install': False,
+}

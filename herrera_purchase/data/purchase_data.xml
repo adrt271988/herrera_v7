@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+<!-- Configurar Metodo de Facturacion basado en envios entrantes  -->
+        <function model="ir.values" name="set_default">
+            <value>purchase.order</value>
+            <value>invoice_method</value>
+            <value>picking</value>
+        </function>
+    </data>
+</openerp>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="herrera_distribution_account_invoice_form">
+			<field name="name">herrera.distribution.account.invoice.form</field>
+			<field name="model">account.invoice</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="account.invoice_form" />
+			<field name="arch" type="xml">
+				<xpath expr='//field[@name="payment_term"]' position='before'>
+				    <field name="payment_condition" class="oe_inline"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</openerp>
+

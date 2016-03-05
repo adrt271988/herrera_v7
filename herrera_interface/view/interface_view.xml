@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<openerp>
+  <data>
+          
+    <record id="act_pencabez_2_pdetalle" model="ir.actions.act_window">
+        <field name="name">Ver lineas de pedido</field>
+        <field name="res_model">interface.pdetalle</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_pe_n2': pe_n2}</field>
+    </record>
+      
+    <!-- pencabez -->
+    <record model="ir.ui.view" id="interface_pencabez_form">
+        <field name="name">interface.pencabez.form</field>
+        <field name="model">interface.pencabez</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string = "pencabez" create="0">
+                <field name = 'pe_n2' readonly="1"/>
+                <field name = 'pe_n1' readonly="1"/>
+                <field name = 'pe_conse_na' readonly="1"/>
+                <field name = 'pe_fecha' readonly="1"/>
+                <field name = 'pe_cli' readonly="1"/>
+                <field name = 'pe_ven' readonly="1"/>
+                <field name = 'pe_condi' readonly="1"/>
+                <field name = 'pe_facemi_ma' readonly="1"/>
+                <field name = 'pe_ultcon' readonly="1"/>
+                <field name = 'pe_numfa' readonly="1"/>
+                <field name = 'pe_ng_na' readonly="1"/>
+                <field name = 'pe_fig_na' readonly="1"/>
+                <field name = 'pe_pog_na' readonly="1"/>
+                <field name = 'pe_ban_na' readonly="1"/>
+                <field name = 'pe_flete' readonly="1"/>
+                <field name = 'pe_dias_na' readonly="1"/>
+                <field name = 'pe_marcai_na' readonly="1"/>
+                <field name = 'pe_marcap_na' readonly="1"/>
+                <field name = 'pe_iva' readonly="1"/>
+                <field name = 'total_monto_GV' readonly="1"/>
+                <field name = 'desc_total' readonly="1"/>
+                <field name = 'mensaje' readonly="1"/>
+                <field name = 'conta' readonly="1"/>
+                <field name = 'em0' readonly="1"/>
+                <field name = 'state' readonly="1"/>
+                <group colspan="4" string="Incidencias" >
+                    <field name = 'log' nolabel="1" readonly="1"/>
+                </group>
+                 <button name="%(act_pencabez_2_pdetalle)d" context="{'pe_n2':pe_n2}" icon="STOCK_FIND" type="action" string="Lineas de pedido"/>
+                <button name = "create_sale_order" type="object" icon="STOCK_REDO" states="draft" string="Cargar pedido"/>
+                <button name = "set_to_draft" type="object" icon="STOCK_UNDO" states="fail,cancel" string="Devolver a pendiente"/>
+                <button name = "cancel_sale_preorder" type="object" icon="gtk-cancel" states="draft,fail" string="Cancelar pedido"/>
+            </form>
+        </field>
+    </record>
+    
+    <record model="ir.ui.view" id="interface_pencabez_tree">
+        <field name="name">interface.pencabez.tree</field>
+        <field name="model">interface.pencabez</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string = "pencabez" create="0" colors="red:state=='fail';grey:state=='cancel';blue:state=='draft'">
+                <field name = 'pe_n2' />
+<!--                <field name = 'pe_n1' />
+
+                <field name = 'pe_conse_na' />
+-->
+                <field name = 'pe_fecha' />
+                <field name = 'pe_cli' />
+                <field name = 'pe_ven' />
+                <field name = 'pe_condi' />
+                <field name = 'pe_facemi_ma' />
+<!--
+                <field name = 'pe_ultcon' />
+                <field name = 'pe_numfa' />
+                <field name = 'pe_ng_na' />
+                <field name = 'pe_fig_na' />
+                <field name = 'pe_pog_na' />
+                <field name = 'pe_ban_na' />
+                <field name = 'pe_flete' />
+                <field name = 'pe_dias_na' />
+                <field name = 'pe_marcai_na' />
+                <field name = 'pe_marcap_na' />
+-->
+                <field name = 'pe_iva' />
+                <field name = 'total_monto_GV' />
+                <field name = 'desc_total' />
+<!--
+                <field name = 'mensaje' />
+
+                <field name = 'conta' />-->
+                <field name = 'em0' />
+                <field name = 'state' />
+                <button name="%(act_pencabez_2_pdetalle)d" context="{'pe_n2':pe_n2}" icon="STOCK_FIND" type="action" string="Lineas de pedido"/>
+                <button name = "create_sale_order" type="object" icon="STOCK_REDO" states="draft" string="Cargar pedido"/>
+                <button name = "set_to_draft" type="object" icon="STOCK_UNDO" states="fail,cancel" string="Devolver a pendiente"/>
+                <button name = "cancel_sale_preorder" type="object" icon="gtk-cancel" states="draft,fail" string="Cancelar pedido"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record model='ir.actions.act_window' id='interface_pencabez_action'>
+        <field name="name">pencabez</field>
+        <field name="res_model">interface.pencabez</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    <!-- pdetalle -->
+    <record model="ir.ui.view" id="interface_pdetalle_form">
+        <field name="name">interface.pdetalle.form</field>
+        <field name="model">interface.pdetalle</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string = "pdetalle" create="0">
+                <field name = 'pe_n2' readonly="1"/>
+                <field name = 'pe_n1' readonly="1"/>
+                <field name = 'pe_conse' readonly="1"/>
+                <field name = 'pe_produ' readonly="1"/> 
+                <field name = 'pe_tipo_GV' readonly="1"/>
+                <field name = 'pe_dep_GV' readonly="1"/>
+                <field name = 'pe_tran' readonly="1"/>
+                <field name = 'pe_uni' readonly="1"/>
+                <field name = 'pe_dcto' readonly="1"/>
+                <field name = 'pe_vent' readonly="1"/>
+                <field name = 'pe_cost' readonly="1"/>
+                <field name = 'pe_vtarec' readonly="1"/>
+                <field name = 'pe_consigna' readonly="1"/>
+                <field name = 'pe_fild' readonly="1"/>
+                <field name = 'pe_marca' readonly="1"/>
+                <field name = 'pe_dcto1' readonly="1"/>
+                <field name = 'conta' readonly="1"/>
+                <field name = 'em0' readonly="1"/>
+                <field name = 'state' readonly="1"/>
+                 <group colspan="4" string="Incidencias" >
+                    <field name = 'log' nolabel="1" readonly="1"/>
+                </group>
+                <button name = "update_sale_order" type="object" icon="gtk-go-forward" string="Cargar linea a pedido"/>
+            </form>
+        </field>
+    </record>
+    
+    <record model="ir.ui.view" id="interface_pdetalle_tree">
+        <field name="name">interface.pdetalle.tree</field>
+        <field name="model">interface.pdetalle</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string = "pdetalle" create="0" colors="red:state=='fail';grey:state=='cancel';blue:state=='draft'">
+                <field name = 'pe_n2' />
+<!--
+                <field name = 'pe_n1' />
+-->
+                <field name = 'pe_conse' />
+                <field name = 'pe_produ' /> 
+<!--
+                <field name = 'pe_tipo_GV' />
+                <field name = 'pe_dep_GV' />
+-->
+                <field name = 'pe_tran' />
+                <field name = 'pe_uni' />
+                <field name = 'pe_dcto' />
+                <field name = 'pe_vent' />
+                <field name = 'pe_cost' />
+<!--
+                <field name = 'pe_vtarec' />
+                <field name = 'pe_consigna' />
+                <field name = 'pe_fild' />
+                <field name = 'pe_marca' />-->
+                <field name = 'pe_dcto1' />
+<!--
+                <field name = 'conta' />
+-->
+                <field name = 'em0' />
+                <field name = 'state' />
+            </tree>
+        </field>
+    </record>
+    
+    <record model='ir.actions.act_window' id='interface_pdetalle_action'>
+        <field name="name">pdetalle</field>
+        <field name="res_model">interface.pdetalle</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- menuitems -->
+    <menuitem name = "Interfaces" id="interface_menu" sequence = "10"/>
+    <menuitem parent="interface_menu" id="interface_transfer_menu" name = "Transferir archivos" sequence = "100"/>
+    <menuitem action="action_interface_import_data" parent="interface_transfer_menu" name="Importar data de .txt" id="interface_import_files_menu" sequence = "1"/>
+    <menuitem action="interface_pdetalle_action" parent="interface_transfer_menu" name="Exportar data en .txt" id="interface_export_files_menu" sequence = "2"/>
+    <menuitem parent="interface_menu" id="interface_import_menu" name = "Entrada" sequence = "10"/>
+    <menuitem action="interface_pencabez_action" parent="interface_import_menu" name="pencabez" id="interface_pencabez_menu" sequence = "1"/>
+    <menuitem action="interface_pdetalle_action" parent="interface_import_menu" name="pdetalle" id="interface_pdetalle_menu" sequence = "2"/>
+    
+  </data>
+</openerp>

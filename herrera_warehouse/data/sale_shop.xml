@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<openerp>
+    <data noupdate="1">
+        <record id='sale.sale_shop_1' model='sale.shop'>
+            <field name='name'>SUCURSAL BARCELONA</field>
+        </record>
+        
+        <record id='shop_mgta' model='sale.shop'>
+            <field name='name'>SUCURSAL MARGARITA</field>
+            <field name='warehouse_id' ref= 'warehouse_mgta'/>
+            <field name="company_id">1</field>
+            <field name="pricelist_id">1</field>
+            <field name='payment_default_id' ref= 'account.account_payment_term_net'/>
+        </record>
+        
+        <record id='shop_cuma' model='sale.shop'>
+            <field name='name'>SUCURSAL CUMANA</field>
+            <field name='warehouse_id' ref= 'warehouse_cuma'/>
+            <field name="company_id">1</field>
+            <field name="pricelist_id">1</field>
+            <field name='payment_default_id' ref= 'account.account_payment_term_net'/>
+        </record>
+        
+        <record id='shop_caru' model='sale.shop'>
+            <field name='name'>SUCURSAL CARUPANO</field>
+            <field name='warehouse_id' ref= 'warehouse_caru'/>
+            <field name="company_id">1</field>
+            <field name="pricelist_id">1</field>
+            <field name='payment_default_id' ref= 'account.account_payment_term_net'/>
+        </record>
+        
+        <record id='shop_matu' model='sale.shop'>
+            <field name='name'>SUCURSAL MATURIN</field>
+            <field name='warehouse_id' ref= 'warehouse_matu'/>
+            <field name="company_id">1</field>
+            <field name="pricelist_id">1</field>
+            <field name='payment_default_id' ref= 'account.account_payment_term_net'/>
+        </record>
+        
+        <record id='shop_zuli' model='sale.shop'>
+            <field name='name'>SUCURSAL ZULIA</field>
+            <field name='warehouse_id' ref= 'warehouse_zuli'/>
+            <field name="company_id">1</field>
+            <field name="pricelist_id">1</field>
+            <field name='payment_default_id' ref= 'account.account_payment_term_net'/>
+        </record>
+        
+        <record id='shop_falc' model='sale.shop'>
+            <field name='name'>SUCURSAL FALCON</field>
+            <field name='warehouse_id' ref= 'warehouse_falc'/>
+            <field name="company_id">1</field>
+            <field name="pricelist_id">1</field>
+            <field name='payment_default_id' ref= 'account.account_payment_term_net'/>
+        </record>
+        
+        <record id='shop_boli' model='sale.shop'>
+            <field name='name'>SUCURSAL BOLIVAR</field>
+            <field name='warehouse_id' ref= 'warehouse_boli'/>
+            <field name="company_id">1</field>
+            <field name="pricelist_id">1</field>
+            <field name='payment_default_id' ref= 'account.account_payment_term_net'/>
+        </record>
+        
+        <record id='shop_ptoo' model='sale.shop'>
+            <field name='name'>SUCURSAL PTO. ORDAZ</field>
+            <field name='warehouse_id' ref= 'warehouse_ptoo'/>
+            <field name="company_id">1</field>
+            <field name="pricelist_id">1</field>
+            <field name='payment_default_id' ref= 'account.account_payment_term_net'/>
+        </record>
+        
+        <record id='shop_sede' model='sale.shop'>
+            <field name='name'>OFICINA SEDE</field>
+            <field name='warehouse_id' ref= 'warehouse_sede'/>
+            <field name="company_id">1</field>
+            <field name="pricelist_id">1</field>
+            <field name='payment_default_id' ref= 'account.account_payment_term_net'/>
+        </record>
+
+    </data>
+</openerp>

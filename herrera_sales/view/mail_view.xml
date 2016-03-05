@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record id="act_sale_order_2_mail_request" model="ir.actions.act_window">
+            <field name="name">Autorizaciones en Espera</field>
+            <field name="res_model">mail.authorization.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'search_default_ref': name, 'search_default_filter_wait': 1}</field>
+        </record>
+    </data>
+</openerp>

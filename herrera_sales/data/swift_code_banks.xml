@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <record id="bank1" model="res.bank">
+            <field name="name">BCV</field>
+            <field name="bic">0001</field>
+        </record>
+        
+        <record id="bank2" model="res.bank">
+            <field name="name">BANCO INDUSTRIAL DE VENEZUELA</field>
+            <field name="bic">0003</field>
+        </record>
+        
+        <record id="bank3" model="res.bank">
+            <field name="name">BANCO DE VENEZUELA</field>
+            <field name="bic">0102</field>
+        </record>
+        
+        <record id="bank4" model="res.bank">
+            <field name="name">BANCO VENEZOLANO DEL CREDITO</field>
+            <field name="bic">0104</field>
+        </record>
+        
+        <record id="bank5" model="res.bank">
+            <field name="name">BANCO MERCANTIL</field>
+            <field name="bic">0105</field>
+        </record>
+        
+        <record id="bank6" model="res.bank">
+            <field name="name">BBVA- BANCO PROVINCIAL</field>
+            <field name="bic">0108</field>
+        </record>
+        
+        <record id="bank7" model="res.bank">
+            <field name="name">BANCO DEL CARIBE</field>
+            <field name="bic">0114</field>
+        </record>
+         
+        <record id="bank8" model="res.bank">
+            <field name="name">BANCO EXTERIOR</field>
+            <field name="bic">0115</field>
+        </record>
+        
+         <record id="bank9" model="res.bank">
+            <field name="name">BANCO OCCIDENTAL DE DESCUENTO</field>
+            <field name="bic">0116</field>
+        </record>
+        
+         <record id="bank10" model="res.bank">
+            <field name="name">CORP BANCA</field>
+            <field name="bic">0121</field>
+        </record>
+        
+        <record id="bank11" model="res.bank">
+            <field name="name">BANCO CARONI</field>
+            <field name="bic">0128</field>
+        </record>
+        
+        <record id="bank12" model="res.bank">
+            <field name="name">BANCO BANESCO</field>
+            <field name="bic">0134</field>
+        </record>
+        
+        <record id="bank13" model="res.bank">
+            <field name="name">BANCO SOFITASA</field>
+            <field name="bic">0137</field>
+        </record>
+        
+        <record id="bank14" model="res.bank">
+            <field name="name">BANCO PLAZA</field>
+            <field name="bic">0138</field>
+        </record>
+        
+        <record id="bank15" model="res.bank">
+            <field name="name">BANGENTE</field>
+            <field name="bic">0146</field>
+        </record>
+        
+        <record id="bank16" model="res.bank">
+            <field name="name">PUEBLO SNO</field>
+            <field name="bic">0149</field>
+        </record>
+        
+        <record id="bank17" model="res.bank">
+            <field name="name">BFC BANCO FONDO COMUN</field>
+            <field name="bic">0151</field>
+        </record>
+        
+        <record id="bank18" model="res.bank">
+            <field name="name">100% BANCO</field>
+            <field name="bic">0156</field>
+        </record>
+        
+        <record id="bank19" model="res.bank">
+            <field name="name">BANCO DELSUR</field>
+            <field name="bic">0157</field>
+        </record>
+        
+        <record id="bank20" model="res.bank">
+            <field name="name">BANCO DEL TESORO</field>
+            <field name="bic">0163</field>
+        </record>
+        
+        <record id="bank21" model="res.bank">
+            <field name="name">BANCO AGRICOLA DE VENEZUELA</field>
+            <field name="bic">0166</field>
+        </record>
+       
+        <record id="bank22" model="res.bank">
+            <field name="name">BANCRECER</field>
+            <field name="bic">0168</field>
+        </record>
+        
+        <record id="bank23" model="res.bank">
+            <field name="name">MIBANCO</field>
+            <field name="bic">0169</field>
+        </record>
+        
+        <record id="bank24" model="res.bank">
+            <field name="name">BANCO ACTIVO</field>
+            <field name="bic">0171</field>
+        </record>
+        
+        <record id="bank25" model="res.bank">
+            <field name="name">BANCAMIGA</field>
+            <field name="bic">0172</field>
+        </record>
+        
+        <record id="bank26" model="res.bank">
+            <field name="name">BIDCA</field>
+            <field name="bic">0173</field>
+        </record>
+        
+        <record id="bank27" model="res.bank">
+            <field name="name">BANPLUS</field>
+            <field name="bic">0174</field>
+        </record>
+        
+        <record id="bank28" model="res.bank">
+            <field name="name">BANCO BICENTENARIO</field>
+            <field name="bic">0175</field>
+        </record>
+        
+        <record id="bank29" model="res.bank">
+            <field name="name">BES</field>
+            <field name="bic">0176</field>
+        </record>
+       
+        <record id="bank30" model="res.bank">
+            <field name="name">CITIBANK</field>
+            <field name="bic">0190</field>
+        </record>
+        
+        <record id="bank31" model="res.bank">
+            <field name="name">NACIONAL DEL CREDITO</field>
+            <field name="bic">0191</field>
+        </record>
+        
+        <record id="bank32" model="res.bank">
+            <field name="name">I.M.C.P</field>
+            <field name="bic">0601</field>
+        </record>
+        
+        <record id="bank33" model="res.bank">
+            <field name="name">BANCO GUAYANA</field>
+            <field name="bic">0008</field>
+        </record>
+    </data>
+</openerp>
+
+

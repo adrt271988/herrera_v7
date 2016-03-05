@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data noupdate="0">
+
+    <record id="group_purchase_analyst" model="res.groups">
+        <field name="name">Analista</field>
+        <field name="category_id" ref="base.module_category_purchase_management"/>
+        <field name="menu_access" eval="[(4,ref('base.menu_purchase_root')),
+                                (4,ref('purchase.menu_board_purchase')),
+                                (4,ref('base.next_id_73')),
+                                (4,ref('purchase.menu_purchase_config_purchase')),
+                                ]"/>
+    </record>
+
+</data>
+</openerp>

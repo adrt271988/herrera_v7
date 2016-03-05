@@ -1,0 +1,34 @@
+{
+    "name": "Flota de Camiones Herrera C.A",
+    "version": "1.1",
+    "author" : "Herrera C.A",
+    "category": "Transporte",
+    "description": """
+     Este modulo contiene las adaptaciones en el modulo de flota para HERRERA, C.A
+    """,
+    'images': [],
+    'depends': ['base', 'account', 'fleet', 'hr', 'sale', 'product', 'herrera_asset'],
+    'data': [
+                'data/sequence.xml',
+                'data/res_partner.xml',
+                'data/vehicle_state.xml',
+                'data/product_category.xml',
+                #~ 'data/service_data.xml',
+            ],
+    'init_xml': [],
+    'update_xml': [
+                    'view/fleet_view.xml',
+                    'view/fleet_alert_view.xml',
+                    'view/fleet_aditionals_view.xml',
+                    'report/fleet_service.xml',
+                    'report/fleet_aditionals.xml',
+                    'wizard/alert_analysis_view.xml',
+                    'wizard/desincorporate_aditional_view.xml',
+                    'view/partner_view.xml',
+                    ],
+    'demo_xml': [],
+    'test': [],
+    'installable': True,
+    'active': True,
+    'auto_install': False,
+}

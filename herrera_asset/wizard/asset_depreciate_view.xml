@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_depreciate_asset_process" model="ir.ui.view">
+            <field name="name">Depreciación de activos</field>
+            <field name="model">account.asset.depreciate.process</field>
+            <field name="arch" type="xml">
+                 <form string="Depreciacion" version="7.0">
+                    <group  col="1">
+                                                
+                        <group col="2">
+                            <field name='period_id' widget= "selection"/>
+                        </group>
+                    </group>
+                   <footer>
+                        <button name="action_depreciate" string="Depreciar" type="object"  class="oe_highlight" help="Crea los asientos de depreciación para aquellos activos que posean linea de depreciación en el período seleccionado." />
+                        <button icon="gtk-cancel" special="cancel" string="Cerrar"/>
+                        <button name="action_txt" string="Crear txt" type="object"  icon="gtk-execute"  help="Creaun archivo .txt con los asientos de depreciación del período seleccionado" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_account_asset_asset">
+        <field name="name">Depreciación de activos</field>
+        <field name="res_model">account.asset.depreciate.process</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="domain">[('parent_id','=',False)]</field>
+        <field name="view_id" ref="view_depreciate_asset_process"/>
+        <field name="target">new</field>
+        <field name="multi">True</field> 
+        </record>
+
+        <menuitem parent="account_asset.menu_finance_assets" id="menu_action_account_asset_asset"
+                  sequence="100"
+                  action="action_account_asset_asset"/>
+    </data>
+</openerp>

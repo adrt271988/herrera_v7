@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+    <menuitem id="menu_stock_distribution" name="Salida de mercancía" parent="stock.menu_stock_root" sequence="3"/>
+    
+    <record id="view_stock_picking_list_tree" model="ir.ui.view">
+        <field name="name">stock.picking.list.tree</field>
+        <field name="model">stock.picking</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Preparar Despacho" create="0" edit="0" colors="blue:state == 'draft';grey:state == 'cancel';red:state not in ('cancel', 'done') and date &lt; current_date" version="7.0">
+                <field name="sale_id" readonly = "1"/>
+                <field name="date" readonly = "1"/>
+                <field name="partner_id" readonly = "1"/>
+                <field name="state_id" readonly = "1"/>
+                <field name="municipality_id" readonly = "1"/>
+                <field name="sector_id" readonly = "1"/>
+                <field name="freight_route_id" readonly = "1"/>
+                <field name="product_qty" string="UdV" sum="Total UdV" readonly = "1"/>
+                <field name="weight" string= "Peso" sum="Total Kgs." readonly = "1"/>
+                <field name="volume" string = "Volumen" sum = "Total m3" readonly = "1"/>
+                <field name="cost" string = "Costo" sum = "Total Bs." readonly = "1"/>
+                <field name="ind_payment_units" string="UPI" sum="Total Unidades Ind."/>
+                <field name="state" invisible = "1"/>
+            </tree>
+        </field>
+    </record>
+<!--
+
+    <record id="view_stock_picking_list_form" model="ir.ui.view">
+        <field name="name">stock.picking.list.form</field>
+        <field name="model">stock.picking</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="/form/header" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+-->
+
+    <record id="view_stock_picking_list_filter" model="ir.ui.view">
+        <field name="name">stock.picking.list.search</field>
+        <field name="model">stock.picking</field>
+        <field name="type">search</field>
+        <field name="inherit_id" ref="stock.view_picking_out_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='to_invoice']" position="before">
+                <field name="global_id" string="Número de global" filter_domain="[('global_id','ilike', self)]"/>
+            </xpath>
+            <xpath expr="/search/group" position="inside">
+                <filter name="group_sale" string="Pedido de venta" icon="terp-sale" domain="[]" context="{'group_by':'sale_id'}"/>
+                <filter name="group_global" string="Número de global" icon="terp-sale" domain="[]" context="{'group_by':'global_id'}"/>
+                <filter name="municipality_id" string="Municipios" context="{'group_by': 'municipality_id' }"/>
+                <filter name="sector_id" string="Sectores" context="{'group_by': 'sector_id' }"/>
+                <filter name="route_id" string="Rutas" context="{'group_by': 'freight_route_id' }"/>
+                <filter name="day" string="Día" context="{'group_by': 'day' }"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="stock_picking_list_action">
+        <field name="name">Preparar Despacho</field>
+        <field name="res_model">stock.picking</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="view_stock_picking_list_tree"/>
+        <field name="search_view_id" ref="view_stock_picking_list_filter"/>
+        <field name="domain">[('location_dest_type','=','output'),('state','=','assigned')]</field>
+        <field name="context">{'default_type': 'out', 'contact_display': 'partner_address', 'search_default_available': 1}</field>
+        <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a quotation, the first step of a new sale.
+              </p><p>
+                OpenERP will help you handle efficiently the complete sale flow:
+                from the quotation to the sales order, the
+                delivery, the invoicing and the payment collection.
+              </p><p>
+                The social feature helps you organize discussions on each sales
+                order, and allow your customers to keep track of the evolution
+                of the sales order.
+              </p>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="global_stock_picking_list_action">
+        <field name="name">Preparar Despacho</field>
+        <field name="res_model">stock.picking</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="view_stock_picking_list_tree"/>
+        <field name="search_view_id" ref="view_stock_picking_list_filter"/>
+        <field name="domain">[('location_dest_type','=','output'),('state','=','assigned')]</field>
+        <field name="context">{'default_type': 'out', 'contact_display': 'partner_address', 'search_default_global_id': global_id}</field>
+        <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a quotation, the first step of a new sale.
+              </p><p>
+                OpenERP will help you handle efficiently the complete sale flow:
+                from the quotation to the sales order, the
+                delivery, the invoicing and the payment collection.
+              </p><p>
+                The social feature helps you organize discussions on each sales
+                order, and allow your customers to keep track of the evolution
+                of the sales order.
+              </p>
+        </field>
+    </record>
+    
+    <record model='ir.ui.view' id='inherit_stock_picking_global_form'>
+        <field name="name">inherit.stock.picking.global.form</field>
+        <field name="model">stock.global</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="herrera_warehouse.stock_picking_global_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='set_cancel']" position="before">
+<!--
+                <button name="%(global_stock_picking_list_action)d" string="Pedidos en pickings" states="confirmed" type="action" context="{'global_id':id}" class="oe_highlight"/>
+-->
+                <button name="%(stock_picking_list_action)d" string="Pedidos en pickings" states="confirmed" type="action" class="oe_highlight"/>
+            </xpath>
+        </field>
+    </record>
+<!--    
+    <record id="view_distribution_picking_out_form" model="ir.ui.view">
+        <field name="name">distribution.stock.picking.out.form</field>
+        <field name="model">stock.picking.out</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="herrera_warehouse.inherit_view_picking_out_form"/>
+        <field name="arch" type="xml">
+            <xpath expr='//field[@name="origin"]' position='after'>
+                <field name="distribution_id" string="Número de despacho" attrs="{'invisible':[('distribution_id','=',False)]}"/>
+            </xpath>
+            <xpath expr="/form/header//button[@name='action_assign']" position="before">
+                <button name="%(create_distribution_action1)d" string="Crear Despacho" attrs="{'invisible':['|',('state','&lt;&gt;','confirmed'),('global_id','=',False)]}" type="action" context="{'direct': True}" class="oe_highlight"/>
+                <button name="%(receive_wizard_action)d" string="Recepcionar" attrs="{'invisible':[('state','=','done'),('distribution_id','is not',False)]}" type="action" class="oe_highlight"/>
+            </xpath>
+	    <xpath expr="//button[@string='Return Products']" position="replace"/>
+
+		<attribute name="states">assigned</attribute>
+	    </xpath>
+
+            <xpath expr="/form/header//button[@name='action_view_global']" position="replace">
+                <button name="action_view_global" attrs="{'invisible':['|',('state','&lt;&gt;','assigned'),('distribution_id','&lt;&gt;',False)]}" string="Consultar Global" type="object" class="oe_highlight"/>
+            </xpath>
+	    <xpath expr='//h1' position='replace'>
+                 <div class="oe_title">
+                     <h1>
+                          <field name="name" class="oe_inline" attrs="{'invisible': [('name','=','/')]}" readonly="1"/>
+                     </h1>
+                 </div>
+                 <div class="oe_right oe_button_box" name="buttons">
+                     <button name="action_view_distro" attrs="{'invisible':['|','&amp;',('state','=','assigned'),('distribution_id','=',False),('state','&lt;&gt;','assigned')]}" string="Despacho relacionado" type="object"/>
+                 </div>
+             </xpath>
+        </field>
+    </record>
+-->    
+    <menuitem parent="menu_stock_distribution" action="stock_picking_list_action" id="menu_stock_picking_list" sequence = "30"/>
+    <menuitem action="herrera_warehouse.stock_picking_global_act" parent="menu_stock_distribution" id="stock_picking_global_menu2" sequence = "10"/>
+    <menuitem action="herrera_warehouse.stock_picking_out_not_confirmed_action" id="menu_stock_picking_out_not_confirmed" parent="menu_stock_distribution" sequence="2"/>
+    <menuitem action="herrera_warehouse.action_picking_tree8" id="menu_stock_picking_out_confirmed" parent="menu_stock_distribution" sequence="3"/>
+    <menuitem action="stock.action_picking_tree" id="stock.menu_action_picking_tree" parent="menu_stock_distribution" sequence="1"/>
+    
+</data>
+</openerp>

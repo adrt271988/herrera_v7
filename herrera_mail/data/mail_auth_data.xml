@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate = "1">
+        <record id="authorization_set_credit_blocked" model = "mail.authorization">
+            <field name="name">Bloquear Cliente</field>
+            <field name="contact">Administrador de la sucursal</field>
+            <field name="model">res.partner</field>
+            <field name="function">set_credit_blocked</field>
+            <field name="args"></field>
+            <field name="module">herrera_partner</field>
+            <field name="view_name">herrera_view_partner_form</field>
+            <field name="view_type">form</field>
+        </record>
+        <record id="authorization_unset_credit_blocked" model = "mail.authorization">
+            <field name="name">Desbloquear Cliente</field>
+            <field name="contact">Administrador de la sucursal</field>
+            <field name="model">res.partner</field>
+            <field name="function">unset_credit_blocked</field>
+            <field name="args"></field>
+            <field name="module">herrera_partner</field>
+            <field name="view_name">herrera_view_partner_form</field>
+            <field name="view_type">form</field>            
+        </record>
+        <record id="authorization_set_active" model = "mail.authorization">
+            <field name="name">Activar Cliente/Proveedor (Recuperar)</field>
+            <field name="contact">Jefe de Ventas / Jefe de Compras</field>
+            <field name="model">res.partner</field>
+            <field name="function">write</field>
+            <field name="args">{'active':True}</field>
+            <field name="module">herrera_partner</field>
+            <field name="view_name">herrera_view_partner_form</field>
+            <field name="view_type">form</field>            
+        </record>
+        <record id="authorization_unset_active" model = "mail.authorization">
+            <field name="name">Desactivar Cliente/Proveedor (Eliminar)</field>
+            <field name="contact">Jefe de Ventas / Jefe de Compras</field>
+            <field name="model">res.partner</field>
+            <field name="function">write</field>
+            <field name="args">{'active':False}</field>
+            <field name="module">herrera_partner</field>
+            <field name="view_name">herrera_view_partner_form</field>
+            <field name="view_type">form</field>            
+        </record>
+        <record id="authorization_blocked_sale_order" model = "mail.authorization">
+            <field name="name">Pedido a Cliente Bloqueado</field>
+            <field name="contact">Jefe de Ventas</field>
+            <field name="model">sale.order</field>
+            <field name="function">action_button_approved</field>
+            <field name="args"></field>
+            <field name="module">herrera_sales</field>
+            <field name="view_name">inherited_sale_order_form</field>
+            <field name="view_type">form</field>            
+        </record>
+        <record id="authorization_credit_limit_sale_order" model = "mail.authorization">
+            <field name="name">Credito Normal Excedido</field>
+            <field name="contact">Jefe de Ventas</field>
+            <field name="model">sale.order</field>
+            <field name="function">action_button_approved</field>
+            <field name="args"></field>
+            <field name="module">herrera_sales</field>
+            <field name="view_name">inherited_sale_order_form</field>
+            <field name="view_type">form</field>                 
+        </record>
+        <record id="authorization_global_limit_sale_order" model = "mail.authorization">
+            <field name="name">Credito Global Excedido</field>
+            <field name="contact">Jefe de Ventas</field>
+            <field name="model">sale.order</field>
+            <field name="function">action_button_approved</field>
+            <field name="args"></field>
+            <field name="module">herrera_sales</field>
+            <field name="view_name">inherited_sale_order_form</field>
+            <field name="view_type">form</field>                 
+        </record>
+        <record id="authorization_distribution_minimum_load" model = "mail.authorization">
+            <field name="name">Despacho por debajo de Carga Mínima</field>
+            <field name="contact">Gerencia de Operaciones</field>
+            <field name="model">stock.distribution</field>
+            <field name="function">force</field>
+            <field name="args"></field>
+            <field name="module">herrera_distribution</field>
+            <field name="view_name">stock_distribution_form</field>
+            <field name="view_type">form</field>                 
+        </record>
+        <record id="authorization_distribution_excess_insurance_policy" model = "mail.authorization">
+            <field name="name">Despacho por Exceso de Póliza de Aseguramiento</field>
+            <field name="contact">Jefe de Administración</field>
+            <field name="model">stock.distribution</field>
+            <field name="function">force</field>
+            <field name="args"></field>
+            <field name="module">herrera_distribution</field>
+            <field name="view_name">stock_distribution_form</field>
+            <field name="view_type">form</field>                 
+        </record>
+        <record id="authorization_reception_invoice_adjust_amount" model = "mail.authorization">
+            <field name="name">Recepción de Facturas con Diferencia por Cobrar</field>
+            <field name="contact">Jefe de Administración</field>
+            <field name="model">stock.reception</field>
+            <field name="function">force</field>
+            <field name="args"></field>
+            <field name="module">herrera_distribution</field>
+            <field name="view_name">stock_reception_form</field>
+            <field name="view_type">form</field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <record model='ir.ui.view' id='pre_reception_wizard_form'>
+        <field name='name'>pre.reception.wizard.form</field>
+        <field name='model'>pre.reception.wizard</field>
+        <field name='type'>form</field>
+        <field name='arch' type='xml'>
+            <form string="Pre-Recepción" version="7.0">
+		    <group>
+			<field name="distribution_id" readonly = "1"/>
+		    </group>
+		    <group string="Facturas">
+			<field name="invoice_ids" nolabel="1">
+			    <tree create="0" editable="bottom">
+				<field name="number" readonly = "1"/>
+				<field name="nro_ctrl" readonly = "1"/>
+				<field name="partner_id" readonly = "1"/>
+				<field name="origin" readonly = "1"/>
+				<field name="amount_total" string = "Monto" sum = "Total Bs." readonly = "1"/>
+				<field name="date_document"/>
+				<field name="reception_type" required="1"/>
+			    </tree>
+			</field>
+		    </group>
+		<footer>
+		    <button name="create_reception" string="Guardar" type="object" icon="terp-stock_effects-object-colorize" />
+                    <button icon="gtk-cancel" special="cancel" string="Salir"/>
+		</footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window name="Crear Recepcion"
+            key2="client_action_multi"
+            res_model="pre.reception.wizard"
+            src_model="stock.reception"
+            view_type="form"
+            view_mode="form"
+            target="new"
+            id="pre_reception_wizard_action"/>
+    
+</data>
+</openerp>

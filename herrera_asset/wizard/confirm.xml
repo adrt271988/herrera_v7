@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<openerp>
+    <data>
+        <record id="view_wizard_confirm" model="ir.ui.view">
+            <field name="name">view.confirm</field>
+            <field name="model">confirm</field>
+            <field name="arch" type="xml">
+                <form string="Confirmación" version="7.0">
+                    <separator string="El proceso ha sido realizado con exito.!!" colspan="4"/>
+                    <group colspan="8" col="8">
+                            <button icon="gtk-ok" special="cancel" string="Aceptar"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

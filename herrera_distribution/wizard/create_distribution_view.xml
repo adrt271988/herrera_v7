@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <record model='ir.ui.view' id='create_distribution_form'>
+        <field name='name'>create.distribution.form</field>
+        <field name='model'>create.distribution</field>
+        <field name='type'>form</field>
+        <field name='arch' type='xml'>
+            <form string="Crear Despacho" version="7.0">
+                    <group>
+                        <group>
+                            <field name="shop_id" readonly = "1" class="oe_inline"/>
+                            <field name="vehicle_id" domain = "[('shop_id','=',shop_id)]" attrs="{'invisible':[('direct','=',True)]}" class="oe_inline"/>
+                            <field name="driver_id" domain = "[('shop_id','=',shop_id)]" attrs="{'invisible':[('direct','=',True)]}" class="oe_inline"/>
+                        </group>
+                        <group>
+                            <field name="direct" class="oe_inline"/>
+                            <field name="date" invisible = "1"/>
+                        </group>
+                        <group colspan="4">
+                            <field name="line_ids" nolabel = "1">
+                                <tree string = "Mercancía en Picking" create="0" version="7.0">
+                                    <field name="sale_id" readonly = "1"/>
+                                    <field name="date" readonly = "1"/>
+                                    <field name="partner_id" readonly = "1"/>
+                                    <field name="state_id" readonly = "1"/>
+                                    <field name="municipality_id" readonly = "1"/>
+                                    <field name="sector_id" readonly = "1"/>
+                                    <field name="route_id" readonly = "1"/>
+                                    <field name="product_qty" string="UdV" sum="Total UdV" readonly = "1"/>
+                                    <field name="weight" string= "Peso" sum="Total Kgs." readonly = "1"/>
+                                    <field name="volume" string = "Volumen" sum = "Total m3" readonly = "1"/>
+                                    <field name="cost" string = "Costo" sum = "Total Bs." readonly = "1"/>
+                                    <field name="payment_independent_units" string="UPI" sum="Total Unidades Ind."/>
+                                </tree>
+                            </field>
+                        </group>
+                    </group>
+                    <button name="create_distro" string="Crear" type="object" icon="terp-stock_effects-object-colorize" />
+                    <button icon="gtk-cancel" special="cancel" string="Cerrar"/>
+            </form>
+        </field>
+    </record>
+
+    <act_window name="Crear Despacho"
+            key2="client_action_multi"
+            res_model="create.distribution"
+            src_model="stock.picking"
+            view_type="form"
+            view_mode="form"
+            target="new"
+            id="create_distribution_action1"/>
+    
+</data>
+</openerp>

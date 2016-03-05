@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <!-- Accesorios -->
+        <record model="ir.ui.view" id="fleet_vehicle_aditionals_form">
+            <field name="name">fleet.vehicle.aditionals.form</field>
+            <field name="model">fleet.vehicle.aditionals</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string = "Accesorios">
+                    <group string="General">
+                        <field name = "name" attrs = "{'readonly':[('state','=','inactive')]}"/>
+                        <field name = "serial" attrs = "{'readonly':[('state','=','inactive')]}"/>
+                        <field name = "vehicle_id" attrs = "{'readonly':[('state','=','inactive')]}" domain="[('active_vehicle','=',True)]"/>
+                        <field name = "date_in" attrs = "{'readonly':[('state','=','inactive')]}"/>
+                        <field name = "odometer"/>
+                        <field name = "horometer"/>
+                    </group>
+                    <group string = "Características">
+                        <field name = "type_id" attrs = "{'readonly':[('state','=','inactive')]}"/>
+                        <field name = "brand_id" attrs = "{'readonly':[('state','=','inactive')]}"/>
+                        <field name = "size" attrs = "{'readonly':[('state','=','inactive')]}"/>
+                        <field name = "use_id" attrs = "{'readonly':[('state','=','inactive')]}"/>
+                        <field name = "state" invisible = "1"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="fleet_vehicle_aditionals_tree">
+            <field name="name">fleet.vehicle.aditionals.tree</field>
+            <field name="model">fleet.vehicle.aditionals</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string = "Accesorios" colors = "red:state=='inactive'">
+                    <field name = "type_id"/>
+                    <field name = "brand_id"/>
+                    <field name = "name"/>
+                    <field name = "serial"/>
+                    <field name = "size"/>
+                    <field name = "vehicle_id"/>
+                    <field name = "state"/>
+                    <field name = "date_in"/>
+                    <field name = "date_out"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='fleet_vehicle_aditionals_act'>
+            <field name="name">Agregar Accesorios</field>
+            <field name="res_model">fleet.vehicle.aditionals</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem parent="fleet.fleet_configuration" name = "Accesorios" id="fleet_vehicle_aditionals_menu" groups="fleet.group_fleet_user" sequence = "10"/>
+        <menuitem action="fleet_vehicle_aditionals_act" parent="fleet_vehicle_aditionals_menu" id="fleet_vehicle_aditionals_add_menu" groups="fleet.group_fleet_user" sequence = "1"/>
+
+        <!-- Categpria de Accesorios -->
+        <record model="ir.ui.view" id="fleet_vehicle_aditionals_type_form">
+            <field name="name">fleet.vehicle.aditionals.type.form</field>
+            <field name="model">fleet.vehicle.aditionals.type</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string = "Categoría de Accesorios">
+                    <field name = "name"/>
+                    <field name = "limit"/>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="fleet_vehicle_aditionals_type_tree">
+            <field name="name">fleet.vehicle.aditionals.type.tree</field>
+            <field name="model">fleet.vehicle.aditionals.type</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string = "Categoría de Accesorios">
+                    <field name = "name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='fleet_vehicle_aditionals_type_act'>
+            <field name="name">Categoría de Accesorios</field>
+            <field name="res_model">fleet.vehicle.aditionals.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="fleet_vehicle_aditionals_type_act" parent="fleet_vehicle_aditionals_menu" id="fleet_vehicle_aditionals_type_menu" groups="fleet.group_fleet_user" sequence = "2"/>
+
+        <!-- Marcas de Accesorios -->
+        <record model="ir.ui.view" id="fleet_vehicle_aditionals_brand_form">
+            <field name="name">fleet.vehicle.aditionals.brand.form</field>
+            <field name="model">fleet.vehicle.aditionals.brand</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string = "Marcas de Accesorios">
+                    <field name = "name"/>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="fleet_vehicle_aditionals_brand_tree">
+            <field name="name">fleet.vehicle.aditionals.brand.tree</field>
+            <field name="model">fleet.vehicle.aditionals.brand</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string = "Marcas de Accesorios">
+                    <field name = "name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='fleet_vehicle_aditionals_brand_act'>
+            <field name="name">Marcas</field>
+            <field name="res_model">fleet.vehicle.aditionals.brand</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="fleet_vehicle_aditionals_brand_act" parent="fleet_vehicle_aditionals_menu" id="fleet_vehicle_aditionals_brand_menu" groups="fleet.group_fleet_user" sequence = "3"/>
+
+        <!-- Tipos de Accesorios -->
+        <record model="ir.ui.view" id="fleet_vehicle_aditionals_use_form">
+            <field name="name">fleet.vehicle.aditionals.use.form</field>
+            <field name="model">fleet.vehicle.aditionals.use</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string = "Tipos de Accesorios">
+                    <field name = "name"/>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="fleet_vehicle_aditionals_use_tree">
+            <field name="name">fleet.vehicle.aditionals.use.tree</field>
+            <field name="model">fleet.vehicle.aditionals.use</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string = "Tipos de Accesorios">
+                    <field name = "name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='fleet_vehicle_aditionals_use_act'>
+            <field name="name">Tipos</field>
+            <field name="res_model">fleet.vehicle.aditionals.use</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="fleet_vehicle_aditionals_use_act" parent="fleet_vehicle_aditionals_menu" id="fleet_vehicle_aditionals_use_menu" groups="fleet.group_fleet_user" sequence = "4"/>
+
+        <!-- Tamaños de Accesorios -->
+        <record model="ir.ui.view" id="fleet_vehicle_aditionals_size_form">
+            <field name="name">fleet.vehicle.aditionals.size.form</field>
+            <field name="model">fleet.vehicle.aditionals.size</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string = "Tamaños de Accesorios">
+                    <field name = "name"/>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="fleet_vehicle_aditionals_size_tree">
+            <field name="name">fleet.vehicle.aditionals.size.tree</field>
+            <field name="model">fleet.vehicle.aditionals.size</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string = "Tamaños de Accesorios">
+                    <field name = "name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='fleet_vehicle_aditionals_size_act'>
+            <field name="name">Tamaños</field>
+            <field name="res_model">fleet.vehicle.aditionals.size</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="fleet_vehicle_aditionals_size_act" parent="fleet_vehicle_aditionals_menu" id="fleet_vehicle_aditionals_size_menu" groups="fleet.group_fleet_user" sequence = "5"/>
+    </data>
+</openerp>

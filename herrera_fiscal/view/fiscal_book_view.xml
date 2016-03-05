@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <!-- Wizard del Boton Data import -->
+        <record id="view_add_data_import" model="ir.ui.view">
+            <field name="name">Importacions</field>
+            <field name="model">wizard.import.process</field>
+            <field name="arch" type="xml">
+                 <form string="Importaciones" version="7.0">
+                    <field name="pb_lines">
+                        <tree editable="botton">
+                            <field name="fb_line"/>
+                            <field name="form_imex"/>
+                            <field name="imex_number"/>
+                        </tree>
+                    </field>
+                    <footer>
+                        <button name="action_add" string="Confirmar" type="object"  class="oe_highlight"  />
+                        <button icon="gtk-cancel" special="cancel" string="Cerrar"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- Accion del Wizard de Data import -->
+       <record model="ir.actions.act_window" id="action_add_data_import">
+        <field name="name">Agregar Datos de Importacion</field>
+        <field name="res_model">wizard.import.process</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="domain">[('parent_id','=',False)]</field>
+        <field name="view_id" ref="view_add_data_import"/>
+        <field name="target">new</field>
+        <field name="multi">True</field>
+        </record>
+        
+        <!-- Inherit Purchase Book -->
+        <record model="ir.ui.view" id="inherit_view_purchase_fiscal_book_form">
+            <field name="name">inherit.view.purchase.fiscal.book.form</field>
+            <field name="model">fiscal.book</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="l10n_ve_fiscal_book.view_fiscal_purchase_book_form"/>
+            <field name="arch" type="xml">
+                
+                <xpath expr="//field[@name='rank']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='doc_type']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='partner_vat']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='partner_name']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='imex_date']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='custom_statement']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='vat_sdcf']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='vat_reduced_base']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='vat_reduced_tax']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='vat_additional_base']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='vat_additional_tax']" position="replace">
+                </xpath>
+
+                <xpath expr='//button[@name="act_confirm"]' position='after'>
+                        <button name="%(action_add_data_import)d" string="Datos Import" states="draft" type="action" icon="gtk-execute"/>
+                </xpath>
+                
+                <xpath expr="//field[@name='emission_date']" position="after">
+                    <field name="partner_vat" string="R.I.F"/>
+                </xpath>
+                <xpath expr="//field[@name='partner_vat']" position="after">
+                    <field name="shop_code"/>
+                </xpath>
+                <xpath expr="//field[@name='shop_code']" position="after">
+                    <field name="partner_name" string="Proveedor"/>
+                </xpath>
+                <xpath expr="//field[@name='affected_invoice']" position="before">
+                    <field name="doc_type" string="Tipo Ope"/>
+                </xpath>
+                <xpath expr="//field[@name='doc_type']" position="before">
+                    <field name="nc_number"/>
+                </xpath>
+                <xpath expr="//field[@name='nc_number']" position="before">
+                    <field name="nd_number"/>
+                </xpath>
+                <xpath expr="//field[@name='ctrl_number']" position="replace">
+                    <field name="ctrl_number" string="Número de Control"/>
+                </xpath>
+                <xpath expr="//field[@name='invoice_number']" position="before">
+                    <field name="imex_number"/>
+                </xpath>
+                <xpath expr="//field[@name='imex_number']" position="before">
+                    <field name="form_imex"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <!-- Inherit res partner -->
+        <record model="ir.ui.view" id="inherit_view_purchase_fiscal_book_line_form">
+            <field name="name">inherit.view.purchase.fiscal.book.line.form</field>
+            <field name="model">fiscal.book.line</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="l10n_ve_fiscal_book.view_fiscal_book_lines_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='type']" position="replace">
+                    <field name="type" invisible="1"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <!-- Inherit res partner -->
+        <record model="ir.ui.view" id="inherit_view_partner_form_fb">
+            <field name="name">inherit.view.partner.form.fb</field>
+            <field name="model">res.partner</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='customer']" position="before">
+                     <field name="partner_type"/>
+                </xpath>
+            </field>
+        </record>
+        
+    </data>
+</openerp>

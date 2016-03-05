@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record id="herrera_fleet_product_normal_form_view" model="ir.ui.view">
+            <field name="name">herrera.fleet.product.normal.form.view</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='default_code']" position="replace">
+                    <field name="default_code" string="Código Interno" attrs="{'invisible': [('type','=','consu')], 'required':[('type','=','product')]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

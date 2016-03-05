@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="inherited_account_product_normal_form_view">
+            <field name="name">inherit.account.product.normal.form</field>
+            <field name="model">product.product</field>
+            <field name="priority">6</field>
+            <field name="inherit_id" ref="account.product_normal_form_view" />
+            <field name="arch" type="xml">
+<!--
+                <xpath expr="//field[@name='type']" position="replace">
+                    <field name="type" on_change="onchange_product_type(type)"/>
+                </xpath>
+-->
+                <xpath expr="//page[@string='Accounting']" position="attributes">
+                    <attribute name="groups">account.group_account_user</attribute>
+                </xpath>
+                  <xpath expr='//field[@name="property_account_income"]' position='replace'>
+                    <field name="property_account_income" domain="[('type','=','other')]" />
+                </xpath>
+                <xpath expr='//field[@name="property_account_expense"]' position='replace'>
+                    <field name="property_account_expense" domain="[('type','=','other')]" />
+                </xpath>
+            </field>
+        </record>        
+<!--
+        <record model="ir.ui.view" id="inherited_product_product_normal_form_view">
+            <field name="name">inherit.product.product.normal.form</field>
+            <field name="model">product.product</field>
+            <field name="priority">7</field>
+            <field name="inherit_id" ref="product.product_normal_form_view" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='type']" position="attributes">
+                    <attribute name="on_change">onchange_product_type(type)</attribute>
+                </xpath>
+            </field>
+        </record>        
+-->
+    </data>
+</openerp>

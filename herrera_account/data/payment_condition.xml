@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<openerp>
+    <data noupdate="0">
+        
+        <record id='payment_condition_0' model='account.payment.condition'>
+            <field name='name'>CREDITO</field>
+            <field name='code'>0</field>
+            <field name='active'>TRUE</field>
+            <field name='term_ids' eval="[(4, ref('account.account_payment_term_immediate')),
+                                          (4, ref('payment_term_6')),
+                                          (4, ref('payment_term_7')),
+                                          (4, ref('payment_term_8')),
+                                          (4, ref('payment_term_9')),
+                                          (4, ref('payment_term_10')),
+                                          (4, ref('payment_term_11')),
+                                          (4, ref('payment_term_12')),
+                                          (4, ref('payment_term_13')),
+                                          (4, ref('payment_term_14')),
+                                          (4, ref('payment_term_16')),
+                                          (4, ref('payment_term_17')),
+                                          (4, ref('payment_term_18')),
+                                          (4, ref('payment_term_19')),
+                                          (4, ref('payment_term_20')),
+                                          (4, ref('payment_term_21')),
+                                          (4, ref('payment_term_28')),
+                                          (4, ref('payment_term_45')),
+                                          (4, ref('payment_term_60')),
+                                          (4, ref('account.account_payment_term_line_15days')),
+                                          (4, ref('account.account_payment_term_net'))]"/>
+            <field name='payment_term' ref="payment_term_6"/>
+        </record>
+        
+        <record id='payment_condition_1' model='account.payment.condition'>
+            <field name='name'>COD EFECTIVO</field>
+            <field name='code'>1</field>
+            <field name='active'>TRUE</field>
+            <field name='term_ids' eval="[(4, ref('account.account_payment_term_immediate'))]"/>
+            <field name='payment_term' ref="account.account_payment_term_immediate"/>
+        </record>
+        
+        <record id='payment_condition_2' model='account.payment.condition'>
+            <field name='name'>COD CHEQUE</field>
+            <field name='code'>2</field>
+            <field name='active'>TRUE</field>
+            <field name='term_ids' eval="[(4, ref('account.account_payment_term_immediate'))]"/>
+            <field name='payment_term' ref="account.account_payment_term_immediate"/>
+        </record>
+        
+        <record id='payment_condition_3' model='account.payment.condition'>
+            <field name='name'>COD DEPOSITO</field>
+            <field name='code'>3</field>
+            <field name='active'>TRUE</field>
+            <field name='term_ids' eval="[(4, ref('account.account_payment_term_immediate'))]"/>
+            <field name='payment_term' ref="account.account_payment_term_immediate"/>
+        </record>
+        
+        <record id='payment_condition_4' model='account.payment.condition'>
+            <field name='name'>CREDITO EFECTIVO</field>
+            <field name='code'>4</field>
+            <field name='active'>TRUE</field>
+            <field name='term_ids' eval="[(4, ref('account.account_payment_term_immediate')),
+                                          (4, ref('payment_term_6'))]"/>
+            <field name='payment_term' ref="account.account_payment_term_immediate"/>
+        </record>
+        
+        <record id='payment_condition_5' model='account.payment.condition'>
+            <field name='name'>CREDITO DEPOSITO</field>
+            <field name='code'>5</field>
+            <field name='active'>TRUE</field>
+            <field name='term_ids' eval="[(4, ref('account.account_payment_term_immediate')),
+                                          (4, ref('payment_term_6'))]"/>
+            <field name='payment_term' ref="account.account_payment_term_immediate"/>
+        </record>
+        
+    </data>
+</openerp>

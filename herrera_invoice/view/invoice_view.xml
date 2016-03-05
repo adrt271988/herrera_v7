@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<openerp>
+   <data>
+      <record model="ir.ui.view" id="hr_invoice_supplier_view">
+            <field name="name">hr.invoice.supplier.form</field>
+            <field name="model">account.invoice</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="l10n_ve_fiscal_requirements.account_invoice_ext_view_supp_form_loc_ve" />
+            <field name="arch" type="xml">
+
+                <!--    Ocultados    -->
+                <xpath expr='//field[@name="nro_ctrl"]' position='replace'>
+                </xpath>
+                <xpath expr='//label[@for="date_invoice"]' position='replace'>
+                </xpath>
+                <xpath expr='//label[@for="date_document"]' position='replace'>
+                </xpath>
+                <xpath expr='//field[@name="date_invoice"]' position='replace'>
+                </xpath>
+                <xpath expr='//field[@name="date_document"]' position='replace'>
+                </xpath>
+                <xpath expr='//button[@string="Change control number"]' position='replace'>
+                </xpath>
+                <xpath expr='//label[@string="(Put here the date when Purchase Invoice was generated for the supplier)"]' position='replace'>
+                </xpath>
+                <xpath expr='//label[@string="(keep empty to use the current date, this will be date used in accounting and Fiscal moves)"]' position='replace'>
+                </xpath>
+                <!--    Reasignados    -->
+                <xpath expr='//field[@name="supplier_invoice_number"]' position='before'>
+                    <field name="nro_ctrl" required="1" />
+                </xpath>
+                <xpath expr='//field[@name="origin"]' position='after'>
+                    <field name="reception_date" />
+                </xpath>
+                <xpath expr='//field[@name="fiscal_position"]' position='replace'>
+                     <field name="fiscal_position" invisible="1"/>
+                </xpath>
+                <xpath expr='//field[@name="date_due"]' position='before'>
+                    <field name="date_invoice" help="Dejar esta fecha vacía para usar la fecha actual; esta será la fecha utilizada en la contabilidad y en los Movimientos Fiscales"/>
+                </xpath>
+                <xpath expr='//field[@name="date_invoice"]' position='before'>
+                    <field name="date_document" help="Coloque aquí la fecha de la orden de compra que se genero para el proveedor" />
+                </xpath>
+            </field>
+      </record>
+      
+      <!--    Herencia de vista en tree de factura del proveedor   -->
+      <record model="ir.ui.view" id="inherit_invoice_supplier_tree_view">
+            <field name="name">inherit.invoice.supplier.tree</field>
+            <field name="model">account.invoice</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="account.invoice_tree" />
+            <field name="arch" type="xml">
+                <xpath expr='//field[@name="currency_id"]' position='replace' />
+                <xpath expr='//field[@name="amount_untaxed"]' position='replace' />
+                <xpath expr='//field[@name="user_id"]' position='replace'>
+                    <field name="user_id" string="Usuario" />
+                </xpath>
+            </field>
+        </record>
+      <!--    Herencia de vista en tree de factura del proveedor   -->
+      <record model="ir.ui.view" id="inherit_account_invoice_wh_iva_tree_view">
+            <field name="name">inherit.account.invoice_wh.iva.tree</field>
+            <field name="model">account.invoice</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="l10n_ve_withholding_iva.account_invoice_wh_iva_tree" />
+            <field name="arch" type="xml">
+                <xpath expr='//field[@name="wh_iva"]' position='replace' />
+            </field>
+        </record>
+        
+      <!--    Herencia de vista en form de factura del cliente   -->
+      <record model="ir.ui.view" id="inherit_localization_invoice_view">
+            <field name="name">inherit.localization.invoice.form</field>
+            <field name="model">account.invoice</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="l10n_ve_fiscal_requirements.account_invoice_ext_view_form_loc_ve" />
+            <field name="arch" type="xml">
+        <!-- Comentamos el boton de dividir facturas ya que se hara implicitamente al validarla -->
+        <!--
+                <xpath expr='//button[@name="invoice_cancel"]' position='before'>
+                    <button name="split_invoice" string="Dividir factura" states="draft" type="object" />
+                </xpath>
+        -->
+                <xpath expr='//field[@name="nro_ctrl"]' position='replace' />
+                <xpath expr='//button[@string="Change control number"]' position='replace' />
+                <xpath expr='//field[@name="partner_id"]' position='after'>
+                    <field name="nro_ctrl" required="1" />
+                </xpath>
+            </field>
+        </record>
+        
+        <!--    Herencia de vista en form de factura del proveedor    -->
+        <record model="ir.ui.view" id="hr_invoice_supplier_form">
+            <field name="name">hr.invoice.supplier</field>
+            <field name="model">account.invoice</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form" />
+            <field name="arch" type="xml">
+                
+                <xpath expr='//div[@class="oe_title"]' position='after'>
+                    <div class="oe_right oe_button_box" name="button_box">
+                        <button name="%(l10n_ve_fiscal_requirements.action_wiz_nroctrl)d"  string="Cambiar N° de Control" type="action" class="oe_light"/>
+                    </div>
+                </xpath>
+                <xpath expr='//field[@name="product_id"]' position='replace'>
+                    <field name="product_id" domain="[('seller_ids.name', '=', parent.partner_id)]" on_change="product_id_change_inh(product_id, uos_id, quantity, name, parent.type, parent.partner_id, parent.fiscal_position, price_unit, parent.currency_id, context, parent.company_id,measure)"/>
+                </xpath>
+                <xpath expr='//field[@name="reference_type"]' position='replace'>
+                </xpath>
+                <xpath expr='//field[@name="reference"]' position='replace'>
+                </xpath>
+                <xpath expr='//field[@name="partner_id"]' position='before'>
+                    <field name="number"/>
+                </xpath>
+                <xpath expr='//field[@name="payment_term"]' position='replace'>
+                    <field name="payment_term" on_change="get_date_exp(payment_term,name)" required="1"/>
+                </xpath>
+                <xpath expr='//field[@name="uos_id"]' position='replace'>
+                    <field name="uos_id" invisible="1"/>
+                    <field name="measure" string="UdM"/>
+                </xpath>
+                <xpath expr='//field[@name="supplier_invoice_number"]' position='attributes'>
+                    <attribute name="required">True</attribute>
+                </xpath>
+                <xpath expr='//field[@name="supplier_invoice_number"]' position="after">
+                    <field name="discount"/>
+                </xpath>
+                <xpath expr='//field[@name="amount_untaxed"]' position="after">
+                    <field name="amount_discount" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <!--    Herencia de la linea de factura del proveedor    -->
+<!--
+        <record model="ir.ui.view" id="hr_account_invoice_line">
+            <field name="name">hr.account.invoice.line</field>
+            <field name="model">account.invoice.line</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="account.view_invoice_line_form" />
+            <field name="arch" type="xml">
+        
+                <xpath expr="//field[@name='account_id']" position="replace">
+                   <field domain="[('company_id', '=', parent.company_id), ('journal_id', '=', parent.journal_id), ('type', '&lt;&gt;', 'view')]" name="account_id" on_change="onchange_account_id(product_id, parent.partner_id, parent.type, parent.fiscal_position,account_id)" groups="account.group_account_user"/>
+                </xpath>
+
+            </field>
+        </record>
+-->
+        
+        <record model="ir.ui.view" id="hr_account_asset_invoice">
+            <field name="name">hr.account.asset.invoice</field>
+            <field name="model">account.invoice</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="account_asset.view_invoice_asset_category" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='invoice_line']/tree/field[@name='asset_category_id']" position="replace" />
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="hr_stock_invoice_onshipping">
+            <field name="name">hr.stock.invoice.onshipping</field>
+            <field name="model">stock.invoice.onshipping</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="stock.view_stock_invoice_onshipping" />
+            <field name="arch" type="xml">
+        
+                <xpath expr='//field[@name="invoice_date"]' position='replace'>
+                    <field name="invoice_date" string="Fecha de la Factura"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+    </openerp>
+

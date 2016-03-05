@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <!-- Vista en Form Autorizaciones  -->
+        <record model="ir.ui.view" id="mail_authorization_form">
+            <field name="name">mail.authorization.form</field>
+            <field name="model">mail.authorization</field>
+            <field name="arch" type="xml">
+            <form string="Asset inventory" version="7.0">
+                <header>
+                </header>
+                <sheet>
+                    <label for="name" class="oe_edit_only"/>
+                        <h1><field name="name"/></h1>
+                    <group>
+                        <group>
+                            <field name="reference" invisible="1"/>
+                            <field name="contact" placeholder="ej. Jefe de Administración"/>
+                        </group>
+                        <group>
+                            <field name="date"/>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                    <notebook>
+                    <page string="Contactos Autorizados">
+                        <group>
+                            <field name="user_ids" nolabel = "1"/> 
+                        </group>
+                    </page>
+                    <page string="Datos Técnicos" groups="base.group_no_one">
+                            <group>
+                                <group string="Accion a Activar">
+                                    <field name="model" placeholder="ej. res.partner"/>
+                                    <field name="function" placeholder="ej. write"/><field name="args" placeholder="ej. {'active': False}"/>
+                                </group>
+                                <group string="Visualizacion">
+                                    <field name="module" placeholder="ej. base"/>
+                                    <field name="view_name" placeholder="ej. view_partner_form"/>
+                                    <field name="view_type" placeholder="ej. form"/>
+                                </group>
+                            </group>
+                    </page>
+                    </notebook>
+                </sheet>
+              </form>
+            </field>
+           </record>
+        
+        <!-- Vista en Tree Autorizaciones  -->
+        <record model="ir.ui.view" id="mail_authorization_tree">
+            <field name="name">mail.authorization.tree</field>
+            <field name="model">mail.authorization</field>
+            <field name="arch" type="xml">
+                <tree string = "Autorizaciones Especiales" version="7.0" > <!-- create = "1" editable = "top"-->
+                    <field name="reference"/>
+                    <field name="name"/>
+                    <field name="date"/>
+                </tree>
+            </field>
+        </record>
+        
+        <!-- Action  Autorizaciones  -->
+        <record id="action_view_authorization" model="ir.actions.act_window">
+            <field name="name">Autorizaciones</field>
+            <field name="res_model">mail.authorization</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menus  -->
+        <menuitem name="Autorizaciones" id="menu_mail_authorization" parent="mail.mail_feeds_main"  />
+        <menuitem name="Autorizaciones" id="mail_authorization" action="action_view_authorization" parent="menu_mail_authorization" sequence = "1" groups="base.group_no_one"/>
+        
+        <record id="mail_special_password_search_form_view" model="ir.ui.view">
+            <field name="name">mail.authorization.request.search.form</field>
+            <field name="model">mail.authorization.request</field>
+            <field name="arch" type="xml">
+                <search string="Autorizacion">
+                   <field name="name"/>
+                   <field name="ref"/>
+                   <separator/>
+                   <filter string="En espera" name="filter_wait" icon="terp-accessories-archiver" domain="[('state','=','wait')]"/>
+                   <filter string="Autorizada" name="filter_done" icon="terp-accessories-archiver" domain="[('state','=','done')]"/>
+                   <separator/>
+                   <filter string="Mis solicitudes" domain="[('user_id','=',uid)]" help="Solicitudes que has emitido" icon="terp-personal" name="my_request_filter"/>
+                   <filter string="Mis autorizaciones"
+                            domain="['|',('authorizing_user','=',uid),('authorization_id.user_ids', 'in', [uid])]"
+                            help="Solicitudes a la que estas autorizado para aprobar"/>
+                    <separator/>
+                </search>
+            </field>
+        </record>
+        
+        <!-- Vista en Form Solicitudes  -->
+          <record model="ir.ui.view" id="mail_special_password_form">
+            <field name="name">mail.authorization.request.form</field>
+            <field name="model">mail.authorization.request</field>
+            <field name="arch" type="xml">
+            <form string="Autorizacion" version="7.0">
+                <header>
+                    <button name="set_to_wait" states="draft" string="Confirmar" type="object" class="oe_highlight"/>
+                    <button name="set_to_done" states="wait" string="Autorizar" type="object" class="oe_highlight"/>
+                    <button name="set_to_close" states="wait" string="Rechazar" type="object" class="oe_highlight"/>
+                    <field name="state" widget="statusbar" statusbar_visible="wait,done,close"/>
+                </header>
+                <sheet>
+                    <label for="name" class="oe_edit_only"/>
+                      <h1><field name="name"/></h1>
+                    <label for="authorization_id" class="oe_edit_only"/>
+                      <field name="authorization_id"/>
+                    <group>
+                        <group>
+                            <field name="user_id"/>
+                            <field name="request_date"/>
+                        </group>
+                        <group>
+                            <field name="ref"/>
+                            <field name="res_id"/>
+                        </group>
+                        <group string="Datos de Autorización o Rechazo" colspan= "3">
+                            <field name="date_end"/> 
+                            <field name="authorizing_user"/> 
+                            <field name="note"/> 
+                        </group>
+                    </group>
+
+                </sheet>
+                  <div class="oe_chatter">
+                    <field name="message_ids" widget="mail_thread" /> <!-- options="{&quot;thread_level&quot;: 1}"-->
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                  </div>
+              </form>
+                    
+          </field>
+        </record>
+        
+        <!-- Vista en Tree Solicitudes  -->
+        <record model="ir.ui.view" id="mail_special_password_tree">
+            <field name="name">mail.authorization.request.tree</field>
+            <field name="model">mail.authorization.request</field>
+            <field name="arch" type="xml">
+                <tree string = "Claves Especiales" version="7.0" colors="blue:state == 'draft'; black:state == 'done'; red:state == 'wait'; gray:state == 'close'">
+                    <field name="name"/>
+                    <field name="authorization_id"/>
+                    <field name="ref"/>
+                    <field name="contact"/>
+                    <field name="user_id"/>
+                    <field name="request_date"/>
+                    <field name="state"/>
+                    <button name="view_model_data" icon="STOCK_FIND" type="object" string="Ver origen"/>
+                </tree>
+            </field>
+        </record>
+        
+        <!-- Action Solicitudes  -->
+        <record model='ir.actions.act_window' id='mail_authorization_request_act'>
+            <field name="name">mail.authorization.request.act</field>
+            <field name="res_model">mail.authorization.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'search_default_my_request_filter': 1, 'search_default_filter_wait': 1}</field>
+        </record>
+       <menuitem name="Solicitudes" id="mail_authorization_request" action="mail_authorization_request_act" parent="menu_mail_authorization"  sequence = "2"/>
+
+    </data>
+</openerp>

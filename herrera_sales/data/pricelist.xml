@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate = "0">
+        <!-- Creamos la Tarifa -->
+        <record id="herrera_sales_pricelist_1" model = "product.pricelist">
+            <field name="name">Oferta Pampers Supersec PEQ 1x12</field>
+            <field name="type">sale</field>
+            <field name="currency_id" ref="base.VEF"/>
+        </record>
+        
+        <!-- Creamos la Versión de Tarifa -->
+        <record id="herrera_sales_pricelist_version_1" model = "product.pricelist.version">
+            <field name="name">10% de Descuento</field>
+            <field name="pricelist_id" ref = "herrera_sales_pricelist_1"/>
+            <field name="date_start">2013-01-01</field>
+            <field name="date_end">2013-12-31</field>
+        </record>
+        
+        <!-- Creamos las Reglas de Tarifa -->
+        <record id="herrera_sales_pricelist_item_1" model = "product.pricelist.item">
+            <field name="name">Regla General</field>
+            <field name="product_id" ref="herrera_product.herrera_product_1"/>
+            <field name="base" eval="1"/>
+            <field name="min_quantity">1</field>
+            <field name="price_discount">-0.01</field>
+            <field name="sequence">6</field>
+            <field name="price_version_id" ref="herrera_sales_pricelist_version_1"/>
+        </record>
+        
+        <record id="herrera_sales_pricelist_item_2" model = "product.pricelist.item">
+            <field name="name">10% Descuento en Pampers Supersec PEQ 1x12</field>
+            <field name="product_id" ref="herrera_product.herrera_product_1"/>
+            <field name="base" eval="1"/>
+            <field name="min_quantity">30</field>
+            <field name="price_discount">-0.1</field>
+            <field name="sequence">4</field>
+            <field name="price_version_id" ref="herrera_sales_pricelist_version_1"/>
+        </record>
+        
+        <record id="herrera_sales_pricelist_item_3" model = "product.pricelist.item">
+            <field name="name">15% Descuento en Pampers Supersec PEQ 1x12</field>
+            <field name="product_id" ref="herrera_product.herrera_product_1"/>
+            <field name="base" eval="1"/>
+            <field name="min_quantity">50</field>
+            <field name="price_discount">-0.15</field>
+            <field name="sequence">3</field>
+            <field name="price_version_id" ref="herrera_sales_pricelist_version_1"/>
+        </record>
+    </data>
+</openerp>

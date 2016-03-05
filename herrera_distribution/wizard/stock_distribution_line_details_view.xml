@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <record model='ir.ui.view' id='wizard_distribution_line_picking_form'>
+        <field name='name'>wizard.distribution.line.picking.form</field>
+        <field name='model'>wizard.distribution.line.picking</field>
+        <field name='type'>form</field>
+        <field name='arch' type='xml'>
+            <form string="Detalles del Pedido" version="7.0">
+                    <group>
+                        <div class="oe_title">
+                            <h1>
+                                <label string="Pedido de venta"/>
+                                <field name="name" class="oe_inline" readonly="1"/>
+                            </h1>
+                        </div>
+                    </group>
+                    <group  string = "Movimientos de Stock" >
+                        <field name="line_ids" nolabel = "1">
+                            <tree string = "Movimientos de Stock" create="0" editable="bottom" delete="0" version="7.0">
+                                <field name="product_id" readonly = "1"/>
+                                <field name="product_qty" readonly = "1"/>
+                                <field name="prodlot_id" readonly = "1"/>
+                                <field name="location_dest_id" readonly = "1"/>
+                                <field name="confirm" context= "{'confirm': True}"/>
+                            </tree>
+                        </field>
+                    </group>
+                    <footer>
+                        <button name="confirm_and_save" string="Confirmar selección" type="object" class="oe_highlight"/>
+                        <button name="action_ok_all" string="Confirmar todos" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+<!--
+                    
+                    <button name="confirm_and_save" string="Continuar" type="object"/>
+                    <button icon="gtk-cancel" special="cancel" string="Cerrar"/>
+-->
+            </form>
+        </field>
+    </record>
+
+    <record id="wizard_distribution_line_picking_action" model="ir.actions.act_window">
+        <field name="name">Detalles del Pedido</field>
+        <field name='res_model'>wizard.distribution.line.picking</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+    
+</data>
+</openerp>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <report id="report_stock_distribution_report"
+                model="stock.distribution"
+                name="stock.distribution.report"
+                string="Imprimir Despacho"
+                rml="herrera_distribution/report/stock_distribution_report.rml" />
+		
+        <report id="report_stock_reception_report"
+                model="stock.reception"
+                name="stock.reception.report"
+                string="Imprimir Recepción"
+                rml="herrera_distribution/report/stock_reception_report.rml"
+		menu="False" />
+		
+        <report id="report_stock_distribution_sada_report"
+                model="stock.distribution"
+                name="stock.distribution.sada.report"
+                string="Imprimir SADA"
+                rml="herrera_distribution/report/stock_distribution_sada_report.rml"
+		menu="False" />
+    
+        <report id="report_invoice_forwarding_report"
+                model="stock.reception"
+                name="invoice.forwarding.report"
+                string="Imprimir Reenvíos"
+                rml="herrera_distribution/report/invoice_forwarding_report.rml" />
+    </data>
+</openerp>

@@ -1,0 +1,2 @@
+import stock_global_report
+import stock_hall_report

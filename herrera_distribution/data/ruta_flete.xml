@@ -1,0 +1,2191 @@
+<?xml version="1.0"?>
+<openerp>
+    <data noupdate="1">
+<!--
+RUTA 12
+-->
+        <record id='ruta_12_1' model='freight.route'>
+            <field name='name'>Ruta 12</field>
+            <field name='code'>12</field>
+            <field name='rank'>De 0 a 50 Kms</field>
+            <field name='shop_id'>1</field>
+        </record>
+                <record id='detail_1' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.53</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_1'/>
+                </record>
+                <record id='detail_2' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_1'/>
+                </record>
+                <record id='detail_3' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.10</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_1'/>
+                </record>
+        
+        <record id='ruta_12_2' model='freight.route'>
+            <field name='name'>Ruta 12</field>
+            <field name='code'>12</field>
+            <field name='rank'>De 0 a 50 Kms</field>
+            <field name='shop_id'>2</field>
+        </record>
+                <record id='detail_4' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.53</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_2'/>
+                </record>
+                <record id='detail_5' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_2'/>
+                </record>
+                <record id='detail_6' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.10</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_2'/>
+                </record>
+        <record id='ruta_12_3' model='freight.route'>
+            <field name='name'>Ruta 12</field>
+            <field name='code'>12</field>
+            <field name='rank'>De 0 a 50 Kms</field>
+            <field name='shop_id'>3</field>
+        </record>
+                <record id='detail_7' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.53</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_3'/>
+                </record>
+                <record id='detail_8' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_3'/>
+                </record>
+                <record id='detail_9' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.10</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_3'/>
+                </record>
+        <record id='ruta_12_4' model='freight.route'>
+            <field name='name'>Ruta 12</field>
+            <field name='code'>12</field>
+            <field name='rank'>De 0 a 50 Kms</field>
+            <field name='shop_id'>4</field>
+        </record>
+                <record id='detail_10' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.53</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_4'/>
+                </record>
+                <record id='detail_11' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_4'/>
+                </record>
+                <record id='detail_12' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.10</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_4'/>
+                </record>
+        <record id='ruta_12_5' model='freight.route'>
+            <field name='name'>Ruta 12</field>
+            <field name='code'>12</field>
+            <field name='rank'>De 0 a 50 Kms</field>
+            <field name='shop_id'>5</field>
+        </record>
+                <record id='detail_13' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.53</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_5'/>
+                </record>
+                <record id='detail_14' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_5'/>
+                </record>
+                <record id='detail_15' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.10</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_5'/>
+                </record>
+        <record id='ruta_12_6' model='freight.route'>
+            <field name='name'>Ruta 12</field>
+            <field name='code'>12</field>
+            <field name='rank'>De 0 a 50 Kms</field>
+            <field name='shop_id'>6</field>
+        </record>
+                <record id='detail_16' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.53</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_6'/>
+                </record>
+                <record id='detail_17' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_6'/>
+                </record>
+                <record id='detail_18' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.10</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_6'/>
+                </record>
+        <record id='ruta_12_7' model='freight.route'>
+            <field name='name'>Ruta 12</field>
+            <field name='code'>12</field>
+            <field name='rank'>De 0 a 50 Kms</field>
+            <field name='shop_id'>7</field>
+        </record>
+                <record id='detail_19' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.53</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_7'/>
+                </record>
+                <record id='detail_20' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_7'/>
+                </record>
+                <record id='detail_21' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.10</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_7'/>
+                </record>
+        <record id='ruta_12_8' model='freight.route'>
+            <field name='name'>Ruta 12</field>
+            <field name='code'>12</field>
+            <field name='rank'>De 0 a 50 Kms</field>
+            <field name='shop_id'>8</field>
+        </record>
+                <record id='detail_22' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.53</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_8'/>
+                </record>
+                <record id='detail_23' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_8'/>
+                </record>
+                <record id='detail_24' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.10</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_8'/>
+                </record>
+        <record id='ruta_12_9' model='freight.route'>
+            <field name='name'>Ruta 12</field>
+            <field name='code'>12</field>
+            <field name='rank'>De 0 a 50 Kms</field>
+            <field name='shop_id'>9</field>
+        </record>
+                <record id='detail_25' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.53</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_9'/>
+                </record>
+                <record id='detail_26' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_9'/>
+                </record>
+                <record id='detail_27' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.10</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_9'/>
+                </record>
+        <record id='ruta_12_10' model='freight.route'>
+            <field name='name'>Ruta 12</field>
+            <field name='code'>12</field>
+            <field name='rank'>De 0 a 50 Kms</field>
+            <field name='shop_id'>10</field>
+        </record>
+                <record id='detail_28' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.53</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_10'/>
+                </record>
+                <record id='detail_29' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_10'/>
+                </record>
+                <record id='detail_30' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.10</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_12_10'/>
+                </record>
+<!--
+RUTA 14
+-->
+        <record id='ruta_14_1' model='freight.route'>
+            <field name='name'>Ruta 14</field>
+            <field name='code'>14</field>
+            <field name='rank'>De 51 a 100 Kms</field>
+            <field name='shop_id'>1</field>
+        </record>
+                <record id='detail_31' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.60</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_1'/>
+                </record>
+                <record id='detail_32' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_1'/>
+                </record>
+                <record id='detail_33' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.11</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_1'/>
+                </record>
+        <record id='ruta_14_2' model='freight.route'>
+            <field name='name'>Ruta 14</field>
+            <field name='code'>14</field>
+            <field name='rank'>De 51 a 100 Kms</field>
+            <field name='shop_id'>2</field>
+        </record>
+                <record id='detail_34' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.60</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_2'/>
+                </record>
+                <record id='detail_35' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_2'/>
+                </record>
+                <record id='detail_36' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.11</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_2'/>
+                </record>
+        <record id='ruta_14_3' model='freight.route'>
+            <field name='name'>Ruta 14</field>
+            <field name='code'>14</field>
+            <field name='rank'>De 51 a 100 Kms</field>
+            <field name='shop_id'>3</field>
+        </record>
+                <record id='detail_37' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.60</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_3'/>
+                </record>
+                <record id='detail_38' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_3'/>
+                </record>
+                <record id='detail_39' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.11</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_3'/>
+                </record>
+        <record id='ruta_14_4' model='freight.route'>
+            <field name='name'>Ruta 14</field>
+            <field name='code'>14</field>
+            <field name='rank'>De 51 a 100 Kms</field>
+            <field name='shop_id'>4</field>
+        </record>
+                <record id='detail_40' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.60</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_4'/>
+                </record>
+                <record id='detail_41' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_4'/>
+                </record>
+                <record id='detail_42' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.11</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_4'/>
+                </record>
+        <record id='ruta_14_5' model='freight.route'>
+            <field name='name'>Ruta 14</field>
+            <field name='code'>14</field>
+            <field name='rank'>De 51 a 100 Kms</field>
+            <field name='shop_id'>5</field>
+        </record>
+                <record id='detail_43' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.60</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_5'/>
+                </record>
+                <record id='detail_44' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_5'/>
+                </record>
+                <record id='detail_45' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.11</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_5'/>
+                </record>
+        <record id='ruta_14_6' model='freight.route'>
+            <field name='name'>Ruta 14</field>
+            <field name='code'>14</field>
+            <field name='rank'>De 51 a 100 Kms</field>
+            <field name='shop_id'>6</field>
+        </record>
+                <record id='detail_46' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.60</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_6'/>
+                </record>
+                <record id='detail_47' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_6'/>
+                </record>
+                <record id='detail_48' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.11</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_6'/>
+                </record>
+        <record id='ruta_14_7' model='freight.route'>
+            <field name='name'>Ruta 14</field>
+            <field name='code'>14</field>
+            <field name='rank'>De 51 a 100 Kms</field>
+            <field name='shop_id'>7</field>
+        </record>
+                <record id='detail_49' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.60</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_7'/>
+                </record>
+                <record id='detail_50' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_7'/>
+                </record>
+                <record id='detail_51' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.11</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_7'/>
+                </record>
+        <record id='ruta_14_8' model='freight.route'>
+            <field name='name'>Ruta 14</field>
+            <field name='code'>14</field>
+            <field name='rank'>De 51 a 100 Kms</field>
+            <field name='shop_id'>8</field>
+        </record>
+                <record id='detail_52' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.60</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_8'/>
+                </record>
+                <record id='detail_53' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_8'/>
+                </record>
+                <record id='detail_54' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.11</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_8'/>
+                </record>
+        <record id='ruta_14_9' model='freight.route'>
+            <field name='name'>Ruta 14</field>
+            <field name='code'>14</field>
+            <field name='rank'>De 51 a 100 Kms</field>
+            <field name='shop_id'>9</field>
+        </record>
+                <record id='detail_55' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.60</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_9'/>
+                </record>
+                <record id='detail_56' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_9'/>
+                </record>
+                <record id='detail_57' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.11</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_9'/>
+                </record>
+        <record id='ruta_14_10' model='freight.route'>
+            <field name='name'>Ruta 14</field>
+            <field name='code'>14</field>
+            <field name='rank'>De 51 a 100 Kms</field>
+            <field name='shop_id'>10</field>
+        </record>
+                <record id='detail_58' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.60</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_10'/>
+                </record>
+                <record id='detail_59' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_10'/>
+                </record>
+                <record id='detail_60' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.11</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_14_10'/>
+                </record>
+<!--
+RUTA 16
+-->
+        <record id='ruta_16_1' model='freight.route'>
+            <field name='name'>Ruta 16</field>
+            <field name='code'>16</field>
+            <field name='rank'>De 101 a 150 Kms</field>
+            <field name='shop_id'>1</field>
+        </record>
+                <record id='detail_61' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.68</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_1'/>
+                </record>
+                <record id='detail_62' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_1'/>
+                </record>
+                <record id='detail_63' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.12</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_1'/>
+                </record>
+        <record id='ruta_16_2' model='freight.route'>
+            <field name='name'>Ruta 16</field>
+            <field name='code'>16</field>
+            <field name='rank'>De 101 a 150 Kms</field>
+            <field name='shop_id'>2</field>
+        </record>
+                <record id='detail_64' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.68</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_2'/>
+                </record>
+                <record id='detail_65' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_2'/>
+                </record>
+                <record id='detail_66' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.12</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_2'/>
+                </record>
+        <record id='ruta_16_3' model='freight.route'>
+            <field name='name'>Ruta 16</field>
+            <field name='code'>16</field>
+            <field name='rank'>De 101 a 150 Kms</field>
+            <field name='shop_id'>3</field>
+        </record>
+                <record id='detail_67' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.68</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_3'/>
+                </record>
+                <record id='detail_68' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_3'/>
+                </record>
+                <record id='detail_69' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.12</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_3'/>
+                </record>
+        <record id='ruta_16_4' model='freight.route'>
+            <field name='name'>Ruta 16</field>
+            <field name='code'>16</field>
+            <field name='rank'>De 101 a 150 Kms</field>
+            <field name='shop_id'>4</field>
+        </record>
+                <record id='detail_70' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.68</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_4'/>
+                </record>
+                <record id='detail_71' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_4'/>
+                </record>
+                <record id='detail_72' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.12</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_4'/>
+                </record>
+        <record id='ruta_16_5' model='freight.route'>
+            <field name='name'>Ruta 16</field>
+            <field name='code'>16</field>
+            <field name='rank'>De 101 a 150 Kms</field>
+            <field name='shop_id'>5</field>
+        </record>
+                <record id='detail_73' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.68</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_5'/>
+                </record>
+                <record id='detail_74' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_5'/>
+                </record>
+                <record id='detail_75' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.12</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_5'/>
+                </record>
+        <record id='ruta_16_6' model='freight.route'>
+            <field name='name'>Ruta 16</field>
+            <field name='code'>16</field>
+            <field name='rank'>De 101 a 150 Kms</field>
+            <field name='shop_id'>6</field>
+        </record>
+                <record id='detail_76' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.68</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_6'/>
+                </record>
+                <record id='detail_77' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_6'/>
+                </record>
+                <record id='detail_78' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.12</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_6'/>
+                </record>
+        <record id='ruta_16_7' model='freight.route'>
+            <field name='name'>Ruta 16</field>
+            <field name='code'>16</field>
+            <field name='rank'>De 101 a 150 Kms</field>
+            <field name='shop_id'>7</field>
+        </record>
+                <record id='detail_79' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.68</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_7'/>
+                </record>
+                <record id='detail_80' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_7'/>
+                </record>
+                <record id='detail_81' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.12</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_7'/>
+                </record>
+        <record id='ruta_16_8' model='freight.route'>
+            <field name='name'>Ruta 16</field>
+            <field name='code'>16</field>
+            <field name='rank'>De 101 a 150 Kms</field>
+            <field name='shop_id'>8</field>
+        </record>
+                <record id='detail_82' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.68</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_8'/>
+                </record>
+                <record id='detail_83' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_8'/>
+                </record>
+                <record id='detail_84' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.12</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_8'/>
+                </record>
+        <record id='ruta_16_9' model='freight.route'>
+            <field name='name'>Ruta 16</field>
+            <field name='code'>16</field>
+            <field name='rank'>De 101 a 150 Kms</field>
+            <field name='shop_id'>9</field>
+        </record>
+                <record id='detail_85' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.68</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_9'/>
+                </record>
+                <record id='detail_86' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_9'/>
+                </record>
+                <record id='detail_87' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.12</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_9'/>
+                </record>
+        <record id='ruta_16_10' model='freight.route'>
+            <field name='name'>Ruta 16</field>
+            <field name='code'>16</field>
+            <field name='rank'>De 101 a 150 Kms</field>
+            <field name='shop_id'>10</field>
+        </record>
+                <record id='detail_88' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.68</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_10'/>
+                </record>
+                <record id='detail_89' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_10'/>
+                </record>
+                <record id='detail_90' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.12</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_16_10'/>
+                </record>
+<!--
+RUTA 18
+-->
+        <record id='ruta_18_1' model='freight.route'>
+            <field name='name'>Ruta 18</field>
+            <field name='code'>18</field>
+            <field name='rank'>De 151 a 200 Kms</field>
+            <field name='shop_id'>1</field>
+        </record>
+                <record id='detail_91' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.77</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_1'/>
+                </record>
+                <record id='detail_92' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_1'/>
+                </record>
+                <record id='detail_93' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.14</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_1'/>
+                </record>
+        <record id='ruta_18_2' model='freight.route'>
+            <field name='name'>Ruta 18</field>
+            <field name='code'>18</field>
+            <field name='rank'>De 151 a 200 Kms</field>
+            <field name='shop_id'>2</field>
+        </record>
+                <record id='detail_94' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.77</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_2'/>
+                </record>
+                <record id='detail_95' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_2'/>
+                </record>
+                <record id='detail_96' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.14</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_2'/>
+                </record>
+        <record id='ruta_18_3' model='freight.route'>
+            <field name='name'>Ruta 18</field>
+            <field name='code'>18</field>
+            <field name='rank'>De 151 a 200 Kms</field>
+            <field name='shop_id'>3</field>
+        </record>
+                <record id='detail_97' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.77</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_3'/>
+                </record>
+                <record id='detail_98' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_3'/>
+                </record>
+                <record id='detail_99' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.14</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_3'/>
+                </record>
+        <record id='ruta_18_4' model='freight.route'>
+            <field name='name'>Ruta 18</field>
+            <field name='code'>18</field>
+            <field name='rank'>De 151 a 200 Kms</field>
+            <field name='shop_id'>4</field>
+        </record>
+                <record id='detail_100' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.77</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_4'/>
+                </record>
+                <record id='detail_101' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_4'/>
+                </record>
+                <record id='detail_102' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.14</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_4'/>
+                </record>
+        <record id='ruta_18_5' model='freight.route'>
+            <field name='name'>Ruta 18</field>
+            <field name='code'>18</field>
+            <field name='rank'>De 151 a 200 Kms</field>
+            <field name='shop_id'>5</field>
+        </record>
+                <record id='detail_103' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.77</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_5'/>
+                </record>
+                <record id='detail_104' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_5'/>
+                </record>
+                <record id='detail_105' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.14</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_5'/>
+                </record>
+        <record id='ruta_18_6' model='freight.route'>
+            <field name='name'>Ruta 18</field>
+            <field name='code'>18</field>
+            <field name='rank'>De 151 a 200 Kms</field>
+            <field name='shop_id'>6</field>
+        </record>
+                <record id='detail_106' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.77</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_6'/>
+                </record>
+                <record id='detail_107' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_6'/>
+                </record>
+                <record id='detail_108' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.14</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_6'/>
+                </record>
+        <record id='ruta_18_7' model='freight.route'>
+            <field name='name'>Ruta 18</field>
+            <field name='code'>18</field>
+            <field name='rank'>De 151 a 200 Kms</field>
+            <field name='shop_id'>7</field>
+        </record>
+                <record id='detail_109' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.77</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_7'/>
+                </record>
+                <record id='detail_110' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_7'/>
+                </record>
+                <record id='detail_111' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.14</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_7'/>
+                </record>
+        <record id='ruta_18_8' model='freight.route'>
+            <field name='name'>Ruta 18</field>
+            <field name='code'>18</field>
+            <field name='rank'>De 151 a 200 Kms</field>
+            <field name='shop_id'>8</field>
+        </record>
+                <record id='detail_112' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.77</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_8'/>
+                </record>
+                <record id='detail_113' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_8'/>
+                </record>
+                <record id='detail_114' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.14</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_8'/>
+                </record>
+        <record id='ruta_18_9' model='freight.route'>
+            <field name='name'>Ruta 18</field>
+            <field name='code'>18</field>
+            <field name='rank'>De 151 a 200 Kms</field>
+            <field name='shop_id'>9</field>
+        </record>
+                <record id='detail_115' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.77</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_9'/>
+                </record>
+                <record id='detail_116' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_9'/>
+                </record>
+                <record id='detail_117' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.14</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_9'/>
+                </record>
+        <record id='ruta_18_10' model='freight.route'>
+            <field name='name'>Ruta 18</field>
+            <field name='code'>18</field>
+            <field name='rank'>De 151 a 200 Kms</field>
+            <field name='shop_id'>10</field>
+        </record>
+                <record id='detail_118' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.77</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_10'/>
+                </record>
+                <record id='detail_119' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_10'/>
+                </record>
+                <record id='detail_120' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.14</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_18_10'/>
+                </record>
+<!--
+RUTA 20
+-->
+        <record id='ruta_20_1' model='freight.route'>
+            <field name='name'>Ruta 20</field>
+            <field name='code'>20</field>
+            <field name='rank'>De 201 a 300 Kms</field>
+            <field name='shop_id'>1</field>
+        </record>
+                <record id='detail_121' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.85</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_1'/>
+                </record>
+                <record id='detail_122' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_1'/>
+                </record>
+                <record id='detail_123' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.16</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_1'/>
+                </record>
+        <record id='ruta_20_2' model='freight.route'>
+            <field name='name'>Ruta 20</field>
+            <field name='code'>20</field>
+            <field name='rank'>De 201 a 300 Kms</field>
+            <field name='shop_id'>2</field>
+        </record>
+                <record id='detail_124' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.85</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_2'/>
+                </record>
+                <record id='detail_125' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_2'/>
+                </record>
+                <record id='detail_126' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.16</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_2'/>
+                </record>
+        <record id='ruta_20_3' model='freight.route'>
+            <field name='name'>Ruta 20</field>
+            <field name='code'>20</field>
+            <field name='rank'>De 201 a 300 Kms</field>
+            <field name='shop_id'>3</field>
+        </record>
+                <record id='detail_127' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.85</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_3'/>
+                </record>
+                <record id='detail_128' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_3'/>
+                </record>
+                <record id='detail_129' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.16</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_3'/>
+                </record>
+        <record id='ruta_20_4' model='freight.route'>
+            <field name='name'>Ruta 20</field>
+            <field name='code'>20</field>
+            <field name='rank'>De 201 a 300 Kms</field>
+            <field name='shop_id'>4</field>
+        </record>
+                <record id='detail_130' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.85</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_4'/>
+                </record>
+                <record id='detail_131' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_4'/>
+                </record>
+                <record id='detail_132' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.16</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_4'/>
+                </record>
+        <record id='ruta_20_5' model='freight.route'>
+            <field name='name'>Ruta 20</field>
+            <field name='code'>20</field>
+            <field name='rank'>De 201 a 300 Kms</field>
+            <field name='shop_id'>5</field>
+        </record>
+                <record id='detail_133' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.85</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_5'/>
+                </record>
+                <record id='detail_134' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_5'/>
+                </record>
+                <record id='detail_135' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.16</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_5'/>
+                </record>
+        <record id='ruta_20_6' model='freight.route'>
+            <field name='name'>Ruta 20</field>
+            <field name='code'>20</field>
+            <field name='rank'>De 201 a 300 Kms</field>
+            <field name='shop_id'>6</field>
+        </record>
+                <record id='detail_136' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.85</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_6'/>
+                </record>
+                <record id='detail_137' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_6'/>
+                </record>
+                <record id='detail_138' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.16</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_6'/>
+                </record>
+        <record id='ruta_20_7' model='freight.route'>
+            <field name='name'>Ruta 20</field>
+            <field name='code'>20</field>
+            <field name='rank'>De 201 a 300 Kms</field>
+            <field name='shop_id'>7</field>
+        </record>
+                <record id='detail_139' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.85</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_7'/>
+                </record>
+                <record id='detail_140' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_7'/>
+                </record>
+                <record id='detail_141' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.16</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_7'/>
+                </record>
+        <record id='ruta_20_8' model='freight.route'>
+            <field name='name'>Ruta 20</field>
+            <field name='code'>20</field>
+            <field name='rank'>De 201 a 300 Kms</field>
+            <field name='shop_id'>8</field>
+        </record>
+                <record id='detail_142' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.85</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_8'/>
+                </record>
+                <record id='detail_143' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_8'/>
+                </record>
+                <record id='detail_144' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.16</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_8'/>
+                </record>
+        <record id='ruta_20_9' model='freight.route'>
+            <field name='name'>Ruta 20</field>
+            <field name='code'>20</field>
+            <field name='rank'>De 201 a 300 Kms</field>
+            <field name='shop_id'>9</field>
+        </record>
+                <record id='detail_145' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.85</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_9'/>
+                </record>
+                <record id='detail_146' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_9'/>
+                </record>
+                <record id='detail_147' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.16</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_9'/>
+                </record>
+        <record id='ruta_20_10' model='freight.route'>
+            <field name='name'>Ruta 20</field>
+            <field name='code'>20</field>
+            <field name='rank'>De 201 a 300 Kms</field>
+            <field name='shop_id'>10</field>
+        </record>
+                <record id='detail_148' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.85</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_10'/>
+                </record>
+                <record id='detail_149' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_10'/>
+                </record>
+                <record id='detail_150' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.16</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_20_10'/>
+                </record>
+<!--
+RUTA 22
+-->
+        <record id='ruta_22_1' model='freight.route'>
+            <field name='name'>Ruta 22</field>
+            <field name='code'>22</field>
+            <field name='rank'>De 301 a 400 Kms</field>
+            <field name='shop_id'>1</field>
+        </record>
+                <record id='detail_151' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.91</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_1'/>
+                </record>
+                <record id='detail_152' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_1'/>
+                </record>
+                <record id='detail_153' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.17</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_1'/>
+                </record>
+        <record id='ruta_22_2' model='freight.route'>
+            <field name='name'>Ruta 22</field>
+            <field name='code'>22</field>
+            <field name='rank'>De 301 a 400 Kms</field>
+            <field name='shop_id'>2</field>
+        </record>
+                <record id='detail_154' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.91</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_2'/>
+                </record>
+                <record id='detail_155' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_2'/>
+                </record>
+                <record id='detail_156' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.17</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_2'/>
+                </record>
+        <record id='ruta_22_3' model='freight.route'>
+            <field name='name'>Ruta 22</field>
+            <field name='code'>22</field>
+            <field name='rank'>De 301 a 400 Kms</field>
+            <field name='shop_id'>3</field>
+        </record>
+                <record id='detail_157' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.91</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_3'/>
+                </record>
+                <record id='detail_158' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_3'/>
+                </record>
+                <record id='detail_159' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.17</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_3'/>
+                </record>
+        <record id='ruta_22_4' model='freight.route'>
+            <field name='name'>Ruta 22</field>
+            <field name='code'>22</field>
+            <field name='rank'>De 301 a 400 Kms</field>
+            <field name='shop_id'>4</field>
+        </record>
+                <record id='detail_160' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.91</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_4'/>
+                </record>
+                <record id='detail_161' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_4'/>
+                </record>
+                <record id='detail_162' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.17</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_4'/>
+                </record>
+        <record id='ruta_22_5' model='freight.route'>
+            <field name='name'>Ruta 22</field>
+            <field name='code'>22</field>
+            <field name='rank'>De 301 a 400 Kms</field>
+            <field name='shop_id'>5</field>
+        </record>
+                <record id='detail_163' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.91</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_5'/>
+                </record>
+                <record id='detail_164' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_5'/>
+                </record>
+                <record id='detail_165' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.17</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_5'/>
+                </record>
+        <record id='ruta_22_6' model='freight.route'>
+            <field name='name'>Ruta 22</field>
+            <field name='code'>22</field>
+            <field name='rank'>De 301 a 400 Kms</field>
+            <field name='shop_id'>6</field>
+        </record>
+                <record id='detail_166' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.91</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_6'/>
+                </record>
+                <record id='detail_167' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_6'/>
+                </record>
+                <record id='detail_168' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.17</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_6'/>
+                </record>
+        <record id='ruta_22_7' model='freight.route'>
+            <field name='name'>Ruta 22</field>
+            <field name='code'>22</field>
+            <field name='rank'>De 301 a 400 Kms</field>
+            <field name='shop_id'>7</field>
+        </record>
+                <record id='detail_169' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.91</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_7'/>
+                </record>
+                <record id='detail_170' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_7'/>
+                </record>
+                <record id='detail_171' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.17</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_7'/>
+                </record>
+        <record id='ruta_22_8' model='freight.route'>
+            <field name='name'>Ruta 22</field>
+            <field name='code'>22</field>
+            <field name='rank'>De 301 a 400 Kms</field>
+            <field name='shop_id'>8</field>
+        </record>
+                <record id='detail_172' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.91</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_8'/>
+                </record>
+                <record id='detail_173' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_8'/>
+                </record>
+                <record id='detail_174' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.17</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_8'/>
+                </record>
+        <record id='ruta_22_9' model='freight.route'>
+            <field name='name'>Ruta 22</field>
+            <field name='code'>22</field>
+            <field name='rank'>De 301 a 400 Kms</field>
+            <field name='shop_id'>9</field>
+        </record>
+                <record id='detail_175' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.91</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_9'/>
+                </record>
+                <record id='detail_176' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_9'/>
+                </record>
+                <record id='detail_177' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.17</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_9'/>
+                </record>
+        <record id='ruta_22_10' model='freight.route'>
+            <field name='name'>Ruta 22</field>
+            <field name='code'>22</field>
+            <field name='rank'>De 301 a 400 Kms</field>
+            <field name='shop_id'>10</field>
+        </record>
+                <record id='detail_178' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>0.91</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_10'/>
+                </record>
+                <record id='detail_179' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_10'/>
+                </record>
+                <record id='detail_180' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.17</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_22_10'/>
+                </record>
+<!--
+RUTA 24
+-->
+        <record id='ruta_24_1' model='freight.route'>
+            <field name='name'>Ruta 24</field>
+            <field name='code'>24</field>
+            <field name='rank'>De 401 a 500 Kms</field>
+            <field name='shop_id'>1</field>
+        </record>
+                <record id='detail_181' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>1.25</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_1'/>
+                </record>
+                <record id='detail_182' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_1'/>
+                </record>
+                <record id='detail_183' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.23</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_1'/>
+                </record>
+        <record id='ruta_24_2' model='freight.route'>
+            <field name='name'>Ruta 24</field>
+            <field name='code'>24</field>
+            <field name='rank'>De 401 a 500 Kms</field>
+            <field name='shop_id'>2</field>
+        </record>
+                <record id='detail_184' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>1.25</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_2'/>
+                </record>
+                <record id='detail_185' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_2'/>
+                </record>
+                <record id='detail_186' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.23</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_2'/>
+                </record>
+        <record id='ruta_24_3' model='freight.route'>
+            <field name='name'>Ruta 24</field>
+            <field name='code'>24</field>
+            <field name='rank'>De 401 a 500 Kms</field>
+            <field name='shop_id'>3</field>
+        </record>
+                <record id='detail_187' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>1.25</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_3'/>
+                </record>
+                <record id='detail_188' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_3'/>
+                </record>
+                <record id='detail_189' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.23</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_3'/>
+                </record>
+        <record id='ruta_24_4' model='freight.route'>
+            <field name='name'>Ruta 24</field>
+            <field name='code'>24</field>
+            <field name='rank'>De 401 a 500 Kms</field>
+            <field name='shop_id'>4</field>
+        </record>
+                <record id='detail_190' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>1.25</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_4'/>
+                </record>
+                <record id='detail_191' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_4'/>
+                </record>
+                <record id='detail_192' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.23</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_4'/>
+                </record>
+        <record id='ruta_24_5' model='freight.route'>
+            <field name='name'>Ruta 24</field>
+            <field name='code'>24</field>
+            <field name='rank'>De 401 a 500 Kms</field>
+            <field name='shop_id'>5</field>
+        </record>
+                <record id='detail_193' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>1.25</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_5'/>
+                </record>
+                <record id='detail_194' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_5'/>
+                </record>
+                <record id='detail_195' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.23</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_5'/>
+                </record>
+        <record id='ruta_24_6' model='freight.route'>
+            <field name='name'>Ruta 24</field>
+            <field name='code'>24</field>
+            <field name='rank'>De 401 a 500 Kms</field>
+            <field name='shop_id'>6</field>
+        </record>
+                <record id='detail_196' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>1.25</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_6'/>
+                </record>
+                <record id='detail_197' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_6'/>
+                </record>
+                <record id='detail_198' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.23</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_6'/>
+                </record>
+        <record id='ruta_24_7' model='freight.route'>
+            <field name='name'>Ruta 24</field>
+            <field name='code'>24</field>
+            <field name='rank'>De 401 a 500 Kms</field>
+            <field name='shop_id'>7</field>
+        </record>
+                <record id='detail_199' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>1.25</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_7'/>
+                </record>
+                <record id='detail_200' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_7'/>
+                </record>
+                <record id='detail_201' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.23</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_7'/>
+                </record>
+        <record id='ruta_24_8' model='freight.route'>
+            <field name='name'>Ruta 24</field>
+            <field name='code'>24</field>
+            <field name='rank'>De 401 a 500 Kms</field>
+            <field name='shop_id'>8</field>
+        </record>
+                <record id='detail_202' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>1.25</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_8'/>
+                </record>
+                <record id='detail_203' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_8'/>
+                </record>
+                <record id='detail_204' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.23</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_8'/>
+                </record>
+        <record id='ruta_24_9' model='freight.route'>
+            <field name='name'>Ruta 24</field>
+            <field name='code'>24</field>
+            <field name='rank'>De 401 a 500 Kms</field>
+            <field name='shop_id'>9</field>
+        </record>
+                <record id='detail_205' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>1.25</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_9'/>
+                </record>
+                <record id='detail_206' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_9'/>
+                </record>
+                <record id='detail_207' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.23</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_9'/>
+                </record>
+        <record id='ruta_24_10' model='freight.route'>
+            <field name='name'>Ruta 24</field>
+            <field name='code'>24</field>
+            <field name='rank'>De 401 a 500 Kms</field>
+            <field name='shop_id'>10</field>
+        </record>
+                <record id='detail_208' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>1.25</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_10'/>
+                </record>
+                <record id='detail_209' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_10'/>
+                </record>
+                <record id='detail_210' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.23</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_24_10'/>
+                </record>
+<!--
+RUTA 26
+-->
+        <record id='ruta_26_1' model='freight.route'>
+            <field name='name'>Ruta 26</field>
+            <field name='code'>26</field>
+            <field name='rank'>De 501 a 600 Kms</field>
+            <field name='shop_id'>1</field>
+        </record>
+                <record id='detail_211' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>1.25</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_1'/>
+                </record>
+                <record id='detail_212' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_1'/>
+                </record>
+                <record id='detail_213' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.23</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_1'/>
+                </record>
+        <record id='ruta_26_2' model='freight.route'>
+            <field name='name'>Ruta 26</field>
+            <field name='code'>26</field>
+            <field name='rank'>De 501 a 600 Kms</field>
+            <field name='shop_id'>2</field>
+        </record>
+                <record id='detail_214' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>1.25</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_2'/>
+                </record>
+                <record id='detail_215' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_2'/>
+                </record>
+                <record id='detail_216' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.23</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_2'/>
+                </record>
+        <record id='ruta_26_3' model='freight.route'>
+            <field name='name'>Ruta 26</field>
+            <field name='code'>26</field>
+            <field name='rank'>De 501 a 600 Kms</field>
+            <field name='shop_id'>3</field>
+        </record>
+                <record id='detail_217' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>1.25</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_3'/>
+                </record>
+                <record id='detail_218' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_3'/>
+                </record>
+                <record id='detail_219' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.23</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_3'/>
+                </record>
+        <record id='ruta_26_4' model='freight.route'>
+            <field name='name'>Ruta 26</field>
+            <field name='code'>26</field>
+            <field name='rank'>De 501 a 600 Kms</field>
+            <field name='shop_id'>4</field>
+        </record>
+                <record id='detail_220' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>1.25</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_4'/>
+                </record>
+                <record id='detail_221' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_4'/>
+                </record>
+                <record id='detail_222' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.23</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_4'/>
+                </record>
+        <record id='ruta_26_5' model='freight.route'>
+            <field name='name'>Ruta 26</field>
+            <field name='code'>26</field>
+            <field name='rank'>De 501 a 600 Kms</field>
+            <field name='shop_id'>5</field>
+        </record>
+                <record id='detail_223' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>1.25</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_5'/>
+                </record>
+                <record id='detail_224' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_5'/>
+                </record>
+                <record id='detail_225' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.23</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_5'/>
+                </record>
+        <record id='ruta_26_6' model='freight.route'>
+            <field name='name'>Ruta 26</field>
+            <field name='code'>26</field>
+            <field name='rank'>De 501 a 600 Kms</field>
+            <field name='shop_id'>6</field>
+        </record>
+                <record id='detail_226' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>1.25</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_6'/>
+                </record>
+                <record id='detail_227' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_6'/>
+                </record>
+                <record id='detail_228' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.23</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_6'/>
+                </record>
+        <record id='ruta_26_7' model='freight.route'>
+            <field name='name'>Ruta 26</field>
+            <field name='code'>26</field>
+            <field name='rank'>De 501 a 600 Kms</field>
+            <field name='shop_id'>7</field>
+        </record>
+                <record id='detail_229' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>1.25</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_7'/>
+                </record>
+                <record id='detail_230' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_7'/>
+                </record>
+                <record id='detail_231' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.23</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_7'/>
+                </record>
+        <record id='ruta_26_8' model='freight.route'>
+            <field name='name'>Ruta 26</field>
+            <field name='code'>26</field>
+            <field name='rank'>De 501 a 600 Kms</field>
+            <field name='shop_id'>8</field>
+        </record>
+                <record id='detail_232' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>1.25</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_8'/>
+                </record>
+                <record id='detail_233' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_8'/>
+                </record>
+                <record id='detail_234' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.23</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_8'/>
+                </record>
+        <record id='ruta_26_9' model='freight.route'>
+            <field name='name'>Ruta 26</field>
+            <field name='code'>26</field>
+            <field name='rank'>De 501 a 600 Kms</field>
+            <field name='shop_id'>9</field>
+        </record>
+                <record id='detail_235' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>1.25</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_9'/>
+                </record>
+                <record id='detail_236' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_9'/>
+                </record>
+                <record id='detail_237' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.23</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_9'/>
+                </record>
+        <record id='ruta_26_10' model='freight.route'>
+            <field name='name'>Ruta 26</field>
+            <field name='code'>26</field>
+            <field name='rank'>De 501 a 600 Kms</field>
+            <field name='shop_id'>10</field>
+        </record>
+                <record id='detail_238' model='details.freight.route'>
+                    <field name='type'>CC</field>
+                    <field name='weight'>1.25</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_10'/>
+                </record>
+                <record id='detail_239' model='details.freight.route'>
+                    <field name='type'>PF</field>
+                    <field name='weight'>0.19</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_10'/>
+                </record>
+                <record id='detail_240' model='details.freight.route'>
+                    <field name='type'>CF</field>
+                    <field name='weight'>0.23</field>
+                    <field name='volume'>0.00</field>
+                    <field name='boxes'>0.00</field>
+                    <field name='freight_route_id' ref ='ruta_26_10'/>
+                </record>
+
+    </data>
+</openerp>

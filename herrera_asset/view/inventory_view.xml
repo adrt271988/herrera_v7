@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+<!--  <field name="method_number"/>attrs="{'required': [('method_time','=','end')], 'invisible':[('method_time','=','number')]}" -->
+     <record model="ir.ui.view" id="view_account_asset_inventory_form">
+        <field name="name">account.asset.inventory.form</field>
+        <field name="model">account.asset.inventory</field>
+        <field name="arch" type="xml">
+            <form string="Asset inventory" version="7.0">
+                <header>
+                    <button name="set_to_open"  states="draft" string="Confirmar" type="object" class="oe_highlight"/>
+                    <button name="set_to_close" states="open"  string="Finalizar" type="object" class="oe_highlight"/>
+                    <button name="set_to_draft" states="open"  string="Cambiar a borrador" type="object" />
+                    <button name="adjust_inventory" states="close" string="Ajustar Inventario" type="object" class="oe_highlight"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,open,close,done"/>
+                </header>
+                <sheet>
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="date_inventory"/>
+                        <field name="user_id"/>
+                    </group>
+                    <group>
+                        <field name="type"/>
+                        <field name="shop_id"       attrs="{'invisible':[('type','=',False)],'required': [('type','in',('S','D','R'))]}"/>
+                        <field name="department_id" attrs="{'invisible':['|',('type','=',False),('type','=','S')],'required': [('type','=','D')]}"/>
+                        <field name="employee_id" domain="[('shop_id','=',shop_id)]" attrs="{'invisible':['|','|',('type','=',False),('type','=','S'),('type','=','D')],'required': [('type','=','R')]}"/>
+                    </group>
+                    <group string="Toma de Inventario" colspan= "3">
+                        <field name="asset_ids" nolabel = "1"/>
+                    </group>
+                </group>
+              </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_account_asset_inventory_tree">
+        <field name="name">account.asset.inventory.tree</field>
+        <field name="model">account.asset.inventory</field>
+        <field name="arch" type="xml">
+            <tree string="Asset inventory">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="shop_id"/>
+                <field name="date_inventory"/>
+                <field name="type"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_account_asset_inventory_search">
+        <field name="name">account.asset.inventory.search</field>
+        <field name="model">account.asset.inventory</field>
+        <field name="arch" type="xml">
+            <search string="Search Asset inventory">
+                <field name="name" string="inventory"/>
+                <field name="code" string="Codigo"/>
+            </search>
+        </field>
+    </record>
+
+<!-- Actions -->
+
+   <record model="ir.actions.act_window" id="action_account_asset_inventory">
+        <field name="name">Inventario</field>
+        <field name="res_model">account.asset.inventory</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_account_asset_inventory_tree"/>
+        <field name="search_view_id" ref="view_account_asset_inventory_search"/>
+    </record>
+
+    
+    <menuitem parent="account_asset.menu_finance_assets" id="menu_action_account_asset_inventory"
+              sequence="102"
+              action="action_account_asset_inventory"/>
+    </data>
+    
+</openerp>

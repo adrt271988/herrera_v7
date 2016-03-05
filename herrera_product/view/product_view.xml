@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="inherited_product_normal_form_view">
+            <field name="name">inherit.product.normal.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name=&quot;default_code&quot;]" position="replace">
+                    <field name="default_code" attrs="{'required':[('type','=','consu')]}" string="Código interno"/>
+                </xpath>
+                <xpath expr="//field[@name=&quot;ean13&quot;]" position="attributes">
+                    <attribute name="attrs">{'required':[('type','=','product')]}</attribute>
+                </xpath>
+                <xpath expr="//div[@name=&quot;ean&quot;]" position="after">
+                    <field name="ean14" placeholder="Por ejemplo, 15901234123457" required="0" string="Código EAN14"/>
+                    <field name="cod8" placeholder="Por ejemplo, 178" required="0" string="Código EAN8"/>
+                    <field name="sica_id" string="Código SICA"/>
+                </xpath>
+                <xpath expr="//field[@name=&quot;uom_id&quot;]" position="before">
+                    <field name="measure" required="1" string="Presentación por defecto"/>
+                </xpath>
+                <xpath expr="//field[@name=&quot;uom_id&quot;]" position="replace">
+                    <field name="uom_id" on_change="onchange_uom(uom_id,uom_po_id)" domain="[('measure','=', measure)]" groups="product.group_uom" context="{'product_id':id}"/>
+                </xpath>
+                <xpath expr="//field[@name=&quot;uom_id&quot;]" position="after">
+                    <field name="pack" placeholder="e.g. 12x250gr" string="Empaque"/>
+                    <field name="palette" string="Cantidad por paleta"/>
+                </xpath>
+                <xpath expr="//group[@name=&quot;Weights&quot;]" position="replace">
+                    <group name="Weights" groups="product.group_stock_packaging" string="Weights">
+                        <field digits="(14, 3)" name="volume" attrs="{'readonly':[('type','=','service')]}" required="1"/>
+                        <field name="weight" attrs="{'readonly':[('type','=','service')]}" required="1"/>
+                        <field name="weight_net" attrs="{'readonly':[('type','=','service')]}" required="1"/>
+                    </group>
+                </xpath>
+<!--
+                <xpath expr='//field[@name="property_account_income"]' position='replace'>
+                    <field name="property_account_income" widget = "selection" domain="[('type','=','other')]" groups="account.group_account_user"/>
+                </xpath>
+                <xpath expr='//field[@name="property_account_expense"]' position='replace'>
+                    <field name="property_account_expense" widget = "selection" domain="[('type','&lt;&gt;','view'),('type','&lt;&gt;','consolidation')]" attrs="{'readonly':[('purchase_ok','=',0)]}" groups="account.group_account_user"/>
+                </xpath>
+-->
+                <xpath expr='//field[@name="uom_po_id"]' position='before'>
+                    <field name="measure_po" string="Presentación de compra" required="1"/>
+                </xpath>
+                <xpath expr='//field[@name="uom_po_id"]' position='replace'>
+                    <field name="uom_po_id" required="1" domain="[('measure','=', measure_po)]" context="{'product_id':id}"/>
+                </xpath>
+                <xpath expr='//page[@string="Sales"]' position='attributes'>
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr='//group[@name="status"]' position='inside'>
+                    <field name="sundecop"/>
+                    <field name="ind_payment"/>
+                </xpath>
+                <xpath expr='//field[@name="state"]' position='replace' />
+                <xpath expr='//field[@name="product_manager"]' position='replace' />
+                <xpath expr='//field[@name="list_price"]' position='attributes'>
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr='//group[@name="procurement_uom"]' position='after'>
+                    <group name="procurement_sale" groups="product.group_uom" string="Venta">
+                        <field name="pvm"/>
+                        <field name="pvp"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="inherited_normal_procurement_locations_form">
+            <field name="name">inherited.normal.procurement.locations.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="stock.view_normal_procurement_locations_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name=&quot;lot&quot;]" position="replace"/>
+                <xpath expr="//group[@name=&quot;store&quot;]" position="replace"/>
+                <xpath expr='//group[@name="delay"]' position='replace'>
+                    <group name="product_active" string="Activar / Desactivar">
+                        <field name="active"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="inherited_product_historical_price">
+            <field name="name">inherited.product.historical.price</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product_historical_price.product_historical_price"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='cost_historical']" position='attributes'>
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='list_price_historical']" position='attributes'>
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name=&quot;list_price_historical_ids&quot;]" position="replace">
+                    <field name="list_price_historical_ids" nolabel="1" colspan="4">
+                        <tree>
+                            <field name = "name" string = "Fecha"/>
+                            <field name = "pricelist_id" string = "Tarifa de venta"/>
+                            <field name = "price" string = "Base"/>
+                            <field name = "margin" string = "Margen"/>
+                            <field name = "net_price" string = "Precio"/>
+                            <field name = "product_uom" string = "UdM de venta"/>
+                        </tree>
+                    </field>
+                </xpath>
+                <xpath expr="//field[@name=&quot;cost_historical_ids&quot;]" position="replace">
+                    <field name="cost_historical_ids" nolabel="1" colspan="4">
+                        <tree>
+                            <field name = "name" string = "Fecha"/>
+                            <field name = "pricelist_id" string = "Tarifa de compra"/>
+                            <field name = "price" string = "Base"/>
+                            <field name = "discount" string = "Descuento"/>
+                            <field name = "net_price" string = "Costo"/>
+                            <field name = "product_uom" string = "UdM de compra"/>
+                        </tree>
+                    </field>
+                </xpath>
+                <xpath expr="//div[@name='buttons']" position='inside'>
+                    <button name="update_historical" string="Remover tarifas anteriores" type="object" />
+                </xpath>
+                <xpath expr="//page[@string='Historical Cost Price']" position='attributes'>
+                    <attribute name="string">Historial de tarifas</attribute>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="product_product_normal_form_procurement_help_inherit_view" model="ir.ui.view">
+            <field name="name">product.normal.form.procurement.help.inherit2</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="purchase.product_product_normal_form_procurement_help_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name=&quot;procurement_help&quot;]" position="replace" />
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="product_kanban_stock_inherit_view">
+            <field name="name">product.kanban.stock.inherit</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="stock.product_kanban_stock_view"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="pack"/>
+                </field>
+                <ul position="replace">
+                    <ul>
+                        <li>Price: <field name="lst_price"></field></li>
+                        <li t-if="record.type.raw_value != 'service'">Stock real: <field name="qty_available"/> <field name="measure"/></li>
+                        <li t-if="record.type.raw_value != 'service'">Stock virtual: <field name="virtual_available"/> <field name="measure"/></li>
+                    </ul>
+                </ul>
+            </field>
+        </record>
+        
+        <record id="product_product_tree_inherit_view" model="ir.ui.view">
+            <field name="name">product.product.tree.inherit</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_product_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name=&quot;uom_id&quot;]" position="replace">
+                    <field name="pack" string="Empaque" />
+                    <field name="measure" string="Presentación" groups="product.group_uom"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="product_uom_tree_inherit_view" model="ir.ui.view">
+            <field name="name">product.uom.tree.inherit</field>
+            <field name="model">product.uom</field>
+            <field name="inherit_id" ref="product.product_uom_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name=&quot;name&quot;]" position="replace">
+                    <field name="name" string="Referencia"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="product_uom_form_inherit_view" model="ir.ui.view">
+            <field name="name">product.uom.form.inherit</field>
+            <field name="model">product.uom</field>
+            <field name="inherit_id" ref="product.product_uom_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name=&quot;uom_type&quot;]"  position="replace" />
+                <xpath expr="//label[@for=&quot;factor&quot;]"  position="replace" />
+                <xpath expr="//div" position="replace" />
+                <xpath expr="//field[@name=&quot;name&quot;]" position="replace" >
+                    <field name="measure" required="1" on_change="onchange_reference(uom_type, measure, factor, factor_inv, rounding)"/>
+                </xpath>
+                <xpath expr="//field[@name=&quot;active&quot;]" position="after" >
+                    <field name="uom_type" on_change="onchange_reference(uom_type, measure, factor, factor_inv, rounding)"/>
+                    <label for="factor"/>
+                    <div>
+                        <field name="factor" attrs="{'invisible':[('uom_type','!=','smaller')]}"  on_change="onchange_reference(uom_type, measure, factor, factor_inv, rounding)"/>
+                        <field name="factor_inv" attrs="{'invisible':[('uom_type','!=','bigger')]}" on_change="onchange_reference(uom_type, measure, factor, factor_inv, rounding)"/>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name=&quot;rounding&quot;]" position="replace" />
+                <xpath expr="//field[@name=&quot;category_id&quot;]" position="replace">
+                    <field name="category_id" widget="selection"/>
+                </xpath>
+                <xpath expr="//field[@name=&quot;category_id&quot;]" position="after" >
+                    <field name="name" string="Referencia"/>
+                    <label for="rounding"/>
+                    <div>
+                        <field name="rounding" on_change="onchange_reference(uom_type, measure, factor, factor_inv, rounding)"/>
+                        <p class="oe_grey"> 
+                            Ejem.: 1,00 (entero); 0,50 (entero y mitad); 0,25 (entero, mitad y cuartos); 0,10 (entero, mitad, decima); 0,01 (entero, mitad, cuarto, decima, centesima)
+                        </p>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="product_supplierinfo_form_inherit_view" model="ir.ui.view">
+            <field name="name">product.supplierinfo.form.inherit</field>
+            <field name="model">product.supplierinfo</field>
+            <field name="inherit_id" ref="product.product_supplierinfo_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name=&quot;delay&quot;]" position="after">
+                    <field name="stat_unit"/>
+                </xpath>
+            </field>
+        </record>
+        
+    </data>
+</openerp>

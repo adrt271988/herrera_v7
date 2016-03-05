@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="sale.plan.categ" id="sale_plan_categ_E">
+            <field name="name">Exclusivo</field>
+            <field name="code">E</field>
+        </record>
+
+        <record model="sale.plan.categ" id="sale_plan_categ_C">
+            <field name="name">Cadenas</field>
+            <field name="code">C</field>
+        </record>
+
+        <record model="sale.plan.categ" id="sale_plan_categ_S">
+            <field name="name">Senior</field>
+            <field name="code">S</field>
+        </record>
+
+        <record model="sale.plan.categ" id="sale_plan_categ_J">
+            <field name="name">Junior</field>
+            <field name="code">J</field>
+        </record>
+
+        <record model="sale.plan.categ" id="sale_plan_categ_B">
+            <field name="name">Bodeguero</field>
+            <field name="code">B</field>
+        </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+        <record model='ir.ui.view' id='massive_stock_analysis_form'>
+            <field name='name'>Análisis masivo de pedidos</field>
+            <field name='model'>sale.stock.massive.analysis</field>
+            <field name='type'>form</field>
+            <field name='arch' type='xml'>
+                <form string="Análisis masivo de pedidos" version="7.0">
+                    <group>
+                        <group string="Instrucciones">
+                            <ul>
+                                <li>Seleccione las acciones que desea procesar y luego presione "Aceptar" para ejecutarlas.</li>
+                                <li>Sólo se tomaran en cuenta los pedidos previamente seleccionados.</li>
+                            </ul>
+                        </group>
+                        <group string="Acciones">
+                            <field name='credit_test'/>
+                            <field name='check_stock' on_change="onchange_check_stock(check_stock, product_reserve)"/>
+                            <field name='product_reserve' on_change="onchange_product_reserve(product_reserve)"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="sale_order_analysis" string="Aceptar" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancelar" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    <act_window name="Análisis masivo de pedidos"
+            key2="client_action_multi"
+            res_model="sale.stock.massive.analysis"
+            src_model="sale.order"
+            view_type="form"
+            view_mode="form"
+            target="new"
+            id="massive_stock_analysis_action"/>
+
+</data>
+</openerp>

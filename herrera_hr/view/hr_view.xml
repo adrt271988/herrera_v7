@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+        <record model="ir.ui.view" id="inherit_view_employee_form">
+			<field name="name">inherit.view.employee.form</field>
+			<field name="model">hr.employee</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="hr.view_employee_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='category_ids']" position="after">
+                    <label for="shop_id" string = "Sucursal"/>
+                    <field name="shop_id" widget="selection"/>
+                </xpath>
+                <xpath expr="//field[@name='birthday']" position="replace">
+                    <field name="entry_date"/>
+                </xpath>
+			</field>
+		</record>
+        
+        <record model="ir.ui.view" id="inherit_view_employee_tree">
+			<field name="name">inherit.view.employee.tree</field>
+			<field name="model">hr.employee</field>
+			<field name="type">tree</field>
+			<field name="inherit_id" ref="hr.view_employee_tree"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='department_id']" position="before">
+                    <field name="shop_id"/>
+                </xpath>
+			</field>
+		</record>
+        
+        <record model="ir.ui.view" id="inherit_view_employee_filter">
+			<field name="name">inherit.view.employee.filter</field>
+			<field name="model">hr.employee</field>
+			<field name="inherit_id" ref="hr.view_employee_filter"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='name']" position="replace">
+                    <field name="name" string="Employees" filter_domain="['|','|',('name','ilike',self),('identification_id','ilike',self),('otherid','=',self)]"/>
+                </xpath>
+			</field>
+		</record>
+	</data>
+</openerp>

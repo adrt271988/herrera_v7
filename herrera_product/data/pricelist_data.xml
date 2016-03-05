@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+
+    <!--  Pricelist 1 -->
+    <!-- Barcelona  --> 
+        <record id="listh1" model="product.pricelist">
+            <field name="name">Tarifa de Venta 1 - Barcelona</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="verh1" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listh1"/>
+            <field name="name">Version Tarifa de Venta 1 - Barcelona</field>
+        </record>
+<!--
+        <record id="itemh1" model="product.pricelist.item">
+            <field name="price_version_id" ref="verh1"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Margarita  -->
+        <record id="listd1" model="product.pricelist">
+            <field name="name">Tarifa de Venta 1 - Margarita</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="verd1" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listd1"/>
+            <field name="name">Version Tarifa de Venta 1 - Margarita</field>
+        </record>
+<!--
+        <record id="itemd1" model="product.pricelist.item">
+            <field name="price_version_id" ref="verd1"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Falcón  -->
+        <record id="listp1" model="product.pricelist">
+            <field name="name">Tarifa de Venta 1 - Falcón</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="verp1" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listp1"/>
+            <field name="name">Version Tarifa de Venta 1 - Falcón</field>
+        </record>
+<!--
+        <record id="itemp1" model="product.pricelist.item">
+            <field name="price_version_id" ref="verp1"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Puerto Ordaz  -->
+        <record id="listo1" model="product.pricelist">
+            <field name="name">Tarifa de Venta 1 - Puerto Ordaz</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="vero1" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listo1"/>
+            <field name="name">Version Tarifa de Venta 1 - Puerto Ordaz</field>
+        </record>
+<!--
+        <record id="itemo1" model="product.pricelist.item">
+            <field name="price_version_id" ref="vero1"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Maturín  -->
+        <record id="listm1" model="product.pricelist">
+            <field name="name">Tarifa de Venta 1 - Maturín</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="verm1" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listm1"/>
+            <field name="name">Version Tarifa de Venta 1 - Maturín</field>
+        </record>
+<!--
+        <record id="itemm1" model="product.pricelist.item">
+            <field name="price_version_id" ref="verm1"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Cúmana  -->
+        <record id="listc1" model="product.pricelist">
+            <field name="name">Tarifa de Venta 1 - Cúmana</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="verc1" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listc1"/>
+            <field name="name">Version Tarifa de Venta 1 - Cúmana</field>
+        </record>
+<!--
+        <record id="itemc1" model="product.pricelist.item">
+            <field name="price_version_id" ref="verc1"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Zulia  -->
+        <record id="listu1" model="product.pricelist">
+            <field name="name">Tarifa de Venta 1 - Zulia</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="veru1" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listu1"/>
+            <field name="name">Version Tarifa de Venta 1 - Zulia</field>
+        </record>
+<!--
+        <record id="itemu1" model="product.pricelist.item">
+            <field name="price_version_id" ref="veru1"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Bolívar  -->
+        <record id="listg1" model="product.pricelist">
+            <field name="name">Tarifa de Venta 1 - Bolívar</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="verg1" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listg1"/>
+            <field name="name">Version Tarifa de Venta 1 - Bolívar</field>
+        </record>
+<!--
+        <record id="itemg1" model="product.pricelist.item">
+            <field name="price_version_id" ref="verg1"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Carúpano  -->
+        <record id="listk1" model="product.pricelist">
+            <field name="name">Tarifa de Venta 1 - Carúpano</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="verk1" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listk1"/>
+            <field name="name">Version Tarifa de Venta 1 - Carúpano</field>
+        </record>
+<!--
+        <record id="itemk1" model="product.pricelist.item">
+            <field name="price_version_id" ref="verk1"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+        
+    <!--  Pricelist 2 -->
+    <!-- Barcelona  -->
+        <record id="listh2" model="product.pricelist">
+            <field name="name">Tarifa de Venta 2 - Barcelona</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="verh2" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listh2"/>
+            <field name="name">Version Tarifa de Venta 2 - Barcelona</field>
+        </record>
+<!--
+        <record id="itemh2" model="product.pricelist.item">
+            <field name="price_version_id" ref="verh2"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Margarita  -->
+        <record id="listd2" model="product.pricelist">
+            <field name="name">Tarifa de Venta 2 - Margarita</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="verd2" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listd2"/>
+            <field name="name">Version Tarifa de Venta 2 - Margarita</field>
+        </record>
+<!--
+        <record id="itemd2" model="product.pricelist.item">
+            <field name="price_version_id" ref="verd2"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Falcón  -->
+        <record id="listp2" model="product.pricelist">
+            <field name="name">Tarifa de Venta 2 - Falcón</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="verp2" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listp2"/>
+            <field name="name">Version Tarifa de Venta 2 - Falcón</field>
+        </record>
+<!--
+        <record id="itemp2" model="product.pricelist.item">
+            <field name="price_version_id" ref="verp2"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Puerto Ordaz  -->
+        <record id="listo2" model="product.pricelist">
+            <field name="name">Tarifa de Venta 2 - Puerto Ordaz</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="vero2" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listo2"/>
+            <field name="name">Version Tarifa de Venta 2 - Puerto Ordaz</field>
+        </record>
+<!--
+        <record id="itemo2" model="product.pricelist.item">
+            <field name="price_version_id" ref="vero2"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Maturín  -->
+        <record id="listm2" model="product.pricelist">
+            <field name="name">Tarifa de Venta 2 - Maturín</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="verm2" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listm2"/>
+            <field name="name">Version Tarifa de Venta 2 - Maturín</field>
+        </record>
+<!--
+        <record id="itemm2" model="product.pricelist.item">
+            <field name="price_version_id" ref="verm2"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Cúmana  -->
+        <record id="listc2" model="product.pricelist">
+            <field name="name">Tarifa de Venta 2 - Cúmana</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="verc2" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listc2"/>
+            <field name="name">Version Tarifa de Venta 2 - Cúmana</field>
+        </record>
+<!--
+        <record id="itemc2" model="product.pricelist.item">
+            <field name="price_version_id" ref="verc2"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Zulia  -->
+        <record id="listu2" model="product.pricelist">
+            <field name="name">Tarifa de Venta 2 - Zulia</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="veru2" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listu2"/>
+            <field name="name">Version Tarifa de Venta 2 - Zulia</field>
+        </record>
+<!--
+        <record id="itemu2" model="product.pricelist.item">
+            <field name="price_version_id" ref="veru2"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Bolívar  -->
+        <record id="listg2" model="product.pricelist">
+            <field name="name">Tarifa de Venta 2 - Bolívar</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="verg2" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listg2"/>
+            <field name="name">Version Tarifa de Venta 2 - Bolívar</field>
+        </record>
+<!--
+        <record id="itemg2" model="product.pricelist.item">
+            <field name="price_version_id" ref="verg2"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Carúpano  -->
+        <record id="listk2" model="product.pricelist">
+            <field name="name">Tarifa de Venta 2 - Carúpano</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="verk2" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listk2"/>
+            <field name="name">Version Tarifa de Venta 2 - Carúpano</field>
+        </record>
+<!--
+        <record id="itemk2" model="product.pricelist.item">
+            <field name="price_version_id" ref="verk2"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+        
+    <!--  Pricelist 3 -->
+    <!-- Barcelona  -->
+        <record id="listh3" model="product.pricelist">
+            <field name="name">Tarifa de Venta 3 - Barcelona</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="verh3" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listh3"/>
+            <field name="name">Version Tarifa de Venta 3 - Barcelona</field>
+        </record>
+<!--
+        <record id="itemh3" model="product.pricelist.item">
+            <field name="price_version_id" ref="verh3"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Margarita  -->
+        <record id="listd3" model="product.pricelist">
+            <field name="name">Tarifa de Venta 3 - Margarita</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="verd3" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listd3"/>
+            <field name="name">Version Tarifa de Venta 3 - Margarita</field>
+        </record>
+<!--
+        <record id="itemd3" model="product.pricelist.item">
+            <field name="price_version_id" ref="verd3"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Falcón  -->
+        <record id="listp3" model="product.pricelist">
+            <field name="name">Tarifa de Venta 3 - Falcón</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="verp3" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listp3"/>
+            <field name="name">Version Tarifa de Venta 3 - Falcón</field>
+        </record>
+<!--
+        <record id="itemp3" model="product.pricelist.item">
+            <field name="price_version_id" ref="verp3"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Puerto Ordaz  -->
+        <record id="listo3" model="product.pricelist">
+            <field name="name">Tarifa de Venta 3 - Puerto Ordaz</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="vero3" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listo3"/>
+            <field name="name">Version Tarifa de Venta 3 - Puerto Ordaz</field>
+        </record>
+<!--
+        <record id="itemo3" model="product.pricelist.item">
+            <field name="price_version_id" ref="vero3"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Maturín  -->
+        <record id="listm3" model="product.pricelist">
+            <field name="name">Tarifa de Venta 3 - Maturín</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="verm3" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listm3"/>
+            <field name="name">Version Tarifa de Venta 3 - Maturín</field>
+        </record>
+<!--
+        <record id="itemm3" model="product.pricelist.item">
+            <field name="price_version_id" ref="verm3"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Cúmana  -->
+        <record id="listc3" model="product.pricelist">
+            <field name="name">Tarifa de Venta 3 - Cúmana</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="verc3" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listc3"/>
+            <field name="name">Version Tarifa de Venta 3 - Cúmana</field>
+        </record>
+<!--
+        <record id="itemc3" model="product.pricelist.item">
+            <field name="price_version_id" ref="verc3"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Zulia  -->
+        <record id="listu3" model="product.pricelist">
+            <field name="name">Tarifa de Venta 3 - Zulia</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="veru3" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listu3"/>
+            <field name="name">Version Tarifa de Venta 3 - Zulia</field>
+        </record>
+<!--
+        <record id="itemu3" model="product.pricelist.item">
+            <field name="price_version_id" ref="veru3"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Bolívar  -->
+        <record id="listg3" model="product.pricelist">
+            <field name="name">Tarifa de Venta 3 - Bolívar</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="verg3" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listg3"/>
+            <field name="name">Version Tarifa de Venta 3 - Bolívar</field>
+        </record>
+<!--
+        <record id="itemg3" model="product.pricelist.item">
+            <field name="price_version_id" ref="verg3"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+    
+    <!-- Carúpano  -->
+        <record id="listk3" model="product.pricelist">
+            <field name="name">Tarifa de Venta 3 - Carúpano</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="verk3" model="product.pricelist.version">
+            <field name="pricelist_id" ref="listk3"/>
+            <field name="name">Version Tarifa de Venta 3 - Carúpano</field>
+        </record>
+<!--
+        <record id="itemk3" model="product.pricelist.item">
+            <field name="price_version_id" ref="verk3"/>
+            <field name="base" ref="product.list_price"/>
+            <field name="name">General</field>
+        </record>
+-->
+
+    </data>
+</openerp>

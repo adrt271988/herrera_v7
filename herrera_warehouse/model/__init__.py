@@ -1,0 +1,6 @@
+import stock_production_lot
+import stock_picking_in
+import stock_picking_out
+import stock
+import stock_global
+import res_config

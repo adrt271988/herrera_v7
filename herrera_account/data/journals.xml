@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data noupdate='1'>
+        <!--sale journal -->
+        <record model="account.journal" id="account_journal_sale_barcelona">
+            <field name="name">Diario de Ventas (Barcelona)</field>
+            <field name="type">sale</field>
+            <field name="code">DVH</field>
+	    <field name='shop_id' eval='ref("sale.sale_shop_1")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_sale_carupano">
+            <field name="name">Diario de Ventas (Carupano)</field>
+            <field name="type">sale</field>
+            <field name="code">DVK</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_caru")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_sale_cumana">
+            <field name="name">Diario de Ventas (Cumana)</field>
+            <field name="type">sale</field>
+            <field name="code">DVC</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_cuma")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_sale_pordaz">
+            <field name="name">Diario de Ventas (Puerto Ordaz)</field>
+            <field name="type">sale</field>
+            <field name="code">DVO</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_ptoo")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_sale_bolivar">
+            <field name="name">Diario de Ventas (Ciudad Bolivar)</field>
+            <field name="type">sale</field>
+            <field name="code">DVG</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_boli")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_sale_pfijo">
+            <field name="name">Diario de Ventas (Punto Fijo)</field>
+            <field name="type">sale</field>
+            <field name="code">DVP</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_falc")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_sale_margarita">
+            <field name="name">Diario de Ventas (Margarita)</field>
+            <field name="type">sale</field>
+            <field name="code">DVD</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_mgta")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_sale_maturin">
+            <field name="name">Diario de Ventas (Maturin)</field>
+            <field name="type">sale</field>
+            <field name="code">DVM</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_matu")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_sale_maracaibo">
+            <field name="name">Diario de Ventas (Maracaibo)</field>
+            <field name="type">sale</field>
+            <field name="code">DVU</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_zuli")'/>
+        </record>
+        
+        <!--sale refund journal -->        
+        <record model="account.journal" id="account_journal_srefund_barcelona">
+            <field name="name">Nota de Credito de Ventas (Barcelona)</field>
+            <field name="type">sale_refund</field>
+            <field name="code">NCVH</field>
+	    <field name='shop_id' eval='ref("sale.sale_shop_1")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_srefund_carupano">
+            <field name="name">Nota de Credito de Ventas (Carupano)</field>
+            <field name="type">sale_refund</field>
+            <field name="code">NCVK</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_caru")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_srefund_cumana">
+            <field name="name">Nota de Credito de Ventas (Cumana)</field>
+            <field name="type">sale_refund</field>
+            <field name="code">NCVC</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_cuma")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_srefund_pordaz">
+            <field name="name">Nota de Credito de Ventas (Puerto Ordaz)</field>
+            <field name="type">sale_refund</field>
+            <field name="code">NCVO</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_ptoo")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_srefund_bolivar">
+            <field name="name">Nota de Credito de Ventas (Ciudad Bolivar)</field>
+            <field name="type">sale_refund</field>
+            <field name="code">NCVG</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_boli")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_srefund_pfijo">
+            <field name="name">Nota de Credito de Ventas (Punto Fijo)</field>
+            <field name="type">sale_refund</field>
+            <field name="code">NCVP</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_falc")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_srefund_margarita">
+            <field name="name">Nota de Credito de Ventas (Margarita)</field>
+            <field name="type">sale_refund</field>
+            <field name="code">NCVD</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_mgta")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_srefund_maturin">
+            <field name="name">Nota de Credito de Ventas (Maturin)</field>
+            <field name="type">sale_refund</field>
+            <field name="code">NCVM</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_matu")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_srefund_maracaibo">
+            <field name="name">Nota de Credito de Ventas (Maracaibo)</field>
+            <field name="type">sale_refund</field>
+            <field name="code">NCVU</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_zuli")'/>
+        </record>
+        
+        <!--purchase journal -->
+        <record model="account.journal" id="account_journal_purchase">
+            <field name="name">Diario de Compras</field>
+            <field name="type">purchase</field>
+            <field name="code">DC</field>
+        </record>
+        
+        <!--purchase refund journal -->
+        <record model="account.journal" id="account_journal_purefund">
+            <field name="name">Nota de Credito de Compras</field>
+            <field name="type">purchase_refund</field>
+            <field name="code">NCC</field>
+        </record>
+        
+        <!--general journal -->
+        <record model="account.journal" id="account_journal_general">
+            <field name="name">Diario General</field>
+            <field name="type">general</field>
+            <field name="code">DG</field>
+        </record>
+        
+        <!--cash journal -->
+        <record model="account.journal" id="account_journal_cash_barcelona">
+            <field name="name">Flujo de Caja (Barcelona)</field>
+            <field name="type">cash</field>
+            <field name="code">FCH</field>
+	    <field name='shop_id' eval='ref("sale.sale_shop_1")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_cash_carupano">
+            <field name="name">Flujo de Caja (Carupano)</field>
+            <field name="type">cash</field>
+            <field name="code">FCK</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_caru")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_cash_cumana">
+            <field name="name">Flujo de Caja (Cumana)</field>
+            <field name="type">cash</field>
+            <field name="code">FCC</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_cuma")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_cash_pordaz">
+            <field name="name">Flujo de Caja (Puerto Ordaz)</field>
+            <field name="type">cash</field>
+            <field name="code">FCO</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_ptoo")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_cash_bolivar">
+            <field name="name">Flujo de Caja (Ciudad Bolivar)</field>
+            <field name="type">cash</field>
+            <field name="code">FCG</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_boli")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_cash_pfijo">
+            <field name="name">Flujo de Caja (Punto Fijo)</field>
+            <field name="type">cash</field>
+            <field name="code">FCP</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_falc")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_cash_margarita">
+            <field name="name">Flujo de Caja (Margarita)</field>
+            <field name="type">cash</field>
+            <field name="code">FCD</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_mgta")'/>
+        </record>
+        
+        <record model="account.journal" id="account_journal_cash_maturin">
+            <field name="name">Flujo de Caja (Maturin)</field>
+            <field name="type">cash</field>
+            <field name="code">FCM</field>
+	    <field name='shop_id' eval='ref("herrera_warehouse.shop_matu")'/>
+        </record>
+        
+        <!--opening/closing situation journal -->
+        <record model="account.journal" id="account_journal_situation">
+            <field name="name">Diario de Apertura/Cierre</field>
+            <field name="type">situation</field>
+            <field name="code">DAC</field>
+        </record>
+        
+        <!--bank journal -->
+        <record model="account.journal" id="account_journal_bank_bfc">
+            <field name="name">Diario de Bancos y Cheques (Fondo Comun 01510152148152001370)</field>
+            <field name="type">bank</field>
+            <field name="code">DBCBFC</field>
+        </record>
+        
+        <record model="account.journal" id="account_journal_bank_caroni">
+            <field name="name">Diario de Bancos y Cheques (Banco Caroni 01280036383600054112)</field>
+            <field name="type">bank</field>
+            <field name="code">DBCCR</field>
+        </record>
+        
+        <record model="account.journal" id="account_journal_bank_delsur">
+            <field name="name">Diario de Bancos y Cheques (Banco Del Sur 01570055603955100205)</field>
+            <field name="type">bank</field>
+            <field name="code">DBCSU</field>
+        </record>
+        
+        <record model="account.journal" id="account_journal_bank_banesco">
+            <field name="name">Diario de Bancos y Cheques (Banesco 01340418674183002304)</field>
+            <field name="type">bank</field>
+            <field name="code">DBCBA</field>
+        </record>
+        
+        <record model="account.journal" id="account_journal_bank_exterior">
+            <field name="name">Diario de Bancos y Cheques (Exterior 01150062593000163852)</field>
+            <field name="type">bank</field>
+            <field name="code">DBCEX</field>
+        </record>
+        
+        <record model="account.journal" id="account_journal_bank_caribe">
+            <field name="name">Diario de Bancos y Cheques (Banco Del Caribe 01140525825255000219)</field>
+            <field name="type">bank</field>
+            <field name="code">DBCCA</field>
+        </record>
+        
+        <record model="account.journal" id="account_journal_bank_mercantil">
+            <field name="name">Diario de Bancos y Cheques (Banco Del Mercantil 01050088598088078725)</field>
+            <field name="type">bank</field>
+            <field name="code">DBCMER</field>
+        </record>
+        
+        <record model="account.journal" id="account_journal_bank_venezuela">
+            <field name="name">Diario de Bancos y Cheques (Banco De Venezuela 01020418680001907199)</field>
+            <field name="type">bank</field>
+            <field name="code">DBCVE</field>
+        </record>
+        
+        <record model="account.journal" id="account_journal_bank_ficticio">
+            <field name="name">Diario de Bancos y Cheques (Depositos Ficticios 9999999999)</field>
+            <field name="type">bank</field>
+            <field name="code">DBCDF</field>
+        </record>
+        
+        <record model="account.journal" id="account_journal_bank_corpbanca">
+            <field name="name">Diario de Bancos y Cheques (CorpBanca 01210115550109975211)</field>
+            <field name="type">bank</field>
+            <field name="code">DBCCB</field>
+        </record>
+        
+        <record model="account.journal" id="account_journal_bank_guayana">
+            <field name="name">Diario de Bancos y Cheques (Banco Guayana 00080020170008194881)</field>
+            <field name="type">bank</field>
+            <field name="code">DBCG</field>
+        </record>
+        <record model="account.journal" id="account_journal_asset">
+            <field name="name">Diario de Activos</field>
+            <field name="type">general</field>
+            <field name="code">DADA</field>
+        </record>
+    </data>
+</openerp>
+

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <report id="report_fleet_service" model="fleet.vehicle.log.services" name="fleet.service" string="Imprimir O/S" rml="herrera_fleet/report/fleet_service.rml" />
+    </data>
+</openerp>

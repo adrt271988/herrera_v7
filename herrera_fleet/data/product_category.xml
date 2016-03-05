@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate = "0">
+        <record id="product_category_herrera_fleet" model="product.category">
+            <field search="[('level','=',0)]" model='product.category' name='parent_id'/>
+            <field name="name">SERVICIOS Y CONSUMIBLES DE FLOTA</field>
+        </record>
+    </data>
+</openerp>

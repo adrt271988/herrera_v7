@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Vista en Form Choferes  -->
+        
+     <record model="ir.ui.view" id="view_fleet_drivers_form">
+        <field name="name">fleet.drivers.form</field>
+        <field name="model">fleet.drivers</field>
+        <field name="arch" type="xml">
+            <form string="Drivers inventory" version="7.0">
+                <header>
+                    <!-- cabecera -->
+                </header>
+                <sheet>
+                    <field name="image_medium" widget='image' class="oe_left oe_avatar"/>
+                        <div class="oe_title">
+                            <label for="driver_type" class="oe_edit_only"/>
+                            <field name="driver_type"/>
+                            <label for="search" class="oe_edit_only" attrs="{'invisible':['|',('driver_type','=',False),('driver_type','=','C')]}"/>
+                            <field name="search" placeholder="Buscar por Cédula o RIF. Ejm: VEV5406114" on_change="onchange_search_driver(search)" attrs="{'invisible':['|',('driver_type','=',False),('driver_type','=','C')]}" help="Busqueda por Rif o Cedula solo para choferes fijos." />
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                            <label for="category_ids" class="oe_edit_only"/>
+                            <field name="category_ids" widget="many2many_tags" placeholder="Ejm. Part Time" />
+                        </div>
+                        
+                        <div class="oe_right oe_button_box" name="button_box">
+<!--
+                            <button name="set_confirm"  string="Hacer Algo" type="object" class="oe_highlight"/>
+-->
+                        </div>
+                        <notebook>
+                            <page string="Información Pública">
+                                <group>
+                                    <group string="Informatión de Contacto">
+                                        <field name="name"/>
+                                        <field name="address_id" on_change="onchange_address_id(address_id)" context="{'show_address': 1}" options='{"always_reload": True, "highlight_first_line": True}'/>
+                                        <field name="work_email" widget="email"/>
+                                        <field name="work_phone"/>
+                                        <field name="mobile_phone"/>
+                                        <field name="work_location"/>
+                                    </group>
+                                    <group string="Cargo">
+                                        <field name="department_id"/>
+                                        <field name="job_id" options='{"no_open": True}' domain="[('state','!=','old')]" context="{'form_view_ref': 'hr.view_hr_job_employee_form'}"/>
+                                        <field name="parent_id"/>
+                                        <field name="entry_date"/>
+                                        <field name="code"/>
+                                        <field name="shop_id"/>
+                                    </group>
+                                    <group>
+                                        <field name="company_id" groups="base.group_multi_company" on_change="onchange_company(company_id)"/>
+                                    </group>
+                                </group>
+                                <field name="notes" placeholder="Otra Información ..." colspan="4"/>
+                            </page>
+                            <page string="Información Personal">
+                                <group>
+                                    <group string="Ciudadanía e información adicional">
+                                        <field name="country_id" options='{"no_open": True}'/>
+                                        <field name="cedula"/>
+                                        <field name="rif"/>
+                                    </group>
+                                    <group string="Dirección">
+                                        <field name="state_id"        domain= "[('country_id','=',country_id)]"  attrs="{'readonly': ['|',('country_id','=',False)]}"/>
+                                        <field name="municipality_id" domain= "[('state_id','=',state_id)]"  attrs="{'readonly': ['|',('state_id','=',False)]}"/>
+                                        <field name="parish_id"       domain= "[('municipalities_id','=',municipality_id)]" attrs="{'readonly': ['|',('municipality_id','=',False)]}"/>
+                                        <field name="address"/>
+                                    </group>
+                                    <group string="Estatus">
+                                        <field name="gender"/>
+                                        <field name="marital"/>
+                                    </group>
+                                    <group string="Nacimiento">
+                                        <field name="birthday"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Contabilidad">
+                                <group>
+                                    <group string="Informacion Contable">
+                                        <group>
+                                          <field name="bank_account"/>
+                                          <field name="account_payable" widget="selection" domain="[('type','=','payable')]"/>
+                                          <field name="account_receivable" widget="selection" domain="[('type','=','receivable')]"/>
+                                        </group>
+                                        <group>
+                                        <field name="withholding_islr" domain="[('type','=','islr')]" context= "{'withholding_islr': 'islr'}"/>
+                                        <field name="withholding_iva" domain="[('type','=','iva')]" context= "{'withholding_iva': 'iva'}"/>
+                                        </group>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Configuración">
+                                <group>
+                                    <group string="Activo" name="active_group">
+                                        <field name="active"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+              </sheet>
+            </form>
+        </field>
+    </record>
+    
+        <!-- Vista en Kanban Choferes  -->
+
+    <record model="ir.ui.view" id="kanban_view_drivers">
+        <field name="name">fleet.drivers.kanban</field>
+        <field name="model">fleet.drivers</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="last_login"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_employee_vignette">
+                            <div class="oe_employee_image">
+                                <a type="open"><img t-att-src="kanban_image('fleet.drivers', 'image_medium', record.id.value)" class="oe_employee_picture"/></a>
+                            </div>
+
+                            <div class="oe_employee_details">
+                                <h4>
+                                    <a type="open"><field name="name"/><t t-if="record.login.raw_value"> (<field name="login"/>)</t></a>
+                                </h4>
+                               <ul>
+                                    <li id="last_login">
+                                        <span t-if="record.last_login.raw_value &amp;&amp; record.last_login.raw_value.is().today()" class="oe_kanban_button" style="font-size: 100%%">
+                                              <t t-esc="record.last_login.raw_value.toString('HH:mm')"/>
+                                        </span>
+                                    </li>
+                                    <li t-if="record.driver_type.raw_value">Chofer <field name="driver_type"/></li>
+                                    <li t-if="record.cedula.raw_value"><field name="cedula"/></li>
+                                    <li t-if="record.mobile_phone.raw_value">Mobile: <field name="mobile_phone"/></li>
+                                    <li t-if="record.work_email.raw_value"><a t-attf-href="mailto:#{record.work_email.value}"><field name="work_email"/></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <script>
+                            $('.oe_employee_picture').load(function() { if($(this).width() > $(this).height()) { $(this).addClass('oe_employee_picture_wide') } });
+                        </script>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    
+        <!-- Vista en Tree Choferes  -->
+        
+    <record model="ir.ui.view" id="view_fleet_drivers_tree">
+        <field name="name">fleet.drivers.tree</field>
+        <field name="model">fleet.drivers</field>
+        <field name="arch" type="xml">
+            <tree string="Drivers">
+                <field name="name"/>
+                <field name="cedula"/>
+                <field name="driver_type"/>
+                <field name="entry_date"/>
+            </tree>
+        </field>
+    </record>
+
+        <!-- Vista en Search Choferes  -->
+        
+    <record model="ir.ui.view" id="view_fleet_drivers_search">
+        <field name="name">fleet.drivers.search</field>
+        <field name="model">fleet.drivers</field>
+        <field name="arch" type="xml">
+            <search string="Search Fleet Drivers">
+                <field name="name"/>
+                <field name="cedula"/>
+            </search>
+        </field>
+    </record>
+
+<!-- Actions -->
+
+   <record model="ir.actions.act_window" id="fleet_driver_actions">
+        <field name="name">Choferes</field>
+        <field name="res_model">fleet.drivers</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_id" ref="kanban_view_drivers"/>
+        <field name="search_view_id" ref="view_fleet_drivers_search"/>
+        <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click para agregar un nuevo chofer.
+              </p><p>
+                Creación de choferes fijos y contratados, tomando en cuenta que los
+                choferes  fijos ya  se  encuentran  en la base de datos de recursos
+                humanos y deben ser precargados mediante previa busqueda por cedula
+                o Rif en el formulario a continuación.
+              </p>
+            </field>
+    </record>
+
+     <menuitem action="fleet_driver_actions" parent="fleet.fleet_vehicles" id="fleet_drivers_menu" groups="fleet.group_fleet_user" sequence = "10"/>
+    
+    </data>
+</openerp>
+
+
+
+

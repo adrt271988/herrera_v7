@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_form_inherit_herrera_product_expiry">
+            <field name="name">form.inherit.herrera.product.expiry</field>
+            <field name="model">stock.production.lot</field>
+            <field name="inherit_id" ref="product_expiry.view_move_form_expiry" />
+            <field name="arch" type="xml">
+                <xpath expr='//field[@name="use_date"]' position="replace" />
+                <xpath expr='//field[@name="date"]' position="after" >
+                    <field name="use_date" on_change="onchange_use_date(use_date)" required="1"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>
+

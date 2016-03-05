@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!--  Import Data -->
+
+        <record id="view_interface_import_data_wizard" model="ir.ui.view">
+            <field name="name">Importar data</field>
+            <field name="model">interface.import.data.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Proceder" version="7.0">
+                    <p class="oe_grey">
+                        Para modificar el directorio de lectura de los archivos debe dirigirse al menú Configuración / Configuracion / Interfaces. Si no posee accesso a esta opción consulte con su Administrador
+                    </p>
+                    <group>
+                        <field name="data"/>
+                        <field name="create_sale_order" attrs="{'invisible':[('data','not in',['all','sales'])]}" string="Crear y validar pedidos"/>
+                        <separator colspan="4" string="Confirmar"/>
+                        <field name="sure"/>
+                    </group>
+                    <footer>
+                        <button name="import_data" string="Importar" type="object"  class="oe_highlight"  />
+                        or
+                        <button string="Cancelar" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+         <act_window name="Importar data desde .txt"
+            res_model="interface.import.data.wizard"
+            view_mode="form"
+            target="new"
+            key2="client_action_multi"
+            id="action_interface_import_data"/>
+
+    </data>
+</openerp>

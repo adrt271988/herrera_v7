@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="herrera_payment_pay_customer_invoice" model="ir.ui.view">
+            <field name="name">herrera.payment.pay.customer.invoice</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account_voucher.view_invoice_customer"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='invoice_pay_customer']" position="replace">
+                    <button name="%(account_payment_wizard_action)d" type="action" string="Register Payment"
+                        attrs="{'invisible': ['|', ('state','!=','open'), ('sent','=',True)]}" groups="base.group_user"/>
+                    <button name="%(account_payment_wizard_action)d" type="action" string="Register Payment"
+                        attrs="{'invisible': ['|', ('state','!=','open'), ('sent','=',False)]}" class="oe_highlight" groups="base.group_user"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

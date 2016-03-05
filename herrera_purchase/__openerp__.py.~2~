@@ -1,0 +1,29 @@
+{
+    "name": "Compras Herrera C.A",
+    "version": "1.1",
+    "author" : "Herrera C.A",
+    "category": "Compras",
+    "description": """
+     Este modulo contiene las adaptaciones en el modulo de compras para HERRERA, C.A
+    """,
+    'images': [],
+    'depends': ['purchase','account','herrera_product','stock','purchase_discount'],
+    'data': [
+        'data/purchase_data.xml', 
+        'data/pricelist.xml',
+        'data/ir_translation.xml',
+        'data/purchase_workflow.xml',
+        ],
+    'init_xml': [],
+    'update_xml': [
+        'view/purchase_view.xml',
+        'view/purchase_discount_view.xml',
+        'view/pricelist_supplier.xml',
+        'wizard/pricelist_supplier.xml',
+        ],
+    'demo_xml': [],
+    'test': [],
+    'installable': True,
+    'active': True,
+    'auto_install': False,
+}

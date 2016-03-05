@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+        <record model='ir.ui.view' id='invoice_control_number_form'>
+            <field name='name'>invoice.control.number.form</field>
+            <field name='model'>invoice.control.number</field>
+            <field name='type'>form</field>
+            <field name='arch' type='xml'>
+                <form string="Facturar Lote" version="7.0">
+                    <group string="Instrucciones">
+                        <ul>
+                            <li>Ingrese el número inicial de secuencia</li>
+                            <li>Pulse el botón "Crear serie"</li>
+                            <li>Debe tildar "Esta usted seguro?" para poder continuar</li>
+                        </ul>
+                    </group>
+                    <group>
+                        <field name='initial' class="oe_inline" placeholder="00-00000000"/>
+                    </group>
+                    <group>
+                        <button name="set_control_number" string="Crear Serie" type="object"/>
+                    </group>
+                    <group string="Facturas">
+                        <field name='line_ids' nolabel="1">
+                            <tree string="Facturas" create="0" edit="0" version="7.0">
+                                <field name="partner_id" readonly="1"/>
+                                <field name="origin" readonly="1"/>
+                                <field name="amount_total" readonly="1"/>
+                                <field name="nro_ctrl" readonly="1"/>
+                            </tree>
+                        </field>
+                    </group>
+                    
+                    <group string="Confirmación">
+                        <field name='validate_invoice'/>
+                        <field name='ok' invisible="1"/>
+                        <field name='reopen' invisible="1"/>
+                        <field name='origin' invisible="1"/>
+                        <field name='sure' string="Esta usted seguro?" attrs="{'readonly':[('ok','=',False)]}"/>
+                    </group>
+                    
+                    <footer>
+                        <button name="write_invoice" string="Guardar" type="object" class="oe_highlight"/>
+                        <button name="print_invoice" string="Guardar e imprimir" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancelar" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    <act_window name="Crear lote de facturación"
+            key2="client_action_multi"
+            res_model="invoice.control.number"
+            src_model="account.invoice"
+            view_type="form"
+            view_mode="form"
+            target="new"
+            id="invoice_control_number_action"/>
+
+</data>
+</openerp>

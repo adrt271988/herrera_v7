@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<openerp>
+  <data>
+    <record id="inherit_view_partner_property_form" model="ir.ui.view">
+        <field name="name">herrera.account.inherit.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.view_partner_property_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name=&quot;property_payment_term&quot;]" position="replace">
+                <field name="payment_condition" widget="selection" string="Condición de pago de cliente" attrs="{'required': [('is_company','=', True)]}" on_change="onchange_payment_condition(payment_condition)"/>
+                <field name="property_payment_term" />
+            </xpath>
+            <xpath expr="//field[@name=&quot;property_supplier_payment_term&quot;]" position="replace">
+                <field name="supplier_payment_condition" widget="selection" string="Condición de pago del proveedor" attrs="{'required': [('is_company','=', True)]}" on_change="onchange_payment_condition(payment_condition,True)"/>
+                <field name="property_supplier_payment_term" />
+            </xpath>
+        </field>
+    </record>
+  </data>
+</openerp>

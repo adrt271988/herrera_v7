@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="inherit_view_picking_in_form">
+            <field name="name">inherit.view.picking.in.form</field>
+            <field name="model">stock.picking.in</field>
+            <field name="inherit_id" ref="stock.view_picking_in_form" />
+            <field name="arch" type="xml">
+<!--
+                 <xpath expr='//field[@name="stock_journal_id"]' position="after">
+                    <field name="ref_sada" string = "Guía SADA"/>
+                </xpath>
+-->
+                <xpath expr='//field[@name="stock_journal_id"]' position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr='//page[@string="Additional Info"]' position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr='//field[@name="move_lines"]' position="replace">
+                    <field name="move_lines" context="{'address_in_id': partner_id, 'form_view_ref':'view_move_picking_form', 'picking_type': 'internal'}" options="{&quot;reload_on_button&quot;: true}" >
+                        <tree colors="grey:scrapped == True" string="Stock Moves">
+                            <field name="product_id"/>
+                            <field name="product_qty" on_change="onchange_quantity(product_id, product_qty, product_uom, product_uos)"/>
+                            <field name="measure" string="UdM"/>
+                            <field name="product_uom" groups="product.group_uom" string="Fraccion" invisible="1"/>
+                            <field name="product_uos" groups="product.group_uos"/>
+                            <field name="location_id" groups="stock.group_locations" invisible="1"/>
+                            <field name="picking_id" invisible="1" />
+                            <field name="create_date" invisible="1" />
+                            <field name="date_expected" invisible="1" />
+                            <button name="%(stock.move_scrap)d"
+                               string="Scrap Products" type="action"
+                               icon="terp-gtk-jump-to-ltr" context="{'scrap': True}"
+                               states="draft,waiting,confirmed,assigned"
+                               groups="base.group_user"/>
+                            <field name="scrapped" invisible="1"/>
+                            <field name="prodlot_id" groups="stock.group_production_lot"/>
+                            <button
+                               name="%(stock.track_line)d"
+                               string="Split in Serial Number"
+                               groups="stock.group_production_lot"
+                               type="action" icon="gtk-justify-fill"
+                               states="draft,waiting,confirmed,assigned"/>
+                            <field name="location_dest_id" groups="stock.group_locations"/>
+                            <field name="state"/>
+                        </tree>
+                    </field>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="inherit_view_picking_in_tree">
+            <field name="name">inherit.view.picking.in.tree</field>
+            <field name="model">stock.picking.in</field>
+            <field name="inherit_id" ref="stock.view_picking_in_tree" />
+            <field name="arch" type="xml">
+                <xpath expr='//field[@name="stock_journal_id"]' position="replace">
+                    <field name="date_done" string = "Fecha de Recepción"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="inherit_stock_move_form">
+            <field name="name">inherit.stock.move.form</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr='//field[@name="create_date"]' position="after">
+                    <field name="ref_sada"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="inherit_stock_move_tree">
+            <field name="name">inherit.stock.move.tree</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr='//field[@name="state"]' position="after">
+                    <field name="ref_sada"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

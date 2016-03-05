@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<openerp>
+<data>
+    
+    <!-- Form - Purchase Order (encabezado) -->
+    <record model="ir.ui.view" id="purchase_supplier_order_form_hr">
+        <field name="name">purchase.order.supplier.form.hr</field>
+        <field name="model">purchase.order</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='warehouse_id']" position="attributes" >
+                <attribute name="required">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='location_id']" position="attributes" >
+                <attribute name = "domain">[('id','=',location_id)]</attribute>
+            </xpath>
+            <xpath expr="//field[@name='partner_ref']" position="replace" />
+            <xpath expr="//field[@name='dest_address_id']" position="before">
+               <field name="partner_ref"/>
+            </xpath>
+            <xpath expr="//field[@name='origin']" position="attributes">
+               <attribute name="invisible">True</attribute>
+            </xpath>
+            <field name="amount_untaxed" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+            <xpath expr="//field[@name='amount_untaxed']" position="replace" >
+                <field name="amount_untaxed" widget="monetary" string="Monto bruto" options="{'currency_field': 'currency_id'}"/>
+            </xpath>
+        </field>
+    </record>
+        
+    <!-- Form - Purchase Order (lineas) -->
+	<record model="ir.ui.view" id="purchase_discount_order_line_tree_H">
+		<field name="name">herrera_purchase_discount.order.form</field>
+		<field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase_discount.purchase_discount_order_line_tree_F"/>
+        <field name="arch" type="xml">
+            <xpath expr='//field[@name="order_line"]' position="replace">
+                <field colspan="4" name="order_line" nolabel="1" context="{'warehouse_id':warehouse_id}">
+                    <tree string="Purchase Order Lines" editable="bottom">
+                        <field name="product_id" on_change="product_id_change(parent.pricelist_id,product_id,product_qty,product_uom,parent.partner_id, parent.date_order,parent.fiscal_position,date_planned,name,price_unit,context)"
+                        context="{'partner_id':parent.partner_id, 'quantity':product_qty, 'pricelist':parent.pricelist_id, 'uom':product_uom, 'warehouse':parent.warehouse_id}"
+                        domain="[('seller_ids.name','=',parent.partner_id)]"
+                        required="1"/>
+                        <field name="name" invisible="1"/>
+                        <field name="date_planned" invisible="1"/>
+                        <field name="company_id" groups="base.group_multi_company" widget="selection"/>
+                        <field name="account_analytic_id" groups="purchase.group_analytic_accounting" domain="[('type','not in',('view','template'))]"/>
+                        <field name="product_qty"/>
+                        <field name="measure" string="UdM" required="1"/>
+                        <field name="product_uom" invisible="1" groups="product.group_uom" on_change="onchange_product_uom(parent.pricelist_id,product_id,product_qty,product_uom,parent.partner_id, parent.date_order,parent.fiscal_position,date_planned,name,price_unit,context)"/>
+                        <field name="price_base" string="Precio unidad"/>
+                        <field name="discount" attrs="{'readonly':[('product_id','=',False)]}" on_change="discount_change(product_id,discount,price_unit,product_qty,parent.partner_id,price_base)"/>
+                        <field name="price_unit" string="Precio c/Desc."/>
+                        <field name="taxes_id" widget="many2many_tags" domain="[('parent_id','=',False),('type_tax_use','!=','sale')]"/>
+                        <field name="price_subtotal"/>
+                    </tree>
+                </field>
+			</xpath>
+            
+		</field>
+	</record>
+    
+    <!-- Form - Purchase Order Line -->
+	<record model="ir.ui.view" id="purchase_discount_order_line_form4">
+		<field name="name">herrera_purchase_discount.order.line.form</field>
+		<field name="model">purchase.order.line</field>
+        <field name="inherit_id" ref="purchase_discount.purchase_discount_order_line_form3"/>
+        <field name="arch" type="xml">
+			<xpath expr='//field[@name="price_base"]' position="replace">
+                <field name="price_base" string="Precio Neto"/>
+			</xpath>
+            <xpath expr="//field[@name='discount']" position="replace" />
+            <xpath expr="//field[@name='price_unit']" position="after" >
+                 <field name="discount" string="Descuento (%%)"/>
+            </xpath>
+		</field>
+	</record>
+
+</data>
+</openerp>

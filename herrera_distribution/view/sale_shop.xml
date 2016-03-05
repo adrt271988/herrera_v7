@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="herrera_distribution_sale_shop_view">
+			<field name="name">hr.sale.shop.form</field>
+			<field name="model">sale.shop</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="herrera_sales.hr_sale_shop_view" />
+			<field name="arch" type="xml">
+				<xpath expr='//field[@name="main"]' position='after'>
+				    <field name="address" placeholder="Calle..."/>
+				    <field name="email"/>
+				    <field name="phone" placeholder="Por ejemplo: +58.0000.000.00.00"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</openerp>
+

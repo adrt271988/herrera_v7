@@ -1,0 +1,5 @@
+import stock_move
+import stock_picking_cancel
+import stock_picking_confirm
+import stock_partial_picking
+import stock_create_global

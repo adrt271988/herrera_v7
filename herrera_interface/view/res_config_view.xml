@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_interface_configuration" model="ir.ui.view">
+            <field name="name">Configure Interface</field>
+            <field name="model">interface.config.settings</field>
+            <field name="arch" type="xml">
+                <form string="Configure Interface" class= "oe_form_configuration" version="7.0">
+                    <header>
+                        <button string="Apply" type="object" name="execute" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" type="object" name="cancel" class="oe_link"/>
+                    </header>
+                    <separator string="Entrada"/>
+                    <group>
+                        <label for="id" string="Origen"/>
+                        <div>
+                            <div>
+                                <label for="import_path" string="Leer los archivos .txt en directorio"/>
+                                <field name="import_path" class="oe_inline"/>
+                            </div>
+                        </div>
+                    </group>
+                    <separator string="Salida"/>
+                    <group>
+                        <label for="id" string="Destino"/>
+                        <div>
+                            <div>
+                                <label for="export_path" string="Crear archivos .txt en directorio"/>
+                                <field name="export_path" class="oe_inline"/>
+                            </div>
+                        </div>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record id="action_interface_configuration" model="ir.actions.act_window">
+            <field name="name">Configure Interface</field>
+            <field name="res_model">interface.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+        <menuitem id="menu_interface_configuration" name="Interfaces" parent="base.menu_config"
+            sequence="19" action="action_interface_configuration"/>
+    </data>
+</openerp>

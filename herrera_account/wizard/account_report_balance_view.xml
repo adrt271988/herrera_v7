@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="account_balance_general_report_view" model="ir.ui.view">
+            <field name="name">balance Report</field>
+            <field name="model">account.balance.general.report</field>
+            <field name="arch" type="xml">
+            <form string="Opciones" version="7.0">
+                <label string="Balance de Comprobación"/>  <!-- binding for inherited views -->
+                <group col="4">
+                   <field name="chart_account_id" widget='selection'/>
+                   <field name="company_id" invisible="1"/>
+                   <field name="fiscalyear_id" domain="[('company_id','=',company_id)]"/>
+                </group>
+                <notebook tabpos="up" colspan="4">
+                    <page string="Filtros" name="filters">
+                        <group>
+                            <field name="type"/>
+                        </group>
+                        <group>
+                            <field name="level_in" attrs="{'invisible':[('type', '!=', 'summary')], 'required':[('type', '=', 'summary')]}"/>
+                            <field name="account_from" attrs="{'invisible':[('type', '!=', 'selection')], 'required':[('type', '=', 'selection')]}" widget="selection"/>
+                            <field name="account_to" attrs="{'invisible':[('type', '!=', 'selection')], 'required':[('type', '=', 'selection')]}" widget="selection"/>
+                        </group>
+                        <group>
+                            <field name="filter" on_change="onchange_filter(filter, fiscalyear_id)"/>
+                        </group>
+                        <group string="Fecha"  attrs="{'invisible':[('filter', '!=', 'filter_date')], 'required':[('filter', '=', 'filter_date')]}">
+                            <field name="date_from"/>
+                            <field name="date_to" />
+                        </group>
+                        <group string="Periodo" attrs="{'invisible':[('filter','!=','filter_period')], 'required':[('filter', '=', 'filter_period')]}">
+                            <field name="period_from" domain="[('fiscalyear_id', '=', fiscalyear_id)]"/>
+                            <field name="period_to" domain="[('fiscalyear_id', '=', fiscalyear_id)]"/>
+                        </group>
+                    </page>
+                </notebook>
+                <footer>
+                    <button name="check_report" string="Generar" type="object" default_focus="1" class="oe_highlight"/>
+                    or 
+                    <button string="Cancelar" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+            </field>
+        </record>
+
+        <record id="action_account_balance_menu" model="ir.actions.act_window">
+            <field name="name">Balance de Comprobación</field>
+            <field name="res_model">account.balance.general.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="account_balance_general_report_view"/>
+            <field name="target">new</field>
+        </record>
+        
+        <menuitem
+                icon="STOCK_PRINT"
+                name="Balance de Comprobación"
+                parent="account.final_accounting_reports"
+                action="action_account_balance_menu"
+                id="menu_Balance_report"
+               />
+    </data>
+</openerp>

@@ -1,0 +1,4 @@
+import product
+import product_sica
+import product_classifications
+import pricelist

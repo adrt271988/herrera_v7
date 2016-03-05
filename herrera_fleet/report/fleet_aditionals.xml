@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <report id="report_fleet_aditionals" model="fleet.vehicle" name="fleet.aditionals" string="Accesorios del Vehículo" rml="herrera_fleet/report/fleet_aditionals.rml" />
+    </data>
+</openerp>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record id='product.list0' model="product.pricelist">
+            <field name="currency_id" ref="base.VEF"/>
+        </record>
+        
+        <record id='product.list_price' model="product.price.type">
+            <field name="currency_id" ref="base.VEF"/>
+        </record>
+        
+        <record id='product.standard_price' model="product.price.type">
+            <field name="currency_id" ref="base.VEF"/>
+        </record>
+    </data>
+</openerp>

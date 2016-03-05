@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+herrera_warehouse_incoming_access_right,stock.picking.in.receptor,model_stock_picking_in,herrera_warehouse_receiver_group,1,1,0,0
+herrera_warehouse_serialnumber_access_right,stock.production.lot.serial.receptor,model_stock_production_lot,herrera_warehouse_receiver_group,1,1,1,0
+herrera_warehouse_moves_access_right,stock.move.receptor,model_stock_move,herrera_warehouse_receiver_group,1,1,1,0

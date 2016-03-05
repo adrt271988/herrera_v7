@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+<!--
+        Herencia para mostrar campo "account_id" el cual venia invisible y requerido originalmente. 
+        (Daba error al realizar el pago)
+-->
+        <record model="ir.ui.view" id="inherited_account_voucher_form_view">
+            <field name="name">inherit.account.voucher.form</field>
+            <field name="model">account.voucher</field>
+            <field name="inherit_id" ref="account_voucher.view_vendor_receipt_dialog_form" />
+            <field name="arch" type="xml">
+              
+                <xpath expr="//field[@name='account_id']" position="replace">
+                    <field name="account_id"  widget="selection"  invisible="False"/>
+                </xpath>
+      
+            </field>
+        </record>
+        
+    </data>
+</openerp>

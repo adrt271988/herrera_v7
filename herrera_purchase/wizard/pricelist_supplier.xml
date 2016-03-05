@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+<!--
+
+    <act_window id="pricelist_supplier_action"
+    name="Actualizar lista de productos"
+    src_model="res.partner"
+    res_model="pricelist.supplier.wizard"
+    view_type="form" view_mode="form"
+    target="new"
+    groups="purchase.group_purchase_manager"/>
+-->
+   <act_window id="pricelist_selector_action"
+    name="Actualizar tarifa"
+    src_model="res.partner"
+    res_model="pricelist.selector.wizard"
+    view_type="form" view_mode="form"
+    target="new"
+    groups="purchase.group_purchase_manager"/>
+     
+    <record id="pricelist_selector_wizard" model="ir.ui.view">
+        <field name="name">Actualizar tarifa</field>
+        <field name="model">pricelist.selector.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Actualizar tarifa" version="7.0">
+                <group>
+                    <group>
+                        <field name="pricelist_type" on_change="onchange_pricelist_type(pricelist_type,context)"/>
+                        <field name="pricelist_id" domain="[('type','=',pricelist_type)]"/>
+<!--
+                        <label for="pricelist_base" attrs="{'invisible':[('pricelist_type','not in',('sale'))],'required':[('pricelist_type','=','sale')]}"/>
+                        <div attrs="{'invisible':[('pricelist_type','not in',('sale'))],'required':[('pricelist_type','=','sale')]}" >
+                            <field name="pricelist_base" domain="[('type','=','purchase')]"/>
+                            <p class="oe_grey"> 
+                                * Seleccione siempre 'Tarifa de compra por defecto' si la tarifa a actualizar va a ser de uso general
+                            </p>
+                        </div>
+-->
+                    </group>
+                    <group>
+                        <label for="order_by" string="Ordenar productos por..."/>
+                        <div>
+                            <field name="order_by"/>
+                        </div>
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_next" string="Siguiente" type="object" class="oe_highlight"/>
+                    or
+                    <button string="Cancelar" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    
+    <record id="pricelist_supplier_wizard" model="ir.ui.view">
+        <field name="name">Actualizar tarifa</field>
+        <field name="model">pricelist.supplier.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Actualizar lista de productos" version="7.0">
+                <group>
+                    <group>
+                        <label for="update_later" string="Actualizar después"/>
+                        <div>
+                            <field name="update_later"/>
+                            <p class="oe_grey">
+                                Esta opción almacena este tarifario para que pueda ser aplicado luego. Para ver las actualizaciones pendientes vaya al menú Compras / Configuracion / Tarifas / Actualizaciones de tarifas.
+                                <!--Esta opción actualiza el valor del descuento lineal en la tarifa. Si el monto descuento es el mismo que posee la tarifa entonces no es necesario tildar esta opción.-->
+                            </p>
+                        </div>
+                    </group>
+                    <group>
+                        <field name="name" attrs="{'invisible':[('update_later','=',False)],'required':[('update_later','=',True)]}" string="Referencia"/>
+                        <field name="unique_discount" string="Descuento unico" invisible="context.get('pricelist_type', 'none') in ('none','sale')"/>
+                        <label for="discount" string="Descuento (%%)" attrs="{'invisible':[('unique_discount','=',False)]}"/>
+                        <div attrs="{'invisible':[('unique_discount','=',False)]}">
+                            <field name="discount" attrs="{'required':[('unique_discount','=',True)]}" style="width: 40%%"/>
+                            <button name="update_discount" type="object" string="Actualizar" icon="gtk-execute"/>
+                        </div>
+                        <field name="unique_margin" string="Margen unico" invisible="context.get('pricelist_type', 'none') in ('none','purchase')"/>
+                        <label for="margin" string="Margen (%%)" attrs="{'invisible':[('unique_margin','=',False)]}"/>
+                        <div attrs="{'invisible':[('unique_margin','=',False)]}">
+                            <field name="margin" attrs="{'required':[('unique_margin','=',True)]}" style="width: 40%%"/>
+                            <button name="update_margin" type="object" string="Actualizar" icon="gtk-execute"/>
+                        </div>
+<!--    
+                        <field name="pricelist_type" readonly="1"/>
+-->
+                    </group>
+                </group>
+                <field name="product_lines">
+                    <tree string="Actualizar lista de productos" editable="bottom">
+                        <field name="code" string="Código P.P."/>
+                        <field name="product_id"/>
+                        <field name="cost" on_change="onchange_cost(product_id,cost,margin,discount)" string="Costo bruto (UdC)" />
+                        <field name="standard_price" string="Costo bruto (UdV)" />
+                        <field name="discount" string="Descuento (%%)" on_change="onchange_discount(cost,standard_price,discount)" invisible="context.get('pricelist_type', 'none') in ('none','sale')"/>
+                        <field name="net_cost" string="Costo neto (UdC)" invisible="context.get('pricelist_type', 'none') in ('none','sale')"/>
+                        <field name="net_price" string="Costo neto (UdV)" invisible="context.get('pricelist_type', 'none') in ('none','sale')"/>
+                        <field name="margin" on_change="onchange_margin(product_id,cost,margin)" invisible="context.get('pricelist_type', 'none') in ('none','purchase')"/>
+                        <field name="price" string="Precio (UdV)" invisible="context.get('pricelist_type', 'none') in ('none','purchase')"/>
+                    </tree>
+                </field>
+                <footer>
+                    <button name="update_prices" string="Guardar" type="object" class="oe_highlight"/>
+                    or
+                    <button string="Cancelar" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    
+  </data>
+</openerp>

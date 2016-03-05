@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+        <record model='ir.ui.view' id='fleet_alert_analysis_form'>
+            <field name='name'>Análisis de Alertas</field>
+            <field name='model'>fleet.alert.analysis</field>
+            <field name='type'>form</field>
+            <field name='arch' type='xml'>
+                <form string="Análisis de Alertas" version="7.0">
+                    <group  col="1">
+                        <p>Seleccione el check para realizar el análisis de los vehículos que necesitan servicios</p>
+                        <field name='sure'/>
+                        <group col="2">
+                            <button name="alert_analysis" string="Analizar" type="object" icon="terp-stock_effects-object-colorize" />
+                            <button icon="gtk-cancel" special="cancel" string="Close"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+    <act_window name="Análisis de Alertas"
+            key2="client_action_multi"
+            res_model="fleet.alert.analysis"
+            src_model="fleet.vehicle"
+            view_type="form"
+            view_mode="form"
+            target="new"
+            id="fleet_alert_analysis_action"/>
+
+</data>
+</openerp>

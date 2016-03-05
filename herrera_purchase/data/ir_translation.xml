@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data noupdate="0">
+        <!-- eliminar traduccion actual -->
+        <delete model="ir.translation" search="[('name','=','purchase.order,state'),('lang','=','es_VE')]" />
+        <!-- ir.translation -->
+        <record id="purchase_order_state_ve_draft" model="ir.translation">
+            <field name="name">purchase.order,state</field>
+            <field name="module">purchase</field>
+            <field name="type">selection</field>
+            <field name="lang">es_VE</field>
+            <field name="src">Draft PO</field>
+            <field name="value">Presupuesto en borrador</field>
+        </record>
+
+        <record id="purchase_order_state_ve_sent" model="ir.translation">
+            <field name="name">purchase.order,state</field>
+            <field name="module">purchase</field>
+            <field name="type">selection</field>
+            <field name="lang">es_VE</field>
+            <field name="src">RFQ Sent</field>
+            <field name="value">Presupuesto enviado</field>
+        </record>
+        
+        <record id="purchase_order_state_ve_confirmed" model="ir.translation">
+            <field name="name">purchase.order,state</field>
+            <field name="module">purchase</field>
+            <field name="type">selection</field>
+            <field name="lang">es_VE</field>
+            <field name="src">Waiting Approval</field>
+            <field name="value">Esperando aprobación</field>
+        </record>
+        
+        <record id="purchase_order_state_ve_approved" model="ir.translation">
+            <field name="name">purchase.order,state</field>
+            <field name="module">purchase</field>
+            <field name="type">selection</field>
+            <field name="lang">es_VE</field>
+            <field name="src">Purchase Order</field>
+            <field name="value">Pedido de compra</field>
+        </record>
+        <record id="purchase_order_state_ve_except_picking" model="ir.translation">
+            <field name="name">purchase.order,state</field>
+            <field name="module">purchase</field>
+            <field name="type">selection</field>
+            <field name="lang">es_VE</field>
+            <field name="src">Shipping Exception</field>
+            <field name="value">Excepción de envío</field>
+        </record>
+        
+        <record id="purchase_order_state_ve_except_invoice" model="ir.translation">
+            <field name="name">purchase.order,state</field>
+            <field name="module">purchase</field>
+            <field name="type">selection</field>
+            <field name="lang">es_VE</field>
+            <field name="src">Invoice Exception</field>
+            <field name="value">Excepción de factura</field>
+        </record>
+        
+        <record id="purchase_order_state_ve_done" model="ir.translation">
+            <field name="name">purchase.order,state</field>
+            <field name="module">purchase</field>
+            <field name="type">selection</field>
+            <field name="lang">es_VE</field>
+            <field name="src">Done</field>
+            <field name="value">Realizado</field>
+        </record>
+        
+        <record id="purchase_order_state_ve_cancel" model="ir.translation">
+            <field name="name">purchase.order,state</field>
+            <field name="module">purchase</field>
+            <field name="type">selection</field>
+            <field name="lang">es_VE</field>
+            <field name="src">Cancelled</field>
+            <field name="value">Cancelado</field>
+        </record>
+        
+    </data>
+</openerp>

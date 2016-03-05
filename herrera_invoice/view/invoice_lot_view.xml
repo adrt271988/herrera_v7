@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+	<record model="ir.ui.view" id="account_invoice_lot_form">
+	    <field name="name">account.invoice.lot.form</field>
+	    <field name="model">account.invoice.lot</field>
+	    <field name="type">form</field>
+	    <field name="arch" type="xml">
+		<form string="Lotes de Facturas" create="0" edit="0" version="7.0">
+		    <header>
+			<field name="state" widget="statusbar" statusbar_visible="open,close"/>
+			<button name="%(reopen_account_invoice_lot_action)d" string="Reabrir Lote" type="action" class="oe_highlight" attrs="{'invisible':[('state','=','open')]}"/>
+            <button name = "invoice_print" type="object" string="Imprimir facturas" class="oe_highlight" attrs="{'invisible':[('state','=','close')]}"/>
+            <button name = "invoice_print" type="object" string="Imprimir facturas" attrs="{'invisible':[('state','=','open')]}"/>
+		    </header>
+		    <sheet>
+            <group>
+                <div class="oe_title">
+                    <h1>
+                        <label string="Lote de Facturas "/>
+                        <field name="name" class="oe_inline" readonly="1"/>
+                    </h1>
+                </div>
+            </group>
+			<group string="Facturas">
+			    <field name="invoice_ids" nolabel="1">
+				<tree version="7.0" edit="0" colors="red:print_state in ('draft', 'open')">
+				    <field name="number" string = "Número de Factura"/>
+				    <field name="nro_ctrl"/>
+				    <field name="partner_id"/>
+				    <field name="origin"/>
+                    <field name="date_invoice"/>
+                    <field name="amount_total"/>
+				    <field name="user_id" invisible="1"/>
+				    <field name="state" invisible="1"/>
+				    <field name="print_state" string="Estado de impresión"/>
+				</tree>
+			    </field>
+			</group>
+		    </sheet>
+		</form>
+	    </field>
+	</record>
+
+	<record model="ir.ui.view" id="account_invoice_lot_tree">
+	    <field name="name">account.invoice.lot.tree</field>
+	    <field name="model">account.invoice.lot</field>
+	    <field name="type">tree</field>
+	    <field name="arch" type="xml">
+		<tree string="Lotes de Facturas" version="7.0" create="0">
+		    <field name="name" />
+		    <field name="origin" />
+		    <field name="initial" />
+		    <field name="count_done" />
+		    <field name="count_wait" />
+		    <field name="state" />
+		    <button name = "invoice_print" type="object" icon="gtk-print" string="Imprimir facturas" attrs="{'invisible':[('state','=','close')]}"/>
+		</tree>
+	    </field>
+	</record>
+
+	<record model='ir.actions.act_window' id='account_invoice_lot_act'>
+            <field name="name">Lotes de Facturas</field>
+            <field name="res_model">account.invoice.lot</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="account_invoice_lot_act" parent="account.menu_finance_receivables" id="account_invoice_lot_menu" string="Lotes de Facturas" sequence = "10"/>
+    </data>
+</openerp>
+

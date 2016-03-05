@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+        <!-- editando data precargada OPENERP-->
+        <record id='stock.stock_location_locations' model='stock.location'>
+            <field name='name'>UBICACIONES FÍSICAS</field>
+        </record>
+
+        <record id='stock.stock_location_company' model='stock.location'>
+            <field name='name'>INVENTARIO</field>
+        </record>
+
+        <record id='stock.stock_location_locations_partner' model='stock.location'>
+            <field name='name'>UBICACIONES DE PARTNERS</field>
+        </record>
+
+        <record id='stock.stock_location_suppliers' model='stock.location'>
+            <field name='name'>PROVEEDORES</field>
+        </record>
+
+        <record id='stock.stock_location_customers' model='stock.location'>
+            <field name='name'>CLIENTES</field>
+        </record>
+
+        <record id='location_h' model='stock.location'>
+            <field name='name'>STOCK BARCELONA</field>
+            <field name='location_id' ref = 'stock.stock_location_company'/>
+            <field name='usage'>internal</field>
+            <field name='internal_type'>view</field>
+            <field name='chained_location_type'>fixed</field>
+            <field name='chained_auto_packing'>transparent</field>
+            <field name='active'>True</field>
+        </record>
+
+        <record id='stock.stock_location_stock' model='stock.location'>
+            <field name='name'>PRINCIPAL BARCELONA</field>
+            <field name='location_id' ref = 'location_h'/>
+            <field name='chained_location_type'>fixed</field>
+            <field name='chained_auto_packing'>transparent</field>
+        </record>
+
+        <!-- insertando nueva data HERRERA-->
+
+            <!-- SUCURSAL MARGARITA -->
+            <record id='location_d' model='stock.location'>
+                <field name='name'>STOCK MARGARITA</field>
+                <field name='location_id' ref = 'stock.stock_location_company'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>fixed</field>
+                <field name='chained_auto_packing'>transparent</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_d_principal' model='stock.location'>
+                <field name='name'>PRINCIPAL MARGARITA</field>
+                <field name='location_id' ref = 'location_d'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>fixed</field>
+                <field name='chained_auto_packing'>transparent</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_d_entrada' model='stock.location'>
+                <field name='name'>ENTRADA MARGARITA</field>
+                <field name='location_id' ref = 'stock.stock_location_company'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>in</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_d_reintegro' model='stock.location'>
+                <field name='name'>REINTEGRO MARGARITA</field>
+                <field name='location_id' ref = 'location_d'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>reinstatement</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+            
+            <record id='location_d_alterno' model='stock.location'>
+                <field name='name'>ALTERNO MARGARITA</field>
+                <field name='location_id' ref = 'location_d'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>alternate</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_d_abastecimiento' model='stock.location'>
+                <field name='name'>ABASTECIMIENTO MARGARITA</field>
+                <field name='location_id' ref = 'location_d'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>procurement</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_d_salida' model='stock.location'>
+                <field name='name'>SALIDA MARGARITA</field>
+                <field name='location_id' ref = 'stock.stock_location_company'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>output</field>
+                <field name='chained_location_type'>customer</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+                <field name='chained_journal_id'>1</field>
+                <field name='chained_picking_type'>out</field>
+            </record>
+
+            <record id='location_d_picking' model='stock.location'>
+                <field name='name'>PICKING MARGARITA</field>
+                <field name='location_id' ref = 'stock.stock_location_company'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>picking</field>
+                <field name='chained_location_type'>fixed</field>
+                <field name='chained_location_id' ref='location_d_salida'/>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+                <field name='chained_journal_id'>1</field>
+                <field name='chained_picking_type'>out</field>
+            </record>
+
+            <!-- SUCURSAL BARCELONA -->
+
+            <record id='location_h_alterno' model='stock.location'>
+                <field name='name'>ALTERNO BARCELONA</field>
+                <field name='location_id' ref = 'location_h'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>alternate</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_reintegro' model='stock.location'>
+                <field name='name'>REINTEGRO BARCELONA</field>
+                <field name='location_id' ref = 'location_h'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>reinstatement</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_abastecimiento' model='stock.location'>
+                <field name='name'>ABASTECIMIENTO BARCELONA</field>
+                <field name='location_id' ref = 'location_h'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>procurement</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_entrada' model='stock.location'>
+                <field name='name'>ENTRADA BARCELONA</field>
+                <field name='location_id' ref = 'stock.stock_location_company'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>in</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='stock.stock_location_output' model='stock.location'>
+                <field name='name'>SALIDA BARCELONA</field>
+                <field name='location_id' ref = 'stock.stock_location_company'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>output</field>
+                <field name='chained_location_type'>customer</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+                <field name='chained_journal_id'>1</field>
+                <field name='chained_picking_type'>out</field>
+            </record>
+
+            <record id='location_h_picking' model='stock.location'>
+                <field name='name'>PICKING BARCELONA</field>
+                <field name='location_id' ref = 'stock.stock_location_company'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>picking</field>
+                <field name='chained_location_type'>fixed</field>
+                <field name='chained_location_id' ref='stock.stock_location_output'/>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+                <field name='chained_journal_id'>1</field>
+                <field name='chained_picking_type'>out</field>
+            </record>
+        
+            <record id='location_h_10' model='stock.location'>
+                <field name='name'>PASILLO 10</field>
+                <field name='location_id' ref = 'stock.stock_location_stock'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_10_01' model='stock.location'>
+                <field name='name'>CARA 01</field>
+                <field name='location_id' ref = 'location_h_10'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_10_01_01' model='stock.location'>
+                <field name='name'>NIVEL 01</field>
+                <field name='location_id' ref = 'location_h_10_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_10_01_02' model='stock.location'>
+                <field name='name'>NIVEL 02</field>
+                <field name='location_id' ref = 'location_h_10_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_10_01_03' model='stock.location'>
+                <field name='name'>NIVEL 03</field>
+                <field name='location_id' ref = 'location_h_10_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_10_02' model='stock.location'>
+                <field name='name'>CARA 02</field>
+                <field name='location_id' ref = 'location_h_10'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_10_02_01' model='stock.location'>
+                <field name='name'>NIVEL 01</field>
+                <field name='location_id' ref = 'location_h_10_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_10_02_02' model='stock.location'>
+                <field name='name'>NIVEL 02</field>
+                <field name='location_id' ref = 'location_h_10_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_10_02_03' model='stock.location'>
+                <field name='name'>NIVEL 03</field>
+                <field name='location_id' ref = 'location_h_10_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_11' model='stock.location'>
+                <field name='name'>PASILLO 11</field>
+                <field name='location_id' ref = 'stock.stock_location_stock'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_11_01' model='stock.location'>
+                <field name='name'>CARA 01</field>
+                <field name='location_id' ref = 'location_h_11'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_11_01_01' model='stock.location'>
+                <field name='name'>NIVEL 01</field>
+                <field name='location_id' ref = 'location_h_11_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_11_01_02' model='stock.location'>
+                <field name='name'>NIVEL 02</field>
+                <field name='location_id' ref = 'location_h_11_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_11_01_03' model='stock.location'>
+                <field name='name'>NIVEL 03</field>
+                <field name='location_id' ref = 'location_h_11_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_11_02' model='stock.location'>
+                <field name='name'>CARA 02</field>
+                <field name='location_id' ref = 'location_h_11'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_11_02_01' model='stock.location'>
+                <field name='name'>NIVEL 01</field>
+                <field name='location_id' ref = 'location_h_11_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_11_02_02' model='stock.location'>
+                <field name='name'>NIVEL 02</field>
+                <field name='location_id' ref = 'location_h_11_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_11_02_03' model='stock.location'>
+                <field name='name'>NIVEL 03</field>
+                <field name='location_id' ref = 'location_h_11_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_12' model='stock.location'>
+                <field name='name'>PASILLO 12</field>
+                <field name='location_id' ref = 'stock.stock_location_stock'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_12_01' model='stock.location'>
+                <field name='name'>CARA 01</field>
+                <field name='location_id' ref = 'location_h_12'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_12_01_01' model='stock.location'>
+                <field name='name'>NIVEL 01</field>
+                <field name='location_id' ref = 'location_h_12_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_12_01_02' model='stock.location'>
+                <field name='name'>NIVEL 02</field>
+                <field name='location_id' ref = 'location_h_12_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_12_01_03' model='stock.location'>
+                <field name='name'>NIVEL 03</field>
+                <field name='location_id' ref = 'location_h_12_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_12_02' model='stock.location'>
+                <field name='name'>CARA 02</field>
+                <field name='location_id' ref = 'location_h_12'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_12_02_01' model='stock.location'>
+                <field name='name'>NIVEL 01</field>
+                <field name='location_id' ref = 'location_h_12_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_12_02_02' model='stock.location'>
+                <field name='name'>NIVEL 02</field>
+                <field name='location_id' ref = 'location_h_12_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_12_02_03' model='stock.location'>
+                <field name='name'>NIVEL 03</field>
+                <field name='location_id' ref = 'location_h_12_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_13' model='stock.location'>
+                <field name='name'>PASILLO 13</field>
+                <field name='location_id' ref = 'stock.stock_location_stock'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_13_01' model='stock.location'>
+                <field name='name'>CARA 01</field>
+                <field name='location_id' ref = 'location_h_13'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_13_01_01' model='stock.location'>
+                <field name='name'>NIVEL 01</field>
+                <field name='location_id' ref = 'location_h_13_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_13_01_02' model='stock.location'>
+                <field name='name'>NIVEL 02</field>
+                <field name='location_id' ref = 'location_h_13_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_13_01_03' model='stock.location'>
+                <field name='name'>NIVEL 03</field>
+                <field name='location_id' ref = 'location_h_13_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_13_01_04' model='stock.location'>
+                <field name='name'>NIVEL 04</field>
+                <field name='location_id' ref = 'location_h_13_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_13_02' model='stock.location'>
+                <field name='name'>CARA 02</field>
+                <field name='location_id' ref = 'location_h_13'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_13_02_01' model='stock.location'>
+                <field name='name'>NIVEL 01</field>
+                <field name='location_id' ref = 'location_h_13_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_13_02_02' model='stock.location'>
+                <field name='name'>NIVEL 02</field>
+                <field name='location_id' ref = 'location_h_13_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_13_02_03' model='stock.location'>
+                <field name='name'>NIVEL 03</field>
+                <field name='location_id' ref = 'location_h_13_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_13_02_04' model='stock.location'>
+                <field name='name'>NIVEL 04</field>
+                <field name='location_id' ref = 'location_h_13_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_14' model='stock.location'>
+                <field name='name'>PASILLO 14</field>
+                <field name='location_id' ref = 'stock.stock_location_stock'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_14_01' model='stock.location'>
+                <field name='name'>CARA 01</field>
+                <field name='location_id' ref = 'location_h_14'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_14_01_01' model='stock.location'>
+                <field name='name'>NIVEL 01</field>
+                <field name='location_id' ref = 'location_h_14_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_14_01_02' model='stock.location'>
+                <field name='name'>NIVEL 02</field>
+                <field name='location_id' ref = 'location_h_14_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_14_01_03' model='stock.location'>
+                <field name='name'>NIVEL 03</field>
+                <field name='location_id' ref = 'location_h_14_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_14_02' model='stock.location'>
+                <field name='name'>CARA 02</field>
+                <field name='location_id' ref = 'location_h_14'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_14_02_01' model='stock.location'>
+                <field name='name'>NIVEL 01</field>
+                <field name='location_id' ref = 'location_h_14_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_14_02_02' model='stock.location'>
+                <field name='name'>NIVEL 02</field>
+                <field name='location_id' ref = 'location_h_14_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_14_02_03' model='stock.location'>
+                <field name='name'>NIVEL 03</field>
+                <field name='location_id' ref = 'location_h_14_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_15' model='stock.location'>
+                <field name='name'>PASILLO 15</field>
+                <field name='location_id' ref = 'stock.stock_location_stock'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_15_01' model='stock.location'>
+                <field name='name'>CARA 01</field>
+                <field name='location_id' ref = 'location_h_15'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_15_01_01' model='stock.location'>
+                <field name='name'>NIVEL 01</field>
+                <field name='location_id' ref = 'location_h_15_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_15_01_02' model='stock.location'>
+                <field name='name'>NIVEL 02</field>
+                <field name='location_id' ref = 'location_h_15_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_15_01_03' model='stock.location'>
+                <field name='name'>NIVEL 03</field>
+                <field name='location_id' ref = 'location_h_15_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_15_01_04' model='stock.location'>
+                <field name='name'>NIVEL 04</field>
+                <field name='location_id' ref = 'location_h_15_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_15_02' model='stock.location'>
+                <field name='name'>CARA 02</field>
+                <field name='location_id' ref = 'location_h_15'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_15_02_01' model='stock.location'>
+                <field name='name'>NIVEL 01</field>
+                <field name='location_id' ref = 'location_h_15_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_15_02_02' model='stock.location'>
+                <field name='name'>NIVEL 02</field>
+                <field name='location_id' ref = 'location_h_15_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_15_02_03' model='stock.location'>
+                <field name='name'>NIVEL 03</field>
+                <field name='location_id' ref = 'location_h_15_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_15_02_04' model='stock.location'>
+                <field name='name'>NIVEL 04</field>
+                <field name='location_id' ref = 'location_h_15_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_16' model='stock.location'>
+                <field name='name'>PASILLO 16</field>
+                <field name='location_id' ref = 'stock.stock_location_stock'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_16_01' model='stock.location'>
+                <field name='name'>CARA 01</field>
+                <field name='location_id' ref = 'location_h_16'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_16_01_01' model='stock.location'>
+                <field name='name'>NIVEL 01</field>
+                <field name='location_id' ref = 'location_h_16_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_16_01_02' model='stock.location'>
+                <field name='name'>NIVEL 02</field>
+                <field name='location_id' ref = 'location_h_16_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_16_01_03' model='stock.location'>
+                <field name='name'>NIVEL 03</field>
+                <field name='location_id' ref = 'location_h_16_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_16_02' model='stock.location'>
+                <field name='name'>CARA 02</field>
+                <field name='location_id' ref = 'location_h_16'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_16_02_01' model='stock.location'>
+                <field name='name'>NIVEL 01</field>
+                <field name='location_id' ref = 'location_h_16_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_16_02_02' model='stock.location'>
+                <field name='name'>NIVEL 02</field>
+                <field name='location_id' ref = 'location_h_16_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_16_02_03' model='stock.location'>
+                <field name='name'>NIVEL 03</field>
+                <field name='location_id' ref = 'location_h_16_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_17' model='stock.location'>
+                <field name='name'>PASILLO 17</field>
+                <field name='location_id' ref = 'stock.stock_location_stock'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_17_01' model='stock.location'>
+                <field name='name'>CARA 01</field>
+                <field name='location_id' ref = 'location_h_17'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_17_01_01' model='stock.location'>
+                <field name='name'>NIVEL 01</field>
+                <field name='location_id' ref = 'location_h_17_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_17_01_02' model='stock.location'>
+                <field name='name'>NIVEL 02</field>
+                <field name='location_id' ref = 'location_h_17_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_17_01_03' model='stock.location'>
+                <field name='name'>NIVEL 03</field>
+                <field name='location_id' ref = 'location_h_17_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_17_02' model='stock.location'>
+                <field name='name'>CARA 02</field>
+                <field name='location_id' ref = 'location_h_17'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_17_02_01' model='stock.location'>
+                <field name='name'>NIVEL 01</field>
+                <field name='location_id' ref = 'location_h_17_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_17_02_02' model='stock.location'>
+                <field name='name'>NIVEL 02</field>
+                <field name='location_id' ref = 'location_h_17_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_17_02_03' model='stock.location'>
+                <field name='name'>NIVEL 03</field>
+                <field name='location_id' ref = 'location_h_17_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_18' model='stock.location'>
+                <field name='name'>PASILLO 18</field>
+                <field name='location_id' ref = 'stock.stock_location_stock'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_18_01' model='stock.location'>
+                <field name='name'>CARA 01</field>
+                <field name='location_id' ref = 'location_h_18'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_18_01_01' model='stock.location'>
+                <field name='name'>NIVEL 01</field>
+                <field name='location_id' ref = 'location_h_18_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_18_01_02' model='stock.location'>
+                <field name='name'>NIVEL 02</field>
+                <field name='location_id' ref = 'location_h_18_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_18_01_03' model='stock.location'>
+                <field name='name'>NIVEL 03</field>
+                <field name='location_id' ref = 'location_h_18_01'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_18_02' model='stock.location'>
+                <field name='name'>CARA 02</field>
+                <field name='location_id' ref = 'location_h_18'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>view</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_18_02_01' model='stock.location'>
+                <field name='name'>NIVEL 01</field>
+                <field name='location_id' ref = 'location_h_18_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_18_02_02' model='stock.location'>
+                <field name='name'>NIVEL 02</field>
+                <field name='location_id' ref = 'location_h_18_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+            <record id='location_h_18_02_03' model='stock.location'>
+                <field name='name'>NIVEL 03</field>
+                <field name='location_id' ref = 'location_h_18_02'/>
+                <field name='usage'>internal</field>
+                <field name='internal_type'>hall</field>
+                <field name='chained_location_type'>none</field>
+                <field name='chained_auto_packing'>manual</field>
+                <field name='active'>True</field>
+            </record>
+
+  </data>
+</openerp>

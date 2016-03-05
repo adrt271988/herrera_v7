@@ -1,0 +1,494 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+	<!-- Menus para acceso a Almacen desde Flota-->
+	<menuitem id="herrera_fleet_warehouse_menu" name="Almacén"
+	    parent="fleet.menu_root" sequence="1"/>
+	<menuitem id="herrera_fleet_incoming_shipments_menu" name="Envíos a Recibir"
+	    parent="herrera_fleet_warehouse_menu"
+	    action="stock.action_picking_tree4" sequence="10"/>
+	<menuitem id="herrera_fleet_internal_moves_menu" name="Albaranes Internos"
+	    parent="herrera_fleet_warehouse_menu"
+	    action="stock.action_picking_tree6" sequence="15"/>
+	
+	<!-- Menus para acceso a Compras desde Flota-->
+	<record id="herrera_fleet_action_partner_supplier_form" model="ir.actions.act_window">
+            <field name="name">Proveedores</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_type">form</field>
+            <field name="domain">[]</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="context">{'search_default_supplier': 1,'default_customer': 0,'default_supplier': 1, 'search_default_fleet_tag': 1}</field>
+            <field name="filter" eval="True"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add a contact in your address book.
+              </p><p>
+                OpenERP helps you easily track all activities related to
+                a supplier: discussions, history of purchases,
+                documents, etc.
+              </p>
+            </field>
+        </record>
+
+	<record id="herrera_fleet_product_normal_action_puchased" model="ir.actions.act_window">
+            <field name="name">Productos</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.product</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="context">{"search_default_consumable":1, "default_type":'consu', "default_categ_id":171}</field>
+            <field name="view_id" ref="product.product_kanban_view"/>
+            <field name="search_view_id" ref="product.product_search_form_view"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to define a new product.
+              </p><p>
+                You must define a product for everything you purchase, whether
+                it's a physical product, a consumable or services you buy to
+                subcontractants.
+              </p><p>
+                The product form contains detailed information to improve the
+                purchase process: prices, procurement logistics, accounting data,
+                available suppliers, etc.
+              </p>
+            </field>
+        </record>
+	
+	<menuitem id="herrera_fleet_purchase_menu" name="Compras"
+	    parent="fleet.menu_root" sequence="1"/>
+	<menuitem id="herrera_fleet_menu_procurement_management_supplier_name" name="Proveedores"
+	    parent="herrera_fleet_purchase_menu"
+	    action="herrera_fleet_action_partner_supplier_form" sequence="15"/>
+	<menuitem action="purchase.purchase_rfq" id="herrera_fleet_menu_purchase_rfq"
+            name="Solicitudes de Presupuesto" parent="herrera_fleet_purchase_menu"
+            sequence="20"/>
+	<menuitem action="purchase.purchase_form_action" id="herrera_fleet_menu_purchase_form_action"
+	    name="Pedidos de Compra" parent="herrera_fleet_purchase_menu" sequence="25"/>
+	<menuitem id="herrera_fleet_products_menu" action="herrera_fleet_product_normal_action_puchased"
+          parent="herrera_fleet_purchase_menu" sequence="30"/>
+
+        <record model="ir.ui.view" id="inherit_fleet_vehicle_form">
+            <field name="name">inherit.fleet.vehicle.form</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='image_medium']" position="replace">
+                    <field name="image_medium" widget="image" class="oe_left oe_avatar"/> 
+                </xpath>
+                <xpath expr="//field[@name='state_id']" position="replace">
+                    <field name="state_id" invisible = "1"/>
+                </xpath>
+                <xpath expr="//label[@for='license_plate']" position="replace"/>
+                <xpath expr="//field[@name='license_plate']" position="replace"/>
+
+                <xpath expr="//label[@for='model_id']" position="before">
+                    <group>
+                        <field name="contracted"/>
+                    </group>
+                    <label for="license_plate" class="oe_edit_only"/>
+                    <h2>
+                        <field nostring="1" name="license_plate" on_change="onchange_search_asset(license_plate, contracted)"/>
+                    </h2>
+                </xpath>
+                <xpath expr="//field[@name='driver_id']" position="replace">
+                    <field name = "asset_id" readonly="1" attrs = "{'required':[('contracted','=',False)]}"/>
+                    <field name = "shop_id" widget = "selection" required = "1"/>
+                    <field name = "driver"/>
+                    <field name = "partner_id" domain = "[('vat','in',['VEJ301936167','VEJ307029889'])]"/>
+                </xpath>
+                <xpath expr="//field[@name='location']" position="replace">
+                    <field name = "motor_number"/>
+                </xpath>
+                <xpath expr="//field[@name='acquisition_date']" position="before">
+                    <field name = "last_horometer" string = "Último Horómetro"/>
+                </xpath>
+                <xpath expr="//field[@name='vin_sn']" position="replace">
+                    <field name = "vin_sn" help = "Número de Chásis / Número de Bastidor"/>
+                </xpath>
+                <xpath expr="//field[@name='car_value']" position="after" >
+                    <field name = "age"/>
+                    <field name = "account_id" widget = "selection" domain = "[('type','&lt;&gt;','view'),('type','&lt;&gt;','consolidation')]"/>
+                </xpath>
+                <xpath expr="//field[@name='color']" position="after" >
+                    <field name = "min_volumetric_capacity"/>
+                    <field name = "volumetric_capacity"/>
+                    <field name = "min_capacity_kgs"/>
+                    <field name = "capacity_kgs"/>
+                    <field name = "gps"/>
+                </xpath>
+                <xpath expr="/form/sheet/group" position="after" >
+                    <group string = "Accesorios del Vehículo">
+                        <field name = "aditional_ids" nolabel="1" context="{'default_vehicle_id': active_id}">
+                            <tree string = "Accesorios">
+                                <field name = "type_id"/>
+                                <field name = "brand_id"/>
+                                <field name = "name"/>
+                                <field name = "serial"/>
+                                <field name = "size"/>
+                                <field name = "state"/>
+                                <field name = "date_in"/>
+                            </tree>
+                            <form string = "Accesorios">
+                                <group string="General">
+                                    <field name = "name"/>
+                                    <field name = "serial"/>
+                                    <field name = "vehicle_id" invisible="1"/>
+                                    <field name = "date_in"/>
+                                </group>
+                                <group string = "Características">
+                                    <field name = "type_id"/>
+                                    <field name = "brand_id"/>
+                                    <field name = "size"/>
+                                    <field name = "use_id"/>
+                                </group>
+                            </form>
+                        </field>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="inherit_fleet_vehicle_model_form">
+            <field name="name">inherit.fleet.vehicle.model.form</field>
+            <field name="model">fleet.vehicle.model</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_model_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@string='Vendors']" position="replace"/>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="inherit_fleet_vehicle_tree">
+            <field name="name">inherit.fleet.vehicle.tree</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="type">tree</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='driver_id']" position="replace">
+                    <field name = "driver"/>
+                </xpath>
+                <xpath expr="//field[@name='vin_sn']" position="replace">
+                    <field name = "shop_id"/>
+                    <field name = "order_count"/>
+                    <field name = "alert_count"/>
+                </xpath>
+                <xpath expr="//field[@name='odometer']" position="replace"/>
+                <xpath expr="//field[@name='odometer_unit']" position="replace"/>
+                <xpath expr="//field[@name='state_id']" position="after">
+                    <field name="active_vehicle"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Action con search_default vehicle-->
+        <record id="fleet_vehicle_log_services_act_2" model="ir.actions.act_window">
+            <field name="name">Ordenes de Servicios</field>
+            <field name="res_model">fleet.vehicle.log.services</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'search_default_vehicle_id': active_id}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Este vehículo no posee O/S asociadas
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="fleet_vehicle_kanban_service_inherit">
+            <field name="name">fleet.vehicle.kanban.service.inherit</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_kanban"/>
+            <field name="arch" type="xml">
+                <field name="model_id" position="after">
+                    <field name="order_count"/>
+                    <field name="alert_count"/>
+                    <field name="image_small"/>
+                    <field name="image_medium"/>
+                </field>
+                <xpath expr="/kanban/templates/t/div/a/img" position="replace">
+                    <img t-att-src="kanban_image('fleet.vehicle', 'image_small', record.id.value)"/>
+                </xpath>
+                <xpath expr="//div/div/field[@name='tag_ids']" position="before">
+                    <div class = "oe_kanban_partner_links">
+                        <a name="%(herrera_fleet.fleet_vehicle_log_services_act_2)d" type="action" t-if="record.order_count.value>0">
+                            <t t-esc="record.order_count.value"/> Servicios Pendientes
+                        </a>
+                        <br/>
+                        <a name="%(herrera_fleet.fleet_service_alert_history_act)d" type="action" t-if="record.alert_count.value>0">
+                            <t t-esc="record.alert_count.value"/> Alertas Pendientes
+                        </a>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="inherit_fleet_vehicle_search" model="ir.ui.view">
+            <field name="name">inherit.fleet.vehicle.search</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_search" />
+            <field name="arch" type="xml">
+                <xpath expr='//filter[@name="alert_true"]' position='replace'>
+                    <filter name="shop_id" string="Sucursal" context="{'group_by': 'shop_id' }"/>
+                    <filter name="model_id" string="Modelo de Vehiculo" context="{'group_by': 'model_id' }"/>
+                    <filter name="state_id" string="Estado del Vehiculo" context="{'group_by': 'state_id' }"/>
+                    <filter name="partner_id" string="Propietario" context="{'group_by': 'partner_id' }"/>
+                    <filter name="contracted" string="Contratado?" context="{'group_by': 'contracted' }"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="inherit_fleet_vehicle_log_services_form">
+            <field name="name">inherit.fleet.vehicle.log.services.form</field>
+            <field name="model">fleet.vehicle.log.services</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_log_services_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="before">
+                    <header>
+                        <button name="set_confirm" states="draft" string="Confirmar O/S" type="object" class="oe_highlight"/>
+                        <button name="set_done" states="confirmed" string="Cerrar O/S" type="object" class="oe_highlight"/>
+                        <button name="set_cancel" states="draft,confirmed" string="Anular O/S" type = "object"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,done,cancel" statusbar_colors="{&quot;shipping_except&quot;:&quot;red&quot;,&quot;invoice_except&quot;:&quot;red&quot;,&quot;waiting_date&quot;:&quot;blue&quot;}"/>
+                    </header>
+                </xpath>
+                <xpath expr="//group[@string='Services Details']" position="replace">
+                        <group colspan = "2">
+                            <div class="oe_title">
+                                <h1>
+                                    <label string="Orden de Servicio"/>
+                                    <field name="name" class="oe_inline" readonly="1"/>
+                                </h1>
+                            </div>
+                        </group>
+                        <group colspan = "2">
+                            <field name="vehicle_id" on_change="onchange_vehicle(vehicle_id)" attrs="{'readonly':[('state','!=','draft')]}" domain="['|',('active_vehicle','=',True),('contracted','=',False)]"/>
+                        </group>
+                </xpath>
+                <xpath expr="//group[@string='Odometer Details']/div" position="after">
+                    <field name="horometer" attrs="{'readonly':[('state','!=','draft')]}"/>
+                </xpath>
+                <xpath expr="//field[@name='date']" position="replace">
+                    <field name="date" attrs="{'readonly':['|',('state','in',['done','cancel']),('vehicle_id','=',False)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='purchaser_id']" position="replace">
+                    <field name="driver_id" attrs="{'readonly':['|',('state','in',['done','cancel']),('vehicle_id','=',False)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='vendor_id']" position="replace">
+                    <field name="vendor_id" domain = "[('category_id.name','in',['FLOTA'])]" attrs="{'readonly':['|',('state','in',['done','cancel']),('vehicle_id','=',False)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='inv_ref']" position="replace">
+                    <field name="inv_ref" attrs="{'readonly':['|',('state','in',['done','cancel']),('vendor_id','=',False)]}"/>
+                    <field name="outcome_to_vehicle" attrs="{'readonly':['|',('state','in',['done','cancel']),('vendor_id','=',False)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='cost_ids']" position="replace">
+                    <field name="cost_ids" nolabel="1" attrs="{'readonly':['|',('state','in',['done','cancel']),('vendor_id','=',False)]}" context = "{'vendor_id': vendor_id}">
+                        <tree string="Servicios Incluidos" version="7.0" editable="bottom">
+                            <field name="cost_subtype_id" string="Service" domain="[('category','=','service')]" on_change="clean_line(cost_subtype_id, context)"/>
+                            <field name="amount" sum="Price" string="Cost" on_change="onchange_subtotal(cost_subtype_id, amount, context)"/>
+                            <field name="tax" sum="IVA" string="Monto IVA"/>
+                            <field name="subtotal" sum="Total" string="Total"/>
+                        </tree>
+                    </field>
+                </xpath>
+                <xpath expr="//field[@name='notes']" position="replace">
+                    <field nolabel="1" name="notes" attrs="{'readonly':[('state','in',['done','cancel'])]}" placeholder="Write here any other information related to the service completed."/>
+                </xpath>
+                <xpath expr="/form/sheet" position="after">
+                    <div class="oe_chatter">
+                        <field name="message_ids" widget="mail_thread" options="{&quot;thread_level&quot;: 1}"/>
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='inherit_fleet_vehicle_log_services_tree'>
+            <field name="name">inherit.fleet.vehicle.log.services.tree</field>
+            <field name="model">fleet.vehicle.log.services</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_log_services_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr='//tree[@string="Services Logs"]' position='attributes'>
+                    <attribute name="colors">blue:state == 'done'</attribute>
+                </xpath>
+                <xpath expr="//field[@name='notes']" position="replace"/>
+                <xpath expr="//field[@name='cost_subtype_id']" position="replace">
+                    <field name = "name"/>
+                </xpath>
+                <xpath expr="//field[@name='purchaser_id']" position="replace">
+                    <field name = "driver_id"/>
+                    <field name = "shop"/>
+                </xpath>
+                <xpath expr="//field[@name='amount']" position="replace">
+                    <field name = "total_amount"/>
+                    <field name = "state"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='fleet_vehicle_log_services_search'>
+            <field name="name">fleet.vehicle.log.services.search</field>
+            <field name="model">fleet.vehicle.log.services</field>
+            <field name="arch" type="xml">
+                <search>
+                    <group expand="1" string="Agrupar por...">
+                        <filter name="groupby_vehicle" context="{'group_by' : 'vehicle_id'}" string="Vehículo"/>
+                        <filter name="groupby_vendor" context="{'group_by' : 'vendor_id'}" string="Proveedor"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='inherit_fleet_vehicle_odometer_tree'>
+            <field name="name">inherit.fleet.vehicle.odometer.tree</field>
+            <field name="model">fleet.vehicle.odometer</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_odometer_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='vehicle_id']" position="replace">
+                    <field name="vehicle_id" on_change="on_change_vehicle(vehicle_id)" domain = "[('active_vehicle','=',True)]"/>
+                </xpath>
+                <xpath expr="//field[@name='unit']" position="after">
+                    <field name = "driver_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Horometro de Vehiculos-->
+        <record model='ir.ui.view' id='fleet_vehicle_horometer_form'>
+            <field name="name">fleet.vehicle.horometer.form</field>
+            <field name="model">fleet.vehicle.horometer</field>
+            <field name="arch" type="xml">
+                <form string="Registros de Horómetros" version="7.0">
+                    <sheet>
+                        <group>
+                            <field name="vehicle_id" on_change="on_change_vehicle(vehicle_id)" domain = "[('active_vehicle','=',True)]"/>
+                                <div>
+                                    <field name="value" class="oe_inline" string = "Valor (horas)"/><p>hrs</p>
+                                </div>
+                            <field name="date" />
+                            <field name="driver_id" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='fleet_vehicle_horometer_tree'>
+            <field name="name">fleet.vehicle.horometer.tree</field>
+            <field name="model">fleet.vehicle.horometer</field>
+            <field name="arch" type="xml">
+                <tree string="Registros de Horómetros" version="7.0" editable="top">
+                    <field name="date" />
+                    <field name="vehicle_id"/>
+                    <field name="value" string = "Valor Horómetro (horas)"/>
+                    <field name="driver_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='fleet_vehicle_horometer_act'>
+            <field name="name">Horómetros de Vehículos</field>
+            <field name="res_model">fleet.vehicle.horometer</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="context">{"search_default_groupby_vehicle" : True}</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Haga click para crear nuevo registro de Horómetro
+              </p>
+              <p>
+                Aquí puedes agregar múltiples registros de horómetros para vehículos
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="fleet_vehicle_horometer_act" parent="fleet.fleet_vehicles" id="fleet_vehicle_horometer_menu" groups="fleet.group_fleet_user" sequence = "10"/>
+
+        <!-- Tipos de servicios de vehiculos -->
+        <record model='ir.ui.view' id='herrera_fleet_vehicle_service_types_tree'>
+            <field name="name">herrera.fleet.vehicle.service.types.tree</field>
+            <field name="model">fleet.service.type</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_service_types_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='category']" position="before">
+                    <field name="account_id" required="1"/>
+                    <field name="iva"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='fleet_vehicle_service_types_form'>
+            <field name="name">fleet.service.type.form</field>
+            <field name="model">fleet.service.type</field>
+            <field name="arch" type="xml">
+                <form string="Tipos de Servicio">
+                    <field name="name" />
+                    <field name="category"/>
+                    <field name="account_id" domain="[('type','not in',['view'])]" required="1"/>
+                    <field name="iva"/>
+                </form>
+            </field>
+        </record>
+
+	<menuitem action="fleet.fleet_vehicle_service_types_act"
+			parent="herrera_fleet_purchase_menu"
+			id="fleet.fleet_vehicle_service_types_menu"
+			groups="base.group_no_one" sequence="40"/>
+	
+        <record model='ir.ui.view' id='inherit_vehicle_state_tree'>
+            <field name="name">inherit.vehicle.state.tree</field>
+            <field name="model">fleet.vehicle.state</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_state_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="set_inactive"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Log de cambios de estatus de vehiculos -->
+        <record model='ir.ui.view' id='fleet_vehicle_state_log_form'>
+            <field name="name">fleet.vehicle.state.log.form</field>
+            <field name="model">fleet.vehicle.state.log</field>
+            <field name="arch" type="xml">
+                <form string="Cambiar Estado del Vehículo" version="7.0">
+                    <group>
+                        <group>
+                            <field name="vehicle_id" on_change= "onchange_vehicle(vehicle_id)"/>
+                            <field name="state_id"/>
+                        </group>
+                        <group>
+                            <field name="date"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='fleet_vehicle_state_log_tree'>
+            <field name="name">fleet.vehicle.state.log.tree</field>
+            <field name="model">fleet.vehicle.state.log</field>
+            <field name="arch" type="xml">
+                <tree string="Registro de Estados de Vehículos" version="7.0">
+                    <field name="vehicle_id"/>
+                    <field name="state_id"/>
+                    <field name="date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='fleet_vehicle_state_log_act'>
+            <field name="name">Registro de Estados de Vehículos</field>
+            <field name="res_model">fleet.vehicle.state.log</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{"search_default_groupby_vehicle" : True}</field>
+        </record>
+
+        <menuitem action="fleet_vehicle_state_log_act" parent="fleet.fleet_vehicles" id="fleet_vehicle_state_log_menu" groups="fleet.group_fleet_user" sequence = "10"/>
+
+    </data>
+</openerp>

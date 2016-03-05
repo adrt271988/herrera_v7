@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="stock_picking_out_not_confirmed_tree" model="ir.ui.view">
+            <field name="name">stock.picking.out.not.confirmed.tree</field>
+            <field name="model">stock.picking.out</field>
+            <field name="arch" type="xml">
+                <tree string="Albaranes en Espera">
+                    <field name="name"/>
+                    <field name="partner_id" string="Customer"/>
+                    <field name="origin"/>
+                    <field name="min_date"/>
+                    <field name="date"/>
+                    <field name="backorder_id"/>
+                    <field name="stock_journal_id" groups="account.group_account_user"/>
+                    <field name="invoice_state"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="stock_picking_out_not_confirmed_form" model="ir.ui.view">
+            <field name="name">stock.picking.out.not.confirmed.form</field>
+            <field name="model">stock.picking.out</field>
+            <field name="inherit_id" ref="stock.view_picking_out_form"/>
+
+            <field name="arch" type="xml">
+                <xpath expr='//form[@string="Internal Picking List"]' position='attributes'>
+                    <attribute name="create">false</attribute>
+                    <attribute name="edit">false</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="stock_picking_out_not_confirmed_action" model="ir.actions.act_window">
+            <field name="name">Envíos en backorders</field>
+            <field name="res_model">stock.picking.out</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('type','=','internal'),('state','=','confirmed'),('invoice_state','=','2binvoiced')]</field>
+            <field name="context">{'default_type': 'out', 'contact_display': 'partner_address'}</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Listado de albaranes con existencia de productos sin confirmar
+              </p>
+            </field>
+        </record>
+        
+    </data>
+</openerp>

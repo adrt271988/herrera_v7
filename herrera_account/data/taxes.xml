@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<openerp>
+    <data noupdate="1">
+        <record id='account_tax_1' model='account.tax'>
+            <field name='name'>IVA</field>
+            <field name='description'>IVA</field>
+            <field name='type'>percent</field>
+            <field name='amount'>0.12</field>
+        </record>
+        
+        <record id='account_tax_2' model='account.tax'>
+            <field name='name'>Descuento por Dañado</field>
+            <field name='description'>DD</field>
+            <field name='type'>percent</field>
+            <field name='amount'>-0.013</field>
+        </record>
+    </data>
+</openerp>

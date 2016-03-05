@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+        <record model='ir.ui.view' id='massive_stock_analysis_form'>
+            <field name='name'>Análisis de Disponibilidad</field>
+            <field name='model'>stock.picking.confirm</field>
+            <field name='type'>form</field>
+            <field name='arch' type='xml'>
+                <form string="Análisis de Disponibilidad" version="7.0">
+                    <group>
+                            <p>Seleccione el check y luego presione "Enviar" para cancelar los albaranes seleccionados</p>
+                            <group>
+                                <field name='sure'/>
+                                <button name="stock_picking_confirm" string="Enviar" type="object" icon="terp-stock_effects-object-colorize" />
+                                <button icon="gtk-cancel" special="cancel" string="Cerrar"/>
+                            </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+<!--
+    <act_window name="Análisis de Disponibilidad"
+            key2="client_action_multi"
+            res_model="stock.picking.confirm"
+            src_model="stock.picking.out"
+            view_type="form"
+            view_mode="form"
+            target="new"
+            id="stock_picking_confirm_action"/>
+-->
+
+</data>
+</openerp>

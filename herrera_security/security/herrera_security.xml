@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+
+        <record model="ir.rule" id="purchase_order_herrera_shop">
+            <field name="name">Herrera Seguridad Sucursal Orden Compra</field>
+            <field name="model_id" ref="purchase.model_purchase_order"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">[('warehouse_id','in',[user.shop_id.warehouse_id.id])]</field>
+        </record>
+        
+        <record model="ir.rule" id="incoming_shipments_herrera_shop">
+            <field name="name">Herrera Seguridad Sucursal Envios a Recibir</field>
+            <field name="model_id" ref="stock.model_stock_picking"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">[('purchase_id.warehouse_id','=',user.shop_id.warehouse_id.id)]</field>
+        </record>
+        
+        <record model="ir.rule" id="incoming_shipments_herrera_shop_in">
+            <field name="name">Herrera Seguridad Sucursal Envios a Recibir In</field>
+            <field name="model_id" ref="stock.model_stock_picking_in"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">[('purchase_id.warehouse_id','=',user.shop_id.warehouse_id.id)]</field>
+        </record>
+        
+        <record model="ir.rule" id="stock_moves_herrera_shop">
+            <field name="name">Herrera Seguridad Sucursal Stock Moves</field>
+            <field name="model_id" ref="stock.model_stock_move"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">[('location_dest_id','in', [user.shop_id.warehouse_id.lot_input_id.id, user.shop_id.warehouse_id.lot_stock_id.id])]</field>
+        </record>
+    </data>
+</openerp>

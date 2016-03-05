@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+
+		<record model="ir.ui.view" id="hr_sale_shop_view">
+			<field name="name">hr.sale.shop.form</field>
+			<field name="model">sale.shop</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="sale.view_shop_form" />
+			<field name="arch" type="xml">
+                <xpath expr='//field[@name="pricelist_id"]' position='after'>
+                    <field name="code"/>
+                    <field name="tax_iva" string="Aplica Impuesto IVA"/>
+                    <field name="main"/>
+                </xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="hr_sale_shop_tree_view">
+			<field name="name">hr.sale.shop.tree</field>
+			<field name="model">sale.shop</field>
+			<field name="inherit_id" ref="sale.view_shop_tree" />
+			<field name="arch" type="xml">
+                <xpath expr='//field[@name="name"]' position='after'>
+                    <field name="code"/>
+                </xpath>
+                <xpath expr='//field[@name="pricelist_id"]' position='after'>
+                    <field name="tax_iva" string="Aplica Impuesto IVA"/>
+                    <field name="main"/>
+                </xpath>
+			</field>
+		</record>
+
+	</data>
+</openerp>
+

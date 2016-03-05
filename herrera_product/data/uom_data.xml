@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data noupdate="1">
+
+    <record id='herrera_uom_tobo_1' model='product.uom' >
+      <field name='name'>TOBO / 1 Unidad(es)</field>
+      <field name='measure'>tobo</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>reference</field>
+      <field name='factor'>1.000000</field>
+    </record>
+
+    <record id='herrera_uom_caja_12' model='product.uom' >
+      <field name='name'>CAJA / 12 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.083333</field>
+    </record>
+
+    <record id='herrera_uom_unidad_1' model='product.uom' >
+      <field name='name'>UNIDAD / 1 Unidad(es)</field>
+      <field name='measure'>unidad</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>reference</field>
+      <field name='factor'>1.000000</field>
+    </record>
+
+    <record id='herrera_uom_caja_24' model='product.uom' >
+      <field name='name'>CAJA / 24 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.041667</field>
+    </record>
+
+    <record id='herrera_uom_caja_14' model='product.uom' >
+      <field name='name'>CAJA / 14 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.071429</field>
+    </record>
+
+    <record id='herrera_uom_3pack_3' model='product.uom' >
+      <field name='name'>3PACK / 3 Unidad(es)</field>
+      <field name='measure'>3pack</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.333333</field>
+    </record>
+
+    <record id='herrera_uom_docena_12' model='product.uom' >
+      <field name='name'>DOCENA / 12 Unidad(es)</field>
+      <field name='measure'>docena</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.083333</field>
+    </record>
+
+    <record id='herrera_uom_display_6' model='product.uom' >
+      <field name='name'>DISPLAY / 6 Unidad(es)</field>
+      <field name='measure'>display</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.166667</field>
+    </record>
+
+    <record id='herrera_uom_3pack_2' model='product.uom' >
+      <field name='name'>3PACK / 2 Unidad(es)</field>
+      <field name='measure'>3pack</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.500000</field>
+    </record>
+
+    <record id='herrera_uom_caja_144' model='product.uom' >
+      <field name='name'>CAJA / 144 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.006944</field>
+    </record>
+
+    <record id='herrera_uom_caja_8' model='product.uom' >
+      <field name='name'>CAJA / 8 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.125000</field>
+    </record>
+
+    <record id='herrera_uom_caja_20' model='product.uom' >
+      <field name='name'>CAJA / 20 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.050000</field>
+    </record>
+
+    <record id='herrera_uom_kilos_1' model='product.uom' >
+      <field name='name'>KILOS / 1 Unidad(es)</field>
+      <field name='measure'>kilos</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>reference</field>
+      <field name='factor'>1.000000</field>
+    </record>
+
+    <record id='herrera_uom_bulto_12' model='product.uom' >
+      <field name='name'>BULTO / 12 Unidad(es)</field>
+      <field name='measure'>bulto</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.083333</field>
+    </record>
+
+    <record id='herrera_uom_bulto_15' model='product.uom' >
+      <field name='name'>BULTO / 15 Unidad(es)</field>
+      <field name='measure'>bulto</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.066667</field>
+    </record>
+
+    <record id='herrera_uom_caja_1' model='product.uom' >
+      <field name='name'>CAJA / 1 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>reference</field>
+      <field name='factor'>1.000000</field>
+    </record>
+
+    <record id='herrera_uom_caja_6' model='product.uom' >
+      <field name='name'>CAJA / 6 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.166667</field>
+    </record>
+
+    <record id='herrera_uom_caja_27' model='product.uom' >
+      <field name='name'>CAJA / 27 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.037037</field>
+    </record>
+
+    <record id='herrera_uom_caja_50' model='product.uom' >
+      <field name='name'>CAJA / 50 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.020000</field>
+    </record>
+
+    <record id='herrera_uom_caja_2' model='product.uom' >
+      <field name='name'>CAJA / 2 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.500000</field>
+    </record>
+
+    <record id='herrera_uom_caja_4' model='product.uom' >
+      <field name='name'>CAJA / 4 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.250000</field>
+    </record>
+
+    <record id='herrera_uom_caja_15' model='product.uom' >
+      <field name='name'>CAJA / 15 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.066667</field>
+    </record>
+
+    <record id='herrera_uom_caja_80' model='product.uom' >
+      <field name='name'>CAJA / 80 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.012500</field>
+    </record>
+
+    <record id='herrera_uom_caja_40' model='product.uom' >
+      <field name='name'>CAJA / 40 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.025000</field>
+    </record>
+
+    <record id='herrera_uom_caja_35' model='product.uom' >
+      <field name='name'>CAJA / 35 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.028571</field>
+    </record>
+
+    <record id='herrera_uom_saco_1' model='product.uom' >
+      <field name='name'>SACO / 1 Unidad(es)</field>
+      <field name='measure'>saco</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>reference</field>
+      <field name='factor'>1.000000</field>
+    </record>
+
+    <record id='herrera_uom_bulto_1' model='product.uom' >
+      <field name='name'>BULTO / 1 Unidad(es)</field>
+      <field name='measure'>bulto</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>reference</field>
+      <field name='factor'>1.000000</field>
+    </record>
+
+    <record id='herrera_uom_fardo_24' model='product.uom' >
+      <field name='name'>FARDO / 24 Unidad(es)</field>
+      <field name='measure'>fardo</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.041667</field>
+    </record>
+
+    <record id='herrera_uom_saco_24' model='product.uom' >
+      <field name='name'>SACO / 24 Unidad(es)</field>
+      <field name='measure'>saco</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.041667</field>
+    </record>
+
+    <record id='herrera_uom_fardo_20' model='product.uom' >
+      <field name='name'>FARDO / 20 Unidad(es)</field>
+      <field name='measure'>fardo</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.050000</field>
+    </record>
+
+    <record id='herrera_uom_fardo_48' model='product.uom' >
+      <field name='name'>FARDO / 48 Unidad(es)</field>
+      <field name='measure'>fardo</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.020833</field>
+    </record>
+
+    <record id='herrera_uom_saco_50' model='product.uom' >
+      <field name='name'>SACO / 50 Unidad(es)</field>
+      <field name='measure'>saco</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.020000</field>
+    </record>
+
+    <record id='herrera_uom_unidad_10' model='product.uom' >
+      <field name='name'>UNIDAD / 10 Unidad(es)</field>
+      <field name='measure'>unidad</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.100000</field>
+    </record>
+
+    <record id='herrera_uom_caja_30' model='product.uom' >
+      <field name='name'>CAJA / 30 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.033333</field>
+    </record>
+
+    <record id='herrera_uom_caja_60' model='product.uom' >
+      <field name='name'>CAJA / 60 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.016667</field>
+    </record>
+
+    <record id='herrera_uom_caja_25' model='product.uom' >
+      <field name='name'>CAJA / 25 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.040000</field>
+    </record>
+
+    <record id='herrera_uom_display_25' model='product.uom' >
+      <field name='name'>DISPLAY / 25 Unidad(es)</field>
+      <field name='measure'>display</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.040000</field>
+    </record>
+
+    <record id='herrera_uom_caja_3' model='product.uom' >
+      <field name='name'>CAJA / 3 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.333333</field>
+    </record>
+
+    <record id='herrera_uom_fardo_5' model='product.uom' >
+      <field name='name'>FARDO / 5 Unidad(es)</field>
+      <field name='measure'>fardo</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.200000</field>
+    </record>
+
+    <record id='herrera_uom_fardo_25' model='product.uom' >
+      <field name='name'>FARDO / 25 Unidad(es)</field>
+      <field name='measure'>fardo</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.040000</field>
+    </record>
+
+    <record id='herrera_uom_bulto_10' model='product.uom' >
+      <field name='name'>BULTO / 10 Unidad(es)</field>
+      <field name='measure'>bulto</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.100000</field>
+    </record>
+
+    <record id='herrera_uom_bulto_25' model='product.uom' >
+      <field name='name'>BULTO / 25 Unidad(es)</field>
+      <field name='measure'>bulto</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.040000</field>
+    </record>
+
+    <record id='herrera_uom_unidad_6' model='product.uom' >
+      <field name='name'>UNIDAD / 6 Unidad(es)</field>
+      <field name='measure'>unidad</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.166667</field>
+    </record>
+
+    <record id='herrera_uom_caja_16' model='product.uom' >
+      <field name='name'>CAJA / 16 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.062500</field>
+    </record>
+
+    <record id='herrera_uom_display_1' model='product.uom' >
+      <field name='name'>DISPLAY / 1 Unidad(es)</field>
+      <field name='measure'>display</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>reference</field>
+      <field name='factor'>1.000000</field>
+    </record>
+
+    <record id='herrera_uom_display_18' model='product.uom' >
+      <field name='name'>DISPLAY / 18 Unidad(es)</field>
+      <field name='measure'>display</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.055556</field>
+    </record>
+
+    <record id='herrera_uom_docena_1' model='product.uom' >
+      <field name='name'>DOCENA / 1 Unidad(es)</field>
+      <field name='measure'>docena</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>reference</field>
+      <field name='factor'>1.000000</field>
+    </record>
+
+    <record id='herrera_uom_docena_6' model='product.uom' >
+      <field name='name'>DOCENA / 6 Unidad(es)</field>
+      <field name='measure'>docena</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.166667</field>
+    </record>
+
+    <record id='herrera_uom_display_12' model='product.uom' >
+      <field name='name'>DISPLAY / 12 Unidad(es)</field>
+      <field name='measure'>display</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.083333</field>
+    </record>
+
+    <record id='herrera_uom_caja_28' model='product.uom' >
+      <field name='name'>CAJA / 28 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.035714</field>
+    </record>
+
+    <record id='herrera_uom_unidad_18' model='product.uom' >
+      <field name='name'>UNIDAD / 18 Unidad(es)</field>
+      <field name='measure'>unidad</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.055556</field>
+    </record>
+
+    <record id='herrera_uom_caja_32' model='product.uom' >
+      <field name='name'>CAJA / 32 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.031250</field>
+    </record>
+
+    <record id='herrera_uom_display_8' model='product.uom' >
+      <field name='name'>DISPLAY / 8 Unidad(es)</field>
+      <field name='measure'>display</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.125000</field>
+    </record>
+
+    <record id='herrera_uom_caja_48' model='product.uom' >
+      <field name='name'>CAJA / 48 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.020833</field>
+    </record>
+
+    <record id='herrera_uom_unidad_8' model='product.uom' >
+      <field name='name'>UNIDAD / 8 Unidad(es)</field>
+      <field name='measure'>unidad</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.125000</field>
+    </record>
+
+    <record id='herrera_uom_docena_4' model='product.uom' >
+      <field name='name'>DOCENA / 4 Unidad(es)</field>
+      <field name='measure'>docena</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.250000</field>
+    </record>
+
+    <record id='herrera_uom_display_32' model='product.uom' >
+      <field name='name'>DISPLAY / 32 Unidad(es)</field>
+      <field name='measure'>display</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.031250</field>
+    </record>
+
+    <record id='herrera_uom_display_60' model='product.uom' >
+      <field name='name'>DISPLAY / 60 Unidad(es)</field>
+      <field name='measure'>display</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.016667</field>
+    </record>
+
+    <record id='herrera_uom_display_30' model='product.uom' >
+      <field name='name'>DISPLAY / 30 Unidad(es)</field>
+      <field name='measure'>display</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.033333</field>
+    </record>
+
+    <record id='herrera_uom_display_50' model='product.uom' >
+      <field name='name'>DISPLAY / 50 Unidad(es)</field>
+      <field name='measure'>display</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.020000</field>
+    </record>
+
+    <record id='herrera_uom_display_16' model='product.uom' >
+      <field name='name'>DISPLAY / 16 Unidad(es)</field>
+      <field name='measure'>display</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.062500</field>
+    </record>
+
+    <record id='herrera_uom_display_24' model='product.uom' >
+      <field name='name'>DISPLAY / 24 Unidad(es)</field>
+      <field name='measure'>display</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.041667</field>
+    </record>
+
+    <record id='herrera_uom_display_40' model='product.uom' >
+      <field name='name'>DISPLAY / 40 Unidad(es)</field>
+      <field name='measure'>display</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.025000</field>
+    </record>
+
+    <record id='herrera_uom_display_20' model='product.uom' >
+      <field name='name'>DISPLAY / 20 Unidad(es)</field>
+      <field name='measure'>display</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.050000</field>
+    </record>
+
+    <record id='herrera_uom_caja_36' model='product.uom' >
+      <field name='name'>CAJA / 36 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.027778</field>
+    </record>
+
+    <record id='herrera_uom_bulto_8' model='product.uom' >
+      <field name='name'>BULTO / 8 Unidad(es)</field>
+      <field name='measure'>bulto</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.125000</field>
+    </record>
+
+    <record id='herrera_uom_bulto_4' model='product.uom' >
+      <field name='name'>BULTO / 4 Unidad(es)</field>
+      <field name='measure'>bulto</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.250000</field>
+    </record>
+
+    <record id='herrera_uom_display_10' model='product.uom' >
+      <field name='name'>DISPLAY / 10 Unidad(es)</field>
+      <field name='measure'>display</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.100000</field>
+    </record>
+
+    <record id='herrera_uom_blister_1' model='product.uom' >
+      <field name='name'>BLISTER / 1 Unidad(es)</field>
+      <field name='measure'>blister</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>reference</field>
+      <field name='factor'>1.000000</field>
+    </record>
+
+    <record id='herrera_uom_blister_4' model='product.uom' >
+      <field name='name'>BLISTER / 4 Unidad(es)</field>
+      <field name='measure'>blister</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.250000</field>
+    </record>
+
+    <record id='herrera_uom_display_4' model='product.uom' >
+      <field name='name'>DISPLAY / 4 Unidad(es)</field>
+      <field name='measure'>display</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.250000</field>
+    </record>
+
+    <record id='herrera_uom_docena_3' model='product.uom' >
+      <field name='name'>DOCENA / 3 Unidad(es)</field>
+      <field name='measure'>docena</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.333333</field>
+    </record>
+
+    <record id='herrera_uom_docena_2' model='product.uom' >
+      <field name='name'>DOCENA / 2 Unidad(es)</field>
+      <field name='measure'>docena</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.500000</field>
+    </record>
+
+    <record id='herrera_uom_display_5' model='product.uom' >
+      <field name='name'>DISPLAY / 5 Unidad(es)</field>
+      <field name='measure'>display</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.200000</field>
+    </record>
+
+    <record id='herrera_uom_display_2' model='product.uom' >
+      <field name='name'>DISPLAY / 2 Unidad(es)</field>
+      <field name='measure'>display</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.500000</field>
+    </record>
+
+    <record id='herrera_uom_display_28' model='product.uom' >
+      <field name='name'>DISPLAY / 28 Unidad(es)</field>
+      <field name='measure'>display</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.035714</field>
+    </record>
+
+    <record id='herrera_uom_caja_7' model='product.uom' >
+      <field name='name'>CAJA / 7 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.142857</field>
+    </record>
+
+    <record id='herrera_uom_caja_10' model='product.uom' >
+      <field name='name'>CAJA / 10 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.100000</field>
+    </record>
+
+    <record id='herrera_uom_unidad_3' model='product.uom' >
+      <field name='name'>UNIDAD / 3 Unidad(es)</field>
+      <field name='measure'>unidad</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.333333</field>
+    </record>
+
+    <record id='herrera_uom_unidad_4' model='product.uom' >
+      <field name='name'>UNIDAD / 4 Unidad(es)</field>
+      <field name='measure'>unidad</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.250000</field>
+    </record>
+
+    <record id='herrera_uom_caja_18' model='product.uom' >
+      <field name='name'>CAJA / 18 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.055556</field>
+    </record>
+
+    <record id='herrera_uom_docena_8' model='product.uom' >
+      <field name='name'>DOCENA / 8 Unidad(es)</field>
+      <field name='measure'>docena</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.125000</field>
+    </record>
+
+    <record id='herrera_uom_saco_12' model='product.uom' >
+      <field name='name'>SACO / 12 Unidad(es)</field>
+      <field name='measure'>saco</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.083333</field>
+    </record>
+
+    <record id='herrera_uom_unidad_9' model='product.uom' >
+      <field name='name'>UNIDAD / 9 Unidad(es)</field>
+      <field name='measure'>unidad</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.111111</field>
+    </record>
+
+    <record id='herrera_uom_display_3' model='product.uom' >
+      <field name='name'>DISPLAY / 3 Unidad(es)</field>
+      <field name='measure'>display</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.333333</field>
+    </record>
+
+    <record id='herrera_uom_docena_24' model='product.uom' >
+      <field name='name'>DOCENA / 24 Unidad(es)</field>
+      <field name='measure'>docena</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.041667</field>
+    </record>
+
+    <record id='herrera_uom_caja_56' model='product.uom' >
+      <field name='name'>CAJA / 56 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.017857</field>
+    </record>
+
+    <record id='herrera_uom_unidad_12' model='product.uom' >
+      <field name='name'>UNIDAD / 12 Unidad(es)</field>
+      <field name='measure'>unidad</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.083333</field>
+    </record>
+
+    <record id='herrera_uom_display_14' model='product.uom' >
+      <field name='name'>DISPLAY / 14 Unidad(es)</field>
+      <field name='measure'>display</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.071429</field>
+    </record>
+
+    <record id='herrera_uom_caja_5' model='product.uom' >
+      <field name='name'>CAJA / 5 Unidad(es)</field>
+      <field name='measure'>caja</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.200000</field>
+    </record>
+
+    <record id='herrera_uom_3pack_1' model='product.uom' >
+      <field name='name'>3PACK / 1 Unidad(es)</field>
+      <field name='measure'>3pack</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>reference</field>
+      <field name='factor'>1.000000</field>
+    </record>
+
+    <record id='herrera_uom_galon_24' model='product.uom' >
+      <field name='name'>GALON / 24 Unidad(es)</field>
+      <field name='measure'>galon</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.041667</field>
+    </record>
+
+    <record id='herrera_uom_unidad_30' model='product.uom' >
+      <field name='name'>UNIDAD / 30 Unidad(es)</field>
+      <field name='measure'>unidad</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.033333</field>
+    </record>
+
+    <record id='herrera_uom_bulto_48' model='product.uom' >
+      <field name='name'>BULTO / 48 Unidad(es)</field>
+      <field name='measure'>bulto</field>
+      <field name='category_id' eval='ref("product.product_uom_categ_unit")'/>
+      <field name='uom_type'>bigger</field>
+      <field name='factor'>0.020833</field>
+    </record>
+
+  </data>
+</openerp>

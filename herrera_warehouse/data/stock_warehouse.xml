@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<openerp>
+    <data noupdate="1">
+        <!-- SUCURSAL BARCELONA -->
+        <record id='stock.warehouse0' model='stock.warehouse'>
+            <field name='name'>ALMACEN BARCELONA</field>
+            <field name='lot_input_id' ref= "location_h_entrada"/>
+            <field name='lot_stock_id' ref= "stock.stock_location_stock"/>
+            <field name='lot_output_id' ref="location_h_picking"/>
+        </record>
+        <!-- SUCURSAL MARGARITA -->
+        <record id='warehouse_mgta' model='stock.warehouse'>
+            <field name='name'>ALMACEN MARGARITA</field>
+            <field name='lot_input_id' ref= "location_d_entrada"/>
+            <field name='lot_stock_id' ref= "location_d"/>
+            <field name='lot_output_id' ref="location_d_picking"/>
+        </record>
+        <!-- SUCURSAL CARUPANO -->
+        <record id='warehouse_caru' model='stock.warehouse'>
+            <field name='name'>ALMACEN CARUPANO</field>
+            <field name='lot_input_id' ref= "location_d"/>
+            <field name='lot_stock_id' ref= "location_d"/>
+            <field name='lot_output_id' ref="location_d_picking"/>
+        </record>
+        <!-- SUCURSAL CUMANA -->
+        <record id='warehouse_cuma' model='stock.warehouse'>
+            <field name='name'>ALMACEN CUMANA</field>
+            <field name='lot_input_id' ref= "location_d"/>
+            <field name='lot_stock_id' ref= "location_d"/>
+            <field name='lot_output_id' ref="location_d_picking"/>
+        </record>
+        <!-- SUCURSAL BOLIVAR -->
+        <record id='warehouse_boli' model='stock.warehouse'>
+            <field name='name'>ALMACEN BOLIVAR</field>
+            <field name='lot_input_id' ref= "location_d"/>
+            <field name='lot_stock_id' ref= "location_d"/>
+            <field name='lot_output_id' ref="location_d_picking"/>
+        </record>
+        <!-- SUCURSAL MATURIN -->
+        <record id='warehouse_matu' model='stock.warehouse'>
+            <field name='name'>ALMACEN MATURIN</field>
+            <field name='lot_input_id' ref= "location_d"/>
+            <field name='lot_stock_id' ref= "location_d"/>
+            <field name='lot_output_id' ref="location_d_picking"/>
+        </record>
+        <!-- SUCURSAL FALCON -->
+        <record id='warehouse_falc' model='stock.warehouse'>
+            <field name='name'>ALMACEN FALCON</field>
+            <field name='lot_input_id' ref= "location_d"/>
+            <field name='lot_stock_id' ref= "location_d"/>
+            <field name='lot_output_id' ref="location_d_picking"/>
+        </record>
+        <!-- SUCURSAL ZULIA -->
+        <record id='warehouse_zuli' model='stock.warehouse'>
+            <field name='name'>ALMACEN ZULIA</field>
+            <field name='lot_input_id' ref= "location_d"/>
+            <field name='lot_stock_id' ref= "location_d"/>
+            <field name='lot_output_id' ref="location_d_picking"/>
+        </record>
+        <!-- SUCURSAL PTO ORDAZ -->
+        <record id='warehouse_ptoo' model='stock.warehouse'>
+            <field name='name'>ALMACEN PTO ORDAZ</field>
+            <field name='lot_input_id' ref= "location_d"/>
+            <field name='lot_stock_id' ref= "location_d"/>
+            <field name='lot_output_id' ref="location_d_picking"/>
+        </record>
+        <!-- OFICINA SEDE -->
+        <record id='warehouse_sede' model='stock.warehouse'>
+            <field name='name'>ALMACEN SEDE</field>
+            <field name='lot_input_id' ref= "location_d"/>
+            <field name='lot_stock_id' ref= "location_d"/>
+            <field name='lot_output_id' ref="location_d_picking"/>
+        </record>
+    </data>
+</openerp>

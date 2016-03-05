@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+        <record model='ir.ui.view' id='stock_create_global_form'>
+            <field name='name'>Creación de Global</field>
+            <field name='model'>stock.create.global</field>
+            <field name='type'>form</field>
+            <field name='arch' type='xml'>
+                <form string="Creación de Global" version="7.0">
+                    <group>
+                            <p>Seleccione el check y luego presione "Crear" para crear la global</p>
+                            <group>
+                                <field name='sure'/>
+                                <button name="create_global" string="Crear" type="object" icon="terp-stock_effects-object-colorize" />
+                                <button icon="gtk-cancel" special="cancel" string="Cerrar"/>
+                            </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+    <act_window name="Creación de Global"
+            key2="client_action_multi"
+            res_model="stock.create.global"
+            src_model="stock.picking.out"
+            view_type="form"
+            view_mode="form"
+            target="new"
+            id="stock_create_global_action"/>
+
+</data>
+</openerp>

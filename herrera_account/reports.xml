@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+      
+           <!-- Herencia de reporte Perdidas y Ganancias-->
+            <report auto="False" 
+                    id="account.account_financial_report" 
+                    menu="False" 
+                    model="account.financial.report" 
+                    name="account.financial.report" 
+                    rml="herrera_account/report/account_financial_report2.rml" 
+                    string="Ganancias y Perdidas"/>
+            
+           <!-- Herencia de reporte de Balance de Sumas y Saldos-->
+ <!--       <report auto="False" 
+                    id="account.account_account_balance" 
+                    menu="False" model="account.account" 
+                    name="account.account.balance" 
+                    rml="/home/openerp/instancias/openerp_7.0/addons-luis/herrera/herrera_account/report/account_balance.rml" 
+                    string="Trial Balance"/>
+-->
+            <report auto="False" 
+                    id="account_general_balance" 
+                    menu="False" 
+                    model="account.account" 
+                    name="general.balance" 
+                    rml="herrera_account/report/general_balance.rml" 
+                    string="Balance de Comprobación"/>
+                    
+            <report auto="False" 
+                    id="account_analytical_accounts" 
+                    menu="False" 
+                    model="account.account" 
+                    name="analytical.accounts" 
+                    rml="herrera_account/report/analytical_accounts.rml" 
+                    string="Analítico de Cuentas"/>
+
+    </data>
+</openerp>

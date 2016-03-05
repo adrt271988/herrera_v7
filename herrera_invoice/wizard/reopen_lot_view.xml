@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+        <record model='ir.ui.view' id='reopen_account_invoice_lot_form'>
+            <field name='name'>reopen.account.invoice.lot.form</field>
+            <field name='model'>reopen.account.invoice.lot</field>
+            <field name='type'>form</field>
+            <field name='arch' type='xml'>
+                <form string="Facturar Lote" version="7.0">
+                    <group string="Instrucciones">
+                        <ul>
+                            <li>Ingrese el número inicial de secuencia</li>
+                            <li>Pulse el botón "Crear serie"</li>
+                            <li>Debe tildar "Esta usted seguro?" para poder continuar</li>
+                        </ul>
+                    </group>
+                    <group>
+                        <field name='select_mode' string="Facturas a reabrir" />
+                    </group>
+                    <group string="Facturas" attrs="{'invisible':[('select_mode','=','all')]}">
+                        <field name='select_lines' nolabel="1">
+                            <tree string="Facturas" create="0" editable="bottom" delete="0" version="7.0">
+                                <field name="invoice_id" readonly="1"/>
+                                <field name="nro_ctrl" readonly="1"/>
+                                <field name="partner" readonly="1"/>
+                                <field name="origin" readonly="1"/>
+                                <field name="amount_total" readonly="1"/>
+                                <field name="reopen"/>
+                            </tree>
+                        </field>
+                    </group>
+                    
+                    <footer>
+                        <button name="action_reopen" string="Continuar" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancelar" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    <record id="reopen_account_invoice_lot_action" model="ir.actions.act_window">
+        <field name="name">Re-abrir lote</field>
+        <field name='res_model'>reopen.account.invoice.lot</field>
+        <field name='src_model'>account.invoice.lot</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</data>
+</openerp>

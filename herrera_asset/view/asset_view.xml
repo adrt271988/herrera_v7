@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+<!--  <<<<<<<<<<<<<<<<< Wizard de desincorporacion >>>>>>>>>>>>>>   -->
+
+		<record id="view_desincorporate_asset_process" model="ir.ui.view">
+            <field name="name">Desincorporar activos</field>
+            <field name="model">account.asset.desincorporate.process</field>
+            <field name="arch" type="xml">
+                 <form string="Depreciacion" version="7.0">
+                    <group  col="1">
+                        <group col="2">
+                        <p>Para continuar con el proceso de desincorporación del activo seleccionado presione "Confirmar"</p>
+                        </group>
+                    </group>
+                   <footer>
+                        <button name="action_desincorporate" string="Confirmar" type="object"  class="oe_highlight"  />
+                        <button icon="gtk-cancel" special="cancel" string="Cerrar"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+<!--  <<<<<<<<<<<<<<<<< Accion del Wizard de desincorporacion >>>>>>>>>>>>>>   -->
+
+       <record model="ir.actions.act_window" id="action_account_desin_asset">
+        <field name="name">Desincorporación de activos</field>
+        <field name="res_model">account.asset.desincorporate.process</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="domain">[('parent_id','=',False)]</field>
+        <field name="view_id" ref="view_desincorporate_asset_process"/>
+        <field name="target">new</field>
+        <field name="multi">True</field>
+        </record>
+
+   <!--  <<<<<<<<<<<<<<<<< vista en form heredada de la vista  de activos >>>>>>>>>>>>>>   -->
+
+   <record model="ir.ui.view" id="inherited_account_asset_asset_form_view">
+            <field name="name">inherit.account.asset.sset.form</field>
+            <field name="model">account.asset.asset</field>
+            <field name="inherit_id" ref="account_asset.view_account_asset_asset_form" />
+            <field name="arch" type="xml">
+
+                <xpath expr='//button[@name="set_to_close"]' position='replace'>
+                <!-- Boton que llama al wizar de desincorporacion  -->
+                    <button name="%(action_account_desin_asset)d" states="open" string="Desincorporar" type="action" class="oe_highlight" />
+                </xpath>
+
+               <div>
+                <xpath expr='//field[@name="name"]' position='before'>
+                    <field name="image" widget='image' class="oe_right oe_avatar" />
+                </xpath>
+              </div>
+                <xpath expr='//field[@name="purchase_date"]' position='before'>
+                    <field name="date_reference" string="Fecha de compra"/>
+                </xpath>
+                <xpath expr='//field[@name="purchase_date"]' position='replace'>
+                    <field name="purchase_date" string="Fecha de depreciación" invisible="1"/>
+                </xpath>
+                <xpath expr='//field[@name="purchase_date"]' position='after'>
+                    <field name="date_incorporation" />
+                </xpath>
+
+                <xpath expr='//field[@name="parent_id"]' position='after'>
+                    <field name="shop_id" />
+                </xpath>
+                 <xpath expr='//field[@name="code"]' position='after'>
+                    <field name="serial" />
+                </xpath>
+                <xpath expr='//field[@name="currency_id"]' position='after'>
+                    <field name="employee_id" on_change="onchange_departament_id(employee_id)"/>
+                </xpath>
+                <xpath expr='//field[@name="employee_id"]' position='after'>
+                    <field name="department_id" />
+                </xpath>
+                <xpath expr='//field[@name="value_residual"]' position='after'>
+                     <field name="value_residual" widget="monetary" string="Valor actual" options="{'currency_field': 'currency_id'}"/>
+                </xpath>
+
+                <xpath expr='//field[@name="shop_id"]' position='after'>
+                     <field name="check_fleet"/>
+                </xpath>
+
+                <xpath expr='//field[@name="department_id"]' position='after'>
+                     <field name="ref" attrs="{'invisible': [('check_fleet', '=', False)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='partner_id']" position="attributes">
+                       <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr='//field[@name="value_residual"]' position='after'>
+                     <field name="accumulated_depre" />
+                </xpath>
+                <xpath expr='//field[@name="method_period"]' position='after'>
+                     <field name="period_number" />
+                </xpath>
+                <xpath expr='//field[@name="period_number"]' position='after'>
+                     <field name="remaining_period" />
+                </xpath>
+<!--
+                <xpath expr='//button[@name="compute_depreciation_board"]' position='attributes'>
+					<attribute name="invisible">True</attribute>
+                </xpath>
+-->
+
+                <xpath expr='//button[@name="compute_depreciation_board"]' position='replace'>
+					<button type="object" name="compute_depreciation_board" string="Recalcular" icon="terp-stock_format-scientific" colspan="2" attrs="{'invisible':[('state','=','close')]}" groups="account.group_account_user" help="Boton utilizado para recalcular la tabla de amortizacion.(Precio_compra - Monto_asientos ó Valor_actual / Numero_depreciaciones)."/>
+                </xpath>
+
+            </field>
+        </record>
+
+   <!--  <<<<<<<<<<<<<<<<< vista en tree heredada de la vista  de activos >>>>>>>>>>>>>>   -->
+
+   <record model="ir.ui.view" id="inherited_account_asset_asset_tree_view">
+            <field name="name">inherit.account.asset.sset.tree</field>
+            <field name="model">account.asset.asset</field>
+            <field name="inherit_id" ref="account_asset.view_account_asset_asset_tree" />
+            <field name="arch" type="xml">
+
+                <xpath expr='//field[@name="value_residual"]' position='replace'>
+                     <field name="value_residual" string="Valor actual" />
+                </xpath>
+                <xpath expr='//field[@name="name"]' position='after'>
+                     <field name="code" string="Codigo" />
+                </xpath>
+
+                <xpath expr="//field[@name='partner_id']" position="attributes">
+                       <attribute name="invisible">True</attribute>
+                </xpath>
+
+                 <xpath expr="//field[@name='currency_id']" position="attributes">
+                       <attribute name="invisible">True</attribute>
+                </xpath>
+
+            </field>
+        </record>
+
+       <!--  <<<<<<<<<<<<<<<<< action redefinido de la vista en tree de activos >>>>>>>>>>>>>>   -->
+
+
+       <record id="account_asset.action_account_asset_asset_form" model="ir.actions.act_window">
+            <field name="name">Activos</field>
+            <field name="res_model">account.asset.asset</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('state','!=','close')]</field>
+            <field name="search_view_id" ref="account_asset.view_account_asset_search"/>
+        </record>
+
+
+       <!--  <<<<<<<<<<<<<<<<< vista en search heredada de la vista  de activos >>>>>>>>>>>>>>   -->
+
+       <record id="inherit_account_asset_search" model="ir.ui.view">
+        <field name="name">inherit.account.asset.asset.search</field>
+        <field name="model">account.asset.asset</field>
+        <field name="inherit_id" ref="account_asset.view_account_asset_search" />
+        <field name="arch" type="xml">
+
+            <xpath expr='//field[@name="name"]' position='after'>
+                <field name="code" string="Codigo" />
+            </xpath>
+
+        </field>
+    </record>
+
+
+    </data>
+</openerp>

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+        <record model="ir.ui.view" id="purchase_discount_form">
+			<field name="name">purchase.discount.form</field>
+			<field name="model">discount</field>
+			<field name="arch" type="xml">
+                <form string="Descuentos" version="7.0">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" placeholder="ej. Prontopago Procter"/>
+                                <field name="value" required="1" string="Descuento (%%)"/>
+                            </group>
+                            <group>
+                                <field name="active" string="Activo"/>
+                                <field name="order_type" string="Documento"/>
+                            </group>
+                        </group>
+                        <field name="note" placeholder="Notas y consideraciones..."/>
+                    </sheet>
+                </form>
+			</field>
+		</record>
+        <record id="purchase_discount_tree" model="ir.ui.view">
+            <field name="name">purchase.discount.tree</field>
+            <field name="model">discount</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Descuentos">
+                    <field name="name"/>
+                    <field name="order_type"/>
+                    <field name="value"/>
+                </tree>
+            </field>
+        </record>
+        <record id="purchase_discount_action" model="ir.actions.act_window">
+            <field name="name">Descuentos</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">discount</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help"></field>
+        </record>
+        <menuitem
+            id="purchase_discount_menu"
+            sequence="50"
+            name="Descuentos"
+            string="Descuentos"
+            action="purchase_discount_action"
+            parent="purchase.menu_purchase_config_purchase"/>
+	</data>
+</openerp>

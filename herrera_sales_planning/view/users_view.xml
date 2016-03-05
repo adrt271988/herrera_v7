@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<openerp>
+  <data>
+    <record id="herrera_view_users_form" model="ir.ui.view">
+        <field name="name">herrera.res.users.inherit</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+          <xpath expr="//field[@name=&quot;company_id&quot;]" position="after">
+             <field name="shop_id" string="Sucursal" class="oe_inline" groups="base.group_no_one" widget="selection"/> 
+          </xpath>
+        </field>
+    </record>
+    <record id="herrera_view_users_tree" model="ir.ui.view">
+        <field name="name">herrera.res.users.inherit.tree</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_tree"/>
+        <field name="arch" type="xml">
+          <xpath expr="//field[@name=&quot;lang&quot;]" position="replace">
+             <field name="shop_id" string="Sucursal"/> 
+          </xpath>
+        </field>
+    </record>
+    <record id="herrera_view_users_simple_form" model="ir.ui.view">
+        <field name="name">herrera.res.users.simplified.inherit</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_simple_form"/>
+        <field name="arch" type="xml">
+          <xpath expr="//field[@name=&quot;phone&quot;]" position="before">
+             <field name="shop_id" string="Sucursal" class="oe_inline" widget="selection"/> 
+          </xpath>
+        </field>
+    </record>
+  </data>
+</openerp>

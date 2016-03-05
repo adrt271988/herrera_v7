@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <!-- Despacho -->
+        <record model='ir.ui.view' id='stock_distribution_form'>
+            <field name="name">stock.distribution.form</field>
+            <field name="model">stock.distribution</field>
+            <field name="arch" type="xml">
+                <form string="Despacho" create="0" version="7.0">
+                    <header>
+                        <button name="set_confirm" states="authorized" string="Confirmar Despacho" type="object" class="oe_highlight"/>
+                        <button name="validate" states="draft" string="Validar" type = "object" class="oe_highlight"/>
+			<button name="print_sada" states="done" type="object" string="Generar SADA"/>
+                        <button name="set_cancel" states="draft,waiting_admin,waiting_operative,authorized" string="Cancelar Despacho" type = "object"/>
+                        <button name="action_invoice_create" states="confirmed" string="Crear Facturas" type="object" class="oe_highlight"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,authorized,done"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <div class="oe_title">
+                                <h1>
+                                    <field name="name" class="oe_inline" readonly="1"/>
+                                </h1>
+                            </div>
+                            <div class="oe_right oe_button_box" name="buttons">
+                                <button name="action_view_invoice_lot" states="done,pre-reception,closed" type="object" string="Ver lote de facturas"/>
+                                <button name="prepare_reception" states="done" type="object" string="Pre-Recepción"/>
+                            </div>
+                        </group>
+                        <group>
+                            <field name="date" readonly = "1" class="oe_inline"/>
+                            <field name="shop_id" readonly = "1" class="oe_inline"/>
+                            <field name="vehicle_id" class="oe_inline" attrs="{'readonly':['|',('state','in',('authorized','confirmed','cancel','done')),('direct','=',True)]}"/>
+                            <field name="driver_id" class="oe_inline" attrs="{'readonly':['|',('state','in',('authorized','confirmed','cancel','done')),('direct','=',True)]}"/>
+                            <field name="amount" readonly = "1" class="oe_inline"/>
+                            <field name="warning" readonly = "1" attrs="{'invisible':[('state','in',('draft','authorized','confirmed','cancel','done'))]}"/>
+                            <field name="direct" readonly = "1" />
+                        </group>
+                        <notebook colspan="4">
+                            <page string="Pedidos">
+                                <field name="line_ids" nolabel="1">
+                                    <tree editable="bottom" create = "0" colors="red:ok == False">
+                                        <field name="sale_id" readonly = "1"/>
+                                        <field name="date" readonly = "1"/>
+                                        <field name="partner_id" readonly = "1"/>
+                                        <field name="state_id" readonly = "1"/>
+                                        <field name="municipality_id" readonly = "1"/>
+                                        <field name="sector_id" readonly = "1"/>
+                                        <field name="route_id" readonly = "1"/>
+                                        <field name="product_qty" string="UdV" sum="Total UdV" readonly = "1"/>
+                                        <field name="weight" string= "Peso" sum="Total Kgs." readonly = "1"/>
+                                        <field name="volume" string = "Volumen" sum = "Total m3" readonly = "1"/>
+                                        <field name="cost" string = "Costo" sum = "Total Bs." readonly = "1"/>
+                                        <field name="payment_independent_units" string="UPI" sum="Total Unidades Ind." readonly="1"/>
+                                        <field name="ok" invisible="1"/>
+                                        <button
+                                                name="%(wizard_distribution_line_picking_action)d"
+                                                string="Detalle del Pedido" type="action"
+                                                icon="STOCK_FIND"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model='ir.ui.view' id='stock_distribution_tree'>
+            <field name="name">stock.distribution.tree</field>
+            <field name="model">stock.distribution</field>
+            <field name="arch" type="xml">
+                <tree string = "Despachos" create = "0" version="7.0">
+                    <field name="name"/>
+                    <field name="direct"/>
+                    <field name="vehicle_id"/>
+                    <field name="driver_id"/>
+                    <field name="total_weight"/>
+                    <field name="date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='stock_distribution_act'>
+            <field name="name">Despachos</field>
+            <field name="res_model">stock.distribution</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="stock_distribution_act" parent="menu_stock_distribution" id="stock_distribution_menu" sequence = "50"/>
+
+    </data>
+</openerp>

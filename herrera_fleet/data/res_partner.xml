@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate = "1">
+        <record id='res_partner_supplier_fleet_VEJ307029889' model='res.partner'>
+            <field name='name'>TRANSPORTE DE VIVERES Y ALIMENTOS, C.A.</field>
+            <field name='company_id'>1</field>
+            <field name='is_company' eval='1'/>
+            <field name='street'    >Calle 4 local Zona Industrial Galpon nro 51 y 53</field>
+            <field name='vat'       >VEJ307029889</field>
+            <field name='street2'   >Sector Barbacoa II</field>
+            <field name='city'      >Barcelona</field>
+            <field name='country_id'>240</field>
+            <field name='state_id'  >52</field>
+            <field name='phone'     >0000000000</field>
+            <field name='mobile'    >0000000000</field>
+            <field name='supplier' eval = "True"/>
+            <field name='customer' eval = "False"/>
+            <field name='ref'       >FL00001</field>
+            <field name='lang'>es_VE</field>
+            <field name='shop_id' ref= 'herrera_warehouse.shop_sede'/>
+        </record>
+
+    </data>
+</openerp>

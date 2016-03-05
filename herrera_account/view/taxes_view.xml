@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+<!--   Herencia vista en Form de impuestos  -->
+        <record model="ir.ui.view" id="inherited_account_view_tax">
+            <field name="name">inherit.account.view.tax.form</field>
+            <field name="model">account.tax</field>
+            <field name="inherit_id" ref="account.view_tax_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='description']" position="after">
+                       <field name="withholding"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

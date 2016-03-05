@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Classification type 1 -->
+        <record id="product_classification1_search_view" model="ir.ui.view">
+            <field name="name">product.classification1.search</field>
+            <field name="model">product.classification1</field>
+            <field name="arch" type="xml">
+                <search string="Product Classifications">
+                    <field name="name" string="Product Classifications"/>
+                    <field name="parent_id"/>
+                </search>
+            </field>
+        </record>
+        <record id="product_classification1_form_view" model="ir.ui.view">
+            <field name="name">product.classification1.form</field>
+            <field name="model">product.classification1</field>
+            <field name="arch" type="xml">
+                <form string="Product Classifications" version="7.0">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group name="parent" col="4">
+                                <field name="parent_id"/>
+                                <field name="type"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="product_classification1_list_view" model="ir.ui.view">
+            <field name="name">product.classification1.list</field>
+            <field name="model">product.classification1</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="Product Classifications">
+                    <field name="complete_name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="product_classification1_tree_view" model="ir.ui.view">
+            <field name="name">product.classification1.tree</field>
+            <field name="model">product.classification1</field>
+            <field name="field_parent">child_id</field>
+            <field name="arch" type="xml">
+                <tree toolbar="True" string="Product Classifications">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="product_classification1_action" model="ir.actions.act_window">
+            <field name="name">Productos por Clasif. tipo 1</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.classification1</field>
+            <field name="domain">[('parent_id','=',False)]</field>
+            <field name="view_type">tree</field>
+            <field name="view_id" ref="product_classification1_tree_view"/>
+            <field name="help" type="html">
+              <p>
+                Here is a list of all your products classified by classification type 1. 
+                You can click a classification type 1 to get the list of all products linked 
+                to this classification or to a child of this classification.
+              </p>
+            </field>
+        </record>
+        <menuitem
+            action="product_classification1_action"
+            id="menu_products_classification1"
+            parent="base.menu_product"
+            sequence="0" groups="group_product_classification1"/>
+        <record id="product_classification1_action_form" model="ir.actions.act_window">
+            <field name="name">Clasificacion tipo 1</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.classification1</field>
+            <field name="view_type">form</field>
+            <field name="search_view_id" ref="product_classification1_search_view"/>
+            <field name="view_id" ref="product_classification1_list_view"/>
+        </record>
+        <menuitem action="product_classification1_action_form"
+            groups="group_product_classification1"
+            id="menu_product_classification1_action_form"
+            parent="product.prod_config_main" sequence="2"/>
+
+        <!-- Classification type 2 -->
+        <record id="product_classification2_search_view" model="ir.ui.view">
+            <field name="name">product.classification2.search</field>
+            <field name="model">product.classification2</field>
+            <field name="arch" type="xml">
+                <search string="Product Classifications">
+                    <field name="name" string="Product Classifications"/>
+                    <field name="parent_id"/>
+                </search>
+            </field>
+        </record>
+        <record id="product_classification2_form_view" model="ir.ui.view">
+            <field name="name">product.classification2.form</field>
+            <field name="model">product.classification2</field>
+            <field name="arch" type="xml">
+                <form string="Product Classifications" version="7.0">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group name="parent" col="4">
+                                <field name="parent_id"/>
+                                <field name="type"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="product_classification2_list_view" model="ir.ui.view">
+            <field name="name">product.classification2.list</field>
+            <field name="model">product.classification2</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="Product Classifications">
+                    <field name="complete_name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="product_classification2_tree_view" model="ir.ui.view">
+            <field name="name">product.classification2.tree</field>
+            <field name="model">product.classification2</field>
+            <field name="field_parent">child_id</field>
+            <field name="arch" type="xml">
+                <tree toolbar="True" string="Product Classifications">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="product_classification2_action" model="ir.actions.act_window">
+            <field name="name">Productos por Clasif. tipo 2</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.classification2</field>
+            <field name="domain">[('parent_id','=',False)]</field>
+            <field name="view_type">tree</field>
+            <field name="view_id" ref="product_classification2_tree_view"/>
+            <field name="help" type="html">
+              <p>
+                Here is a list of all your products classified by classification type 2. 
+                You can click a classification type 2 to get the list of all products linked 
+                to this classification or to a child of this classification.
+              </p>
+            </field>
+        </record>
+        <menuitem
+            action="product_classification2_action"
+            id="menu_products_classification2"
+            parent="base.menu_product"
+            sequence="0" groups="group_product_classification2"/>
+        <record id="product_classification2_action_form" model="ir.actions.act_window">
+            <field name="name">Clasificacion tipo 2</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.classification2</field>
+            <field name="view_type">form</field>
+            <field name="search_view_id" ref="product_classification2_search_view"/>
+            <field name="view_id" ref="product_classification2_list_view"/>
+        </record>
+        <menuitem action="product_classification2_action_form"
+            groups="group_product_classification2"
+            id="menu_product_classification2_action_form"
+            parent="product.prod_config_main" sequence="2"/>
+
+        <!-- Classification type 3 -->
+        <record id="product_classification3_search_view" model="ir.ui.view">
+            <field name="name">product.classification3.search</field>
+            <field name="model">product.classification3</field>
+            <field name="arch" type="xml">
+                <search string="Product Classifications">
+                    <field name="name" string="Product Classifications"/>
+                    <field name="parent_id"/>
+                </search>
+            </field>
+        </record>
+        <record id="product_classification3_form_view" model="ir.ui.view">
+            <field name="name">product.classification3.form</field>
+            <field name="model">product.classification3</field>
+            <field name="arch" type="xml">
+                <form string="Product Classifications" version="7.0">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group name="parent" col="4">
+                                <field name="parent_id"/>
+                                <field name="type"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="product_classification3_list_view" model="ir.ui.view">
+            <field name="name">product.classification3.list</field>
+            <field name="model">product.classification3</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="Product Classifications">
+                    <field name="complete_name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="product_classification3_tree_view" model="ir.ui.view">
+            <field name="name">product.classification3.tree</field>
+            <field name="model">product.classification3</field>
+            <field name="field_parent">child_id</field>
+            <field name="arch" type="xml">
+                <tree toolbar="True" string="Product Classifications">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="product_classification3_action" model="ir.actions.act_window">
+            <field name="name">Productos por Clasif. tipo 3</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.classification3</field>
+            <field name="domain">[('parent_id','=',False)]</field>
+            <field name="view_type">tree</field>
+            <field name="view_id" ref="product_classification3_tree_view"/>
+            <field name="help" type="html">
+              <p>
+                Here is a list of all your products classified by classification type 3. 
+                You can click a classification type 3 to get the list of all products linked 
+                to this classification or to a child of this classification.
+              </p>
+            </field>
+        </record>
+        <menuitem
+            action="product_classification3_action"
+            id="menu_products_classification3"
+            parent="base.menu_product"
+            sequence="0" groups="group_product_classification3"/>
+        <record id="product_classification3_action_form" model="ir.actions.act_window">
+            <field name="name">Clasificacion tipo 3</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.classification3</field>
+            <field name="view_type">form</field>
+            <field name="search_view_id" ref="product_classification3_search_view"/>
+            <field name="view_id" ref="product_classification3_list_view"/>
+        </record>
+        <menuitem action="product_classification3_action_form"
+            groups="group_product_classification3"
+            id="menu_product_classification3_action_form"
+            parent="product.prod_config_main" sequence="2"/>
+
+    </data>
+</openerp>

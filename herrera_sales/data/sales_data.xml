@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+<!-- Configurar Metodo de Crecion de 'Sobre la Orden de Entreda'  -->
+        <function model="ir.values" name="set_default">
+            <value>sale.order</value>
+            <value>order_policy</value>
+            <value>picking</value>
+        </function>
+    </data>
+</openerp>

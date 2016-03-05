@@ -1,0 +1,12 @@
+BZR merge-modified list format 1
+file_id: __openerp__.py-20130912142146-aykzcv1v2ya5gcwm-3
+hash: ce31237c75b864269aeb52469e15248d00241deb
+
+file_id: ir.model.access.csv-20141223152332-kzpxoe9tz8s22hmz-3
+hash: fab9c87a068589dd69bf72517aa3df5f03468bb4
+
+file_id: invoice_view.xml-20150109184246-a3y4swt2me2x17qh-1
+hash: 0beb18aab455ce8b09527da94d8ace9a26a72167
+
+file_id: purchase_security.xm-20141223152332-kzpxoe9tz8s22hmz-4
+hash: 4877e07f6cece1d02a7d37c12d0c13f3b97d9d9f

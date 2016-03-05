@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data noupdate="1">
+    <record id='herrera_job_asistente_presidencia' model='hr.job' >
+      <field name='name'>ASISTENTE PRESIDENCIA</field>
+      <field name='department_id' eval='ref("hr_department_1")' />
+    </record>
+    <record id='herrera_job_capitan' model='hr.job' >
+      <field name='name'>CAPITAN</field>
+      <field name='department_id' eval='ref("hr_department_1")' />
+    </record>
+    <record id='herrera_job_supervisor_auditoria' model='hr.job' >
+      <field name='name'>SUPERVISOR AUDITORIA</field>
+      <field name='department_id' eval='ref("hr_department_2")' />
+    </record>
+    <record id='herrera_job_supervisor_auditoria_operativa' model='hr.job' >
+      <field name='name'>SUPERVISOR AUDITORIA OPERATIVA</field>
+      <field name='department_id' eval='ref("hr_department_2")' />
+    </record>
+    <record id='herrera_job_auditor' model='hr.job' >
+      <field name='name'>AUDITOR</field>
+      <field name='department_id' eval='ref("hr_department_2")' />
+    </record>
+    <record id='herrera_job_auditor_financiero' model='hr.job' >
+      <field name='name'>AUDITOR FINANCIERO</field>
+      <field name='department_id' eval='ref("hr_department_2")' />
+    </record>
+    <record id='herrera_job_auditor_operativo' model='hr.job' >
+      <field name='name'>AUDITOR OPERATIVO</field>
+      <field name='department_id' eval='ref("hr_department_2")' />
+    </record>
+    <record id='herrera_job_analista_pagos_y_servicios' model='hr.job' >
+      <field name='name'>ANALISTA PAGOS Y SERVICIOS</field>
+      <field name='department_id' eval='ref("hr_department_3")' />
+    </record>
+    <record id='herrera_job_gerente_administracion' model='hr.job' >
+      <field name='name'>GERENTE ADMINISTRACION</field>
+      <field name='department_id' eval='ref("hr_department_3")' />
+    </record>
+    <record id='herrera_job_especialista_bancos' model='hr.job' >
+      <field name='name'>ESPECIALISTA BANCOS</field>
+      <field name='department_id' eval='ref("hr_department_3")' />
+    </record>
+    <record id='herrera_job_sub_contralor' model='hr.job' >
+      <field name='name'>SUB CONTRALOR</field>
+      <field name='department_id' eval='ref("hr_department_3")' />
+    </record>
+    <record id='herrera_job_mensajero' model='hr.job' >
+      <field name='name'>MENSAJERO</field>
+      <field name='department_id' eval='ref("hr_department_3")' />
+    </record>
+    <record id='herrera_job_especialista_proveedores' model='hr.job' >
+      <field name='name'>ESPECIALISTA PROVEEDORES</field>
+      <field name='department_id' eval='ref("hr_department_3")' />
+    </record>
+    <record id='herrera_job_analista_tesoreria' model='hr.job' >
+      <field name='name'>ANALISTA TESORERIA</field>
+      <field name='department_id' eval='ref("hr_department_3")' />
+    </record>
+    <record id='herrera_job_vacacionista' model='hr.job' >
+      <field name='name'>VACACIONISTA</field>
+      <field name='department_id' eval='ref("hr_department_3")' />
+    </record>
+    <record id='herrera_job_asistente_proveedores' model='hr.job' >
+      <field name='name'>ASISTENTE PROVEEDORES</field>
+      <field name='department_id' eval='ref("hr_department_3")' />
+    </record>
+    <record id='herrera_job_gerente_contabilidad' model='hr.job' >
+      <field name='name'>GERENTE CONTABILIDAD</field>
+      <field name='department_id' eval='ref("hr_department_4")' />
+    </record>
+    <record id='herrera_job_analista_contabilidad' model='hr.job' >
+      <field name='name'>ANALISTA CONTABILIDAD</field>
+      <field name='department_id' eval='ref("hr_department_4")' />
+    </record>
+    <record id='herrera_job_recepcionista' model='hr.job' >
+      <field name='name'>RECEPCIONISTA</field>
+      <field name='department_id' eval='ref("hr_department_5")' />
+    </record>
+    <record id='herrera_job_coordinador_obligaciones_legales' model='hr.job' >
+      <field name='name'>COORDINADOR OBLIGACIONES LEGALES</field>
+      <field name='department_id' eval='ref("hr_department_5")' />
+    </record>
+    <record id='herrera_job_coordinador_nomina' model='hr.job' >
+      <field name='name'>COORDINADOR NOMINA</field>
+      <field name='department_id' eval='ref("hr_department_5")' />
+    </record>
+    <record id='herrera_job_analista_oblig_legales' model='hr.job' >
+      <field name='name'>ANALISTA OBLIG LEGALES</field>
+      <field name='department_id' eval='ref("hr_department_5")' />
+    </record>
+    <record id='herrera_job_analista_de_nomina' model='hr.job' >
+      <field name='name'>ANALISTA DE NOMINA</field>
+      <field name='department_id' eval='ref("hr_department_5")' />
+    </record>
+    <record id='herrera_job_especialista_rrhh' model='hr.job' >
+      <field name='name'>ESPECIALISTA RRHH</field>
+      <field name='department_id' eval='ref("hr_department_5")' />
+    </record>
+    <record id='herrera_job_asistente_de_rrhh' model='hr.job' >
+      <field name='name'>ASISTENTE DE RRHH</field>
+      <field name='department_id' eval='ref("hr_department_5")' />
+    </record>
+    <record id='herrera_job_analista_soporte_tecnico' model='hr.job' >
+      <field name='name'>ANALISTA SOPORTE TECNICO</field>
+      <field name='department_id' eval='ref("hr_department_6")' />
+    </record>
+    <record id='herrera_job_programador' model='hr.job' >
+      <field name='name'>PROGRAMADOR</field>
+      <field name='department_id' eval='ref("hr_department_6")' />
+    </record>
+    <record id='herrera_job_gerente_sucursales' model='hr.job' >
+      <field name='name'>GERENTE SUCURSALES</field>
+      <field name='department_id' eval='ref("hr_department_7")' />
+    </record>
+    <record id='herrera_job_asistente_ventas' model='hr.job' >
+      <field name='name'>ASISTENTE VENTAS</field>
+      <field name='department_id' eval='ref("hr_department_7")' />
+    </record>
+    <record id='herrera_job_gerente_ventas' model='hr.job' >
+      <field name='name'>GERENTE VENTAS</field>
+      <field name='department_id' eval='ref("hr_department_7")' />
+    </record>
+    <record id='herrera_job_analista_compras' model='hr.job' >
+      <field name='name'>ANALISTA COMPRAS</field>
+      <field name='department_id' eval='ref("hr_department_8")' />
+    </record>
+    <record id='herrera_job_jefe_compras' model='hr.job' >
+      <field name='name'>JEFE COMPRAS</field>
+      <field name='department_id' eval='ref("hr_department_8")' />
+    </record>
+    <record id='herrera_job_asistente_de_compras' model='hr.job' >
+      <field name='name'>ASISTENTE DE COMPRAS</field>
+      <field name='department_id' eval='ref("hr_department_8")' />
+    </record>
+    <record id='herrera_job_coordinador_operaciones' model='hr.job' >
+      <field name='name'>COORDINADOR OPERACIONES</field>
+      <field name='department_id' eval='ref("hr_department_9")' />
+    </record>
+    <record id='herrera_job_mecanico' model='hr.job' >
+      <field name='name'>MECANICO</field>
+      <field name='department_id' eval='ref("hr_department_9")' />
+    </record>
+    <record id='herrera_job_coordinador_logistico' model='hr.job' >
+      <field name='name'>COORDINADOR LOGISTICO</field>
+      <field name='department_id' eval='ref("hr_department_9")' />
+    </record>
+    <record id='herrera_job_chofer_gandola' model='hr.job' >
+      <field name='name'>CHOFER GANDOLA</field>
+      <field name='department_id' eval='ref("hr_department_9")' />
+    </record>
+    <record id='herrera_job_asistente_de_flota' model='hr.job' >
+      <field name='name'>ASISTENTE DE FLOTA</field>
+      <field name='department_id' eval='ref("hr_department_9")' />
+    </record>
+    <record id='herrera_job_jefe_de_flota' model='hr.job' >
+      <field name='name'>JEFE DE FLOTA</field>
+      <field name='department_id' eval='ref("hr_department_9")' />
+    </record>
+    <record id='herrera_job_papeleria/cont_activos' model='hr.job' >
+      <field name='name'>PAPELERIA/CONT ACTIVOS</field>
+      <field name='department_id' eval='ref("hr_department_10")' />
+    </record>
+    <record id='herrera_job_coordinador_de_sucursales' model='hr.job' >
+      <field name='name'>COORDINADOR DE SUCURSALES</field>
+      <field name='department_id' eval='ref("hr_department_10")' />
+    </record>
+    <record id='herrera_job_analista_enlace_tdd' model='hr.job' >
+      <field name='name'>ANALISTA ENLACE TDD</field>
+      <field name='department_id' eval='ref("hr_department_10")' />
+    </record>
+    <record id='herrera_job_archivista' model='hr.job' >
+      <field name='name'>ARCHIVISTA</field>
+      <field name='department_id' eval='ref("hr_department_10")' />
+    </record>
+    <record id='herrera_job_supervisor_de_facturacion_nocturna' model='hr.job' >
+      <field name='name'>SUPERVISOR DE FACTURACION NOCTURNA</field>
+      <field name='department_id' eval='ref("hr_department_10")' />
+    </record>
+    <record id='herrera_job_tecnico_servicios_generales' model='hr.job' >
+      <field name='name'>TECNICO SERVICIOS GENERALES</field>
+      <field name='department_id' eval='ref("hr_department_10")' />
+    </record>
+    <record id='herrera_job_ayudante_serv_generales' model='hr.job' >
+      <field name='name'>AYUDANTE SERV GENERALES</field>
+      <field name='department_id' eval='ref("hr_department_10")' />
+    </record>
+    <record id='herrera_job_aseador' model='hr.job' >
+      <field name='name'>ASEADOR</field>
+      <field name='department_id' eval='ref("hr_department_10")' />
+    </record>
+    <record id='herrera_job_mantenimiento_y_soporte' model='hr.job' >
+      <field name='name'>MANTENIMIENTO Y SOPORTE</field>
+      <field name='department_id' eval='ref("hr_department_10")' />
+    </record>
+    <record id='herrera_job_analista_adm_ventas' model='hr.job' >
+      <field name='name'>ANALISTA ADM VENTAS</field>
+      <field name='department_id' eval='ref("hr_department_10")' />
+    </record>
+    <record id='herrera_job_aseador_vacacionista' model='hr.job' >
+      <field name='name'>ASEADOR VACACIONISTA</field>
+      <field name='department_id' eval='ref("hr_department_10")' />
+    </record>
+    <record id='herrera_job_escolta' model='hr.job' >
+      <field name='name'>ESCOLTA</field>
+      <field name='department_id' eval='ref("hr_department_11")' />
+    </record>
+    <record id='herrera_job_coordinador_sha' model='hr.job' >
+      <field name='name'>COORDINADOR SHA</field>
+      <field name='department_id' eval='ref("hr_department_11")' />
+    </record>
+    <record id='herrera_job_jefe_de_seguridad' model='hr.job' >
+      <field name='name'>JEFE DE SEGURIDAD</field>
+      <field name='department_id' eval='ref("hr_department_11")' />
+    </record>
+    <record id='herrera_job_inspector_de_seguridad' model='hr.job' >
+      <field name='name'>INSPECTOR DE SEGURIDAD</field>
+      <field name='department_id' eval='ref("hr_department_11")' />
+    </record>
+    <record id='herrera_job_administrador_de_sucursal' model='hr.job' >
+      <field name='name'>ADMINISTRADOR DE SUCURSAL</field>
+      <field name='department_id' eval='ref("hr_department_3")' />
+    </record>
+    <record id='herrera_job_asistente_administrativo' model='hr.job' >
+      <field name='name'>ASISTENTE ADMINISTRATIVO</field>
+      <field name='department_id' eval='ref("hr_department_3")' />
+    </record>
+    <record id='herrera_job_asistente_admon_vac' model='hr.job' >
+      <field name='name'>ASISTENTE ADMON VAC</field>
+      <field name='department_id' eval='ref("hr_department_3")' />
+    </record>
+    <record id='herrera_job_promotor_de_ventas' model='hr.job' >
+      <field name='name'>PROMOTOR DE VENTAS</field>
+      <field name='department_id' eval='ref("hr_department_12")' />
+    </record>
+    <record id='herrera_job_jefe_ventas' model='hr.job' >
+      <field name='name'>JEFE VENTAS</field>
+      <field name='department_id' eval='ref("hr_department_12")' />
+    </record>
+    <record id='herrera_job_representante_de_ventas' model='hr.job' >
+      <field name='name'>REPRESENTANTE DE VENTAS</field>
+      <field name='department_id' eval='ref("hr_department_12")' />
+    </record>
+    <record id='herrera_job_supervisor_promotores' model='hr.job' >
+      <field name='name'>SUPERVISOR PROMOTORES</field>
+      <field name='department_id' eval='ref("hr_department_12")' />
+    </record>
+    <record id='herrera_job_jefe_de_area' model='hr.job' >
+      <field name='name'>JEFE DE AREA</field>
+      <field name='department_id' eval='ref("hr_department_12")' />
+    </record>
+    <record id='herrera_job_supervisor_almacen' model='hr.job' >
+      <field name='name'>SUPERVISOR ALMACEN</field>
+      <field name='department_id' eval='ref("hr_department_15")' />
+    </record>
+    <record id='herrera_job_montacarguista' model='hr.job' >
+      <field name='name'>MONTACARGUISTA</field>
+      <field name='department_id' eval='ref("hr_department_15")' />
+    </record>
+    <record id='herrera_job_chequeador' model='hr.job' >
+      <field name='name'>CHEQUEADOR</field>
+      <field name='department_id' eval='ref("hr_department_15")' />
+    </record>
+    <record id='herrera_job_almacenista' model='hr.job' >
+      <field name='name'>ALMACENISTA</field>
+      <field name='department_id' eval='ref("hr_department_15")' />
+    </record>
+    <record id='herrera_job_asistente_almacen' model='hr.job' >
+      <field name='name'>ASISTENTE ALMACEN</field>
+      <field name='department_id' eval='ref("hr_department_15")' />
+    </record>
+    <record id='herrera_job_despachador' model='hr.job' >
+      <field name='name'>DESPACHADOR</field>
+      <field name='department_id' eval='ref("hr_department_16")' />
+    </record>
+    <record id='herrera_job_chequeador__control_de_inventario' model='hr.job' >
+      <field name='name'>CHEQUEADOR  CONTROL DE INVENTARIO</field>
+      <field name='department_id' eval='ref("hr_department_15")' />
+    </record>
+    <record id='herrera_job_supervisor_distribucion' model='hr.job' >
+      <field name='name'>SUPERVISOR DISTRIBUCION</field>
+      <field name='department_id' eval='ref("hr_department_15")' />
+    </record>
+    <record id='herrera_job_operador_maquinaria' model='hr.job' >
+      <field name='name'>OPERADOR MAQUINARIA</field>
+      <field name='department_id' eval='ref("hr_department_15")' />
+    </record>
+    <record id='herrera_job_aprendiz_ince' model='hr.job' >
+      <field name='name'>APRENDIZ INCE</field>
+      <field name='department_id' eval='ref("hr_department_3")' />
+    </record>
+    <record id='herrera_job_almacenista_vac' model='hr.job' >
+      <field name='name'>ALMACENISTA VAC</field>
+      <field name='department_id' eval='ref("hr_department_15")' />
+    </record>
+  </data>
+</openerp>

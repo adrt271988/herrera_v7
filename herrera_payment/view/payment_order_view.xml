@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Inherit Account Payment Form -->
+        <record model="ir.ui.view" id="inherit_account_payment_order_form">
+            <field name="name">inherit.payment.order.form</field>
+            <field name="model">payment.order</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="account_payment.view_payment_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='oe_title']" position="after">
+                    <div class="oe_inline">
+                        <label for="partner_id" class="oe_title"/>
+                        <h1><field name="partner_id"/></h1>
+                    </div>
+                </xpath>
+
+                <xpath expr="//field[@name='line_ids']" position="replace">
+                    <field name="invo_ids">
+
+                        <tree create="0">
+                            <field name="ref" string="Comprobante"/>
+                            <field name="invoice"/>
+                            <field name="date" string="Fecha"/>
+                            <field name="partner_id" string="Beneficiario"/>
+                            <field name="name" string="Descripción"/>
+                            <field name="account_id"/>
+                            <field name="debit" sum=""/>
+                            <field name="credit" sum="" />
+                        </tree>
+
+                    </field>
+                </xpath>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="inherit_account_payment_order_tree">
+            <field name="name">inherit.payment.order.tree</field>
+            <field name="model">payment.order</field>
+            <field name="type">tree</field>
+            <field name="inherit_id" ref="account_payment.view_payment_order_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='reference']" position="after">
+                        <field name="partner_id"/>
+                </xpath>
+                <xpath expr="//field[@name='date_created']" position="after">
+                        <field name="date_scheduled"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

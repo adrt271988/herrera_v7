@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<openerp>
+    <data noupdate="1">
+        <record id='hr_department_1' model='hr.department'>
+            <field name='name'>PRESIDENCIA</field>
+        </record>
+        
+       <record id='hr_department_2' model='hr.department'>
+            <field name='name'>AUDITORIA INTERNA</field>
+        </record>
+        
+        <record id='hr_department_3' model='hr.department'>
+            <field name='name'>ADMINISTRACION</field>
+        </record>
+        
+        <record id='hr_department_4' model='hr.department'>
+            <field name='name'>CONTABILIDAD</field>
+        </record>
+        
+        <record id='hr_department_5' model='hr.department'>
+            <field name='name'>RECURSOS HUMANOS</field>
+        </record>
+        
+        <record id='hr_department_6' model='hr.department'>
+            <field name='name'>INFORMATICA</field>
+        </record>
+        
+       <record id='hr_department_7' model='hr.department'>
+            <field name='name'>COMERCIALIZACION</field>
+        </record>
+        
+       <record id='hr_department_8' model='hr.department'>
+            <field name='name'>COMPRAS</field>
+       </record>  
+       
+       <record id='hr_department_9' model='hr.department'>
+            <field name='name'>LOGISTICA</field>
+       </record>  
+       
+       <record id='hr_department_10' model='hr.department'>
+            <field name='name'>SOPORTE/PROCURA</field>
+        </record> 
+            
+       <record id='hr_department_11' model='hr.department'>
+            <field name='name'>SEGURIDAD INTEGRAL</field>
+       </record> 
+            
+       <record id='hr_department_12' model='hr.department'>
+            <field name='name'>EXCLUSIVO VARIOS</field>
+         </record>   
+         
+       <record id='hr_department_13' model='hr.department'>
+            <field name='name'>VENTAS PROCTER &amp; GAMBLE</field>
+         </record>   
+         
+       <record id='hr_department_14' model='hr.department'>
+            <field name='name'>VENTAS CANAL MIXTO</field>
+        </record>  
+          
+       <record id='hr_department_15' model='hr.department'>
+            <field name='name'>ALMACEN</field>
+         </record>   
+         
+       <record id='hr_department_16' model='hr.department'>
+            <field name='name'>TRANSPORTE</field>
+        </record>
+        
+       <record id='hr_department_17' model='hr.department'>
+            <field name='name'>TRADE MARKETING KELLOGS</field>
+        </record>
+    </data>
+</openerp>

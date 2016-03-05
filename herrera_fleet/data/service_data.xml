@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data noupdate="1">
+
+    <record id='herrera_service_S1' model='product.product' >
+      <field name='name'>CALCULO DE LAS PRESTACIONES EN ESPECIE</field>
+      <field name='default_code'>SER00001</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S2' model='product.product' >
+      <field name='name'>DEPRECIACION E INTERESES</field>
+      <field name='default_code'>SER00002</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S3' model='product.product' >
+      <field name='name'>REGISTRO TRIBUTARIO</field>
+      <field name='default_code'>SER00003</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S4' model='product.product' >
+      <field name='name'>NEUMATICOS DE VERANO</field>
+      <field name='default_code'>SER00004</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S5' model='product.product' >
+      <field name='name'>NEUMATICOS DE NIEVE</field>
+      <field name='default_code'>SER00005</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S6' model='product.product' >
+      <field name='name'>NEUMATICOS DE VERANO</field>
+      <field name='default_code'>SER00006</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S7' model='product.product' >
+      <field name='name'>REPARACION Y MANTENIMIENTO</field>
+      <field name='default_code'>SER00007</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S8' model='product.product' >
+      <field name='name'>ASISTENCIA</field>
+      <field name='default_code'>SER00008</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S9' model='product.product' >
+      <field name='name'>VEHICULO DE REEMPLAZO</field>
+      <field name='default_code'>SER00009</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S10' model='product.product' >
+      <field name='name'>TASA DE GESTION</field>
+      <field name='default_code'>SER00010</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S11' model='product.product' >
+      <field name='name'>ALQUILER (EXCLUYENDO IVA)</field>
+      <field name='default_code'>SER00011</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S12' model='product.product' >
+      <field name='name'>IMPUESTO DE ENTRADA AL SERVICIO</field>
+      <field name='default_code'>SER00012</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S13' model='product.product' >
+      <field name='name'>GASTOS TOTALES (EXCLUYENDO IVA)</field>
+      <field name='default_code'>SER00013</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S14' model='product.product' >
+      <field name='name'>VALOR RESIDUAL (EXCLUYENDO IVA)</field>
+      <field name='default_code'>SER00014</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S15' model='product.product' >
+      <field name='name'>OPCIONES</field>
+      <field name='default_code'>SER00015</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S16' model='product.product' >
+      <field name='name'>EMISIONES</field>
+      <field name='default_code'>SER00016</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S17' model='product.product' >
+      <field name='name'>ASISTENCIA EN VIAJE</field>
+      <field name='default_code'>SER00017</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S18' model='product.product' >
+      <field name='name'>VALOR RESIDUAL EN %</field>
+      <field name='default_code'>SER00018</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S19' model='product.product' >
+      <field name='name'>REPUESTO DEL COMPRESOR DE A/C</field>
+      <field name='default_code'>SER00019</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S20' model='product.product' >
+      <field name='name'>REPUESTO DEL CONDENSADOR DE A/C</field>
+      <field name='default_code'>SER00020</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S21' model='product.product' >
+      <field name='name'>DIAGNOSTICO DEL A/C</field>
+      <field name='default_code'>SER00021</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S22' model='product.product' >
+      <field name='name'>REPUESTO DEL EVAPORADOR DE A/C</field>
+      <field name='default_code'>SER00022</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S23' model='product.product' >
+      <field name='name'>RECARGA A/C</field>
+      <field name='default_code'>SER00023</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S24' model='product.product' >
+      <field name='name'>REPUESTO DEL FILTRO DE AIRE</field>
+      <field name='default_code'>SER00024</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S25' model='product.product' >
+      <field name='name'>REPUESTO DEL ALTERNADOR</field>
+      <field name='default_code'>SER00025</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S26' model='product.product' >
+      <field name='name'>REPUESTO DE LA ROTULA</field>
+      <field name='default_code'>SER00026</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S27' model='product.product' >
+      <field name='name'>INSPECCION DE BATERIA</field>
+      <field name='default_code'>SER00027</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S28' model='product.product' >
+      <field name='name'>REPUESTO DE LA BATERIA</field>
+      <field name='default_code'>SER00028</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S29' model='product.product' >
+      <field name='name'>REPUESTO DE LA PINZA DE FRENO</field>
+      <field name='default_code'>SER00029</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S30' model='product.product' >
+      <field name='name'>INSPECCION DE FRENOS</field>
+      <field name='default_code'>SER00030</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S31' model='product.product' >
+      <field name='name'>REPUESTO DE LA(S) PASTILLA(S) DE FRENO</field>
+      <field name='default_code'>SER00031</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S32' model='product.product' >
+      <field name='name'>LAVADO DE COCHE</field>
+      <field name='default_code'>SER00032</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S33' model='product.product' >
+      <field name='name'>REPUESTO DEL CONVERTIDOR CATALITICO</field>
+      <field name='default_code'>SER00033</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S34' model='product.product' >
+      <field name='name'>DIAGNOSIS DEL SISTEMA DE CARGA</field>
+      <field name='default_code'>SER00034</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S35' model='product.product' >
+      <field name='name'>REPUESTO DE REGULADOR/MOTOR DE LA VENTANA</field>
+      <field name='default_code'>SER00035</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S36' model='product.product' >
+      <field name='name'>INSPECCION DE LAS CORREAS</field>
+      <field name='default_code'>SER00036</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S37' model='product.product' >
+      <field name='name'>REPUESTO DEL REFRIGERANTE DEL MOTOR</field>
+      <field name='default_code'>SER00037</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S38' model='product.product' >
+      <field name='name'>REPUESTO DE LA(S) CORREA(S) DE TRANSMISION</field>
+      <field name='default_code'>SER00038</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S39' model='product.product' >
+      <field name='name'>REPUESTO DEL TUBO DE ESCAPE</field>
+      <field name='default_code'>SER00039</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S40' model='product.product' >
+      <field name='name'>REPUESTO DEL INYECTOR DE COMBUSTIBLE</field>
+      <field name='default_code'>SER00040</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S41' model='product.product' >
+      <field name='name'>REPUESTO DE LA BOMBA DE COMBUSTIBLE</field>
+      <field name='default_code'>SER00041</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S42' model='product.product' >
+      <field name='name'>REPUESTO DE LA JUNTA(S) DE CULATA</field>
+      <field name='default_code'>SER00042</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S43' model='product.product' >
+      <field name='name'>REPUESTO DEL MOTOR DEL VENTILADOR</field>
+      <field name='default_code'>SER00043</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S44' model='product.product' >
+      <field name='name'>REPUESTO DE LA VALVULA DE CONTROL DEL CALENTADOR</field>
+      <field name='default_code'>SER00044</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S45' model='product.product' >
+      <field name='name'>REPUESTO DEL NUCLEO DEL CALENTADOR</field>
+      <field name='default_code'>SER00045</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S46' model='product.product' >
+      <field name='name'>REPUESTO DE LA MANGUERA DEL CALENTADOR</field>
+      <field name='default_code'>SER00046</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S47' model='product.product' >
+      <field name='name'>REPUESTO DE LA BOBINA DE ENCENDIDO</field>
+      <field name='default_code'>SER00047</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S48' model='product.product' >
+      <field name='name'>REPUESTO DE LA JUNTA DEL COLECTOR DE ADMISION</field>
+      <field name='default_code'>SER00048</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S49' model='product.product' >
+      <field name='name'>CAMBIO DE ACEITE</field>
+      <field name='default_code'>SER00049</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S50' model='product.product' >
+      <field name='name'>REPUESTO DE LA BOMBA DE ACEITE</field>
+      <field name='default_code'>SER00050</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S51' model='product.product' >
+      <field name='name'>OTRO MANTENIMIENTO</field>
+      <field name='default_code'>SER00051</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S52' model='product.product' >
+      <field name='name'>REPUESTO DEL SENSOR DE OXIGENO</field>
+      <field name='default_code'>SER00052</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S53' model='product.product' >
+      <field name='name'>REPUESTO DE LA MANGUERA DE LA DIRECCION ASISTIDA</field>
+      <field name='default_code'>SER00053</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S54' model='product.product' >
+      <field name='name'>REPUESTO DE LA BOMBA DE LA DIRECCION ASISTIDA</field>
+      <field name='default_code'>SER00054</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S55' model='product.product' >
+      <field name='name'>REPARACION DEL RADIADOR</field>
+      <field name='default_code'>SER00055</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S56' model='product.product' >
+      <field name='name'>REFLOTAR ROTORES</field>
+      <field name='default_code'>SER00056</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S57' model='product.product' >
+      <field name='name'>ROTAR NEUMATICOS</field>
+      <field name='default_code'>SER00057</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S58' model='product.product' >
+      <field name='name'>REPUESTO DEL ROTOR</field>
+      <field name='default_code'>SER00058</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S59' model='product.product' >
+      <field name='name'>REPUESTO DE LA BUJIA</field>
+      <field name='default_code'>SER00059</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S60' model='product.product' >
+      <field name='name'>REPUESTO DEL MOTOR DE ARRANQUE</field>
+      <field name='default_code'>SER00060</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S61' model='product.product' >
+      <field name='name'>REPUESTO DEL TERMOSTATO</field>
+      <field name='default_code'>SER00061</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S62' model='product.product' >
+      <field name='name'>REPUESTO DE LA ROTULA</field>
+      <field name='default_code'>SER00062</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S63' model='product.product' >
+      <field name='name'>REPUESTO DE NEUMATICO</field>
+      <field name='default_code'>SER00063</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S64' model='product.product' >
+      <field name='name'>SERVICIO DE NEUMATICOS</field>
+      <field name='default_code'>SER00064</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S65' model='product.product' >
+      <field name='name'>REPUESTO DEL FILTRO DE TRANSMISION</field>
+      <field name='default_code'>SER00065</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S66' model='product.product' >
+      <field name='name'>REPUESTO DE LIQUIDO DE TRANSMISION</field>
+      <field name='default_code'>SER00066</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S67' model='product.product' >
+      <field name='name'>REPUESTO DE LA TRANSMISION</field>
+      <field name='default_code'>SER00067</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S68' model='product.product' >
+      <field name='name'>REPUESTO DE LA BOMBA DE AGUA</field>
+      <field name='default_code'>SER00068</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S69' model='product.product' >
+      <field name='name'>ALINEACION DE LOS NEUMATICOS</field>
+      <field name='default_code'>SER00069</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S70' model='product.product' >
+      <field name='name'>REPUESTO DE LA RUEDA DEL COJINETE</field>
+      <field name='default_code'>SER00070</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S71' model='product.product' >
+      <field name='name'>REPUESTO DEL/DE LOS LIMPIAPARABRISAS</field>
+      <field name='default_code'>SER00071</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+    <record id='herrera_service_S72' model='product.product' >
+      <field name='name'>RECARGA DE COMBUSTIBLE</field>
+      <field name='default_code'>SER00072</field>
+      <field name='type'>service</field>
+      <field name='measure'>unidad</field>
+      <field name='measure_po'>unidad</field>
+      <field name='categ_id' eval='ref("product_category_herrera_fleet")'/>
+      <field name='uom_id' eval='ref("product.product_uom_hour")'/>
+      <field name='uom_po_id' eval='ref("product.product_uom_hour")'/>
+      <field name='property_account_income'  eval='ref("herrera_account.account_ingxventas")'/>
+      <field name='property_account_expense'  eval='ref("herrera_account.account_gastos5")'/>
+    </record>
+
+</data>
+</openerp>

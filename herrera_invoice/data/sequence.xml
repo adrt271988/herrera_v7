@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate = "1">
+        <record id="herrera_invoice_lot_sequence_type" model = "ir.sequence.type">
+            <field name="name">Lote de Facturas</field>
+            <field name="code">account.invoice.lot</field>
+        </record>
+
+        <record id="herrera_invoice_lot_sequence" model = "ir.sequence">
+            <field name="name">Lote de Facturas</field>
+            <field name="code">account.invoice.lot</field>
+            <field name="prefix">LOF/</field>
+            <field name="padding">6</field>
+            <field name="number_increment">1</field>
+            <field name="implementation">standard</field>
+        </record>
+    </data>
+</openerp>

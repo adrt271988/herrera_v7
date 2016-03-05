@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+        <delete model='ir.ui.menu' id="purchase.menu_product_pricelist_action2_purchase" />
+        
+        <!-- Search - Product Pricelist -->
+        <record model="ir.ui.view" id="product_pricelist_purchase_view_search">
+            <field name="name">product.pricelist.purchase.search</field>
+            <field name="model">product.pricelist</field>
+            <field name="arch" type="xml">
+                <search string="Products Price Search">
+                    <field name="name" string="Products Price"/>
+                    <field name="type"/>
+                    <field name="active" />
+                    <field name="currency_id" groups="base.group_multi_currency"/>
+                     <separator/>
+                    <filter icon="terp-personal" name="purchase" string="Tarifa de compra" domain="[('type', '=', 'purchase')]" />
+                    <filter icon="terp-personal" name="sale" string="Tarifa de venta" domain="[('type', '=', 'sale')]" />
+                </search>
+            </field>
+        </record>
+        
+        <!-- Action - Product Pricelist -->
+        <record id="product_pricelist_action_for_purchase2" model="ir.actions.act_window">
+            <field name="name">Pricelists</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.pricelist</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="product_pricelist_purchase_view_search" />
+            <field name="context">{"default_type":"purchase", "search_default_type":"purchase"}</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a pricelist.
+              </p><p>
+                A price list contains rules to be evaluated in order to compute
+                the purchase price. The default price list has only one rule; use
+                the cost price defined on the product form, so that you do not have to
+                worry about supplier pricelists if you have very simple needs.
+              </p><p>
+                But you can also import complex price lists form your supplier
+                that may depends on the quantities ordered or the current
+                promotions.
+              </p>
+            </field>
+        </record>
+        
+        <!--Configuracion/Tarifas menu-->
+        <menuitem name="Tarifas"
+            action="product_pricelist_action_for_purchase2" id="menu_product_pricelist_action2_purchase"
+            parent="purchase.menu_purchase_config_pricelist" sequence="1" groups="product.group_purchase_pricelist" />
+
+        <!--Supplier menu-->
+        <menuitem id="base.menu_procurement_management_supplier_name" name="Suppliers"
+            parent="purchase.menu_procurement_management"
+            action="herrera_partner.action_partner_supplier_form2" sequence="15"/>
+            
+        
+	</data>
+</openerp>

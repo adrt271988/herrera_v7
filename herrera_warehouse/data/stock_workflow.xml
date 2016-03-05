@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<openerp>
+    <data>
+        
+        <record id="act_transit" model="workflow.activity">
+            <field name="wkf_id" ref="stock.wkf_picking"/>
+            <field name="name">transit</field>
+            <field name="kind">function</field>
+            <field name="action">action_transit()</field>
+        </record>
+
+        <record id="trans_assigned_transit" model="workflow.transition">
+            <field name="act_from" ref="stock.act_assigned"/>
+            <field name="act_to" ref="act_transit"/>
+            <field name="signal">button_transit</field>
+        </record>
+        
+        <record id="trans_transit_move_done" model="workflow.transition">
+            <field name="act_from" ref="act_transit"/>
+            <field name="act_to" ref="stock.act_move"/>
+            <field name="condition">test_done()</field>
+        </record>
+    
+        <record id="trans_transit_move_done" model="workflow.transition">
+            <field name="act_from" ref="act_transit"/>
+            <field name="act_to" ref="stock.act_move"/>
+            <field name="signal">button_done</field>
+        </record>
+        
+        <record id="trans_transit_cancel_auto" model="workflow.transition">
+            <field name="act_from" ref="act_transit"/>
+            <field name="act_to" ref="stock.act_cancel"/>
+            <field name="condition">test_cancel()</field>
+        </record>
+        
+    </data>
+</openerp>

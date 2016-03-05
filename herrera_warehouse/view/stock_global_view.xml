@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+         <record model='ir.ui.view' id='stock_picking_global_form'>
+            <field name="name">stock.picking.global.form</field>
+            <field name="model">stock.global</field>
+            <field name="arch" type="xml">
+                <form string="Global" create="0" version="7.0">
+                    <header>
+                        <button name="set_confirm" states="draft" string="Confirmar Global" type="object" class="oe_highlight"/>
+                        <button name="set_cancel" states="draft" string="Cancelar Global" type = "object"/>
+                        <button name="%(stock.act_stock_return_picking)d" string="Devolver a almacen" states="confirmed" type="action" />
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,cancel"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <label string="Global N°" attrs="{'invisible': [('state','not in',('draft','confirmed','cancel'))]}"/>
+                                <field name="name" class="oe_inline" readonly="1"/>
+                            </h1>
+                        </div>
+                        <div class="oe_right oe_button_box" name="buttons">
+                            <button name="action_ok_all" states = "draft" type="object" string="Confirmar todas las lineas"  attrs="{'invisible': [('state','not in',('draft'))]}"/>
+                        </div>
+                        <group>
+                            <field name="date" readonly = "1"/>
+                        </group>
+                        <group string = "Items">
+                            <field name="global_lines" nolabel="1" attrs="{'readonly':[('state','=','confirmed')]}">
+                                <tree editable="bottom" create = "0">
+                                    <field name="item" readonly = "1"/>
+                                    <field name="product_id" readonly = "1"/>
+                                    <field name="supplier_code" readonly = "1"/>
+                                    <field name="uom_id" readonly = "1" string="UdM"/>
+                                    <field name="weight" string= "Peso (kgs.)" readonly = "1"/>
+                                    <field name="volume" string = "Volumen (m3)" readonly = "1"/>
+                                    <field name="palette" readonly = "1"/>
+                                    <field name="product_qty" readonly = "1" string="Cantidad en pedidos"/>
+                                    <field name="real_qty" string="Cantidad a despachar"/>
+                                    <field name="ok"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='stock_picking_global_tree'>
+            <field name="name">stock.picking.global.tree</field>
+            <field name="model">stock.global</field>
+            <field name="arch" type="xml">
+                <tree string="Global" create="0" version="7.0">
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='stock_picking_global_act'>
+            <field name="name">Globales</field>
+            <field name="res_model">stock.global</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+<!--
+        <menuitem action="stock_picking_global_act" parent="stock.menu_stock_inventory_control" id="stock_picking_global_menu" sequence = "10"/>
+-->
+    </data>
+</openerp>

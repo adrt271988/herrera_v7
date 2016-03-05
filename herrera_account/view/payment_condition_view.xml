@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<openerp>
+  <data>
+    <!-- Condiciones -->
+    <record model="ir.ui.view" id="account_payment_condition_form">
+        <field name="name">account.payment.condition.form</field>
+        <field name="model">account.payment.condition</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Condiciones de Pago" version="7.0">
+                <group col="4">
+                    <field name="name"/>
+                    <field name="active"/>
+                    <field name="code" class="oe_inline"/>
+                    <field name="payment_term"/>
+                </group>
+                <separator string="Plazos de Pago"/>
+                <field name="term_ids" widget="one2many_list" />
+                <separator string="Notas"/>
+                <field name="note" placeholder="Explicación de la condición de pago..."/>
+            </form>
+        </field>
+    </record>
+    
+    <record model="ir.ui.view" id="account_payment_condition_tree">
+        <field name="name">account.payment.condition.tree</field>
+        <field name="model">account.payment.condition</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Condiciones de Pago">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="payment_term"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record model='ir.actions.act_window' id='action_payment_condition_form'>
+        <field name="name">Condiciones de Pago</field>
+        <field name="res_model">account.payment.condition</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem action="action_payment_condition_form"
+    id="menu_action_payment_condition_form" parent="account.menu_configuration_misc" sequence="1"/>
+ </data>
+</openerp>

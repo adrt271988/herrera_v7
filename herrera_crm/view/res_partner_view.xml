@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <!-- Add section_id (Sales Team) to res.partner -->
+        <record id="view_partners_form_crm2" model="ir.ui.view">
+            <field name="name">view.res.partner.form.crm.inherited2</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="crm.view_partners_form_crm1"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='section_id']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Partner kanban view inherte
+        <record model="ir.ui.view" id="crm_lead_partner_kanban_view">
+            <field name="name">res.partner.kanban.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+            <field name="priority" eval="10"/>
+            <field name="arch" type="xml">
+                <field name="mobile" position="after">
+                    <field name="opportunity_count"/>
+                    <field name="meeting_count"/>
+                </field>
+                <xpath expr="//div[@class='oe_kanban_partner_links']" position="inside">
+                    <a name="%(relate_partner_opportunities)d" type="action" t-if="record.opportunity_count.value>0">
+                        <t t-esc="record.opportunity_count.value"/> Opportunities
+                    </a>
+                    <a name="%(crm_meeting_partner)d" type="action" t-if="record.meeting_count.value>0">
+                        <t t-esc="record.meeting_count.value"/> Meetings
+                    </a>
+                </xpath>
+            </field>
+        </record>
+        -->
+
+        <record model="ir.ui.view" id="res_partner_view_buttons_inherited">
+            <field name="name">res.partner.view.buttons.inherited</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="crm.res_partner_view_buttons" />
+            <field name="arch" type="xml">
+                <xpath expr="//button[@string='Meetings']" position="replace"/>
+                <xpath expr="//button[@string='Calls']" position="replace"/>
+                <xpath expr="//button[@string='Opportunities']" position="replace"/>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+

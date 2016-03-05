@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<openerp>
+    <data noupdate="0">
+        <!-- Asignamos algunos menus a los grupos Manager y User de Warehouse, para que no se muestre dicho menu para otros grupos de usuarios-->
+        <record id = "stock.group_stock_manager" model="res.groups">
+            <field name="menu_access" eval="[
+                                                (4,ref('stock.menu_stock_product')),
+                                            ]"/>
+        </record>
+        
+        <record id = "stock.group_stock_user" model="res.groups">
+            <field name="menu_access" eval="[
+                                                (4,ref('stock.menu_stock_product')),
+                                                (4,ref('stock.menu_stock_warehouse_mgmt')),
+                                                (4,ref('stock.menu_traceability')),
+                                            ]"/>
+        </record>
+        
+        <!--Creamos el grupo Receptor de Mercancia-->
+        <record id="herrera_warehouse_receiver_group" model="res.groups">
+            <field name="name">Receptor de Mercancía</field>
+            <field name="comment">El receptor de mercancía se limitará a recibir los pedidos de compra o transferencias entrantes... 
+            Así mismo tendrá los permisos para la creación y división de recepciones en Números de Serie o Lotes</field>
+            <field name="category_id" eval="ref('base.module_category_warehouse_management')"/>
+            <field name="users" eval="[(4,ref('base.user_root'))]"/>
+            <field name="menu_access" eval="[(4,ref('stock.menu_stock_root')),
+                                            (4,ref('stock.menu_stock_warehouse_mgmt')),
+                                            (4,ref('stock.menu_traceability')),
+                                            (4,ref('stock.menu_action_production_lot_form')),
+                                            ]"/>
+        </record>
+        
+        <!-- Creamos los derechos de acceso para las vistas Picking List, Purchase Order, Stock Prod Lot Revision -->
+        <record id = "herrera_warehouse_pickinglist_access_right" model = "ir.model.access">
+            <field name = "name">stock.picking.receptor</field>
+            <field name = "model_id" ref ="stock.model_stock_picking"/>
+            <field name = "group_id" ref ="herrera_warehouse_receiver_group"/>
+            <field name = "perm_read" eval = "1"/>
+            <field name = "perm_write" eval = "1"/>
+            <field name = "perm_create" eval = "0"/>
+            <field name = "perm_unlink" eval = "0"/>
+        </record>
+        
+        <record id = "herrera_warehouse_purchase_access_right" model = "ir.model.access">
+            <field name = "name">purchase.order.receptor</field>
+            <field name = "model_id" ref ="purchase.model_purchase_order"/>
+            <field name = "group_id" ref ="herrera_warehouse_receiver_group"/>
+            <field name = "perm_read" eval = "1"/>
+            <field name = "perm_write" eval = "1"/>
+            <field name = "perm_create" eval = "1"/>
+            <field name = "perm_unlink" eval = "0"/>
+        </record>
+        
+        <record id = "herrera_warehouse_serialnumber_review_access_right" model = "ir.model.access">
+            <field name = "name">stock.production.lot.serial.review.receptor</field>
+            <field name = "model_id" ref ="stock.model_stock_production_lot_revision"/>
+            <field name = "group_id" ref ="herrera_warehouse_receiver_group"/>
+            <field name = "perm_read" eval = "1"/>
+            <field name = "perm_write" eval = "0"/>
+            <field name = "perm_create" eval = "0"/>
+            <field name = "perm_unlink" eval = "0"/>
+        </record>
+    </data>
+</openerp>

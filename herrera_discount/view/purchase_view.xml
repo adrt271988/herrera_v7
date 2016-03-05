@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+        <record model="ir.ui.view" id="purchase_order_discount_form">
+			<field name="name">purchase.order.discount.form</field>
+			<field name="model">purchase.order</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="purchase.purchase_order_form" />
+			<field name="arch" type="xml">
+<!--
+                <xpath expr="//page[@string='Purchase Order']" position="after" >
+                    <page string="Descuentos en factura">
+                        
+                    </page>
+				</xpath>
+-->
+                <xpath expr='//field[@name="amount_untaxed"]' position="after">
+                    <field name="amount_discount" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                </xpath>
+                <xpath expr='//group[@class="oe_subtotal_footer oe_right"]' position="after">
+                    <div style="width: 50%%">
+                        <field name="discount_ids" >
+                            <tree editable="bottom">
+                                <field name='discount_id' required="1" string="Descuento" on_change="discount_id_change(discount_id)" domain="[('order_type','=','purchase')]" context="{'order_type':'purchase'}"/>
+                                <field name='name' string="Nombre" invisible="1"/>
+                                <field name='sequence' required="1" string="Prioridad"/>
+                                <field name='discount' required="1" string="Monto (%%)" on_change="discount_value_change(discount_id,discount)"/>
+                            </tree>
+                        </field>
+                    </div>
+                </xpath>
+			</field>
+		</record>
+    
+	</data>
+</openerp>

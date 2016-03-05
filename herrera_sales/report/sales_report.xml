@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <report
+            id="report_products_outside_stock"
+            string="Productos fuera de Stock Distribución"
+            model="sale.order"
+            name="products.outside.stock"
+            rml="herrera_sales/report/products_outside_stock.rml"
+            menu="False"
+            auto="False"/>
+    </data>
+</openerp>

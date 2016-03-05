@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+         Vista en Form Ruta Fletes  
+        
+     <record model="ir.ui.view" id="view_freight_route_form">
+        <field name="name">freight.route.form</field>
+        <field name="model">freight.route</field>
+        <field name="arch" type="xml">
+            <form string="Ruta Fletes" version="7.0">
+                 <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                        </group>
+                        <group>
+                            <field name="rank"/>
+                            <field name="shop_id"/>
+                        </group>
+                    </group>
+                    <field name="detail_ids">
+                        <tree string="" editable="bottom" create ="0" delete="0">
+                            <field name="type" domain="[('parent_id','=',False)]"/>
+                            <field name="weight" domain="[('parent_id','=',False)]"/>
+                            <field name="volume" domain="[('parent_id','=',False)]"/>
+                            <field name="boxes" domain="[('parent_id','=',False)]"/>
+                        </tree>
+                    </field>
+                 </sheet>
+            </form>
+        </field>
+    </record>
+    
+        <!-- Vista en Tree Ruta Fletes  -->
+        
+    <record model="ir.ui.view" id="view_freight_route_tree">
+        <field name="name">freight.route.tree</field>
+        <field name="model">freight.route</field>
+        <field name="arch" type="xml">
+            <tree string="Ruta de Fletes">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="rank"/>
+                <field name="shop_id"/>
+            </tree>
+        </field>
+    </record>
+
+        <!-- Vista en Search Ruta Fletes  -->
+        
+    <record model="ir.ui.view" id="view_freight_route_search">
+        <field name="name">freight.route.search</field>
+        <field name="model">freight.route</field>
+        <field name="arch" type="xml">
+            <search string="Search Route Freight">
+                <field name="name"/>
+                <field name="code"/>
+            </search>
+        </field>
+    </record>
+
+<!-- Actions -->
+
+   <record model="ir.actions.act_window" id="freight_route_actions">
+        <field name="name">Ruta Fletes</field>
+        <field name="res_model">freight.route</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_freight_route_tree"/>
+        <field name="search_view_id" ref="view_freight_route_search"/>
+    </record>
+
+
+    <menuitem action="freight_route_actions" id="menu_freight_route" parent="stock.menu_stock_configuration" sequence="3" groups="stock.group_locations"/>
+
+    </data>
+</openerp>
+
+

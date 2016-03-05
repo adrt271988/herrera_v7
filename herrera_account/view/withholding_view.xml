@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Vista en Form Retenciones  -->
+        
+     <record model="ir.ui.view" id="view_taxes_withholding_form">
+        <field name="name">taxes.withholding.form</field>
+        <field name="model">taxes.withholding</field>
+        <field name="arch" type="xml">
+            <form string="Retenciones" version="7.0">
+                 <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                            <field name="type"/>
+                        </group>
+                        <group>
+                            <field name="percent"/>
+                            <field name="deductible"/>
+                            <field name="top"/>
+                        </group>
+                    </group>
+                 </sheet>
+            </form>
+        </field>
+    </record>
+    
+        <!-- Vista en Tree Retenciones  -->
+        
+    <record model="ir.ui.view" id="view_taxes_withholding_tree">
+        <field name="name">taxes.withholding.tree</field>
+        <field name="model">taxes.withholding</field>
+        <field name="arch" type="xml">
+            <tree string="Drivers">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="percent"/>
+                <field name="deductible"/>
+                <field name="top"/>
+            </tree>
+        </field>
+    </record>
+
+        <!-- Vista en Search Retenciones  -->
+        
+    <record model="ir.ui.view" id="view_taxes_withholding_search">
+        <field name="name">taxes.withholding.search</field>
+        <field name="model">taxes.withholding</field>
+        <field name="arch" type="xml">
+            <search string="Search Retencion Drivers">
+                <field name="name"/>
+                <field name="code"/>
+            </search>
+        </field>
+    </record>
+
+<!-- Actions -->
+
+   <record model="ir.actions.act_window" id="taxes_withholding_actions">
+        <field name="name">Retenciones</field>
+        <field name="res_model">taxes.withholding</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_taxes_withholding_tree"/>
+        <field name="search_view_id" ref="view_taxes_withholding_search"/>
+
+    </record>
+
+
+    <menuitem action="taxes_withholding_actions" id="menu_taxes_withholding" parent="account.next_id_27" sequence="12" groups="base.group_no_one"/>
+
+    </data>
+</openerp>

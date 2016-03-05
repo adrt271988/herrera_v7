@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<openerp>
+    <data>
+        <record id="inherit_distribution_account_invoice_refund_view" model="ir.ui.view">
+            <field name="name">inherit.distribution.account.invoice.refund.view</field>
+            <field name="model">account.invoice.refund</field>
+            <field name="inherit_id" ref="l10n_ve_fiscal_requirements.view_account_inv_nctrl_refund"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='nro_ctrl']" position="replace">
+                    <field name="nro_ctrl"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

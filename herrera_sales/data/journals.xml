@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <!-- Diarios de Comprobantes de Pago de Ventas-->
+	<record model="account.journal" id="account_journal_iva_retention">
+            <field name="name">Comprobante de Retención de IVA</field>
+            <field name="type">iva_sale</field>
+            <field name="code">RIVA</field>
+	    <field name="shop_id" ref='herrera_warehouse.shop_sede'/>
+        </record>
+	
+	<record model="account.journal" id="account_journal_islr_retention">
+            <field name="name">Comprobante de Retención de ISLR</field>
+            <field name="type">islr_sale</field>
+            <field name="code">RISLR</field>
+            <field name="shop_id" ref='herrera_warehouse.shop_sede'/>
+        </record>
+	
+	<record model="account.journal" id="account_journal_city_taxes_H">
+            <field name="name">Comprobante de Retención de Impuestos Municipales Barcelona</field>
+            <field name="type">mun_sale</field>
+            <field name="code">RIMUH</field>
+	    <field name="shop_id" ref='sale.sale_shop_1'/>
+        </record>
+	
+	<record model="account.journal" id="account_journal_city_taxes_K">
+            <field name="name">Comprobante de Retención de Impuestos Municipales Carupano</field>
+            <field name="type">mun_sale</field>
+            <field name="code">RIMUK</field>
+	    <field name="shop_id" ref='herrera_warehouse.shop_caru'/>
+        </record>
+	
+	<record model="account.journal" id="account_journal_city_taxes_C">
+            <field name="name">Comprobante de Retención de Impuestos Municipales Cumana</field>
+            <field name="type">mun_sale</field>
+            <field name="code">RIMUC</field>
+	    <field name="shop_id" ref='herrera_warehouse.shop_cuma'/>
+        </record>
+
+	<record model="account.journal" id="account_journal_city_taxes_D">
+            <field name="name">Comprobante de Retención de Impuestos Municipales Margarita</field>
+            <field name="type">mun_sale</field>
+            <field name="code">RIMUD</field>
+	    <field name="shop_id" ref= 'herrera_warehouse.shop_mgta'/>
+        </record>
+	
+	<record model="account.journal" id="account_journal_city_taxes_O">
+            <field name="name">Comprobante de Retención de Impuestos Municipales Pto. Ordaz</field>
+            <field name="type">mun_sale</field>
+            <field name="code">RIMUO</field>
+	    <field name="shop_id" ref='herrera_warehouse.shop_ptoo'/>
+        </record>
+
+	<record model="account.journal" id="account_journal_city_taxes_G">
+            <field name="name">Comprobante de Retención de Impuestos Municipales Ciudad Bolivar</field>
+            <field name="type">mun_sale</field>
+            <field name="code">RIMUG</field>
+	    <field name="shop_id" ref='herrera_warehouse.shop_boli'/>
+        </record>
+
+	<record model="account.journal" id="account_journal_city_taxes_U">
+            <field name="name">Comprobante de Retención de Impuestos Municipales Maracaibo</field>
+            <field name="type">mun_sale</field>
+            <field name="code">RIMUU</field>
+	    <field name="shop_id" ref='herrera_warehouse.shop_zuli'/>
+        </record>
+
+	<record model="account.journal" id="account_journal_city_taxes_P">
+            <field name="name">Comprobante de Retención de Impuestos Municipales Punto Fijo</field>
+            <field name="type">mun_sale</field>
+            <field name="code">RIMUP</field>
+	    <field name="shop_id" ref='herrera_warehouse.shop_falc'/>
+        </record>
+
+	<record model="account.journal" id="account_journal_city_taxes_M">
+            <field name="name">Comprobante de Retención de Impuestos Municipales Maturin</field>
+            <field name="type">mun_sale</field>
+            <field name="code">RIMUM</field>
+	    <field name="shop_id" ref='herrera_warehouse.shop_matu'/>
+        </record>
+	
+	<record model="account.journal" id="account_journal_dpp">
+            <field name="name">Descuento por Pronto Pago Ventas</field>
+            <field name="type">sale_dpp</field>
+            <field name="code">DPP</field>
+	    <field name="shop_id" ref='sale.sale_shop_1'/>
+        </record>
+	
+	<record model="account.journal" id="account_journal_dpp_recovery">
+            <field name="name">Recuperación IVA DPP</field>
+            <field name="type">dpp_recovery</field>
+            <field name="code">DPPREC</field>
+	    <field name="shop_id" ref='sale.sale_shop_1'/>
+        </record>
+    </data>
+</openerp>
+
+

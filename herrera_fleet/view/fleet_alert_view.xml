@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+         <record model='ir.ui.view' id='fleet_service_alert_form'>
+            <field name="name">fleet.service.alert.form</field>
+            <field name="model">fleet.service.alert</field>
+            <field name="arch" type="xml">
+                <form string="Configuración de Alertas" version="7.0">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="vehicle_id" domain="['|',('active_vehicle','=',True),('contracted','=',False)]"/>
+                            <field name="service_id"/>
+                            <field name="odometer_ini" invisible = "1"/>
+                            <field name="horometer_ini" invisible = "1"/>
+                        </group>
+                        <group string = "Criterios">
+                            <field name="criteria_ids" nolabel="1">
+                                <form string="Criterios">
+                                    <field name="alert_unit"/>
+                                    <field name="pre_interval"/>
+                                    <field name="interval"/>
+                                    <field name="date_ini" attrs = "{'readonly':[('alert_unit','&lt;&gt;','fecha')]}"/>
+                                </form>
+                                <tree>
+                                    <field name="alert_unit"/>
+                                    <field name="pre_interval"/>
+                                    <field name="interval"/>
+                                    <field name="date_ini" attrs = "{'invisible':[('alert_unit','&lt;&gt;','fecha')]}"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='fleet_service_alert_tree'>
+            <field name="name">fleet.service.alert.tree</field>
+            <field name="model">fleet.service.alert</field>
+            <field name="arch" type="xml">
+                <tree string="Alertas de Servicio" version="7.0">
+                    <field name="name"/>
+                    <field name="vehicle_id"/>
+                    <field name="service_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='fleet_service_alert_act'>
+            <field name="name">Alertas de Servicio</field>
+            <field name="res_model">fleet.service.alert</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{"search_default_groupby_vehicle" : True}</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Haga click para configurar alertas de servicio por vehículo
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="fleet_service_alert_act" parent="fleet.fleet_configuration" id="fleet_service_alert_menu" groups="fleet.group_fleet_user" sequence = "10"/>
+
+
+        <record model='ir.ui.view' id='fleet_service_alert_history_tree'>
+            <field name="name">fleet.service.alert.history.tree</field>
+            <field name="model">fleet.service.alert.history</field>
+            <field name="arch" type="xml">
+                <tree string="Alertas de Servicio por revisar" colors="red:state=='pending';orange:state=='caution'" version="7.0" editable="top" create = "false">
+                    <field name="alert" readonly = "1"/>
+                    <field name="vehicle" readonly = "1"/>
+                    <field name="service" readonly = "1"/>
+                    <field name="name"/>
+                    <field name="reference"/>
+                    <field name="state"/>
+                    <field name="date"/>
+                    <button name="confirm_service" type="object" icon="terp-stock_effects-object-colorize" states="pending"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='fleet_service_alert_history_act'>
+            <field name="name">Alertas de Servicio Pendientes</field>
+            <field name="res_model">fleet.service.alert.history</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <menuitem action="fleet_service_alert_history_act" parent="fleet.fleet_vehicles" id="fleet_service_alert_history_menu" groups="fleet.group_fleet_user" sequence = "10"/>
+    </data>
+</openerp>

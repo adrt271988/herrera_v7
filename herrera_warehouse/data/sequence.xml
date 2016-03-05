@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate = "0">
+
+        <record id="herrera_warehouse_global_sequence_type" model = "ir.sequence.type">
+            <field name="name">Global</field>
+            <field name="code">stock.global</field>
+        </record>
+
+        <record id="herrera_warehouse_global_sequence" model = "ir.sequence">
+            <field name="name">Global</field>
+            <field name="code">stock.global</field>
+            <field name="prefix">GO/</field>
+            <field name="padding">6</field>
+            <field name="number_increment">1</field>
+            <field name="implementation">standard</field>
+        </record>
+
+        <record id="herrera_warehouse_hall_sequence_type" model = "ir.sequence.type">
+            <field name="name">Listin</field>
+            <field name="code">stock.hall.document</field>
+        </record>
+
+        <record id="herrera_warehouse_hall_sequence" model = "ir.sequence">
+            <field name="name">Listin</field>
+            <field name="code">stock.hall.document</field>
+            <field name="prefix">LI/</field>
+            <field name="padding">6</field>
+            <field name="number_increment">1</field>
+            <field name="implementatios">standard</field>
+        </record>
+    </data>
+</openerp>

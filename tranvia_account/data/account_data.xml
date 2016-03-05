@@ -1,0 +1,2049 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data noupdate="1">
+
+    <record id='tranvia_account_0' model='account.account'>
+      <field name='code'>0</field>
+      <field name='parent_id'></field>
+      <field name='name'>Plan de Cuentas Tranvia</field>
+      <field name='type'>view</field>
+      <field name='user_type'>1</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_1' model='account.account'>
+      <field name='name'>ACTIVOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_0')"/>
+      <field name='code'>1</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11' model='account.account'>
+      <field name='name'>ACTIVO CIRCULANTE</field>
+      <field name='parent_id' eval="ref('tranvia_account_1')"/>
+      <field name='code'>11</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_111' model='account.account'>
+      <field name='name'>CAJA Y BANCO</field>
+      <field name='parent_id' eval="ref('tranvia_account_11')"/>
+      <field name='code'>111</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11101' model='account.account'>
+      <field name='name'>CAJA</field>
+      <field name='parent_id' eval="ref('tranvia_account_111')"/>
+      <field name='code'>11101</field>
+      <field name='type'>liquidity</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11104' model='account.account'>
+      <field name='name'>BANCOS NACIONALES</field>
+      <field name='parent_id' eval="ref('tranvia_account_111')"/>
+      <field name='code'>11104</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11104000' model='account.account'>
+      <field name='name'>BANCOS NACIONALES</field>
+      <field name='parent_id' eval="ref('tranvia_account_11104')"/>
+      <field name='code'>11104000</field>
+      <field name='type'>liquidity</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11104001' model='account.account'>
+      <field name='name'>BANCOS NACIONALES</field>
+      <field name='parent_id' eval="ref('tranvia_account_11104')"/>
+      <field name='code'>11104001</field>
+      <field name='type'>liquidity</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11106' model='account.account'>
+      <field name='name'>BANCOS DEL EXTERIOR</field>
+      <field name='parent_id' eval="ref('tranvia_account_111')"/>
+      <field name='code'>11106</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11106001' model='account.account'>
+      <field name='name'>EBNA BANK NV 182565.47$</field>
+      <field name='parent_id' eval="ref('tranvia_account_11106')"/>
+      <field name='code'>11106001</field>
+      <field name='type'>liquidity</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11107' model='account.account'>
+      <field name='name'>INVERSIONES DPN</field>
+      <field name='parent_id' eval="ref('tranvia_account_111')"/>
+      <field name='code'>11107</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11107001' model='account.account'>
+      <field name='name'>BONOS DPN EL VZLANO I</field>
+      <field name='parent_id' eval="ref('tranvia_account_11107')"/>
+      <field name='code'>11107001</field>
+      <field name='type'>liquidity</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11107002' model='account.account'>
+      <field name='name'>BONOS DPN EL VZLANO II</field>
+      <field name='parent_id' eval="ref('tranvia_account_11107')"/>
+      <field name='code'>11107002</field>
+      <field name='type'>liquidity</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11107003' model='account.account'>
+      <field name='name'>BONOS PDVSA 2017</field>
+      <field name='parent_id' eval="ref('tranvia_account_11107')"/>
+      <field name='code'>11107003</field>
+      <field name='type'>liquidity</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_113' model='account.account'>
+      <field name='name'>CUENTAS POR COBRAR</field>
+      <field name='parent_id' eval="ref('tranvia_account_11')"/>
+      <field name='code'>113</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11301' model='account.account'>
+      <field name='name'>C X C CLIENTES</field>
+      <field name='parent_id' eval="ref('tranvia_account_113')"/>
+      <field name='code'>11301</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11301001' model='account.account'>
+      <field name='name'>CTAS/COBRAR COMERCIALES</field>
+      <field name='parent_id' eval="ref('tranvia_account_11301')"/>
+      <field name='code'>11301001</field>
+      <field name='type'>receivable</field>
+      <field name='user_type'>2</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11301005' model='account.account'>
+      <field name='name'>C/C ANGEL BONALDE</field>
+      <field name='parent_id' eval="ref('tranvia_account_11301')"/>
+      <field name='code'>11301005</field>
+      <field name='type'>receivable</field>
+      <field name='user_type'>2</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11302' model='account.account'>
+      <field name='name'>CUENTA P/COBRAR ACCIONIS</field>
+      <field name='parent_id' eval="ref('tranvia_account_113')"/>
+      <field name='code'>11302</field>
+      <field name='type'>receivable</field>
+      <field name='user_type'>2</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11303' model='account.account'>
+      <field name='name'>CTS/COBRAR RELACIONADAS</field>
+      <field name='parent_id' eval="ref('tranvia_account_113')"/>
+      <field name='code'>11303</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11303001' model='account.account'>
+      <field name='name'>HERRERA CA</field>
+      <field name='parent_id' eval="ref('tranvia_account_11303')"/>
+      <field name='code'>11303001</field>
+      <field name='type'>receivable</field>
+      <field name='user_type'>2</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11303003' model='account.account'>
+      <field name='name'>CONSUMA CA</field>
+      <field name='parent_id' eval="ref('tranvia_account_11303')"/>
+      <field name='code'>11303003</field>
+      <field name='type'>receivable</field>
+      <field name='user_type'>2</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11303004' model='account.account'>
+      <field name='name'>REP HERRERA CA</field>
+      <field name='parent_id' eval="ref('tranvia_account_11303')"/>
+      <field name='code'>11303004</field>
+      <field name='type'>receivable</field>
+      <field name='user_type'>2</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11303005' model='account.account'>
+      <field name='name'>HERRERA GUAYANA CA</field>
+      <field name='parent_id' eval="ref('tranvia_account_11303')"/>
+      <field name='code'>11303005</field>
+      <field name='type'>receivable</field>
+      <field name='user_type'>2</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11303006' model='account.account'>
+      <field name='name'>HERRERA MONAGAS CA</field>
+      <field name='parent_id' eval="ref('tranvia_account_11303')"/>
+      <field name='code'>11303006</field>
+      <field name='type'>receivable</field>
+      <field name='user_type'>2</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11303007' model='account.account'>
+      <field name='name'>DISTRIBUID LA AMISTAD CA</field>
+      <field name='parent_id' eval="ref('tranvia_account_11303')"/>
+      <field name='code'>11303007</field>
+      <field name='type'>receivable</field>
+      <field name='user_type'>2</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11303008' model='account.account'>
+      <field name='name'>TRNSARRIENDAS CA</field>
+      <field name='parent_id' eval="ref('tranvia_account_11303')"/>
+      <field name='code'>11303008</field>
+      <field name='type'>receivable</field>
+      <field name='user_type'>2</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11303009' model='account.account'>
+      <field name='name'>TRANSERCA CA</field>
+      <field name='parent_id' eval="ref('tranvia_account_11303')"/>
+      <field name='code'>11303009</field>
+      <field name='type'>receivable</field>
+      <field name='user_type'>2</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11303099' model='account.account'>
+      <field name='name'>OTROS</field>
+      <field name='parent_id' eval="ref('tranvia_account_11303')"/>
+      <field name='code'>11303099</field>
+      <field name='type'>receivable</field>
+      <field name='user_type'>2</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11315389' model='account.account'>
+      <field name='name'>C-CARLOS FARIAS</field>
+      <field name='parent_id' eval="ref('tranvia_account_113')"/>
+      <field name='code'>11315389</field>
+      <field name='type'>receivable</field>
+      <field name='user_type'>2</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_119' model='account.account'>
+      <field name='name'>INVERSIONES</field>
+      <field name='parent_id' eval="ref('tranvia_account_11')"/>
+      <field name='code'>119</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11901' model='account.account'>
+      <field name='name'>INVERSIONES EN TERRENOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_119')"/>
+      <field name='code'>11901</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11902' model='account.account'>
+      <field name='name'>INVERSIONES EN ACCIONES</field>
+      <field name='parent_id' eval="ref('tranvia_account_119')"/>
+      <field name='code'>11902</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_119021' model='account.account'>
+      <field name='name'>INV ACCIONES RELACIONDAS</field>
+      <field name='parent_id' eval="ref('tranvia_account_11902')"/>
+      <field name='code'>119021</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11902101' model='account.account'>
+      <field name='name'>PROMOTORA GARAJONAY CA</field>
+      <field name='parent_id' eval="ref('tranvia_account_119021')"/>
+      <field name='code'>11902101</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11902102' model='account.account'>
+      <field name='name'>PROMOTORA EL TEIDE CA</field>
+      <field name='parent_id' eval="ref('tranvia_account_119021')"/>
+      <field name='code'>11902102</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_11902199' model='account.account'>
+      <field name='name'>AJUSTE POR INFLACION</field>
+      <field name='parent_id' eval="ref('tranvia_account_119021')"/>
+      <field name='code'>11902199</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_13' model='account.account'>
+      <field name='name'>ACTIVO FIJO</field>
+      <field name='parent_id' eval="ref('tranvia_account_1')"/>
+      <field name='code'>13</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_134' model='account.account'>
+      <field name='name'>ACTIVOS FIJOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_13')"/>
+      <field name='code'>134</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_13401' model='account.account'>
+      <field name='name'>ACTIVOS DEPRECIABLES</field>
+      <field name='parent_id' eval="ref('tranvia_account_134')"/>
+      <field name='code'>13401</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_134011' model='account.account'>
+      <field name='name'>MOBILIARIO</field>
+      <field name='parent_id' eval="ref('tranvia_account_13401')"/>
+      <field name='code'>134011</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_13401101' model='account.account'>
+      <field name='name'>COSTO DE ADQUISICION</field>
+      <field name='parent_id' eval="ref('tranvia_account_134011')"/>
+      <field name='code'>13401101</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_13401102' model='account.account'>
+      <field name='name'>DEPRECIACION HISTORICA</field>
+      <field name='parent_id' eval="ref('tranvia_account_134011')"/>
+      <field name='code'>13401102</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_13401103' model='account.account'>
+      <field name='name'>AJUSTE POR INFLACION</field>
+      <field name='parent_id' eval="ref('tranvia_account_134011')"/>
+      <field name='code'>13401103</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_13401104' model='account.account'>
+      <field name='name'>DEP POR REAJUSTE</field>
+      <field name='parent_id' eval="ref('tranvia_account_134011')"/>
+      <field name='code'>13401104</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_134012' model='account.account'>
+      <field name='name'>EQUIPO ELECTRONICO</field>
+      <field name='parent_id' eval="ref('tranvia_account_13401')"/>
+      <field name='code'>134012</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_13401201' model='account.account'>
+      <field name='name'>COSTO DE ADQUISICION</field>
+      <field name='parent_id' eval="ref('tranvia_account_134012')"/>
+      <field name='code'>13401201</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_13401202' model='account.account'>
+      <field name='name'>DEPRECIACION HISTORICA</field>
+      <field name='parent_id' eval="ref('tranvia_account_134012')"/>
+      <field name='code'>13401202</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_13401203' model='account.account'>
+      <field name='name'>AJUSTE POR INFLACION</field>
+      <field name='parent_id' eval="ref('tranvia_account_134012')"/>
+      <field name='code'>13401203</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_13401204' model='account.account'>
+      <field name='name'>DEP POR REAJUSTE</field>
+      <field name='parent_id' eval="ref('tranvia_account_134012')"/>
+      <field name='code'>13401204</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_134013' model='account.account'>
+      <field name='name'>MAQUINARIA Y EQUIPO</field>
+      <field name='parent_id' eval="ref('tranvia_account_13401')"/>
+      <field name='code'>134013</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_13401301' model='account.account'>
+      <field name='name'>COSTO DE ADQUISICION</field>
+      <field name='parent_id' eval="ref('tranvia_account_134013')"/>
+      <field name='code'>13401301</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_13401302' model='account.account'>
+      <field name='name'>EPRECIACION HISTORICA</field>
+      <field name='parent_id' eval="ref('tranvia_account_134013')"/>
+      <field name='code'>13401302</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_13401303' model='account.account'>
+      <field name='name'>AJUSTE POR INFLACION</field>
+      <field name='parent_id' eval="ref('tranvia_account_134013')"/>
+      <field name='code'>13401303</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_13401304' model='account.account'>
+      <field name='name'>DEP POR REAJUSTE</field>
+      <field name='parent_id' eval="ref('tranvia_account_134013')"/>
+      <field name='code'>13401304</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_134015' model='account.account'>
+      <field name='name'>VEHICULOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_13401')"/>
+      <field name='code'>134015</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_13401501' model='account.account'>
+      <field name='name'>COSTO DE ADQUISICION</field>
+      <field name='parent_id' eval="ref('tranvia_account_134015')"/>
+      <field name='code'>13401501</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_13401502' model='account.account'>
+      <field name='name'>DEPRECIACION HISTORICA</field>
+      <field name='parent_id' eval="ref('tranvia_account_134015')"/>
+      <field name='code'>13401502</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_13401503' model='account.account'>
+      <field name='name'>AJUSTE POR INFLACION</field>
+      <field name='parent_id' eval="ref('tranvia_account_134015')"/>
+      <field name='code'>13401503</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_13401504' model='account.account'>
+      <field name='name'>DEP POR REAJUSTE</field>
+      <field name='parent_id' eval="ref('tranvia_account_134015')"/>
+      <field name='code'>13401504</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_134016' model='account.account'>
+      <field name='name'>INMUEBLES</field>
+      <field name='parent_id' eval="ref('tranvia_account_13401')"/>
+      <field name='code'>134016</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_13401601' model='account.account'>
+      <field name='name'>COSTO DE ADQUISICION</field>
+      <field name='parent_id' eval="ref('tranvia_account_134016')"/>
+      <field name='code'>13401601</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_13401602' model='account.account'>
+      <field name='name'>DEPRECIACION HISTORICA</field>
+      <field name='parent_id' eval="ref('tranvia_account_134016')"/>
+      <field name='code'>13401602</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_13401603' model='account.account'>
+      <field name='name'>AJUSTE POR INFLACION</field>
+      <field name='parent_id' eval="ref('tranvia_account_134016')"/>
+      <field name='code'>13401603</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_13401604' model='account.account'>
+      <field name='name'>DEP POR REAJUSTE</field>
+      <field name='parent_id' eval="ref('tranvia_account_134016')"/>
+      <field name='code'>13401604</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_18' model='account.account'>
+      <field name='name'>OTROS ACTIVOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_1')"/>
+      <field name='code'>18</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_181' model='account.account'>
+      <field name='name'>CARGOS DIFERIDOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_18')"/>
+      <field name='code'>181</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_18101' model='account.account'>
+      <field name='name'>IMPUESTOS ANTICIPADOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_181')"/>
+      <field name='code'>18101</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_18101001' model='account.account'>
+      <field name='name'>IVA SOBRE COMPRAS</field>
+      <field name='parent_id' eval="ref('tranvia_account_18101')"/>
+      <field name='code'>18101001</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_18101002' model='account.account'>
+      <field name='name'>IMPUESTOS RETENIDOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_18101')"/>
+      <field name='code'>18101002</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_18101003' model='account.account'>
+      <field name='name'>IMPSTO DECLARAC ESTIMADA</field>
+      <field name='parent_id' eval="ref('tranvia_account_18101')"/>
+      <field name='code'>18101003</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_18101004' model='account.account'>
+      <field name='name'>RETENCION IVA 75%</field>
+      <field name='parent_id' eval="ref('tranvia_account_18101')"/>
+      <field name='code'>18101004</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_18101005' model='account.account'>
+      <field name='name'>IMPSTOS PAG EN EXCESO</field>
+      <field name='parent_id' eval="ref('tranvia_account_18101')"/>
+      <field name='code'>18101005</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_18102' model='account.account'>
+      <field name='name'>GASTOS DE CONSTITUCION</field>
+      <field name='parent_id' eval="ref('tranvia_account_181')"/>
+      <field name='code'>18102</field>
+      <field name='type'>view</field>
+      <field name='user_type'>12</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_18102001' model='account.account'>
+      <field name='name'>GASTOS DE CONSTITUCION</field>
+      <field name='parent_id' eval="ref('tranvia_account_18102')"/>
+      <field name='code'>18102001</field>
+      <field name='type'>other</field>
+      <field name='user_type'>6</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_2' model='account.account'>
+      <field name='name'>PASIVO Y PATRIMONIO</field>
+      <field name='parent_id' eval="ref('tranvia_account_0')"/>
+      <field name='code'>2</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21' model='account.account'>
+      <field name='name'>PASIVO CIRCULANTE</field>
+      <field name='parent_id' eval="ref('tranvia_account_2')"/>
+      <field name='code'>21</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_211' model='account.account'>
+      <field name='name'>EFECTOS Y CTAS P/PAGAR</field>
+      <field name='parent_id' eval="ref('tranvia_account_21')"/>
+      <field name='code'>211</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21101' model='account.account'>
+      <field name='name'>EFECTOS POR PAGAR</field>
+      <field name='parent_id' eval="ref('tranvia_account_211')"/>
+      <field name='code'>21101</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21102' model='account.account'>
+      <field name='name'>CUENTAS POR PAGAR</field>
+      <field name='parent_id' eval="ref('tranvia_account_211')"/>
+      <field name='code'>21102</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_211020' model='account.account'>
+      <field name='name'>C/PAGAR RELACIONADAS</field>
+      <field name='parent_id' eval="ref('tranvia_account_21102')"/>
+      <field name='code'>211020</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21102001' model='account.account'>
+      <field name='name'>HERRERA, C.A.</field>
+      <field name='parent_id' eval="ref('tranvia_account_211020')"/>
+      <field name='code'>21102001</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_211021' model='account.account'>
+      <field name='name'>C/PAGAR COMERCIALES</field>
+      <field name='parent_id' eval="ref('tranvia_account_21102')"/>
+      <field name='code'>211021</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_211022' model='account.account'>
+      <field name='name'>C/PAGAR ACCIONISTAS</field>
+      <field name='parent_id' eval="ref('tranvia_account_21102')"/>
+      <field name='code'>211022</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_211023' model='account.account'>
+      <field name='name'>CIAS FILIALS Y RELACNDS</field>
+      <field name='parent_id' eval="ref('tranvia_account_21102')"/>
+      <field name='code'>211023</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21102301' model='account.account'>
+      <field name='name'>HERRERA CA</field>
+      <field name='parent_id' eval="ref('tranvia_account_211023')"/>
+      <field name='code'>21102301</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21102303' model='account.account'>
+      <field name='name'>CONSUMA CA</field>
+      <field name='parent_id' eval="ref('tranvia_account_211023')"/>
+      <field name='code'>21102303</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21102304' model='account.account'>
+      <field name='name'>REP HERRERA CA</field>
+      <field name='parent_id' eval="ref('tranvia_account_211023')"/>
+      <field name='code'>21102304</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21102305' model='account.account'>
+      <field name='name'>HERRERA GUAYANA CA</field>
+      <field name='parent_id' eval="ref('tranvia_account_211023')"/>
+      <field name='code'>21102305</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21102306' model='account.account'>
+      <field name='name'>HERRERA MONAGAS CA</field>
+      <field name='parent_id' eval="ref('tranvia_account_211023')"/>
+      <field name='code'>21102306</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21102307' model='account.account'>
+      <field name='name'>DIST LA AMISTAD CA</field>
+      <field name='parent_id' eval="ref('tranvia_account_211023')"/>
+      <field name='code'>21102307</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21102308' model='account.account'>
+      <field name='name'>TRANSARRIENDAS CA</field>
+      <field name='parent_id' eval="ref('tranvia_account_211023')"/>
+      <field name='code'>21102308</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21102309' model='account.account'>
+      <field name='name'>TRANSERCA CA</field>
+      <field name='parent_id' eval="ref('tranvia_account_211023')"/>
+      <field name='code'>21102309</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21102310' model='account.account'>
+      <field name='name'>SUCESION HERRERA</field>
+      <field name='parent_id' eval="ref('tranvia_account_211023')"/>
+      <field name='code'>21102310</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21102399' model='account.account'>
+      <field name='name'>OTROS</field>
+      <field name='parent_id' eval="ref('tranvia_account_211023')"/>
+      <field name='code'>21102399</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21107' model='account.account'>
+      <field name='name'>GTOS E IMPUESTOS P/PAGAR</field>
+      <field name='parent_id' eval="ref('tranvia_account_211')"/>
+      <field name='code'>21107</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21107080' model='account.account'>
+      <field name='name'>I.S.L.R. RETENIDO</field>
+      <field name='parent_id' eval="ref('tranvia_account_21107')"/>
+      <field name='code'>21107080</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21107082' model='account.account'>
+      <field name='name'>RETENC 75% IVA PROVEEDOR</field>
+      <field name='parent_id' eval="ref('tranvia_account_21107')"/>
+      <field name='code'>21107082</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21107083' model='account.account'>
+      <field name='name'>RET 75% IVA SERVICIOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_21107')"/>
+      <field name='code'>21107083</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21107084' model='account.account'>
+      <field name='name'>RET IAE POR PAGAR</field>
+      <field name='parent_id' eval="ref('tranvia_account_21107')"/>
+      <field name='code'>21107084</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21107085' model='account.account'>
+      <field name='name'>RETENC ISLR EMPLEADOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_21107')"/>
+      <field name='code'>21107085</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21107086' model='account.account'>
+      <field name='name'>INSTERESES P/PAGAR BANCS</field>
+      <field name='parent_id' eval="ref('tranvia_account_21107')"/>
+      <field name='code'>21107086</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21153' model='account.account'>
+      <field name='name'>C-NOMINA CHOFERES CUMANA</field>
+      <field name='parent_id' eval="ref('tranvia_account_211')"/>
+      <field name='code'>21153</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21153990' model='account.account'>
+      <field name='name'>C-SUELD CHOFERES CUMANA</field>
+      <field name='parent_id' eval="ref('tranvia_account_21153')"/>
+      <field name='code'>21153990</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21153991' model='account.account'>
+      <field name='name'>C-RSVA PREST CHOF CUMANA</field>
+      <field name='parent_id' eval="ref('tranvia_account_21153')"/>
+      <field name='code'>21153991</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21154' model='account.account'>
+      <field name='name'>G-NOMINA CHOFRES BOLIVAR</field>
+      <field name='parent_id' eval="ref('tranvia_account_211')"/>
+      <field name='code'>21154</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21154990' model='account.account'>
+      <field name='name'>G-SUELD CHOFERES BOLIVAR</field>
+      <field name='parent_id' eval="ref('tranvia_account_21154')"/>
+      <field name='code'>21154990</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21154991' model='account.account'>
+      <field name='name'>G-RSVA PRESTAC CHOF BOLI</field>
+      <field name='parent_id' eval="ref('tranvia_account_21154')"/>
+      <field name='code'>21154991</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21155' model='account.account'>
+      <field name='name'>M-NOM CHOFERES MATURIN</field>
+      <field name='parent_id' eval="ref('tranvia_account_211')"/>
+      <field name='code'>21155</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21155990' model='account.account'>
+      <field name='name'>M-SLDO CHOFERES MATURIN</field>
+      <field name='parent_id' eval="ref('tranvia_account_21155')"/>
+      <field name='code'>21155990</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21155991' model='account.account'>
+      <field name='name'>M-RSVA PREST CHOF MATURI</field>
+      <field name='parent_id' eval="ref('tranvia_account_21155')"/>
+      <field name='code'>21155991</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21156' model='account.account'>
+      <field name='name'>K-NOMINA CHOFERS CARUPAN</field>
+      <field name='parent_id' eval="ref('tranvia_account_211')"/>
+      <field name='code'>21156</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21156990' model='account.account'>
+      <field name='name'>K-SUELDO CHOF CARUPANO</field>
+      <field name='parent_id' eval="ref('tranvia_account_21156')"/>
+      <field name='code'>21156990</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21156991' model='account.account'>
+      <field name='name'>K-RSVA PREST CHOF CARUP</field>
+      <field name='parent_id' eval="ref('tranvia_account_21156')"/>
+      <field name='code'>21156991</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21157' model='account.account'>
+      <field name='name'>U-NOMINA CHOFS MARACAIBO</field>
+      <field name='parent_id' eval="ref('tranvia_account_211')"/>
+      <field name='code'>21157</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21157990' model='account.account'>
+      <field name='name'>U-SLDO CHOFERES MARACAIB</field>
+      <field name='parent_id' eval="ref('tranvia_account_21157')"/>
+      <field name='code'>21157990</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21157991' model='account.account'>
+      <field name='name'>U-RSVA PREST CHOF MCBO</field>
+      <field name='parent_id' eval="ref('tranvia_account_21157')"/>
+      <field name='code'>21157991</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21158' model='account.account'>
+      <field name='name'>O-NOMINA CHOF PTO ORDAZ</field>
+      <field name='parent_id' eval="ref('tranvia_account_211')"/>
+      <field name='code'>21158</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21158990' model='account.account'>
+      <field name='name'>O-SLDOS CHOF PTO ORDAZ</field>
+      <field name='parent_id' eval="ref('tranvia_account_21158')"/>
+      <field name='code'>21158990</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21158991' model='account.account'>
+      <field name='name'>O-RSVA PREST CHOF MACBO</field>
+      <field name='parent_id' eval="ref('tranvia_account_21158')"/>
+      <field name='code'>21158991</field>
+      <field name='type'>payable</field>
+      <field name='user_type'>3</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_215' model='account.account'>
+      <field name='name'>OTROS PASIVOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_21')"/>
+      <field name='code'>215</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21501' model='account.account'>
+      <field name='name'>DEBITO FISCAL</field>
+      <field name='parent_id' eval="ref('tranvia_account_215')"/>
+      <field name='code'>21501</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21501001' model='account.account'>
+      <field name='name'>IVA SOBRE VENTAS</field>
+      <field name='parent_id' eval="ref('tranvia_account_21501')"/>
+      <field name='code'>21501001</field>
+      <field name='type'>other</field>
+      <field name='user_type'>7</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21501002' model='account.account'>
+      <field name='name'>IMPUESTOS RET P/PAGAR</field>
+      <field name='parent_id' eval="ref('tranvia_account_21501')"/>
+      <field name='code'>21501002</field>
+      <field name='type'>other</field>
+      <field name='user_type'>7</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21501003' model='account.account'>
+      <field name='name'>IMP S/R POR PAGAR</field>
+      <field name='parent_id' eval="ref('tranvia_account_21501')"/>
+      <field name='code'>21501003</field>
+      <field name='type'>other</field>
+      <field name='user_type'>7</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21501004' model='account.account'>
+      <field name='name'>IMP I A E POR PAGAR</field>
+      <field name='parent_id' eval="ref('tranvia_account_21501')"/>
+      <field name='code'>21501004</field>
+      <field name='type'>other</field>
+      <field name='user_type'>7</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_21501005' model='account.account'>
+      <field name='name'>OTROS IMPUESTOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_21501')"/>
+      <field name='code'>21501005</field>
+      <field name='type'>other</field>
+      <field name='user_type'>7</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_22' model='account.account'>
+      <field name='name'>PATRIMONIO</field>
+      <field name='parent_id' eval="ref('tranvia_account_2')"/>
+      <field name='code'>22</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_221' model='account.account'>
+      <field name='name'>CAPITAL SOCIAL</field>
+      <field name='parent_id' eval="ref('tranvia_account_22')"/>
+      <field name='code'>221</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_22101' model='account.account'>
+      <field name='name'>ACCIONISTAS</field>
+      <field name='parent_id' eval="ref('tranvia_account_221')"/>
+      <field name='code'>22101</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_22101001' model='account.account'>
+      <field name='name'>ACCIONISTA</field>
+      <field name='parent_id' eval="ref('tranvia_account_22101')"/>
+      <field name='code'>22101001</field>
+      <field name='type'>other</field>
+      <field name='user_type'>15</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_22101002' model='account.account'>
+      <field name='name'>ACCIONISTA</field>
+      <field name='parent_id' eval="ref('tranvia_account_22101')"/>
+      <field name='code'>22101002</field>
+      <field name='type'>other</field>
+      <field name='user_type'>15</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_222' model='account.account'>
+      <field name='name'>SUPERAVIT</field>
+      <field name='parent_id' eval="ref('tranvia_account_22')"/>
+      <field name='code'>222</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_22201' model='account.account'>
+      <field name='name'>RESERVA LEGAL</field>
+      <field name='parent_id' eval="ref('tranvia_account_222')"/>
+      <field name='code'>22201</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_22201001' model='account.account'>
+      <field name='name'>RESERVA LEGAL 10%</field>
+      <field name='parent_id' eval="ref('tranvia_account_22201')"/>
+      <field name='code'>22201001</field>
+      <field name='type'>other</field>
+      <field name='user_type'>15</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_22202' model='account.account'>
+      <field name='name'>RESULTADO ACUMULADO</field>
+      <field name='parent_id' eval="ref('tranvia_account_222')"/>
+      <field name='code'>22202</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_22202001' model='account.account'>
+      <field name='name'>RESULTADO ACUMULADO</field>
+      <field name='parent_id' eval="ref('tranvia_account_22202')"/>
+      <field name='code'>22202001</field>
+      <field name='type'>other</field>
+      <field name='user_type'>15</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_22202002' model='account.account'>
+      <field name='name'>RESULTADO 31/12/2002</field>
+      <field name='parent_id' eval="ref('tranvia_account_22202')"/>
+      <field name='code'>22202002</field>
+      <field name='type'>other</field>
+      <field name='user_type'>15</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_22202003' model='account.account'>
+      <field name='name'>OTROS</field>
+      <field name='parent_id' eval="ref('tranvia_account_22202')"/>
+      <field name='code'>22202003</field>
+      <field name='type'>other</field>
+      <field name='user_type'>15</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_22203' model='account.account'>
+      <field name='name'>REVALORIZAC PATRIMONIAL</field>
+      <field name='parent_id' eval="ref('tranvia_account_222')"/>
+      <field name='code'>22203</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_22203001' model='account.account'>
+      <field name='name'>REVALORIZAC PATRIMONIAL</field>
+      <field name='parent_id' eval="ref('tranvia_account_22203')"/>
+      <field name='code'>22203001</field>
+      <field name='type'>other</field>
+      <field name='user_type'>15</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_22205' model='account.account'>
+      <field name='name'>RESULTADO DEL EJERCICIO</field>
+      <field name='parent_id' eval="ref('tranvia_account_222')"/>
+      <field name='code'>22205</field>
+      <field name='type'>view</field>
+      <field name='user_type'>13</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_22205001' model='account.account'>
+      <field name='name'>RESULTADO DEL EJERCICIO</field>
+      <field name='parent_id' eval="ref('tranvia_account_22205')"/>
+      <field name='code'>22205001</field>
+      <field name='type'>other</field>
+      <field name='user_type'>15</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_22205002' model='account.account'>
+      <field name='name'>CIERRE DEL EJERCICIO</field>
+      <field name='parent_id' eval="ref('tranvia_account_22205')"/>
+      <field name='code'>22205002</field>
+      <field name='type'>other</field>
+      <field name='user_type'>15</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_4' model='account.account'>
+      <field name='name'>UTIL O PERD NETA A/ISLR</field>
+      <field name='parent_id' eval="ref('tranvia_account_0')"/>
+      <field name='code'>4</field>
+      <field name='type'>view</field>
+      <field name='user_type'>10</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_40' model='account.account'>
+      <field name='name'>INGRESOS POR SERVICIOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_4')"/>
+      <field name='code'>40</field>
+      <field name='type'>view</field>
+      <field name='user_type'>10</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_400' model='account.account'>
+      <field name='name'>INGRESOS POR SERVICIOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_40')"/>
+      <field name='code'>400</field>
+      <field name='type'>view</field>
+      <field name='user_type'>10</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_4000' model='account.account'>
+      <field name='name'>INGRESOS POR FLETES</field>
+      <field name='parent_id' eval="ref('tranvia_account_400')"/>
+      <field name='code'>4000</field>
+      <field name='type'>view</field>
+      <field name='user_type'>10</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_40000' model='account.account'>
+      <field name='name'>FLETES Y MANT MARGARITA</field>
+      <field name='parent_id' eval="ref('tranvia_account_4000')"/>
+      <field name='code'>40000</field>
+      <field name='type'>other</field>
+      <field name='user_type'>8</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_40001' model='account.account'>
+      <field name='name'>UTILIDAD BRUTA EN VENTAS</field>
+      <field name='parent_id' eval="ref('tranvia_account_4000')"/>
+      <field name='code'>40001</field>
+      <field name='type'>view</field>
+      <field name='user_type'>10</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_40001001' model='account.account'>
+      <field name='name'>AUXILIAR VTAS BRUTAS</field>
+      <field name='parent_id' eval="ref('tranvia_account_40001')"/>
+      <field name='code'>40001001</field>
+      <field name='type'>other</field>
+      <field name='user_type'>8</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60' model='account.account'>
+      <field name='name'>GASTOS ADMINISTRATIVOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_0')"/>
+      <field name='code'>60</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_601' model='account.account'>
+      <field name='name'>GASTOS ADMINISTRATIVOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_60')"/>
+      <field name='code'>601</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60101' model='account.account'>
+      <field name='name'>GASTOS GENERALES</field>
+      <field name='parent_id' eval="ref('tranvia_account_601')"/>
+      <field name='code'>60101</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60101001' model='account.account'>
+      <field name='name'>HONORARIOS PROFESIONALES</field>
+      <field name='parent_id' eval="ref('tranvia_account_60101')"/>
+      <field name='code'>60101001</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60101002' model='account.account'>
+      <field name='name'>GASTOS DE ARRENDAMIENTO</field>
+      <field name='parent_id' eval="ref('tranvia_account_60101')"/>
+      <field name='code'>60101002</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60101003' model='account.account'>
+      <field name='name'>COMUNICACIONES</field>
+      <field name='parent_id' eval="ref('tranvia_account_60101')"/>
+      <field name='code'>60101003</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60101004' model='account.account'>
+      <field name='name'>GTOS DE MANTENIMIENTO</field>
+      <field name='parent_id' eval="ref('tranvia_account_60101')"/>
+      <field name='code'>60101004</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60101005' model='account.account'>
+      <field name='name'>GTS DE DEPRECIACION</field>
+      <field name='parent_id' eval="ref('tranvia_account_60101')"/>
+      <field name='code'>60101005</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60101006' model='account.account'>
+      <field name='name'>GTS NOTARIA Y REGISTROS</field>
+      <field name='parent_id' eval="ref('tranvia_account_60101')"/>
+      <field name='code'>60101006</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60101099' model='account.account'>
+      <field name='name'>OTROS GASTOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_60101')"/>
+      <field name='code'>60101099</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60150' model='account.account'>
+      <field name='name'>D-NOM CHOFERES MARGARITA</field>
+      <field name='parent_id' eval="ref('tranvia_account_601')"/>
+      <field name='code'>60150</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60150990' model='account.account'>
+      <field name='name'>D-SUELDO CHOF MARGARITA</field>
+      <field name='parent_id' eval="ref('tranvia_account_60150')"/>
+      <field name='code'>60150990</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60150991' model='account.account'>
+      <field name='name'>D-RSVA PRESTAC CHOF MARG</field>
+      <field name='parent_id' eval="ref('tranvia_account_60150')"/>
+      <field name='code'>60150991</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60151' model='account.account'>
+      <field name='name'>H-NOM CHOFERES BARCELONA</field>
+      <field name='parent_id' eval="ref('tranvia_account_601')"/>
+      <field name='code'>60151</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60151990' model='account.account'>
+      <field name='name'>H-SUELDOS CHOF BARELONA</field>
+      <field name='parent_id' eval="ref('tranvia_account_60151')"/>
+      <field name='code'>60151990</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60151991' model='account.account'>
+      <field name='name'>H-RVSVA PRESTAC CHOF BLA</field>
+      <field name='parent_id' eval="ref('tranvia_account_60151')"/>
+      <field name='code'>60151991</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60152' model='account.account'>
+      <field name='name'>F-NOMINA CHOFRES FALCON</field>
+      <field name='parent_id' eval="ref('tranvia_account_601')"/>
+      <field name='code'>60152</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60152990' model='account.account'>
+      <field name='name'>F-SUELOD CHOF FALCON</field>
+      <field name='parent_id' eval="ref('tranvia_account_60152')"/>
+      <field name='code'>60152990</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60152991' model='account.account'>
+      <field name='name'>F-RSVA PRESTA CHOF FALCO</field>
+      <field name='parent_id' eval="ref('tranvia_account_60152')"/>
+      <field name='code'>60152991</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60153' model='account.account'>
+      <field name='name'>C-NOMINA CHOF CUMANA</field>
+      <field name='parent_id' eval="ref('tranvia_account_601')"/>
+      <field name='code'>60153</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60153990' model='account.account'>
+      <field name='name'>C-SULDO CHOFERES CUMANA</field>
+      <field name='parent_id' eval="ref('tranvia_account_60153')"/>
+      <field name='code'>60153990</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60153991' model='account.account'>
+      <field name='name'>C-RVSVA PREST CHOF CUMAN</field>
+      <field name='parent_id' eval="ref('tranvia_account_60153')"/>
+      <field name='code'>60153991</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60154' model='account.account'>
+      <field name='name'>G-NOMINA CHOF BOLIVAR</field>
+      <field name='parent_id' eval="ref('tranvia_account_601')"/>
+      <field name='code'>60154</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60154990' model='account.account'>
+      <field name='name'>G-SLDO CHOFERES CUMANA</field>
+      <field name='parent_id' eval="ref('tranvia_account_60154')"/>
+      <field name='code'>60154990</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60154991' model='account.account'>
+      <field name='name'>G-RSVA PREST CHOF CUMANA</field>
+      <field name='parent_id' eval="ref('tranvia_account_60154')"/>
+      <field name='code'>60154991</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60155' model='account.account'>
+      <field name='name'>M-NOMINA CHOFERES MATURI</field>
+      <field name='parent_id' eval="ref('tranvia_account_601')"/>
+      <field name='code'>60155</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60155990' model='account.account'>
+      <field name='name'>M-SLDO CHOFERS MATURIN</field>
+      <field name='parent_id' eval="ref('tranvia_account_60155')"/>
+      <field name='code'>60155990</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60155991' model='account.account'>
+      <field name='name'>M-RSVA PREST CHOF MATURI</field>
+      <field name='parent_id' eval="ref('tranvia_account_60155')"/>
+      <field name='code'>60155991</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60156' model='account.account'>
+      <field name='name'>K-NOMINA CHOF CARUPANO</field>
+      <field name='parent_id' eval="ref('tranvia_account_601')"/>
+      <field name='code'>60156</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60156990' model='account.account'>
+      <field name='name'>K-SLDOS CHOFERES CARUPAN</field>
+      <field name='parent_id' eval="ref('tranvia_account_60156')"/>
+      <field name='code'>60156990</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60156991' model='account.account'>
+      <field name='name'>K-RSVA PREST CHOF CARUPA</field>
+      <field name='parent_id' eval="ref('tranvia_account_60156')"/>
+      <field name='code'>60156991</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60157' model='account.account'>
+      <field name='name'>U-NOMINA CHOFRES MARACAI</field>
+      <field name='parent_id' eval="ref('tranvia_account_601')"/>
+      <field name='code'>60157</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60157990' model='account.account'>
+      <field name='name'>U-SLDOS CHOF MARACAIBO</field>
+      <field name='parent_id' eval="ref('tranvia_account_60157')"/>
+      <field name='code'>60157990</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60157991' model='account.account'>
+      <field name='name'>U-RSVA PRESTAC CHOF MCBO</field>
+      <field name='parent_id' eval="ref('tranvia_account_60157')"/>
+      <field name='code'>60157991</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60158' model='account.account'>
+      <field name='name'>O-NOMNA CHOF PTO ORDAZ</field>
+      <field name='parent_id' eval="ref('tranvia_account_601')"/>
+      <field name='code'>60158</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60158990' model='account.account'>
+      <field name='name'>O-SLDO CHOF PTO ORDAZ</field>
+      <field name='parent_id' eval="ref('tranvia_account_60158')"/>
+      <field name='code'>60158990</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_60158991' model='account.account'>
+      <field name='name'>O-RSVA PREST CHOF PORDAZ</field>
+      <field name='parent_id' eval="ref('tranvia_account_60158')"/>
+      <field name='code'>60158991</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_622' model='account.account'>
+      <field name='name'>TRANSPORTE Y FLETES</field>
+      <field name='parent_id' eval="ref('tranvia_account_0')"/>
+      <field name='code'>622</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_62200' model='account.account'>
+      <field name='name'>FLETES</field>
+      <field name='parent_id' eval="ref('tranvia_account_622')"/>
+      <field name='code'>62200</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_62200000' model='account.account'>
+      <field name='name'>FLETE CHOFERES FIJOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_62200')"/>
+      <field name='code'>62200000</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_62200001' model='account.account'>
+      <field name='name'>GASTOS ADIC DE CHOFERES</field>
+      <field name='parent_id' eval="ref('tranvia_account_62200')"/>
+      <field name='code'>62200001</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_62200003' model='account.account'>
+      <field name='name'>MANTENIMIENTO VEHICULOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_62200')"/>
+      <field name='code'>62200003</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_62200004' model='account.account'>
+      <field name='name'>GASTO POLIZAS DE SEGUROS</field>
+      <field name='parent_id' eval="ref('tranvia_account_62200')"/>
+      <field name='code'>62200004</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_625' model='account.account'>
+      <field name='name'>GASTOS ADMINISTRATIVOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_0')"/>
+      <field name='code'>625</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_62501' model='account.account'>
+      <field name='name'>GASTOS ADMINISTRATIVOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_625')"/>
+      <field name='code'>62501</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_62501001' model='account.account'>
+      <field name='name'>HONORARIOS PROFESIONALES</field>
+      <field name='parent_id' eval="ref('tranvia_account_62501')"/>
+      <field name='code'>62501001</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_62501002' model='account.account'>
+      <field name='name'>GASTOS DE ARRENDAMIENTOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_62501')"/>
+      <field name='code'>62501002</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_62501003' model='account.account'>
+      <field name='name'>COMUNICACIONES</field>
+      <field name='parent_id' eval="ref('tranvia_account_62501')"/>
+      <field name='code'>62501003</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_62501004' model='account.account'>
+      <field name='name'>GSTO DE MANTENIMIENTO</field>
+      <field name='parent_id' eval="ref('tranvia_account_62501')"/>
+      <field name='code'>62501004</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_62501005' model='account.account'>
+      <field name='name'>GASTO DE DEPRECIACION</field>
+      <field name='parent_id' eval="ref('tranvia_account_62501')"/>
+      <field name='code'>62501005</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_62501006' model='account.account'>
+      <field name='name'>GASTO NOTARIA Y REGISTRO</field>
+      <field name='parent_id' eval="ref('tranvia_account_62501')"/>
+      <field name='code'>62501006</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_62501099' model='account.account'>
+      <field name='name'>OTROS GASTOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_62501')"/>
+      <field name='code'>62501099</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_70' model='account.account'>
+      <field name='name'>UTIL.O PERD.FINANCIERA</field>
+      <field name='parent_id' eval="ref('tranvia_account_0')"/>
+      <field name='code'>70</field>
+      <field name='type'>view</field>
+      <field name='user_type'>10</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_701' model='account.account'>
+      <field name='name'>INGRESOS FINANCIEROS</field>
+      <field name='parent_id' eval="ref('tranvia_account_70')"/>
+      <field name='code'>701</field>
+      <field name='type'>view</field>
+      <field name='user_type'>10</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_70101' model='account.account'>
+      <field name='name'>INGRESOS FINANCIEROS</field>
+      <field name='parent_id' eval="ref('tranvia_account_701')"/>
+      <field name='code'>70101</field>
+      <field name='type'>view</field>
+      <field name='user_type'>10</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_70101001' model='account.account'>
+      <field name='name'>INTERESES GANADOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_70101')"/>
+      <field name='code'>70101001</field>
+      <field name='type'>other</field>
+      <field name='user_type'>8</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_70101002' model='account.account'>
+      <field name='name'>GCIA EN VTA DE ACTIVOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_70101')"/>
+      <field name='code'>70101002</field>
+      <field name='type'>other</field>
+      <field name='user_type'>8</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_70101888' model='account.account'>
+      <field name='name'>DIF DE CONVERSION MONETA</field>
+      <field name='parent_id' eval="ref('tranvia_account_70101')"/>
+      <field name='code'>70101888</field>
+      <field name='type'>other</field>
+      <field name='user_type'>8</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_70101999' model='account.account'>
+      <field name='name'>OTROS INGRESOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_70101')"/>
+      <field name='code'>70101999</field>
+      <field name='type'>other</field>
+      <field name='user_type'>8</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_70102' model='account.account'>
+      <field name='name'>INGRESOS NO GRAVABLES</field>
+      <field name='parent_id' eval="ref('tranvia_account_701')"/>
+      <field name='code'>70102</field>
+      <field name='type'>view</field>
+      <field name='user_type'>10</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_70102001' model='account.account'>
+      <field name='name'>INGRESOS NO GRAVABLES</field>
+      <field name='parent_id' eval="ref('tranvia_account_70102')"/>
+      <field name='code'>70102001</field>
+      <field name='type'>other</field>
+      <field name='user_type'>8</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_80' model='account.account'>
+      <field name='name'>OTROS EGRESOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_0')"/>
+      <field name='code'>80</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_801' model='account.account'>
+      <field name='name'>OTROS EGRESOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_80')"/>
+      <field name='code'>801</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_80101' model='account.account'>
+      <field name='name'>OTROS EGRESOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_801')"/>
+      <field name='code'>80101</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_80101001' model='account.account'>
+      <field name='name'>EGRESOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_80101')"/>
+      <field name='code'>80101001</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_80101002' model='account.account'>
+      <field name='name'>PERDIDA VTA DE ACTIVOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_80101')"/>
+      <field name='code'>80101002</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_80101003' model='account.account'>
+      <field name='name'>GASTOS BANCARIOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_80101')"/>
+      <field name='code'>80101003</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_80101888' model='account.account'>
+      <field name='name'>PERDIDA CONVERSION MONET</field>
+      <field name='parent_id' eval="ref('tranvia_account_80101')"/>
+      <field name='code'>80101888</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_80101999' model='account.account'>
+      <field name='name'>OTROS EGRESOS</field>
+      <field name='parent_id' eval="ref('tranvia_account_80101')"/>
+      <field name='code'>80101999</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_81' model='account.account'>
+      <field name='name'>GASTOS NO DEDUCIBLES</field>
+      <field name='parent_id' eval="ref('tranvia_account_0')"/>
+      <field name='code'>81</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_810' model='account.account'>
+      <field name='name'>GASTOS NO DEDUCIBLES</field>
+      <field name='parent_id' eval="ref('tranvia_account_81')"/>
+      <field name='code'>810</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_81001' model='account.account'>
+      <field name='name'>GASTOS NO DEDUCIBLES</field>
+      <field name='parent_id' eval="ref('tranvia_account_810')"/>
+      <field name='code'>81001</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_81001001' model='account.account'>
+      <field name='name'>GASTOS NO DEDUCIBLES</field>
+      <field name='parent_id' eval="ref('tranvia_account_81001')"/>
+      <field name='code'>81001001</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_88' model='account.account'>
+      <field name='name'>REAJUSTE POR INFLACION</field>
+      <field name='parent_id' eval="ref('tranvia_account_0')"/>
+      <field name='code'>88</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_881' model='account.account'>
+      <field name='name'>REAJUSTE POR INFLACION</field>
+      <field name='parent_id' eval="ref('tranvia_account_88')"/>
+      <field name='code'>881</field>
+      <field name='type'>view</field>
+      <field name='user_type'>11</field>
+      <field name='active'>True</field>
+    </record>
+
+    <record id='tranvia_account_88100001' model='account.account'>
+      <field name='name'>REAJUSTE POR INFLACION</field>
+      <field name='parent_id' eval="ref('tranvia_account_881')"/>
+      <field name='code'>88100001</field>
+      <field name='type'>other</field>
+      <field name='user_type'>9</field>
+      <field name='active'>True</field>
+    </record>
+
+  </data>
+</openerp>

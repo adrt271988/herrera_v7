@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+     <report id="asset_list"
+             model="account.asset.asset"
+             name="asset.list"
+             rml="herrera_asset/report/asset_list.rml"
+             string="Listado de Activos"
+             usage="default"
+             header='False'
+             auto = 'False'/>
+
+     <report id="asset_transfer"
+             model="account.asset.asset"
+             name="asset.transfer"
+             rml="herrera_asset/report/transfer_note_report.rml"
+             string="Nota de Translado"
+             usage="default"
+             header='False'
+             auto = 'False'/>
+
+      <report id="asset_incorporated"
+              model="account.asset.asset"
+              name="asset.incorporated"
+              rml="herrera_asset/report/list_incorporate.rml"
+              string="Activos incorporados"
+              auto="False"/>
+
+      <report id="asset_desincorporated"
+              model="account.asset.asset"
+              name="asset.desincorporated"
+              rml="herrera_asset/report/list_desincorp.rml"
+              string="Activos Desincorporados"
+              auto="False"/>
+
+      <report id="asset_assignment"
+              model="account.asset.asset"
+              name="asset.assignment"
+              rml="herrera_asset/report/assig_note_report.rml"
+              string="Nota de Asignación"
+              auto="False"/>
+
+      <report id="asset_label"
+              model="account.asset.asset"
+              name="asset.label"
+              string="Etiqueta activos"
+              xml="herrera_asset/report/asset_label.xml"
+              xsl="herrera_asset/report/asset_label.xsl"/>
+
+      <report id="asset_incidence_shop"
+              model="account.asset.inventory"
+              name="asset.incidence.shop"
+              rml="herrera_asset/report/incidence_shop.rml"
+              string="Incidencias por sucursal"
+              auto="False"/>
+
+      <report id="asset_incidence_dpto"
+              model="account.asset.inventory"
+              name="asset.incidence.dpto"
+              string="Incidencias por departamento"
+              rml="herrera_asset/report/incidence_dpto.rml"
+              auto="False"/>
+
+      <report id="asset_incidence_rpon"
+              model="account.asset.inventory"
+              name="asset.incidence.rpon"
+              string="Incidencias por responsables"
+              rml="herrera_asset/report/incidence_rpon.rml"
+              auto="False"/>
+
+    </data>
+</openerp>

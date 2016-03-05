@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<openerp>
+    <data noupdate="1">
+        <record id='asset_category_1' model='account.asset.category'>
+            <field name='name'>MOBILIARIO</field>
+            <field name='method'>linear</field>
+            <field name='method_time'>number</field>
+            <field name='method_number'>120</field>
+            <field name='method_period'>1</field>
+            <field name='prorata'>TRUE</field>
+            <field name='journal_id' eval="ref('herrera_account.account_journal_asset')"/>
+            <field name='account_asset_id' eval="ref('herrera_account.account_act_mob_mob')"/>
+            <field name='account_depreciation_id' eval="ref('herrera_account.account_act_mob_mob')"/>
+            <field name='account_expense_depreciation_id' eval="ref('herrera_account.account_gastos5')"/>
+            <field name='account_desincorporate_id' eval="ref('herrera_account.account_ganper')"/>
+        </record>
+        
+       <record id='asset_category_2' model='account.asset.category'>
+            <field name='name'>EQUIPOS ELECTRONICOS</field>
+            <field name='method'>linear</field>
+            <field name='method_time'>number</field>
+            <field name='method_number'>36</field>
+            <field name='method_period'>1</field>
+            <field name='prorata'>TRUE</field>
+            <field name='journal_id' eval="ref('herrera_account.account_journal_asset')"/>
+            <field name='account_asset_id' eval="ref('herrera_account.account_act_ee_ee')"/>
+            <field name='account_depreciation_id' eval="ref('herrera_account.account_act_ee_ee')"/>
+            <field name='account_expense_depreciation_id' eval="ref('herrera_account.account_gastos5')"/>
+            <field name='account_desincorporate_id' eval="ref('herrera_account.account_ganper')"/>
+        </record>
+        
+        <record id='asset_category_3' model='account.asset.category'>
+            <field name='name'>MAQUINARIA Y EQUIPOS</field>
+            <field name='method'>linear</field>
+            <field name='method_time'>number</field>
+            <field name='method_number'>60</field>
+            <field name='method_period'>1</field>
+            <field name='prorata'>TRUE</field>
+            <field name='journal_id' eval="ref('herrera_account.account_journal_asset')"/>
+            <field name='account_asset_id' eval="ref('herrera_account.account_act_maq_maq')"/>
+            <field name='account_depreciation_id' eval="ref('herrera_account.account_act_maq_maq')"/>
+            <field name='account_expense_depreciation_id' eval="ref('herrera_account.account_gastos5')"/>
+            <field name='account_desincorporate_id' eval="ref('herrera_account.account_ganper')"/>
+        </record>
+        
+        <record id='asset_category_4' model='account.asset.category'>
+            <field name='name'>INMUEBLES</field>
+            <field name='method'>linear</field>
+            <field name='method_time'>number</field>
+            <field name='method_number'>180</field>
+            <field name='method_period'>1</field>
+            <field name='prorata'>TRUE</field>
+            <field name='journal_id' eval="ref('herrera_account.account_journal_asset')"/>
+            <field name='account_asset_id' eval="ref('herrera_account.account_act_inm_inm')"/>
+            <field name='account_depreciation_id' eval="ref('herrera_account.account_act_inm_inm')"/>
+            <field name='account_expense_depreciation_id' eval="ref('herrera_account.account_gastos5')"/>
+            <field name='account_desincorporate_id' eval="ref('herrera_account.account_ganper')"/>
+        </record>
+        
+        <record id='asset_category_5' model='account.asset.category'>
+            <field name='name'>TRANSPORTE</field>
+            <field name='method'>linear</field>
+            <field name='method_time'>number</field>
+            <field name='method_number'>60</field>
+            <field name='method_period'>1</field>
+            <field name='prorata'>TRUE</field>
+            <field name='journal_id' eval="ref('herrera_account.account_journal_asset')"/>
+            <field name='account_asset_id' eval="ref('herrera_account.account_act_veh_dep')"/>
+            <field name='account_depreciation_id' eval="ref('herrera_account.account_act_veh_dep')"/>
+            <field name='account_expense_depreciation_id' eval="ref('herrera_account.account_gastos5')"/>
+            <field name='account_desincorporate_id' eval="ref('herrera_account.account_ganper')"/>
+        </record>
+        
+        <record id='asset_category_6' model='account.asset.category'>
+            <field name='name'>MAQUINARIA AGRICOLA</field>
+            <field name='method'>linear</field>
+            <field name='method_time'>number</field>
+            <field name='method_number'>60</field>
+            <field name='method_period'>1</field>
+            <field name='prorata'>TRUE</field>
+            <field name='journal_id' eval="ref('herrera_account.account_journal_asset')"/>
+            <field name='account_asset_id' eval="ref('herrera_account.account_act_maq_agr_min')"/>
+            <field name='account_depreciation_id' eval="ref('herrera_account.account_act_maq_agr_min')"/>
+            <field name='account_expense_depreciation_id' eval="ref('herrera_account.account_gastos5')"/>
+            <field name='account_desincorporate_id' eval="ref('herrera_account.account_ganper')"/>
+        </record>
+        
+       <record id='asset_category_7' model='account.asset.category'>
+            <field name='name'>TRANSPORTE LEASING</field>
+            <field name='method'>linear</field>
+            <field name='method_time'>number</field>
+            <field name='method_number'>60</field>
+            <field name='method_period'>1</field>
+            <field name='prorata'>TRUE</field>
+            <field name='journal_id' eval="ref('herrera_account.account_journal_asset')"/>
+            <field name='account_asset_id' eval="ref('herrera_account.account_act_veh_veh_lea')"/>
+            <field name='account_depreciation_id' eval="ref('herrera_account.account_act_veh_veh_lea')"/>
+            <field name='account_expense_depreciation_id' eval="ref('herrera_account.account_gastos5')"/>
+            <field name='account_desincorporate_id' eval="ref('herrera_account.account_ganper')"/>
+        </record>
+        
+       <record id='asset_category_8' model='account.asset.category'>
+            <field name='name'>INSTALACIONES</field>
+            <field name='method'>linear</field>
+            <field name='method_time'>number</field>
+            <field name='method_number'>60</field>
+            <field name='method_period'>1</field>
+            <field name='prorata'>TRUE</field>
+            <field name='journal_id' eval="ref('herrera_account.account_journal_asset')"/>
+            <field name='account_asset_id' eval="ref('herrera_account.account_act_ins_ins')"/>
+            <field name='account_depreciation_id' eval="ref('herrera_account.account_act_ins_ins')"/>
+            <field name='account_expense_depreciation_id' eval="ref('herrera_account.account_gastos5')"/>
+            <field name='account_desincorporate_id' eval="ref('herrera_account.account_ganper')"/>
+        </record>
+    </data>
+</openerp>

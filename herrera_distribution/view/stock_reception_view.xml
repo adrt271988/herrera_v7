@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>	
+        <!-- Recepción -->
+        <record model='ir.ui.view' id='stock_reception_form'>
+            <field name="name">stock.reception.form</field>
+            <field name="model">stock.reception</field>
+            <field name="arch" type="xml">
+                <form string="Recepción" create="0" edit="0" version="7.0">
+                    <header>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,done,closed"/>
+			<button name="close_reception" states="done" string="Cerrar Despacho" type = "object" class="oe_highlight"/>
+			<button name="print_reception" states="closed" string="Imprimir Recepción" type = "object"/>
+			<button name="force_reception" help="Forzar la recepción para facturas con diferencias por cobrar"
+				    states="incomplete" string="Forzar Recepción"
+				    type = "object" class="oe_highlight"/>
+                    </header>
+                    <sheet>
+                        <group>
+			    <field name="distribution_id" readonly = "1" class="oe_inline"/>
+                            <field name="date" readonly = "1" class="oe_inline"/>
+                            <field name="shop_id" readonly = "1" class="oe_inline"/>
+                            <field name="driver_amount" class="oe_inline" attrs="{'invisible':[('state','not in',['closed'])]}"/>
+                        </group>
+			    <field name="invoice_ids" nolabel="1">
+				<tree editable="bottom" create = "0" delete="0">
+				    <field name="number" readonly = "1"/>
+				    <field name="nro_ctrl" readonly = "1"/>
+				    <field name="partner_id" readonly = "1"/>
+				    <field name="origin" readonly = "1"/>
+				    <field name="payment_condition" readonly = "1"/>
+				    <field name="residual" readonly = "1"/>
+				    <field name="amount_total" readonly = "1" sum="Total Bs."/>
+				    <field name="reception_type"/>
+				    <field name="reception_progress" string="Estado Recepción"/>
+				    <button name="process_line"
+					    string="Procesar Factura"
+					    attrs="{'invisible':[('reception_progress','in',['done','waiting'])]}"
+					    icon="STOCK_EXECUTE"
+					    type="object"/>
+				    <button name="cr_voucher"
+					    string="Pagar Factura"
+					    attrs="{'invisible':[('reception_progress','in',['draft','done'])]}"
+					    icon="terp-dolar_ok!"
+					    type="object"/>
+				</tree>
+			    </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model='ir.ui.view' id='stock_reception_tree'>
+            <field name="name">stock.reception.tree</field>
+            <field name="model">stock.reception</field>
+            <field name="arch" type="xml">
+                <tree string = "Recepciones" create = "0" version="7.0">
+		    <field name="name"/>
+                    <field name="shop_id"/>
+                    <field name="date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='stock_reception_act'>
+            <field name="name">Recepción</field>
+            <field name="res_model">stock.reception</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="stock_reception_act" parent="menu_stock_distribution" id="stock_reception_menu" sequence = "50"/>
+
+    </data>
+</openerp>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<openerp>
+  <data>
+    <record id="herrera_view_partner_form2" model="ir.ui.view">
+        <field name="name">herrera.res.partner.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="l10n_ve_fiscal_requirements.view_partner_form_ve"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name=&quot;user_id&quot;]" position="replace">
+                <field name="comercial_list" invisible="1"/>
+                <field name="user_id" domain="[('id','in',comercial_list)]"/>
+            </xpath>
+        </field>
+    </record>
+  </data>
+</openerp>

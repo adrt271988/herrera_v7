@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_transfer_asset_process" model="ir.ui.view">
+            <field name="name">Generador de Reportes</field>
+            <field name="model">account.asset.report</field>
+            <field name="arch" type="xml">
+                 <form string="Reportes" version="7.0">
+
+                    <group  col="2"> <!--col = "1"  pone los campos de ingresar valores debajo -->
+                        <group col="2">
+                            <field name='report_type'/>
+                        </group>
+                        <group col="2">
+                            <field name='asset_ids' widget="many2many_tags" attrs="{'invisible':['|',('report_type','=',False),('report_type','in',('I','D','L'))],'required': ['|',('report_type','=','T'),('report_type','=','A')]}" />
+                            
+                            <field name='department_id' attrs="{'invisible':['|',('report_type','=',False),('report_type','in',('I','D','L'))]}" widget= "selection" />
+                            <field name='employee_id'   attrs="{'invisible':['|',('report_type','=',False),('report_type','in',('I','D','L'))],'required': [('report_type','=','A')]}" widget= "selection"/>
+                            <field name='date_from'     attrs="{'invisible':['|',('report_type','=',False),('report_type','in',('T','A','L'))]}" />
+                            <field name='date_until'    attrs="{'invisible':['|',('report_type','=',False),('report_type','in',('T','A','L'))]}" />
+                            <field name='report_group'  attrs="{'invisible':['|',('report_type','=',False),('report_type','in',('I','D','T','A'))]}" />
+
+                            <field name='select_categ'  attrs="{'invisible':['|','|',('report_group','=',False),('report_group','in',('S','P')),('report_type','in',('I','D','T','A'))], 'required': [('select_categ','=','1')]}" />
+                            <field name='select_shop'   attrs="{'invisible':['|','|',('report_group','=',False),('report_group','in',('C','P')),('report_type','in',('I','D','T','A'))], 'required': [('select_shop','=','1')]}" />
+                            <field name='select_parent' attrs="{'invisible':['|','|',('report_group','=',False),('report_group','in',('C','S')),('report_type','in',('I','D','T','A'))], 'required': [('select_parent','=','1')]}" />
+
+                            <field name='category_id' attrs="{'invisible':['|','|','|',('select_categ','=',False),('select_categ','in',('0')),('report_group','in',('S','P')),('report_type','in',('I','D','T','A'))], 'required': [('select_categ','=','1')]}" />
+                            <field name='shop_id'     attrs="{'invisible':['|','|','|',('report_type','=',False),('report_type','in',('I','D')),('report_group','in',('C','P')),('select_shop','in',('0'))],'required': ['|',('report_type','=','T'),('select_shop','=','1')]}" widget= "selection" />
+                            <field name='asset_id'    attrs="{'invisible':['|','|','|',('select_parent','=',False),('select_parent','in',('0')),('report_group','in',('C','S')),('report_type','in',('I','D','T','A'))], 'required': [('select_parent','=','1')]}" />
+                            
+                            <field name='period_id'   attrs="{'invisible':['|',('report_type','=',False),('report_type','in',('T','A','I','D'))]}" widget= "selection" />
+                        </group>
+                    </group> 
+                   <footer>  
+                        <button name="action_report" string="Generar" type="object"  class="oe_highlight"  />
+                        <button icon="gtk-cancel" special="cancel" string="Cerrar"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_account_asset_transfer">
+        <field name="name">Reportes de activos</field>
+        <field name="res_model">account.asset.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="domain">[('parent_id','=',False)]</field>
+        <field name="view_id" ref="view_transfer_asset_process"/>
+        <field name="target">new</field>
+        <field name="multi">True</field>
+        </record>
+
+        <menuitem parent="account_asset.menu_finance_assets" id="menu_action_account_asset_transfer"
+                  sequence="101"
+                  action="action_account_asset_transfer"/>
+    </data>
+</openerp>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record id="herrera_fleet_inherit_partner_property_form" model="ir.ui.view">
+            <field name="name">herrera.fleet.inherit.partner.property.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="account.view_partner_property_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='property_account_payable']" position="replace">
+                    <field name="property_account_payable" groups="account.group_account_invoice,fleet.group_fleet_manager"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

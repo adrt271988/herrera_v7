@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<openerp>
+  <data>
+    <record id="herrera_view_partner_form" model="ir.ui.view">
+        <field name="name">herrera.res.partner.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="l10n_ve_fiscal_requirements.view_partner_form_ve"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name=&quot;vat&quot;]" position="replace"/>
+            <xpath expr="//button[@name=&quot;button_check_vat&quot;]" position="replace"/>
+            <xpath expr="//button[@string=&quot;Update Name&quot;]" position="replace"/>
+            <xpath expr="//label[@for=&quot;vat&quot;]" position="replace"/>
+            <xpath expr="//div[@name=&quot;vat_info&quot;]" position="replace"/>
+            <xpath expr="//field[@name=&quot;category_id&quot;]" position="replace">
+                <label for="category_id" string="Categorías de Partners" class = "oe_edit_only"/>
+                <field name="category_id" widget="many2many_tags" placeholder="Categorías..."/>
+            </xpath>
+            <xpath expr="//field[@name=&quot;parent_id&quot;]" position="before">
+                <label for="vat" string="RIF"/>
+                <field name="vat" colspan="2" placeholder="ej. VEJ301936167" class="oe_inline" attrs="{'required': [('parent_id','=', False)]}"/>
+                <button name="update_rif" string="Sincronizar con SENIAT" type="object" icon="gtk-execute" class="oe_inline"/>
+            </xpath>
+<!--            <xpath expr="//field[@name=&quot;phone&quot;]" position="before">
+
+                <field name="shop_id" string="Sucursal" class="oe_inline" required="1"/>
+                <field name="freight_route_id" domain= "[('shop_id','=',shop_id)]" />
+
+            </xpath>
+-->
+            <xpath expr="//field[@name=&quot;country_id&quot;]" position="replace" />
+            <xpath expr="//div[@class=&quot;address_format&quot;]" position="replace">
+                <div class="address_format">
+                    <field name="city" placeholder="Ciudad" attrs="{'readonly': [('use_parent_address','=',True)]}"/>
+                    <field name="country_id" placeholder="Pais"  class="oe_no_button" options="{&quot;no_open&quot;: True}" attrs="{'readonly': [('use_parent_address','=',True)]}"/>
+                    <field name="state_id" placeholder="Estado" domain= "[('country_id','=',country_id)]" style="width: 73%%" attrs="{'readonly': ['|',('country_id','=',False),('use_parent_address','=',True)]}"/>
+                    <field name="zip" placeholder="C.Postal" style="width: 25%%" attrs="{'readonly': [('use_parent_address','=',True)]}"/>
+                    <field name="city_id" placeholder="Ciudad"  domain= "[('state_id','=',state_id)]"  attrs="{'readonly': ['|',('state_id','=',False),('use_parent_address','=',True)]}"/>
+                    <field name="municipality_id" placeholder="Municipio"  domain= "[('state_id','=',state_id)]"  attrs="{'readonly': ['|',('state_id','=',False),('use_parent_address','=',True)]}"/>
+                    <field name="parish_id" placeholder="Parroquia"  widget="many2one" domain= "[('municipalities_id','=',municipality_id)]" attrs="{'readonly': ['|',('municipality_id','=',False),('use_parent_address','=',True)]}"/>
+                    <field name="sector" placeholder="Sector" domain= "[('municipality_id','=',municipality_id)]" context="{'municipality_id': municipality_id,'parish_id': parish_id,'city_id': city_id,'state_id': state_id }"  />
+                </div>
+            </xpath>
+            <xpath expr="//field[@name=&quot;user_id&quot;]" position="after">
+                <field name="sica_code"/>
+            </xpath>
+            <xpath expr="//div[@name='buttons']" position="inside">
+                <button type="object" string="Solicitar Bloqueo/Desbloqueo" attrs="{'invisible': [('customer', '=', False)]}" name="auth_credit_blocked"/>
+                <button type="object" string="Solicitar Eliminación/Reincorporacion" name="auth_active"/>
+            </xpath>
+            <xpath expr="//field[@name='active']" position="attributes">
+                <attribute name="readonly">True</attribute>
+            </xpath>
+            <xpath expr="//form[@string=&quot;Contact&quot;]" position="replace">
+                <form string="Contact" version="7.0">
+                    <sheet>
+                        <field name="image" widget='image' class="oe_avatar oe_left" options='{"preview_image": "image_medium"}'/>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1><field name="name" style="width: 70%%"/></h1>
+                            <field name="category_id" widget="many2many_tags" placeholder="Tags..." style="width: 70%%"/>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="function" placeholder="e.g. Sales Director"/>
+                                <field name="email"/>
+                                <field name="phone"/>
+                                <field name="mobile"/>
+                            </group>
+                            <group>
+<!--
+                                <field name="shop_id" />
+                                <field name="freight_route_id" />
+-->
+                                <field name="ref" />
+                            </group>
+                        </group>
+                        <div>
+                            <field name="use_parent_address"/><label for="use_parent_address"/>
+                        </div>
+                        <group>
+                            <label for="type"/>
+                            <div name="div_type">
+                                <field class="oe_inline" name="type"/>
+                            </div>
+                            <label for="street" string="Address" attrs="{'invisible': [('use_parent_address','=', True)]}"/>
+                            <div attrs="{'invisible': [('use_parent_address','=', True)]}" name="div_address">
+                                <field name="street" placeholder="Street..."/>
+                                <field name="street2"/>
+                                <div class="address_format">
+                                    <field name="city" placeholder="City" style="width: 40%%"/>
+                                    <field name="state_id" class="oe_no_button" placeholder="State" style="width: 37%%" options='{"no_open": True}' on_change="onchange_state(state_id)"/>
+                                    <field name="zip" placeholder="ZIP" style="width: 20%%"/>
+                                </div>
+                                <field name="country_id" placeholder="Country" class="oe_no_button" options='{"no_open": True}'/>
+                            </div>
+                        </group>
+                        <field name="supplier" invisible="True"/>
+                    </sheet>
+                </form>
+            </xpath>
+        </field>
+    </record>
+        
+    <record id="herrera_partner_inherit_accounting_form" model="ir.ui.view">
+        <field name="name">herrera.partner.inherit.accounting.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.view_partner_property_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='debit']" position="after">
+                <field name="special" />
+                <field name="vat_subjected" string="Aplica IVA"/>
+            </xpath>
+            <xpath expr="//field[@name='credit_limit']" position="after">
+                <field name="global_limit"/>
+                <field name="credit_blocked"/>
+            </xpath>                
+            <xpath expr="//page[@string='Accounting']" position="after">
+                <page string="Adicionales">
+                    <group>
+                        <group string="Piso de venta">
+                            <field name="pv_metros"/>
+                            <field name="pv_islas"/>
+                            <field name="pv_planchas"/>
+                            <field name="pv_cabezales"/>
+                            <field name="pv_cajas"/>
+                        </group>
+                        <group>
+                            <field name="checkout"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+  </data>
+</openerp>

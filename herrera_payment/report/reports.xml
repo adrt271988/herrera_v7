@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+     <report id="report_pay_planning"
+             model="pay.planning.process"
+             name="pay.planning"
+             rml="herrera_payment/report/pay_planning.rml"
+             string="Planificacion de Pagos"
+             usage="default"
+             header='False'
+             auto = 'False'/>
+
+    </data>
+</openerp>

@@ -1,0 +1,445 @@
+<?xml version="1.0"?>
+<openerp>
+    <data noupdate="1">
+        <record id='account_herrera' model='account.account'>
+            <field name='code'>0</field>
+            <field name='parent_id'></field>
+            <field name='name'>Plan de Cuentas Herrera</field>
+            <field name='type'>view</field>
+            <field name='user_type'>12</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_activo' model='account.account'>
+            <field name='code'>1</field>
+            <field name='parent_id' ref="account_herrera"/>
+            <field name='name'>ACTIVO</field>
+            <field name='type'>view</field>
+            <field name='user_type'>6</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_actcirculante' model='account.account'>
+            <field name='code'>11</field>
+            <field name='parent_id' ref="account_activo"/>
+            <field name='name'>ACTIVO CIRCULANTE</field>
+            <field name='type'>view</field>
+            <field name='user_type'>6</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='activo_fijo' model='account.account'>
+            <field name='code'>13</field>
+            <field name='parent_id' ref="account_activo"/>
+            <field name='name'>ACTIVO FIJO</field>
+            <field name='type'>view</field>
+            <field name='user_type'>6</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_cajabanco' model='account.account'>
+            <field name='code'>111</field>
+            <field name='parent_id' ref="account_actcirculante"/>
+            <field name='name'>CAJA Y BANCO</field>
+            <field name='type'>view</field>
+            <field name='user_type'>6</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_cajachica' model='account.account'>
+            <field name='code'>11101</field>
+            <field name='parent_id' ref="account_cajabanco"/>
+            <field name='name'>CAJA CHICA</field>
+            <field name='type'>view</field>
+            <field name='user_type'>6</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_auxcajachica' model='account.account'>
+            <field name='code'>11101001</field>
+            <field name='parent_id' ref="account_cajachica"/>
+            <field name='name'>AUX CAJA CHICA</field>
+            <field name='type'>other</field>
+            <field name='user_type'>6</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_cxc' model='account.account'>
+            <field name='code'>113</field>
+            <field name='parent_id' ref="account_actcirculante"/>
+            <field name='name'>CUENTAS X COBRAR</field>
+            <field name='type'>view</field>
+            <field name='user_type'>2</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_act_dep_amo' model='account.account'>
+            <field name='code'>133</field>
+            <field name='parent_id' ref="activo_fijo"/>
+            <field name='name'>ACTIVOS DEPRECIABLES Y AMORTIZABLES</field>
+            <field name='type'>view</field>
+            <field name='user_type'>2</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_act_veh' model='account.account'>
+            <field name='code'>138</field>
+            <field name='parent_id' ref="activo_fijo"/>
+            <field name='name'>VEHICULOS</field>
+            <field name='type'>view</field>
+            <field name='user_type'>2</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_act_mob' model='account.account'>
+            <field name='code'>13301</field>
+            <field name='parent_id' ref="account_act_dep_amo"/>
+            <field name='name'>MOBILIARIO</field>
+            <field name='type'>view</field>
+            <field name='user_type'>2</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_act_ee' model='account.account'>
+            <field name='code'>13302</field>
+            <field name='parent_id' ref="account_act_dep_amo"/>
+            <field name='name'>EQUIPOS ELECTRONICOS</field>
+            <field name='type'>view</field>
+            <field name='user_type'>2</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_act_maq' model='account.account'>
+            <field name='code'>13303</field>
+            <field name='parent_id' ref="account_act_dep_amo"/>
+            <field name='name'>MAQUINARIA Y EQUIPOS</field>
+            <field name='type'>view</field>
+            <field name='user_type'>2</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_act_ins' model='account.account'>
+            <field name='code'>13304</field>
+            <field name='parent_id' ref="account_act_dep_amo"/>
+            <field name='name'>INSTALACIONES</field>
+            <field name='type'>view</field>
+            <field name='user_type'>2</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_act_maq_agr' model='account.account'>
+            <field name='code'>13305</field>
+            <field name='parent_id' ref="account_act_dep_amo"/>
+            <field name='name'>MAQUINARIA AGRICOLA Y MINERA</field>
+            <field name='type'>view</field>
+            <field name='user_type'>2</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_act_inm' model='account.account'>
+            <field name='code'>13307</field>
+            <field name='parent_id' ref="account_act_dep_amo"/>
+            <field name='name'>INMUEBLES</field>
+            <field name='type'>view</field>
+            <field name='user_type'>2</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_act_veh_veh' model='account.account'>
+            <field name='code'>13801</field>
+            <field name='parent_id' ref="account_act_veh"/>
+            <field name='name'>VEHICULOS</field>
+            <field name='type'>view</field>
+            <field name='user_type'>2</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_act_veh_lea' model='account.account'>
+            <field name='code'>13802</field>
+            <field name='parent_id' ref="account_act_veh"/>
+            <field name='name'>VEHICULOS LEASING</field>
+            <field name='type'>view</field>
+            <field name='user_type'>2</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_act_mob_mob' model='account.account'>
+            <field name='code'>13301010</field>
+            <field name='parent_id' ref="account_act_mob"/>
+            <field name='name'>MOBILIARIO</field>
+            <field name='type'>other</field>
+            <field name='user_type'>2</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_act_ee_ee' model='account.account'>
+            <field name='code'>13302010</field>
+            <field name='parent_id' ref="account_act_ee"/>
+            <field name='name'>EQUIPOS ELECTRONICOS</field>
+            <field name='type'>other</field>
+            <field name='user_type'>2</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_act_maq_maq' model='account.account'>
+            <field name='code'>13303010</field>
+            <field name='parent_id' ref="account_act_maq"/>
+            <field name='name'>MAQUINARIA Y EQUIPOS</field>
+            <field name='type'>other</field>
+            <field name='user_type'>2</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_act_ins_ins' model='account.account'>
+            <field name='code'>13304201</field>
+            <field name='parent_id' ref="account_act_ins"/>
+            <field name='name'>DEPRECIACION ACUMULADA INSTALACIONES</field>
+            <field name='type'>other</field>
+            <field name='user_type'>2</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_act_maq_agr_min' model='account.account'>
+            <field name='code'>13305201</field>
+            <field name='parent_id' ref="account_act_maq_agr"/>
+            <field name='name'>MAQUINARIA AGRICOLA</field>
+            <field name='type'>other</field>
+            <field name='user_type'>2</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_act_inm_inm' model='account.account'>
+            <field name='code'>13307101</field>
+            <field name='parent_id' ref="account_act_inm"/>
+            <field name='name'>INMUEBLES (DEPRECIACION)</field>
+            <field name='type'>other</field>
+            <field name='user_type'>2</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_act_veh_dep' model='account.account'>
+            <field name='code'>13801201</field>
+            <field name='parent_id' ref="account_act_veh_veh"/>
+            <field name='name'>VEHICULOS (DEPRECIACION)</field>
+            <field name='type'>other</field>
+            <field name='user_type'>2</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_act_veh_veh_lea' model='account.account'>
+            <field name='code'>13802201</field>
+            <field name='parent_id' ref="account_act_veh_lea"/>
+            <field name='name'>TRANSPORTE LEASING</field>
+            <field name='type'>other</field>
+            <field name='user_type'>2</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_cxcclientes' model='account.account'>
+            <field name='code'>11301</field>
+            <field name='parent_id' ref="account_cxc"/>
+            <field name='name'>CUENTAS X COBRAR CLIENTES</field>
+            <field name='type'>view</field>
+            <field name='user_type'>2</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_cxcclientes_reg' model='account.account'>
+            <field name='code'>11301000</field>
+            <field name='parent_id' ref="account_cxcclientes"/>
+            <field name='name'>CUENTAS X COBRAR CLIENTES</field>
+            <field name='type'>receivable</field>
+            <field name='user_type'>2</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_inventario' model='account.account'>
+            <field name='code'>115</field>
+            <field name='parent_id' ref="account_actcirculante"/>
+            <field name='name'>INVENTARIO</field>
+            <field name='type'>view</field>
+            <field name='user_type'>6</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_inventario2' model='account.account'>
+            <field name='code'>11501</field>
+            <field name='parent_id' ref="account_inventario"/>
+            <field name='name'>INVENTARIOS</field>
+            <field name='type'>view</field>
+            <field name='user_type'>6</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_compras' model='account.account'>
+            <field name='code'>11501001</field>
+            <field name='parent_id' ref="account_inventario2"/>
+            <field name='name'>COMPRAS</field>
+            <field name='type'>other</field>
+            <field name='user_type'>6</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_ventas' model='account.account'>
+            <field name='code'>11501012</field>
+            <field name='parent_id' ref="account_inventario2"/>
+            <field name='name'>VENTAS</field>
+            <field name='type'>other</field>
+            <field name='user_type'>8</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_ganper' model='account.account'>
+            <field name='code'>11501013</field>
+            <field name='parent_id' ref="account_inventario2"/>
+            <field name='name'>GANANCIAS Y PERDIDAS</field>
+            <field name='type'>other</field>
+            <field name='user_type'>6</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_invdanado' model='account.account'>
+            <field name='code'>11502</field>
+            <field name='parent_id' ref="account_inventario"/>
+            <field name='name'>INVENTARIOS DAÑADO</field>
+            <field name='type'>view</field>
+            <field name='user_type'>6</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_pasivo' model='account.account'>
+            <field name='code'>2</field>
+            <field name='parent_id' ref="account_herrera"/>
+            <field name='name'>PASIVOS</field>
+            <field name='type'>view</field>
+            <field name='user_type'>7</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_pascirculante' model='account.account'>
+            <field name='code'>21</field>
+            <field name='parent_id' ref="account_pasivo"/>
+            <field name='name'>PASIVO CIRCULANTE</field>
+            <field name='type'>view</field>
+            <field name='user_type'>7</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_efecxp' model='account.account'>
+            <field name='code'>211</field>
+            <field name='parent_id' ref="account_pascirculante"/>
+            <field name='name'>EFECTOS Y CUENTAS X PAGAR</field>
+            <field name='type'>view</field>
+            <field name='user_type'>3</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_exp' model='account.account'>
+            <field name='code'>21101</field>
+            <field name='parent_id' ref="account_efecxp"/>
+            <field name='name'>EFECTOS X PAGAR</field>
+            <field name='type'>view</field>
+            <field name='user_type'>3</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_cxpcomerciales' model='account.account'>
+            <field name='code'>21102</field>
+            <field name='parent_id' ref="account_efecxp"/>
+            <field name='name'>CXP COMERCIALES</field>
+            <field name='type'>view</field>
+            <field name='user_type'>3</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_cxpproveedores' model='account.account'>
+            <field name='code'>21102001</field>
+            <field name='parent_id' ref="account_cxpcomerciales"/>
+            <field name='name'>CXP PROVEEDORES</field>
+            <field name='type'>payable</field>
+            <field name='user_type'>3</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_ingresos' model='account.account'>
+            <field name='code'>4</field>
+            <field name='parent_id' ref="account_herrera"/>
+            <field name='name'>INGRESOS</field>
+            <field name='type'>view</field>
+            <field name='user_type'>8</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_inginventario' model='account.account'>
+            <field name='code'>41</field>
+            <field name='parent_id' ref="account_ingresos"/>
+            <field name='name'>INGRESOS EN INVENTARIO</field>
+            <field name='type'>view</field>
+            <field name='user_type'>8</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_inginventario2' model='account.account'>
+            <field name='code'>411</field>
+            <field name='parent_id' ref="account_inginventario"/>
+            <field name='name'>INGRESOS EN INVENTARIO</field>
+            <field name='type'>view</field>
+            <field name='user_type'>8</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_ingxventas' model='account.account'>
+            <field name='code'>41101001</field>
+            <field name='parent_id' ref="account_inginventario2"/>
+            <field name='name'>INGRESOS POR VENTAS</field>
+            <field name='type'>other</field>
+            <field name='user_type'>8</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_gastos' model='account.account'>
+            <field name='code'>6</field>
+            <field name='parent_id' ref="account_herrera"/>
+            <field name='name'>GASTOS</field>
+            <field name='type'>view</field>
+            <field name='user_type'>9</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_gastos2' model='account.account'>
+            <field name='code'>61</field>
+            <field name='parent_id' ref="account_gastos"/>
+            <field name='name'>GASTOS</field>
+            <field name='type'>view</field>
+            <field name='user_type'>9</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_gastos3' model='account.account'>
+            <field name='code'>611</field>
+            <field name='parent_id' ref="account_gastos2"/>
+            <field name='name'>GASTOS</field>
+            <field name='type'>view</field>
+            <field name='user_type'>9</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_gastos4' model='account.account'>
+            <field name='code'>61101</field>
+            <field name='parent_id' ref="account_gastos3"/>
+            <field name='name'>GASTOS</field>
+            <field name='type'>view</field>
+            <field name='user_type'>9</field>
+            <field name='active'>True</field>
+        </record>
+        
+        <record id='account_gastos5' model='account.account'>
+            <field name='code'>61101001</field>
+            <field name='parent_id' ref="account_gastos4"/>
+            <field name='name'>GASTOS</field>
+            <field name='type'>other</field>
+            <field name='user_type'>9</field>
+            <field name='active'>True</field>
+        </record>
+    </data>
+</openerp>

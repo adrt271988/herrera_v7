@@ -1,0 +1,8 @@
+import asset_list
+import asset_transfer
+import asset_incorporate
+import asset_desincorp
+import asset_assignment
+import asset_incidence_shop
+import asset_incidence_dpto
+import asset_incidence_rpon

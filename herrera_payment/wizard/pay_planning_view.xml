@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_pay_planning_process" model="ir.ui.view">
+            <field name="name">Planificación de Pagos</field>
+            <field name="model">pay.planning.process</field>
+            <field name="arch" type="xml">
+                 <form string="Planificación" version="7.0">
+                    <group  col="1">
+                        <group col="2">
+                            <field name='date_from'/>
+                            <field name='date_until'/>
+                        </group>
+                    </group>
+                   <footer>
+                        <button name="action_generate" string="Generar" type="object"  class="oe_highlight" />
+                        <button icon="gtk-cancel" special="cancel" string="Cerrar"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_pay_planning">
+        <field name="name">Planificación de Pagos</field>
+        <field name="res_model">pay.planning.process</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="domain">[('parent_id','=',False)]</field>
+        <field name="view_id" ref="view_pay_planning_process"/>
+        <field name="target">new</field>
+        <field name="multi">True</field> 
+        </record>
+
+        <menuitem action="action_pay_planning" id="menu_action_pay_plannin_wizard" parent="account_payment.menu_main_payment" sequence="4"/>
+
+    </data>
+</openerp>

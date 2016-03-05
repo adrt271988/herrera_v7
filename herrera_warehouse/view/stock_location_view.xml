@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        
+        <record model="ir.ui.view" id="inherit_view_location_form">
+            <field name="name">inherit.view.location.form</field>
+            <field name="model">stock.location</field>
+            <field name="inherit_id" ref="stock.view_location_form" />
+            <field name="arch" type="xml">
+                <xpath expr='//group[@string="Localization"]' position='attributes'>
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="inherit_view_location_tree">
+            <field name="name">inherit.view.location.tree</field>
+            <field name="model">stock.location</field>
+            <field name="inherit_id" ref="stock.view_location_tree2" />
+            <field name="arch" type="xml">
+                <xpath expr='//field[@name="usage"]' position='after'>
+                    <field name="level" string="Nivel"/>
+                </xpath>
+            </field>
+        </record>
+    
+    </data>
+</openerp>

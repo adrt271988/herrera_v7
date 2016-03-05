@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<openerp>
+  <data>
+    <!-- Motivos -->
+
+    <record id="account_invoice_motive_form" model="ir.ui.view">
+        <field name="name">account.invoice.motive.form</field>
+        <field name="model">account.invoice.motive</field>
+        <field name="arch" type="xml">
+            <form string="Motivos" version="7.0">
+                <sheet string="Invoice Motive">
+                <label for="name"/>
+                    <field name="name" required="1"/>
+                <group col="4">
+                    <field name="code" required="1" class="oe_inline"/>
+                </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record model="ir.ui.view" id="account_invoice_motive_tree">
+        <field name="name">account.invoice.motive.tree</field>
+        <field name="model">account.invoice.motive</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Motivos">
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record model='ir.actions.act_window' id='action_invoice_motive'>
+        <field name="name">Motivos</field>
+        <field name="res_model">account.invoice.motive</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem action="action_invoice_motive"
+              id="menu_action_invoice_motive_form" 
+              parent="account.menu_configuration_misc" 
+              sequence="1"/>
+ </data>
+</openerp>
+

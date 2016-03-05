@@ -1,0 +1,2165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data noupdate="1">
+        <record id="product_sica_384" model="product.sica">
+            <field name="code">384</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">ABA Alimentos para peces</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_188" model="product.sica">
+            <field name="code">188</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">ABA Animales Domésticos</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_185" model="product.sica">
+            <field name="code">185</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">AB.A</field>
+            <field name="name">ABA Aves</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_186" model="product.sica">
+            <field name="code">186</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">AB.B</field>
+            <field name="name">ABA Bovinos</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_187" model="product.sica">
+            <field name="code">187</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">AB.C</field>
+            <field name="name">ABA Cerdos</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_488" model="product.sica">
+            <field name="code">488</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Aceite 18Lts Industrial</field>
+            <field name="description">Aceite de uso Industrial en presentacion de 18 Lts</field>
+        </record>
+
+        <record id="product_sica_245" model="product.sica">
+            <field name="code">245</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Aceite Crudo de Canola</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_417" model="product.sica">
+            <field name="code">417</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Aceite Crudo de Coco</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_241" model="product.sica">
+            <field name="code">241</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Aceite Crudo de Girasol</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_242" model="product.sica">
+            <field name="code">242</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Aceite Crudo de Maíz</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_243" model="product.sica">
+            <field name="code">243</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Aceite Crudo de Palma</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_539" model="product.sica">
+            <field name="code">539</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Aceite Crudo de Palmiste</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_244" model="product.sica">
+            <field name="code">244</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Aceite Crudo de Soya</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_415" model="product.sica">
+            <field name="code">415</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Aceite de Coco Refinado</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_257" model="product.sica">
+            <field name="code">257</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Aceite No Regulado - Soya</field>
+            <field name="description">Aceite refinado consumo domestico no regulado; de soya 100% de oliva otros aceites</field>
+        </record>
+
+        <record id="product_sica_256" model="product.sica">
+            <field name="code">256</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Aceite Regulado</field>
+            <field name="description">Aceite refinado consumo domestico regulado; mezclas de maiz de girasol</field>
+        </record>
+
+        <record id="product_sica_490" model="product.sica">
+            <field name="code">490</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Aceites Otros - Canola Oliva</field>
+            <field name="description">Otras variedades de aceite como de oliva canola entre otros.</field>
+        </record>
+
+        <record id="product_sica_281" model="product.sica">
+            <field name="code">281</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Aceite Uso Industrial</field>
+            <field name="description">Aceites de oleina de palma soya desodorizada girasol desodorizado palma desodorizada de pescado</field>
+        </record>
+
+        <record id="product_sica_210" model="product.sica">
+            <field name="code">210</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Aceitunas</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_451" model="product.sica">
+            <field name="code">451</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Ácidos Grasos</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_346" model="product.sica">
+            <field name="code">346</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Afrecho y Afrechillo Consumo Animal</field>
+            <field name="description">Productos obtenido de la molienda de cereales considerado por su calidad para ser mezclado transformado o consumido directamente para la alimentacion animal</field>
+        </record>
+
+        <record id="product_sica_108" model="product.sica">
+            <field name="code">108</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Afrecho y afrechillo para consumo humano</field>
+            <field name="description">Producto derivado de la molienda de cereales modificado o acondicionado para se empleado en elaboracion de producto terminado o consumo directo.</field>
+        </record>
+
+        <record id="product_sica_537" model="product.sica">
+            <field name="code">537</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Agua</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_236" model="product.sica">
+            <field name="code">236</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Ají</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_388" model="product.sica">
+            <field name="code">388</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Ajo</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_551" model="product.sica">
+            <field name="code">551</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Albúmina de Huevo en Polvo</field>
+            <field name="description">Producto resultante del proceso de producción de mayonesas una vez deshidratada y pulverizada la clara del huevo</field>
+        </record>
+
+        <record id="product_sica_211" model="product.sica">
+            <field name="code">211</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Alcaparras</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_455" model="product.sica">
+            <field name="code">455</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Alfalfa</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_409" model="product.sica">
+            <field name="code">409</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Alimentos Preparados listos para Servir</field>
+            <field name="description">Sopas  Minestrones  Caraotas vegetales cocidos cachapas y preparados alimenticios para microondas cocido u horneado</field>
+        </record>
+
+        <record id="product_sica_301" model="product.sica">
+            <field name="code">301</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Almendra de Palmiste</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_547" model="product.sica">
+            <field name="code">547</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Almidones Modificados</field>
+            <field name="description">Sustancias obtenidas por uno o más tratamientos químicos de almidones comestibles utilizados para impartir propiedades funcionales a los alimentos que mejoren las carácteristicas de calidad de los mismos de maíz papa trigo yuca entre otros.</field>
+        </record>
+
+        <record id="product_sica_148" model="product.sica">
+            <field name="code">148</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">alpiste</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_200" model="product.sica">
+            <field name="code">200</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv">ArBNR</field>
+            <field name="name">Arroz Blanco Presentación No Regulada</field>
+            <field name="description">Instantaneos Saborizados Parborizados y Con aditivos</field>
+        </record>
+
+        <record id="product_sica_201" model="product.sica">
+            <field name="code">201</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv">ArBR</field>
+            <field name="name">Arroz Blanco Presentación Regulada</field>
+            <field name="description">Tipo I ( 1-10 Granos Partido) II ( 10 - 1 Granos Partidos) o III ( 18-25 Granos Partidos) de acuedo a La Gaceta 39.208 de fecha 15-08-2009</field>
+        </record>
+
+        <record id="product_sica_120" model="product.sica">
+            <field name="code">120</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">ArST</field>
+            <field name="name">Arroz de Segunda</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_264" model="product.sica">
+            <field name="code">264</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">Ar3ra</field>
+            <field name="name">Arroz de Tercera</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_69" model="product.sica">
+            <field name="code">69</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv">ArPA</field>
+            <field name="name">Arroz Paddy - Acondicionado</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_271" model="product.sica">
+            <field name="code">271</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Artículos de Chocolateria</field>
+            <field name="description">Chocolate negro de leche blanco con almendras maní cereales rellenos de frutas o sirope cremas u otras presentaciones.</field>
+        </record>
+
+        <record id="product_sica_172" model="product.sica">
+            <field name="code">172</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Articulos de Confiteria</field>
+            <field name="description">Arequipe caramelos chupetas golosinas extruidos gelatinizados gelatinas flanes sirope entre otros</field>
+        </record>
+
+        <record id="product_sica_272" model="product.sica">
+            <field name="code">272</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Artículos de Galletería</field>
+            <field name="description">Galletas dulces saladas ambrosias palmeritas polvorosas y pasta seca</field>
+        </record>
+
+        <record id="product_sica_123" model="product.sica">
+            <field name="code">123</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Arvejas</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_315" model="product.sica">
+            <field name="code">315</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Atún Enlatado Presentación No Regulada</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_209" model="product.sica">
+            <field name="code">209</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Avellanas</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_51" model="product.sica">
+            <field name="code">51</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv">Av</field>
+            <field name="name">Avena</field>
+            <field name="description">Avena en hojuela y polvo</field>
+        </record>
+
+        <record id="product_sica_303" model="product.sica">
+            <field name="code">303</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Avena Despuntada</field>
+            <field name="description">Consumo Animal</field>
+        </record>
+
+        <record id="product_sica_437" model="product.sica">
+            <field name="code">437</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Avena en Granos</field>
+            <field name="description">Materia prima (avena entera que no ha sido sometida a ningun tipo de transformación)</field>
+        </record>
+
+        <record id="product_sica_374" model="product.sica">
+            <field name="code">374</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Avena Liquida</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_541" model="product.sica">
+            <field name="code">541</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Aves en pie</field>
+            <field name="description">Otras aves para beneficio (Patos codorniz avestruz)</field>
+        </record>
+
+        <record id="product_sica_325" model="product.sica">
+            <field name="code">325</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv">AzD</field>
+            <field name="name">Azúcar Domestica</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_350" model="product.sica">
+            <field name="code">350</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Azúcares y Derivados</field>
+            <field name="description">Azucar Integral Edulcorantes Otros</field>
+        </record>
+
+        <record id="product_sica_326" model="product.sica">
+            <field name="code">326</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Azúcar Industrial</field>
+            <field name="description">Incluye azucar cristalizada y liquida</field>
+        </record>
+
+        <record id="product_sica_414" model="product.sica">
+            <field name="code">414</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Bebidas Lacteas</field>
+            <field name="description">Formulas lacteas mezclas liquidas enriquecidas y saborizadas  chichas  bebidas achocolatadas yogurt líquido.</field>
+        </record>
+
+        <record id="product_sica_261" model="product.sica">
+            <field name="code">261</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Cacao en polvo</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_239" model="product.sica">
+            <field name="code">239</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Café Liofilizado</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_358" model="product.sica">
+            <field name="code">358</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Café Molido Presentación No Regulada</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_357" model="product.sica">
+            <field name="code">357</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Café Molido Presentación Regulada</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_355" model="product.sica">
+            <field name="code">355</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Café Parapara</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_299" model="product.sica">
+            <field name="code">299</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Cafe Tostado en Grano</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_440" model="product.sica">
+            <field name="code">440</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Caja de Alimentos</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_49" model="product.sica">
+            <field name="code">49</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Caraota Roja</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_48" model="product.sica">
+            <field name="code">48</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Caraota Rosada</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_47" model="product.sica">
+            <field name="code">47</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Caraotas Blanca</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_231" model="product.sica">
+            <field name="code">231</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Carne de Aves -pavo pato codorniz avestruz entre otras-</field>
+            <field name="description">Todas aquellas variedades de aves diferentes a pollo y gallina</field>
+        </record>
+
+        <record id="product_sica_220" model="product.sica">
+            <field name="code">220</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv">CaBD</field>
+            <field name="name">Carne de Bovino Despostado</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_218" model="product.sica">
+            <field name="code">218</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv">CaBC</field>
+            <field name="name">Carne de Bovino en Canal</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_158" model="product.sica">
+            <field name="code">158</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">CaC</field>
+            <field name="name">Carne de Caprino (Chivo Cabra Etc)</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_432" model="product.sica">
+            <field name="code">432</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Carne de Conejo</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_161" model="product.sica">
+            <field name="code">161</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">CaO</field>
+            <field name="name">Carne de Ovino</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_84" model="product.sica">
+            <field name="code">84</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">CaPC</field>
+            <field name="name">Carne de Porcino despostada</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_82" model="product.sica">
+            <field name="code">82</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv">CaPD</field>
+            <field name="name">Carne de Porcino en Canal</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_361" model="product.sica">
+            <field name="code">361</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Casabe</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_62" model="product.sica">
+            <field name="code">62</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Cascarilla de Arroz</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_340" model="product.sica">
+            <field name="code">340</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Cascarilla de Girasol</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_56" model="product.sica">
+            <field name="code">56</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Cebada</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_195" model="product.sica">
+            <field name="code">195</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Cebolla</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_215" model="product.sica">
+            <field name="code">215</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Cebolla en Salmuera</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_269" model="product.sica">
+            <field name="code">269</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Centeno</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_391" model="product.sica">
+            <field name="code">391</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Ceras de origen animal o vegetal</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_169" model="product.sica">
+            <field name="code">169</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">Cer</field>
+            <field name="name">Cereales</field>
+            <field name="description">Cebada Fororo Afrecho Trigo Partido y entero</field>
+        </record>
+
+        <record id="product_sica_295" model="product.sica">
+            <field name="code">295</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Cerezas</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_296" model="product.sica">
+            <field name="code">296</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Ciruelas</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_549" model="product.sica">
+            <field name="code">549</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Claras de Huevo</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_116" model="product.sica">
+            <field name="code">116</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">CoAl</field>
+            <field name="name">Complementos Alimenticios y Dietéticos</field>
+            <field name="description">Compotas Colados Sopas y Papillas.</field>
+        </record>
+
+        <record id="product_sica_298" model="product.sica">
+            <field name="code">298</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Concentrados de Frutas</field>
+            <field name="description">naranjas peras otros</field>
+        </record>
+
+        <record id="product_sica_166" model="product.sica">
+            <field name="code">166</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">CoEs</field>
+            <field name="name">Condimentos y Especies</field>
+            <field name="description">Clavos Comino Curri Anis Estrellado Pimienta Onoto Canela Saborizantes</field>
+        </record>
+
+        <record id="product_sica_168" model="product.sica">
+            <field name="code">168</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">Cong</field>
+            <field name="name">Congelados</field>
+            <field name="description">Vegetales Productos del Mar Frutas</field>
+        </record>
+
+        <record id="product_sica_156" model="product.sica">
+            <field name="code">156</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Crema de Leche - Mat Prima</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_304" model="product.sica">
+            <field name="code">304</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Crema de Leche - Prod Terminado</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_162" model="product.sica">
+            <field name="code">162</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">DrLa</field>
+            <field name="name">Derivados Lacteos</field>
+            <field name="description">Yogurt Suero Crema de Leche Lactovisoy Leche Condensada cuajadas entre otras</field>
+        </record>
+
+        <record id="product_sica_401" model="product.sica">
+            <field name="code">401</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Dorado Entero</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_250" model="product.sica">
+            <field name="code">250</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Duraznos</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_109" model="product.sica">
+            <field name="code">109</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">Emb</field>
+            <field name="name">Embutidos</field>
+            <field name="description">Jamón Salchichas Salchichones Chorizos Mortadelas pepperoni salami coppa Morcillas.</field>
+        </record>
+
+        <record id="product_sica_363" model="product.sica">
+            <field name="code">363</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Encurtidos</field>
+            <field name="description">Productos vegetales tras ser sometidos a diversas transformacionesque han sido sumergidos (marinados) en una solución de sal o tienen en común su aderezo con vinagre. Permite extender su conservación. Tenemos pepinillo cebollita rabanitos champiñones zanahoria repollo berenjenas remolacha de mesa pimiento tomate verde alcaparra coliflor apio entre otras.</field>
+        </record>
+
+        <record id="product_sica_37" model="product.sica">
+            <field name="code">37</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">Enl</field>
+            <field name="name">Enlatados</field>
+            <field name="description">Productos de consumo masivo en presentación enlatada.</field>
+        </record>
+
+        <record id="product_sica_343" model="product.sica">
+            <field name="code">343</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Equinos en Pie</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_452" model="product.sica">
+            <field name="code">452</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Estearina</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_291" model="product.sica">
+            <field name="code">291</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Extractos - escencias y concentrados</field>
+            <field name="description">Productos terminados (Té manzanilla linaza entre otros) o materia prima (gomas resinas y demás jugos y extractos vegetales)</field>
+        </record>
+
+        <record id="product_sica_404" model="product.sica">
+            <field name="code">404</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Filetes de Dorado</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_403" model="product.sica">
+            <field name="code">403</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Filetes de Merluza</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_402" model="product.sica">
+            <field name="code">402</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Filetes de Salmon</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_52" model="product.sica">
+            <field name="code">52</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">FoPr</field>
+            <field name="name">Formula Preinfantil</field>
+            <field name="description">Crema de Arroz Mezclas de Cereales</field>
+        </record>
+
+        <record id="product_sica_259" model="product.sica">
+            <field name="code">259</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Fórmulas Lácteas</field>
+            <field name="description">Preparados lacteos en polvo mezclas enriquecidas y formulaciones nutricionales en base láctea en polvo</field>
+        </record>
+
+        <record id="product_sica_157" model="product.sica">
+            <field name="code">157</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Frutas</field>
+            <field name="description">Naturales enteras (lechoza melón patilla naranjas limón mandarina entre otras)</field>
+        </record>
+
+        <record id="product_sica_129" model="product.sica">
+            <field name="code">129</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Frutas en Almibar o Confitadas</field>
+            <field name="description">Frutas en trozos enteras y mezcladas tanto de origen nacional o importada se incluye melocoton durazno piña cerezas fresa mango u otras frutas</field>
+        </record>
+
+        <record id="product_sica_443" model="product.sica">
+            <field name="code">443</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Frutos secos</field>
+            <field name="description">Almendras avellanas nueces pistachos alpiste sésamo entre otros</field>
+        </record>
+
+        <record id="product_sica_214" model="product.sica">
+            <field name="code">214</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Galletas Navideñas</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_395" model="product.sica">
+            <field name="code">395</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Gallina Beneficiada entera</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_442" model="product.sica">
+            <field name="code">442</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Gallina Despresada</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_287" model="product.sica">
+            <field name="code">287</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Gallina en pie</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_332" model="product.sica">
+            <field name="code">332</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Ganado Bovino en pie para beneficio</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_265" model="product.sica">
+            <field name="code">265</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Ganado Bovino en pie para reproducción</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_80" model="product.sica">
+            <field name="code">80</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Ganado Porcino en Pie</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_535" model="product.sica">
+            <field name="code">535</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Ganado Porcino en Pie Para Reproducción</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_146" model="product.sica">
+            <field name="code">146</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Garbanzos</field>
+            <field name="description">Empacados en presentaciones comerciales de 450 gr. 1 Kg y en sacos no ncluyen procesados y enlatados</field>
+        </record>
+
+        <record id="product_sica_297" model="product.sica">
+            <field name="code">297</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Girasol - Acondicionado (TM)</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_282" model="product.sica">
+            <field name="code">282</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Grasa Uso Industrial</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_447" model="product.sica">
+            <field name="code">447</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Grits</field>
+            <field name="description">Materia prima para la elaboración de productos a base de maíz</field>
+        </record>
+
+        <record id="product_sica_421" model="product.sica">
+            <field name="code">421</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Harina Amarilla de Arroz</field>
+            <field name="description">Harina proveniente del proceso de trillado del arroz</field>
+        </record>
+
+        <record id="product_sica_352" model="product.sica">
+            <field name="code">352</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Harina de Arroz</field>
+            <field name="description">Harina destinada para Consumo Humano</field>
+        </record>
+
+        <record id="product_sica_533" model="product.sica">
+            <field name="code">533</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Harina de Avena</field>
+            <field name="description">Sub-Producto de grano de Avena</field>
+        </record>
+
+        <record id="product_sica_416" model="product.sica">
+            <field name="code">416</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Harina de Coco y Coco Rayado</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_339" model="product.sica">
+            <field name="code">339</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Harina de Girasol</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_139" model="product.sica">
+            <field name="code">139</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Harina de Maiz Cruda</field>
+            <field name="description">Harina de maiz cruda Semola de Maiz Harinilla</field>
+        </record>
+
+        <record id="product_sica_328" model="product.sica">
+            <field name="code">328</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Harina de Maiz Gritz</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_204" model="product.sica">
+            <field name="code">204</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv">HMPNR</field>
+            <field name="name">Harina de Maiz Precocida No Regulada</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_203" model="product.sica">
+            <field name="code">203</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv">HMPR</field>
+            <field name="name">Harina de Maiz Precocida Regulada</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_423" model="product.sica">
+            <field name="code">423</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Harina derivado de maiz para ABA</field>
+            <field name="description">Producto de la molienda extraccion de aceite o sub producto de los procesos de transformacion del maiz la cual se emplea para la elaboracion de Alimentos Balanceados para Animales (ABA)</field>
+        </record>
+
+        <record id="product_sica_217" model="product.sica">
+            <field name="code">217</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Harina de Soya -Torta de Soya-</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_221" model="product.sica">
+            <field name="code">221</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Harina de Trigo Familiar</field>
+            <field name="description">Producto derivado del Trigo Múltiples Usos utilizado para la elaboración de Artículos de Consumo Doméstico (tortas dulces panes entre otros)</field>
+        </record>
+
+        <record id="product_sica_290" model="product.sica">
+            <field name="code">290</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Harina de Trigo Galletera</field>
+            <field name="description">Producto utilizado para la elaboración de Artículos de Galletería</field>
+        </record>
+
+        <record id="product_sica_20" model="product.sica">
+            <field name="code">20</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv">HTP</field>
+            <field name="name">Harina de Trigo para Panaderia y Pastelería</field>
+            <field name="description">Producto derivado del Trigo Múltiples Usos utilizado para la elaboración de Pan y Artículos de Panadería y Pastelería</field>
+        </record>
+
+        <record id="product_sica_202" model="product.sica">
+            <field name="code">202</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv">ArBNR</field>
+            <field name="name">Harina de Trigo para Pastificio</field>
+            <field name="description">Producto derivado del Trigo Múltiples Usos utilizado para la elaboración de Pastas Alimenticias Reguladas</field>
+        </record>
+
+        <record id="product_sica_529" model="product.sica">
+            <field name="code">529</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Harina Integral de Trigo</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_64" model="product.sica">
+            <field name="code">64</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">HDOP</field>
+            <field name="name">Harinas Derivadas de otros Productos</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_444" model="product.sica">
+            <field name="code">444</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Harinas proteícas para animales</field>
+            <field name="description">de sangre pescado carne hueso plumas entre otras destinadas a Alimentos Balanceados para Animales</field>
+        </record>
+
+        <record id="product_sica_273" model="product.sica">
+            <field name="code">273</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Helados</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_345" model="product.sica">
+            <field name="code">345</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Hortalizas</field>
+            <field name="description">coles lechugas zanahorias pepinos hongos entre otros</field>
+        </record>
+
+        <record id="product_sica_448" model="product.sica">
+            <field name="code">448</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Huevo Entero Líquido con Sal</field>
+            <field name="description">Materia prima para la elaboración de mayonesa</field>
+        </record>
+
+        <record id="product_sica_450" model="product.sica">
+            <field name="code">450</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Huevos de Codorniz</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_22" model="product.sica">
+            <field name="code">22</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv">Hvos</field>
+            <field name="name">Huevos de Consumo</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_456" model="product.sica">
+            <field name="code">456</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Huevos Deshidratados</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_110" model="product.sica">
+            <field name="code">110</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Huevos Fértiles</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_457" model="product.sica">
+            <field name="code">457</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Jarabe de Glucosa</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_531" model="product.sica">
+            <field name="code">531</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Jarabe de Maiz</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_34" model="product.sica">
+            <field name="code">34</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">Jug</field>
+            <field name="name">Jugos Nectares y Cocteles</field>
+            <field name="description">Jugos cocteles y nectares de frutas envasados en Plasticubierto U.H.T plastico lata y botellas</field>
+        </record>
+
+        <record id="product_sica_43" model="product.sica">
+            <field name="code">43</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Jurel (Enlatado)</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_354" model="product.sica">
+            <field name="code">354</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Jurel Fresco</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_268" model="product.sica">
+            <field name="code">268</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Kiwi</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_24" model="product.sica">
+            <field name="code">24</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">LeP</field>
+            <field name="name">Leche Condensada</field>
+            <field name="description">En sus diferentes presentaciones</field>
+        </record>
+
+        <record id="product_sica_232" model="product.sica">
+            <field name="code">232</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv">LECD</field>
+            <field name="name">Leche en Polvo Completa - Uso Domestico</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_476" model="product.sica">
+            <field name="code">476</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv">LECI</field>
+            <field name="name">Leche en Polvo Completa - Uso Industrial MP</field>
+            <field name="description">Leche en Polvo Completa en sacos importada para ser envasada presentacion en saco de 25kg</field>
+        </record>
+
+        <record id="product_sica_233" model="product.sica">
+            <field name="code">233</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Leche en Polvo Descremada - Uso Domestico</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_478" model="product.sica">
+            <field name="code">478</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Leche en Polvo Descremada - Uso Industrial MP</field>
+            <field name="description">Leche en Polvo Descremada en sacos importada para ser envasada presentacion de 25kg</field>
+        </record>
+
+        <record id="product_sica_23" model="product.sica">
+            <field name="code">23</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">LeL</field>
+            <field name="name">Leche Evaporada</field>
+            <field name="description">En sus diferentes presentaciones</field>
+        </record>
+
+        <record id="product_sica_360" model="product.sica">
+            <field name="code">360</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Leche Liquida Pasteurizada No Regulada</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_359" model="product.sica">
+            <field name="code">359</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Leche Liquida Pasteurizada Regulada</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_238" model="product.sica">
+            <field name="code">238</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Leche Liquida UHT</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_324" model="product.sica">
+            <field name="code">324</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Lecitina de Soya</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_152" model="product.sica">
+            <field name="code">152</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">Leg</field>
+            <field name="name">Leguminosas</field>
+            <field name="description">Guisantes habas entre otros</field>
+        </record>
+
+        <record id="product_sica_38" model="product.sica">
+            <field name="code">38</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Lentejas</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_35" model="product.sica">
+            <field name="code">35</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Levadura</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_262" model="product.sica">
+            <field name="code">262</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Licor de Cacao</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_453" model="product.sica">
+            <field name="code">453</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Lomo de Atún</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_40" model="product.sica">
+            <field name="code">40</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv">MzAA</field>
+            <field name="name">Maiz Amarillo - Acondicionado</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_436" model="product.sica">
+            <field name="code">436</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Maiz Amarillo - Consumo Humano</field>
+            <field name="description">Maíz destinado a consumo humano en sus diferentes presentaciones (pilado molido entre otros) para la elaboración de (harina de maíz precocida mezcla para cachapas hojuelas de maíz entre otros)</field>
+        </record>
+
+        <record id="product_sica_42" model="product.sica">
+            <field name="code">42</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv">MzBA</field>
+            <field name="name">Maiz Blanco - Acondicionado</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_89" model="product.sica">
+            <field name="code">89</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">MzCo</field>
+            <field name="name">Maiz de Cotufa (TM)</field>
+            <field name="description">Proveniente del campo o importado a granel o empaquetado</field>
+        </record>
+
+        <record id="product_sica_126" model="product.sica">
+            <field name="code">126</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Maiz Dulce</field>
+            <field name="description">Enlatados o empacados en bolsas</field>
+        </record>
+
+        <record id="product_sica_198" model="product.sica">
+            <field name="code">198</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">MzBBA</field>
+            <field name="name">Maiz G X M Blanco ABA Acondicionado</field>
+            <field name="description">Materia prima para la elaboracion de Alimentos Balanceados para Animales (ABA)</field>
+        </record>
+
+        <record id="product_sica_263" model="product.sica">
+            <field name="code">263</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Manteca de Cacao</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_472" model="product.sica">
+            <field name="code">472</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Manteca de Cerdo</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_32" model="product.sica">
+            <field name="code">32</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">ManV</field>
+            <field name="name">Manteca Vegetal</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_25" model="product.sica">
+            <field name="code">25</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">Mant</field>
+            <field name="name">Mantequilla</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_251" model="product.sica">
+            <field name="code">251</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Manzanas</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_308" model="product.sica">
+            <field name="code">308</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Margarina -Consumo Doméstico-</field>
+            <field name="description">Se incluyen en esta categoría las presentaciones de 100 200 250 400 500 y 1.000 gramos</field>
+        </record>
+
+        <record id="product_sica_309" model="product.sica">
+            <field name="code">309</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Margarina -Consumo Industrial-</field>
+            <field name="description">Incluye las presentaciones de 5 Kilogramos o más</field>
+        </record>
+
+        <record id="product_sica_311" model="product.sica">
+            <field name="code">311</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv">MyNR</field>
+            <field name="name">Mayonesa</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_75" model="product.sica">
+            <field name="code">75</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">Mlza</field>
+            <field name="name">Melaza</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_400" model="product.sica">
+            <field name="code">400</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Merluza Entera</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_212" model="product.sica">
+            <field name="code">212</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Mermeladas</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_406" model="product.sica">
+            <field name="code">406</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Mero Entero</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_351" model="product.sica">
+            <field name="code">351</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Miel</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_207" model="product.sica">
+            <field name="code">207</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Nueces</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_365" model="product.sica">
+            <field name="code">365</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Oleina de Palma</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_434" model="product.sica">
+            <field name="code">434</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Oleina Vegetal</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_205" model="product.sica">
+            <field name="code">205</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Onoto</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_396" model="product.sica">
+            <field name="code">396</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Otras Aves Beneficiadas</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_322" model="product.sica">
+            <field name="code">322</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Otras Especies de Agua Dulce</field>
+            <field name="description">Producción de Peces en agua Dulce (Cachamas Truchas Coporos Pavones Caribes ect.)</field>
+        </record>
+
+        <record id="product_sica_95" model="product.sica">
+            <field name="code">95</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Otros Productos del Mar</field>
+            <field name="description">Mariscos Moluscos entre otros. (Calamares Camarones Pulpo etc)</field>
+        </record>
+
+        <record id="product_sica_213" model="product.sica">
+            <field name="code">213</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Panetton</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_153" model="product.sica">
+            <field name="code">153</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Papelón</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_249" model="product.sica">
+            <field name="code">249</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Pasta de Tomate - Materia Prima</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_305" model="product.sica">
+            <field name="code">305</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Pasta de Tomate-Prod Terminado</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_313" model="product.sica">
+            <field name="code">313</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Pastas Alimenticias No Reguladas</field>
+            <field name="description">Producto derivado del procesamiento de la sémola de trigo durum.</field>
+        </record>
+
+        <record id="product_sica_312" model="product.sica">
+            <field name="code">312</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Pastas Alimenticias Reguladas</field>
+            <field name="description">Producto derivado del procesamiento de la sémola de trigo durum y harina de trigo para pastificio.</field>
+        </record>
+
+        <record id="product_sica_362" model="product.sica">
+            <field name="code">362</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Pastas Uso Industrial</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_289" model="product.sica">
+            <field name="code">289</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Pavo en pie</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_389" model="product.sica">
+            <field name="code">389</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Pellets de Cereales</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_379" model="product.sica">
+            <field name="code">379</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Pepitonas Enlatadas</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_378" model="product.sica">
+            <field name="code">378</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Pepitonas Frescas</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_252" model="product.sica">
+            <field name="code">252</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Peras</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_196" model="product.sica">
+            <field name="code">196</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">Pnil</field>
+            <field name="name">Pernil - Cerdo</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_341" model="product.sica">
+            <field name="code">341</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Pescado Salado</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_342" model="product.sica">
+            <field name="code">342</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Pescado Varios</field>
+            <field name="description">Distintas especies marinas (pescados) congelados o fresco en sus distintas presentaciones.</field>
+        </record>
+
+        <record id="product_sica_194" model="product.sica">
+            <field name="code">194</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">Pm</field>
+            <field name="name">Pimenton</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_525" model="product.sica">
+            <field name="code">525</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Platano</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_29" model="product.sica">
+            <field name="code">29</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv">PllB</field>
+            <field name="name">Pollo Beneficiado Entero</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_441" model="product.sica">
+            <field name="code">441</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Pollo Despresado</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_85" model="product.sica">
+            <field name="code">85</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Pollos en Pie</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_381" model="product.sica">
+            <field name="code">381</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Premezcla de Vitaminas y Aminoacidos</field>
+            <field name="description">Consumo Humano y consumo animal con incidencia directa en el consumo humano</field>
+        </record>
+
+        <record id="product_sica_382" model="product.sica">
+            <field name="code">382</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Premezcla Minerales</field>
+            <field name="description">Consumo Humano y consumo animal con incidencia directa en el consumo humano</field>
+        </record>
+
+        <record id="product_sica_138" model="product.sica">
+            <field name="code">138</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Preparaciones a base de carne -congelada y refrigerada-</field>
+            <field name="description">Carne de Hamburguesa Nuggets entre otros</field>
+        </record>
+
+        <record id="product_sica_373" model="product.sica">
+            <field name="code">373</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Preparaciones a Base de Cereales</field>
+            <field name="description">Productos terminados derivados de cereales (Hojuelas de maiz trigo avena o arrozgranola enriquecidos fortificados o saborizados con frutas mani almendras avellana chocolate u otros)</field>
+        </record>
+
+        <record id="product_sica_356" model="product.sica">
+            <field name="code">356</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Preparaciones Alimenticias Diversas</field>
+            <field name="description">Sopas y bebidas instantaneas merengadas alimentos dietético concentrados de pescados carne y pollo Sopas deshidratas Pasapalos cubitos papas fritas tostones cotufaschicharrones yuca frita espinaca molida entre otros</field>
+        </record>
+
+        <record id="product_sica_380" model="product.sica">
+            <field name="code">380</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Preparado de Mayonesa</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_283" model="product.sica">
+            <field name="code">283</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Productos de la Floricultura</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_173" model="product.sica">
+            <field name="code">173</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">PPP</field>
+            <field name="name">Productos de Panaderia y Pasteleria</field>
+            <field name="description">Pan Ambrosia Croissant Bizcochos Roscas Tequenos Pastelitos empanadas  tortillas de cereales u otras</field>
+        </record>
+
+        <record id="product_sica_385" model="product.sica">
+            <field name="code">385</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Productos Quimicos Inorganicos</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_446" model="product.sica">
+            <field name="code">446</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Productos Químicos Orgánicos</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_255" model="product.sica">
+            <field name="code">255</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Pulpa de Frutas</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_408" model="product.sica">
+            <field name="code">408</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Quesos fundidos y Pastas para Untar</field>
+            <field name="description">Quesos fundidos: Cheddar y mezclas con vegetales o saborizadas.</field>
+        </record>
+
+        <record id="product_sica_321" model="product.sica">
+            <field name="code">321</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Quesos Presentación No Regulada</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_320" model="product.sica">
+            <field name="code">320</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Quesos Presentación Regulada</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_353" model="product.sica">
+            <field name="code">353</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Racimo Coquito de Palma</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_179" model="product.sica">
+            <field name="code">179</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Raices y Tuberculos</field>
+            <field name="description">Apio ocumo ñame y otros</field>
+        </record>
+
+        <record id="product_sica_284" model="product.sica">
+            <field name="code">284</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Residuos de las Industrias Alimentarias</field>
+            <field name="description">Desperdicios residuos y grasas de origen vegetales o animales de igual forma los subproductos generados de las lineas de produccion destinados para Alimentos Balanceados para Animales (ABA)</field>
+        </record>
+
+        <record id="product_sica_553" model="product.sica">
+            <field name="code">553</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Sal Cruda</field>
+            <field name="description">Materia Prima utilizada para la producción de Sal Refinada</field>
+        </record>
+
+        <record id="product_sica_397" model="product.sica">
+            <field name="code">397</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Salmon Entero</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_30" model="product.sica">
+            <field name="code">30</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv">Sal</field>
+            <field name="name">Sal Refinada</field>
+            <field name="description">Producto obtenido del procesamiento de la Sal cruda</field>
+        </record>
+
+        <record id="product_sica_307" model="product.sica">
+            <field name="code">307</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Salsa de Tomate -Ketchup-</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_167" model="product.sica">
+            <field name="code">167</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">SlV</field>
+            <field name="name">Salsas Varias</field>
+            <field name="description">para Aderezar Mostaza Rosada Picante Pasta-Passata de Tomate</field>
+        </record>
+
+        <record id="product_sica_317" model="product.sica">
+            <field name="code">317</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Sardina Enlatada Presentación No Regulada</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_316" model="product.sica">
+            <field name="code">316</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Sardina Enlatada Presentación Regulada</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_334" model="product.sica">
+            <field name="code">334</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv"></field>
+            <field name="name">Sardina Fresca</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_280" model="product.sica">
+            <field name="code">280</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Semen de Bovino</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_425" model="product.sica">
+            <field name="code">425</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Semilla de Arroz Acondicionada</field>
+            <field name="description">Producto acondicionado para su almacenaje y conservacion</field>
+        </record>
+
+        <record id="product_sica_430" model="product.sica">
+            <field name="code">430</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Semilla de Brócoli</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_227" model="product.sica">
+            <field name="code">227</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Semilla de Cebolla</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_286" model="product.sica">
+            <field name="code">286</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Semilla de Girasol - Acondicionado</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_226" model="product.sica">
+            <field name="code">226</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Semilla de Girasol Humedo</field>
+            <field name="description">Producto recepcionado de la Cosecha</field>
+        </record>
+
+        <record id="product_sica_431" model="product.sica">
+            <field name="code">431</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Semilla de Lechuga</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_223" model="product.sica">
+            <field name="code">223</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Semilla de Maíz Amarillo Acondicionado</field>
+            <field name="description">Producto acondiconado para su almacenamiento y conservacion</field>
+        </record>
+
+        <record id="product_sica_224" model="product.sica">
+            <field name="code">224</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Semilla de Maíz Blanco Acondicionado</field>
+            <field name="description">Producto acondionado para su consevacion y almacenamiento</field>
+        </record>
+
+        <record id="product_sica_222" model="product.sica">
+            <field name="code">222</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Semilla de Papa</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_276" model="product.sica">
+            <field name="code">276</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Semilla de Pasto</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_428" model="product.sica">
+            <field name="code">428</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Semilla de Sorgo Acondicionado</field>
+            <field name="description">Producto de la recepcion de la Cosecha</field>
+        </record>
+
+        <record id="product_sica_429" model="product.sica">
+            <field name="code">429</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Semilla de Soya Acondicionada</field>
+            <field name="description">Producto Acondionado para su conservacion y almacenamiento</field>
+        </record>
+
+        <record id="product_sica_229" model="product.sica">
+            <field name="code">229</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Semilla de Tomate</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_228" model="product.sica">
+            <field name="code">228</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Semilla de Zanahoria</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_515" model="product.sica">
+            <field name="code">515</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Semillas de Caraota</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_329" model="product.sica">
+            <field name="code">329</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Semola de Maiz</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_72" model="product.sica">
+            <field name="code">72</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">Se</field>
+            <field name="name">Semola de Trigo</field>
+            <field name="description">Producto utilizado para la elaboración de Pastas Alimenticias</field>
+        </record>
+
+        <record id="product_sica_50" model="product.sica">
+            <field name="code">50</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv">SoA</field>
+            <field name="name">Sorgo Acondicionado (TM)</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_60" model="product.sica">
+            <field name="code">60</field>
+            <field name="pr" eval="1"/>
+            <field name="abrv">SyA</field>
+            <field name="name">Soya Acondicionada (Frijol de Soya)(TM)</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_445" model="product.sica">
+            <field name="code">445</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Subproducto de Aves</field>
+            <field name="description">Vísceras plumas y sangre CMD (Carne Mecánicamente Deshuesada) Recortes de pollo utilizados como materia prima</field>
+        </record>
+
+        <record id="product_sica_394" model="product.sica">
+            <field name="code">394</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Sub Productos de Bovino</field>
+            <field name="description">Trastes viscéras sangre cabezas patas cachos y otros despojos</field>
+        </record>
+
+        <record id="product_sica_302" model="product.sica">
+            <field name="code">302</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Subproductos de Cerdo</field>
+            <field name="description">Trastes viscéras sangre cabezas patas orejas y otros despojos.</field>
+        </record>
+
+        <record id="product_sica_277" model="product.sica">
+            <field name="code">277</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Suero de Leche</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_366" model="product.sica">
+            <field name="code">366</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Suero en polvo</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_405" model="product.sica">
+            <field name="code">405</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Tocino y piel de cerdo</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_375" model="product.sica">
+            <field name="code">375</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Tomate en Conserva</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_372" model="product.sica">
+            <field name="code">372</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Tomate Pelado</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_41" model="product.sica">
+            <field name="code">41</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">TrMP</field>
+            <field name="name">Trigo Durum</field>
+            <field name="description">Materia Prima utilizada para la producción de Sémola de Trigo Durum</field>
+        </record>
+
+        <record id="product_sica_174" model="product.sica">
+            <field name="code">174</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">TrP</field>
+            <field name="name">Trigo para Galletas</field>
+            <field name="description">Materia Prima Utilizada para la producción de Harina para Galletas</field>
+        </record>
+
+        <record id="product_sica_413" model="product.sica">
+            <field name="code">413</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv">Trr</field>
+            <field name="name">Turron</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_253" model="product.sica">
+            <field name="code">253</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Uvas</field>
+            <field name="description"></field>
+        </record>
+
+        <record id="product_sica_206" model="product.sica">
+            <field name="code">206</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Uvas Pasas</field>
+            <field name="description">En su estado natural o procesadas (pasitas)</field>
+        </record>
+
+        <record id="product_sica_459" model="product.sica">
+            <field name="code">459</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Vegetales Deshidratados</field>
+            <field name="description">Vegetales a los que se les ha eliminado al máximo el agua que contienen bien sea por medios naturales o artificiales</field>
+        </record>
+
+        <record id="product_sica_128" model="product.sica">
+            <field name="code">128</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Vegetales Enlatados</field>
+            <field name="description">Zanahoria garbanzos caraotas champiñon maiz guisantes arvejas esparragos palmito ajo aji pimenton y mezclas de vegetales.</field>
+        </record>
+
+        <record id="product_sica_336" model="product.sica">
+            <field name="code">336</field>
+            <field name="pr" eval="0"/>
+            <field name="abrv"></field>
+            <field name="name">Yemas de Huevo</field>
+            <field name="description"></field>
+        </record>
+
+  </data>
+</openerp>

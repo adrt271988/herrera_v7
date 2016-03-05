@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="inherited_account_asset_category_form_view">
+            <field name="name">inherit.account.asset.category.form</field>
+            <field name="model">account.asset.category</field>
+            <field name="inherit_id" ref="account_asset.view_account_asset_category_form" />
+            <field name="arch" type="xml">
+              
+                <xpath expr='//field[@name="name"]' position='after'>
+                    <field name="reference" placeholder="Ejm: MOB, EE, INM, etc.."/>/>
+                </xpath>
+                <xpath expr='//field[@name="reference"]' position='after'>
+                    <field name="policy_number" string="Número de Póliza" />
+                </xpath>
+                <xpath expr='//field[@name="policy_number"]' position='after'>
+                    <field name="shop_id"/>
+                </xpath>
+                <xpath expr='//field[@name="account_expense_depreciation_id"]' position='after'>
+                    <field name="account_desincorporate_id"/>
+                </xpath>
+      
+            </field>
+        </record>
+        
+<!--
+        <record model="ir.ui.view" id="inherited_purchase_order_tree_view">
+            <field name="name">inherit.purchase.order.tree</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_tree" />
+            <field name="arch" type="xml">
+                <xpath expr='//field[@name="origin"]' position='attributes'>
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+            </field>
+        </record>
+-->
+    </data>
+</openerp>

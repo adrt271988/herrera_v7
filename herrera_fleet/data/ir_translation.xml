@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data noupdate="0">
+        <record model='ir.actions.act_window' id='fleet.fleet_vehicle_model_brand_act'>
+            <field name="name">Marca del vehículo</field>
+        </record>
+
+    </data>
+</openerp>

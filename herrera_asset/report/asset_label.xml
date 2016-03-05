@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<lots>
+    <lot-line type="fields" name="id">
+        <code type="field" name="code"/>
+        <product type="field" name="name"/>
+        <currency type="field" name="company_id.currency_id.name"/>
+        <company  type="field" name="company_id.name"/>
+        <imagen  type="field" name="company_id.logo"/>
+    </lot-line>
+</lots>

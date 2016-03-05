@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate = "1">
+        <!-- Creamos la Tarifa -->
+        <record id="herrera_purchase_pricelist_1" model = "product.pricelist">
+            <field name="name">Tarifa de Compra 1</field>
+            <field name="type">purchase</field>
+            <field name="currency_id" ref="base.VEF"/>
+        </record>
+        
+        <!-- Creamos la Versión de Tarifa -->
+        <record id="herrera_purchase_pricelist_version_1" model = "product.pricelist.version">
+            <field name="name">Descuento por Dañado</field>
+            <field name="pricelist_id" ref = "herrera_purchase_pricelist_1"/>
+            <field name="date_start">2013-01-01</field>
+            <field name="date_end">2013-12-31</field>
+        </record>
+        
+        <!-- Creamos la Regla de Tarifa -->
+        <record id="herrera_purchase_pricelist_item_1" model = "product.pricelist.item">
+            <field name="name">Porcentaje Dañado</field>
+            <field name="categ_id" ref="product.product_category_all"/>
+            <field name="base" eval="2"/>
+            <field name="price_discount">-0.0013</field>
+            <field name="price_version_id" ref="herrera_purchase_pricelist_version_1"/>
+        </record>
+    </data>
+</openerp>

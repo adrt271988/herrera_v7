@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <report id="report_stock_global_report"
+                model="stock.global"
+                name="stock.global.report"
+                string="Imprimir Global"
+                rml="herrera_warehouse/report/stock_global_report.rml" />
+
+        <report id="report_stock_hall_report"
+                model="stock.global"
+                name="stock.hall.report"
+                string="Imprimir Listines"
+                rml="herrera_warehouse/report/stock_hall_report.rml" />
+
+	<report id="stock.report_picking_list_out"
+		model="stock.picking.out"
+		name="stock.picking.list.out"
+		string="Delivery Slip"
+		rml="herrera_warehouse/report/delivery_slip.rml"/>
+    </data>
+</openerp>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="sale_plan_form" model="ir.ui.view">
+            <field name="name">sale.plan.form</field>
+            <field name="model">sale.plan</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Plan de Venta" version="7.0">
+                    <sheet>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="name" string="Nombre del plan"/> (
+                                <field name="is_manager" class="oe_inline"/> <label for="is_manager" string="Es supervisor?"/>)
+                            </div>
+                            <h1>
+                                <field name="name" default_focus="1" placeholder="ej. VENDEDOR H01"/>
+                            </h1>
+                        </div>
+                        <div class="oe_right oe_button_box" name="buttons">
+<!-- NO FUNCIONA EL WRITE en ['switch_to_weekly','switch_to_monthly']-->
+<!--
+                            <button type="object" string="Cambiar a ruta mensual" attrs="{'invisible': [('frequency', 'in', ['biweekly','monthly'])]}" name="switch_to_weekly"/>
+                            <button type="object" string="Cambiar a ruta semanal" attrs="{'invisible': [('frequency', 'in', ['weekly','biweekly'])]}" name="switch_to_monthly"/>
+-->
+                            <button type="object" string="Solicitar Activación/Desactivación" name="auth_active"/>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="user_id" string="Responsable" on_change="onchange_user(user_id)"/>
+                                <field name="shop_id" />
+                                <field name="code" string="Codigo"/>
+                            </group>
+                            <group>
+                                <field name="manager" string="Supervisor" attrs="{'invisible': [('is_manager', '=', True)]}"/>
+                                <field name="categ_id" string="Categoria"/>
+                                <field name="frequency" string="Tipo de ruta"/>
+<!--
+                                <field name="active" string="Activo"/>
+-->
+                            </group>
+                        </group>
+                        <group string="Ruta de Trabajo">
+                            <field name="attendance_ids" nolabel="1">
+                                <tree editable="top" >
+                                    <field name="dayofweek"/>
+                                    <field name="partner_id" string="Cliente a visitar" required="1"/>
+                                    <field name="pricelist_id" string="Tarifa de venta"/>
+                                    <field name="boletin"/>
+                                </tree>
+                            </field>
+                        </group>
+<!--
+                        <notebook>
+                            <page string="Ruta de Trabajo">
+                                <group>
+                                    <field name="attendance_ids" nolabel="1">
+                                        <tree editable="top" >
+                                            <field name="dayofweek" required="1" string="Dia de la semana" />
+                                            <field name="partner_id" string="Cliente a visitar" required="1"/>
+                                            <field name="pricelist_id" string="Tarifa de venta"/>
+                                            <field name="boletin"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string = "Cartera de Productos">
+                                <field name="product_ids" widget="many2many_kanban" required="1">
+                                    <kanban quick_create="false" create="true">
+                                        <field name="name"/>
+                                        <templates>
+                                            <t t-name="kanban-box">
+                                                <div style="position: relative">
+                                                    <a t-if="! read_only_mode" type="delete" style="position: absolute; right: 0; padding: 4px; diplay: inline-block">X</a>
+                                                    <div class="oe_module_vignette">
+                                                        <div class="oe_module_desc">
+                                                            <field name="name"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </templates>
+                                    </kanban>
+                                </field>
+                            </page>
+                        </notebook>
+-->
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Calendar Tree -->
+        <record id="sale_plan_tree" model="ir.ui.view">
+            <field name="name">sale.plan.tree</field>
+            <field name="model">sale.plan</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Planificación de Ventas" >
+                    <field name="name" string="Referencia"/>
+                    <field name="user_id" string="Vendedor"/>
+                    <field name="code" string="Codigo"/>
+                    <field name="shop_id" string="Sucursal"/>
+                    <field name="categ_id" string="Categoria"/>
+                    <field name="manager" string="Supervisor"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="sale_plan_action" model="ir.actions.act_window">
+            <field name="name">Planificacion de ventas</field>
+            <field name="res_model">sale.plan</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="sale_plan_tree"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Haga click aqui para establecer una nueva planificacion de ventas.
+              </p><p>
+                Usa planificacion de venta para organizar las cartera de
+                productos asi como tambien las diferentes rutas de ventas
+                para vendedores o grupo de vendedores.
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="sale_plan_action"
+            id="menu_sale_plan_action" sequence="20"
+            parent="base.menu_base_config" groups="base.group_sale_manager"/>
+
+    </data>
+</openerp>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<openerp>
+    <data noupdate = "0">
+        <record id='base.user_root' model="res.users">
+            <field name="groups_id" eval="[
+                                            (4,ref('stock.group_production_lot')),
+                                            (4,ref('stock.group_tracking_lot')),
+                                            (4,ref('stock.group_locations')),
+                                            
+                                            ]"/>
+        </record>
+    </data>
+</openerp>

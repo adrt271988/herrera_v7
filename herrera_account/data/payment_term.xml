@@ -1,0 +1,254 @@
+<?xml version="1.0"?>
+<openerp>
+    <data noupdate="1">
+        
+        <record id='payment_term_7' model='account.payment.term'>
+            <field name='name'>7 días</field>
+            <field name='note'>7 días</field>
+            <field name='active'>TRUE</field>
+        </record>
+        
+        <record id='payment_term_line_7' model='account.payment.term.line'>
+            <field name='days'>7</field>
+            <field name='days2'>0</field>
+            <field name='payment_id' ref="payment_term_7"/>
+            <field name='value'>balance</field>
+        </record>
+        
+        <record id='payment_term_14' model='account.payment.term'>
+            <field name='name'>14 días</field>
+            <field name='note'>14 días</field>
+            <field name='active'>TRUE</field>
+        </record>
+        
+        <record id='payment_term_line_14' model='account.payment.term.line'>
+            <field name='days'>14</field>
+            <field name='days2'>0</field>
+            <field name='payment_id' ref="payment_term_14"/>
+            <field name='value'>balance</field>
+        </record>
+        
+        <record id='payment_term_21' model='account.payment.term'>
+            <field name='name'>21 días</field>
+            <field name='note'>21 días</field>
+            <field name='active'>TRUE</field>
+        </record>
+        
+        <record id='payment_term_line_21' model='account.payment.term.line'>
+            <field name='days'>21</field>
+            <field name='days2'>0</field>
+            <field name='payment_id' ref="payment_term_21"/>
+            <field name='value'>balance</field>
+        </record>
+
+        <record id='payment_term_28' model='account.payment.term'>
+            <field name='name'>28 días</field>
+            <field name='note'>28 días</field>
+            <field name='active'>TRUE</field>
+        </record>
+        
+        <record id='payment_term_line_28' model='account.payment.term.line'>
+            <field name='days'>28</field>
+            <field name='days2'>0</field>
+            <field name='payment_id' ref="payment_term_28"/>
+            <field name='value'>balance</field>
+        </record>
+
+        <record id='payment_term_45' model='account.payment.term'>
+            <field name='name'>45 días</field>
+            <field name='note'>45 días</field>
+            <field name='active'>TRUE</field>
+        </record>
+        
+        <record id='payment_term_line_45' model='account.payment.term.line'>
+            <field name='days'>45</field>
+            <field name='days2'>0</field>
+            <field name='payment_id' ref="payment_term_45"/>
+            <field name='value'>balance</field>
+        </record>
+
+        <record id='payment_term_60' model='account.payment.term'>
+            <field name='name'>60 días</field>
+            <field name='note'>60 días</field>
+            <field name='active'>TRUE</field>
+        </record>
+        
+        <record id='payment_term_line_60' model='account.payment.term.line'>
+            <field name='days'>60</field>
+            <field name='days2'>0</field>
+            <field name='payment_id' ref="payment_term_60"/>
+            <field name='value'>balance</field>
+        </record>
+        
+        <record id='payment_term_90' model='account.payment.term'>
+            <field name='name'>90 días</field>
+            <field name='note'>90 días</field>
+            <field name='active'>TRUE</field>
+        </record>
+        
+        <record id='payment_term_line_90' model='account.payment.term.line'>
+            <field name='days'>90</field>
+            <field name='days2'>0</field>
+            <field name='payment_id' ref="payment_term_90"/>
+            <field name='value'>balance</field>
+        </record>
+        
+        <record id='payment_term_6' model='account.payment.term'>
+            <field name='name'>6 días</field>
+            <field name='note'>6 días</field>
+            <field name='active'>TRUE</field>
+        </record>
+        
+                
+        <record id='payment_term_line_6' model='account.payment.term.line'>
+            <field name='days'>6</field>
+            <field name='days2'>0</field>
+            <field name='payment_id' ref="payment_term_6"/>
+            <field name='value'>balance</field>
+        </record>
+        
+        <record id='payment_term_8' model='account.payment.term'>
+            <field name='name'>8 días</field>
+            <field name='note'>8 días</field>
+            <field name='active'>TRUE</field>
+        </record>
+        
+        <record id='payment_term_line_8' model='account.payment.term.line'>
+            <field name='days'>8</field>
+            <field name='days2'>0</field>
+            <field name='payment_id' ref="payment_term_8"/>
+            <field name='value'>balance</field>
+        </record>
+        
+        <record id='payment_term_9' model='account.payment.term'>
+            <field name='name'>9 días</field>
+            <field name='note'>9 días</field>
+            <field name='active'>TRUE</field>
+        </record>
+        
+        <record id='payment_term_line_9' model='account.payment.term.line'>
+            <field name='days'>9</field>
+            <field name='days2'>0</field>
+            <field name='payment_id' ref="payment_term_9"/>
+            <field name='value'>balance</field>
+        </record>
+        
+        <record id='payment_term_10' model='account.payment.term'>
+            <field name='name'>10 días</field>
+            <field name='note'>10 días</field>
+            <field name='active'>TRUE</field>
+        </record>
+
+        <record id='payment_term_line_10' model='account.payment.term.line'>
+            <field name='days'>10</field>
+            <field name='days2'>0</field>
+            <field name='payment_id' ref="payment_term_10"/>
+            <field name='value'>balance</field>
+        </record>
+        
+        <record id='payment_term_11' model='account.payment.term'>
+            <field name='name'>11 días</field>
+            <field name='note'>11 días</field>
+            <field name='active'>TRUE</field>
+        </record>
+
+        <record id='payment_term_line_11' model='account.payment.term.line'>
+            <field name='days'>11</field>
+            <field name='days2'>0</field>
+            <field name='payment_id' ref="payment_term_11"/>
+            <field name='value'>balance</field>
+        </record>
+        
+        <record id='payment_term_12' model='account.payment.term'>
+            <field name='name'>12 días</field>
+            <field name='note'>12 días</field>
+            <field name='active'>TRUE</field>
+        </record>
+
+        <record id='payment_term_line_12' model='account.payment.term.line'>
+            <field name='days'>12</field>
+            <field name='days2'>0</field>
+            <field name='payment_id' ref="payment_term_12"/>
+            <field name='value'>balance</field>
+        </record>
+        
+        <record id='payment_term_13' model='account.payment.term'>
+            <field name='name'>13 días</field>
+            <field name='note'>13 días</field>
+            <field name='active'>TRUE</field>
+        </record>
+        
+        <record id='payment_term_line_13' model='account.payment.term.line'>
+            <field name='days'>13</field>
+            <field name='days2'>0</field>
+            <field name='payment_id' ref="payment_term_13"/>
+            <field name='value'>balance</field>
+        </record>
+        
+        <record id='payment_term_16' model='account.payment.term'>
+            <field name='name'>16 días</field>
+            <field name='note'>16 días</field>
+            <field name='active'>TRUE</field>
+        </record>
+
+        <record id='payment_term_line_16' model='account.payment.term.line'>
+            <field name='days'>16</field>
+            <field name='days2'>0</field>
+            <field name='payment_id' ref="payment_term_16"/>
+            <field name='value'>balance</field>
+        </record>
+        
+        <record id='payment_term_17' model='account.payment.term'>
+            <field name='name'>17 días</field>
+            <field name='note'>17 días</field>
+            <field name='active'>TRUE</field>
+        </record>
+
+        <record id='payment_term_line_17' model='account.payment.term.line'>
+            <field name='days'>17</field>
+            <field name='days2'>0</field>
+            <field name='payment_id' ref="payment_term_17"/>
+            <field name='value'>balance</field>
+        </record>
+        
+        <record id='payment_term_18' model='account.payment.term'>
+            <field name='name'>18 días</field>
+            <field name='note'>18 días</field>
+            <field name='active'>TRUE</field>
+        </record>
+
+        <record id='payment_term_line_18' model='account.payment.term.line'>
+            <field name='days'>18</field>
+            <field name='days2'>0</field>
+            <field name='payment_id' ref="payment_term_18"/>
+            <field name='value'>balance</field>
+        </record>
+        
+        <record id='payment_term_19' model='account.payment.term'>
+            <field name='name'>19 días</field>
+            <field name='note'>19 días</field>
+            <field name='active'>TRUE</field>
+         </record>
+
+        <record id='payment_term_line_19' model='account.payment.term.line'>
+            <field name='days'>19</field>
+            <field name='days2'>0</field>
+            <field name='payment_id' ref="payment_term_19"/>
+            <field name='value'>balance</field>
+        </record>
+        
+        <record id='payment_term_20' model='account.payment.term'>
+            <field name='name'>20 días</field>
+            <field name='note'>20 días</field>
+            <field name='active'>TRUE</field>
+         </record>
+
+        <record id='payment_term_line_20' model='account.payment.term.line'>
+            <field name='days'>20</field>
+            <field name='days2'>0</field>
+            <field name='payment_id' ref="payment_term_20"/>
+            <field name='value'>balance</field>
+        </record>
+        
+    </data>
+</openerp>
